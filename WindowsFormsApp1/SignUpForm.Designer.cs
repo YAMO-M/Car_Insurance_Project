@@ -92,7 +92,7 @@
             this.nameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nameLabel.Location = new System.Drawing.Point(12, 51);
             this.nameLabel.Name = "nameLabel";
-            this.nameLabel.Size = new System.Drawing.Size(53, 20);
+            this.nameLabel.Size = new System.Drawing.Size(45, 17);
             this.nameLabel.TabIndex = 2;
             this.nameLabel.Text = "Name";
             // 
@@ -102,7 +102,7 @@
             this.surnameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.surnameLabel.Location = new System.Drawing.Point(330, 51);
             this.surnameLabel.Name = "surnameLabel";
-            this.surnameLabel.Size = new System.Drawing.Size(76, 20);
+            this.surnameLabel.Size = new System.Drawing.Size(65, 17);
             this.surnameLabel.TabIndex = 3;
             this.surnameLabel.Text = "Surname";
             // 
@@ -196,7 +196,7 @@
             this.yearComboBox.Location = new System.Drawing.Point(401, 177);
             this.yearComboBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.yearComboBox.Name = "yearComboBox";
-            this.yearComboBox.Size = new System.Drawing.Size(199, 28);
+            this.yearComboBox.Size = new System.Drawing.Size(199, 24);
             this.yearComboBox.TabIndex = 7;
             // 
             // monthComboBox
@@ -218,7 +218,7 @@
             this.monthComboBox.Location = new System.Drawing.Point(192, 177);
             this.monthComboBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.monthComboBox.Name = "monthComboBox";
-            this.monthComboBox.Size = new System.Drawing.Size(203, 28);
+            this.monthComboBox.Size = new System.Drawing.Size(203, 24);
             this.monthComboBox.TabIndex = 8;
             // 
             // dayComboBox
@@ -259,16 +259,15 @@
             this.dayComboBox.Location = new System.Drawing.Point(12, 177);
             this.dayComboBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dayComboBox.Name = "dayComboBox";
-            this.dayComboBox.Size = new System.Drawing.Size(175, 28);
+            this.dayComboBox.Size = new System.Drawing.Size(175, 24);
             this.dayComboBox.TabIndex = 9;
-            this.dayComboBox.SelectedIndexChanged += new System.EventHandler(this.comboBox3_SelectedIndexChanged);
             // 
             // DateOfBirthLabel
             // 
             this.DateOfBirthLabel.AutoSize = true;
             this.DateOfBirthLabel.Location = new System.Drawing.Point(9, 123);
             this.DateOfBirthLabel.Name = "DateOfBirthLabel";
-            this.DateOfBirthLabel.Size = new System.Drawing.Size(102, 20);
+            this.DateOfBirthLabel.Size = new System.Drawing.Size(78, 16);
             this.DateOfBirthLabel.TabIndex = 10;
             this.DateOfBirthLabel.Text = "Date of birth";
             // 
@@ -278,7 +277,7 @@
             this.dayLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dayLabel.Location = new System.Drawing.Point(10, 162);
             this.dayLabel.Name = "dayLabel";
-            this.dayLabel.Size = new System.Drawing.Size(33, 17);
+            this.dayLabel.Size = new System.Drawing.Size(26, 13);
             this.dayLabel.TabIndex = 11;
             this.dayLabel.Text = "Day";
             // 
@@ -288,10 +287,9 @@
             this.monthLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.monthLabel.Location = new System.Drawing.Point(189, 162);
             this.monthLabel.Name = "monthLabel";
-            this.monthLabel.Size = new System.Drawing.Size(47, 17);
+            this.monthLabel.Size = new System.Drawing.Size(37, 13);
             this.monthLabel.TabIndex = 12;
             this.monthLabel.Text = "Month";
-            this.monthLabel.Click += new System.EventHandler(this.label5_Click);
             // 
             // yearLabel
             // 
@@ -299,7 +297,7 @@
             this.yearLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.yearLabel.Location = new System.Drawing.Point(398, 162);
             this.yearLabel.Name = "yearLabel";
-            this.yearLabel.Size = new System.Drawing.Size(38, 17);
+            this.yearLabel.Size = new System.Drawing.Size(29, 13);
             this.yearLabel.TabIndex = 13;
             this.yearLabel.Text = "Year";
             // 
@@ -307,15 +305,14 @@
             // 
             this.idNumberTextbox.Location = new System.Drawing.Point(12, 280);
             this.idNumberTextbox.Name = "idNumberTextbox";
-            this.idNumberTextbox.Size = new System.Drawing.Size(313, 26);
+            this.idNumberTextbox.Size = new System.Drawing.Size(313, 22);
             this.idNumberTextbox.TabIndex = 14;
-            this.idNumberTextbox.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // licenseNumberTextbox
             // 
             this.licenseNumberTextbox.Location = new System.Drawing.Point(331, 280);
             this.licenseNumberTextbox.Name = "licenseNumberTextbox";
-            this.licenseNumberTextbox.Size = new System.Drawing.Size(321, 26);
+            this.licenseNumberTextbox.Size = new System.Drawing.Size(321, 22);
             this.licenseNumberTextbox.TabIndex = 15;
             // 
             // IDNumberLabel
@@ -324,7 +321,7 @@
             this.IDNumberLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.IDNumberLabel.Location = new System.Drawing.Point(12, 264);
             this.IDNumberLabel.Name = "IDNumberLabel";
-            this.IDNumberLabel.Size = new System.Drawing.Size(75, 17);
+            this.IDNumberLabel.Size = new System.Drawing.Size(58, 13);
             this.IDNumberLabel.TabIndex = 16;
             this.IDNumberLabel.Text = "ID Number";
             // 
@@ -334,7 +331,7 @@
             this.LicenseNumberLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LicenseNumberLabel.Location = new System.Drawing.Point(331, 264);
             this.LicenseNumberLabel.Name = "LicenseNumberLabel";
-            this.LicenseNumberLabel.Size = new System.Drawing.Size(163, 17);
+            this.LicenseNumberLabel.Size = new System.Drawing.Size(122, 13);
             this.LicenseNumberLabel.TabIndex = 17;
             this.LicenseNumberLabel.Text = "Driver\'s License Number";
             // 
@@ -342,7 +339,7 @@
             // 
             this.phoneNumberbox.Location = new System.Drawing.Point(12, 343);
             this.phoneNumberbox.Name = "phoneNumberbox";
-            this.phoneNumberbox.Size = new System.Drawing.Size(313, 26);
+            this.phoneNumberbox.Size = new System.Drawing.Size(313, 22);
             this.phoneNumberbox.TabIndex = 18;
             // 
             // personalDetailsLabel
@@ -350,7 +347,7 @@
             this.personalDetailsLabel.AutoSize = true;
             this.personalDetailsLabel.Location = new System.Drawing.Point(12, 215);
             this.personalDetailsLabel.Name = "personalDetailsLabel";
-            this.personalDetailsLabel.Size = new System.Drawing.Size(133, 20);
+            this.personalDetailsLabel.Size = new System.Drawing.Size(106, 16);
             this.personalDetailsLabel.TabIndex = 19;
             this.personalDetailsLabel.Text = "Personal Details";
             // 
@@ -358,7 +355,7 @@
             // 
             this.emailTextBox.Location = new System.Drawing.Point(331, 343);
             this.emailTextBox.Name = "emailTextBox";
-            this.emailTextBox.Size = new System.Drawing.Size(321, 26);
+            this.emailTextBox.Size = new System.Drawing.Size(321, 22);
             this.emailTextBox.TabIndex = 20;
             // 
             // phoneNumberLabel
@@ -367,7 +364,7 @@
             this.phoneNumberLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.phoneNumberLabel.Location = new System.Drawing.Point(12, 327);
             this.phoneNumberLabel.Name = "phoneNumberLabel";
-            this.phoneNumberLabel.Size = new System.Drawing.Size(103, 17);
+            this.phoneNumberLabel.Size = new System.Drawing.Size(78, 13);
             this.phoneNumberLabel.TabIndex = 21;
             this.phoneNumberLabel.Text = "Phone Number";
             // 
@@ -377,7 +374,7 @@
             this.emailLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.emailLabel.Location = new System.Drawing.Point(331, 327);
             this.emailLabel.Name = "emailLabel";
-            this.emailLabel.Size = new System.Drawing.Size(51, 17);
+            this.emailLabel.Size = new System.Drawing.Size(38, 13);
             this.emailLabel.TabIndex = 22;
             this.emailLabel.Text = "E- mail";
             // 
@@ -385,28 +382,28 @@
             // 
             this.StreetAddress1Box.Location = new System.Drawing.Point(12, 507);
             this.StreetAddress1Box.Name = "StreetAddress1Box";
-            this.StreetAddress1Box.Size = new System.Drawing.Size(644, 26);
+            this.StreetAddress1Box.Size = new System.Drawing.Size(644, 22);
             this.StreetAddress1Box.TabIndex = 23;
             // 
             // streetAddress2Box
             // 
             this.streetAddress2Box.Location = new System.Drawing.Point(12, 566);
             this.streetAddress2Box.Name = "streetAddress2Box";
-            this.streetAddress2Box.Size = new System.Drawing.Size(644, 26);
+            this.streetAddress2Box.Size = new System.Drawing.Size(644, 22);
             this.streetAddress2Box.TabIndex = 24;
             // 
             // provinceTextBox
             // 
             this.provinceTextBox.Location = new System.Drawing.Point(331, 618);
             this.provinceTextBox.Name = "provinceTextBox";
-            this.provinceTextBox.Size = new System.Drawing.Size(321, 26);
+            this.provinceTextBox.Size = new System.Drawing.Size(321, 22);
             this.provinceTextBox.TabIndex = 25;
             // 
             // CityTextBox
             // 
             this.CityTextBox.Location = new System.Drawing.Point(12, 618);
             this.CityTextBox.Name = "CityTextBox";
-            this.CityTextBox.Size = new System.Drawing.Size(313, 26);
+            this.CityTextBox.Size = new System.Drawing.Size(313, 22);
             this.CityTextBox.TabIndex = 26;
             // 
             // CurrentAddressLabel
@@ -414,7 +411,7 @@
             this.CurrentAddressLabel.AutoSize = true;
             this.CurrentAddressLabel.Location = new System.Drawing.Point(12, 452);
             this.CurrentAddressLabel.Name = "CurrentAddressLabel";
-            this.CurrentAddressLabel.Size = new System.Drawing.Size(132, 20);
+            this.CurrentAddressLabel.Size = new System.Drawing.Size(103, 16);
             this.CurrentAddressLabel.TabIndex = 27;
             this.CurrentAddressLabel.Text = "Current Address";
             // 
@@ -424,7 +421,7 @@
             this.streetAddressLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.streetAddressLabel.Location = new System.Drawing.Point(9, 491);
             this.streetAddressLabel.Name = "streetAddressLabel";
-            this.streetAddressLabel.Size = new System.Drawing.Size(102, 17);
+            this.streetAddressLabel.Size = new System.Drawing.Size(76, 13);
             this.streetAddressLabel.TabIndex = 28;
             this.streetAddressLabel.Text = "Street Address";
             // 
@@ -434,10 +431,9 @@
             this.streetAddressLine2Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.streetAddressLine2Label.Location = new System.Drawing.Point(9, 550);
             this.streetAddressLine2Label.Name = "streetAddressLine2Label";
-            this.streetAddressLine2Label.Size = new System.Drawing.Size(145, 17);
+            this.streetAddressLine2Label.Size = new System.Drawing.Size(108, 13);
             this.streetAddressLine2Label.TabIndex = 29;
             this.streetAddressLine2Label.Text = "Street Address Line 2";
-            this.streetAddressLine2Label.Click += new System.EventHandler(this.label14_Click);
             // 
             // CityLabel
             // 
@@ -445,7 +441,7 @@
             this.CityLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CityLabel.Location = new System.Drawing.Point(12, 602);
             this.CityLabel.Name = "CityLabel";
-            this.CityLabel.Size = new System.Drawing.Size(31, 17);
+            this.CityLabel.Size = new System.Drawing.Size(24, 13);
             this.CityLabel.TabIndex = 30;
             this.CityLabel.Text = "City";
             // 
@@ -455,7 +451,7 @@
             this.ProvinceLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ProvinceLabel.Location = new System.Drawing.Point(328, 602);
             this.ProvinceLabel.Name = "ProvinceLabel";
-            this.ProvinceLabel.Size = new System.Drawing.Size(63, 17);
+            this.ProvinceLabel.Size = new System.Drawing.Size(49, 13);
             this.ProvinceLabel.TabIndex = 31;
             this.ProvinceLabel.Text = "Province";
             // 
@@ -463,9 +459,8 @@
             // 
             this.PostalCodeTextBox.Location = new System.Drawing.Point(12, 678);
             this.PostalCodeTextBox.Name = "PostalCodeTextBox";
-            this.PostalCodeTextBox.Size = new System.Drawing.Size(145, 26);
+            this.PostalCodeTextBox.Size = new System.Drawing.Size(145, 22);
             this.PostalCodeTextBox.TabIndex = 32;
-            this.PostalCodeTextBox.TextChanged += new System.EventHandler(this.textBox12_TextChanged);
             // 
             // PostalCodeLabel
             // 
@@ -473,7 +468,7 @@
             this.PostalCodeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PostalCodeLabel.Location = new System.Drawing.Point(9, 662);
             this.PostalCodeLabel.Name = "PostalCodeLabel";
-            this.PostalCodeLabel.Size = new System.Drawing.Size(108, 17);
+            this.PostalCodeLabel.Size = new System.Drawing.Size(84, 13);
             this.PostalCodeLabel.TabIndex = 33;
             this.PostalCodeLabel.Text = "Postal/Zip Code";
             // 
@@ -482,7 +477,7 @@
             this.GenderLabel.AutoSize = true;
             this.GenderLabel.Location = new System.Drawing.Point(12, 386);
             this.GenderLabel.Name = "GenderLabel";
-            this.GenderLabel.Size = new System.Drawing.Size(64, 20);
+            this.GenderLabel.Size = new System.Drawing.Size(52, 16);
             this.GenderLabel.TabIndex = 34;
             this.GenderLabel.Text = "Gender";
             // 
@@ -492,7 +487,7 @@
             this.maleRadioButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.maleRadioButton.Location = new System.Drawing.Point(30, 414);
             this.maleRadioButton.Name = "maleRadioButton";
-            this.maleRadioButton.Size = new System.Drawing.Size(59, 21);
+            this.maleRadioButton.Size = new System.Drawing.Size(48, 17);
             this.maleRadioButton.TabIndex = 35;
             this.maleRadioButton.TabStop = true;
             this.maleRadioButton.Text = "Male";
@@ -504,7 +499,7 @@
             this.femaleRadioButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.femaleRadioButton.Location = new System.Drawing.Point(333, 411);
             this.femaleRadioButton.Name = "femaleRadioButton";
-            this.femaleRadioButton.Size = new System.Drawing.Size(75, 21);
+            this.femaleRadioButton.Size = new System.Drawing.Size(59, 17);
             this.femaleRadioButton.TabIndex = 36;
             this.femaleRadioButton.TabStop = true;
             this.femaleRadioButton.Text = "Female";
@@ -519,7 +514,7 @@
             this.SubmitButton.TabIndex = 37;
             this.SubmitButton.Text = "Submit";
             this.SubmitButton.UseVisualStyleBackColor = false;
-            this.SubmitButton.Click += new System.EventHandler(this.button1_Click);
+            this.SubmitButton.Click += new System.EventHandler(this.SubmitButton_Click);
             // 
             // errorProvider1
             // 
@@ -527,10 +522,10 @@
             // 
             // SignUpForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(708, 789);
+            this.ClientSize = new System.Drawing.Size(672, 789);
             this.Controls.Add(this.SubmitButton);
             this.Controls.Add(this.femaleRadioButton);
             this.Controls.Add(this.maleRadioButton);

@@ -4,48 +4,36 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsFormsApp1.DataSet1TableAdapters;
 
 namespace WindowsFormsApp1
 {
     public partial class SignUpForm : Form
     {
+      
+       
         public SignUpForm()
         {
             InitializeComponent();
         }
+       
 
-        private void textBox4_TextChanged(object sender, EventArgs e)
+        private void SubmitButton_Click(object sender, EventArgs e)
         {
+            string clientName = nameTextbox.Text;
+            string clientSurname = surnameTextbox.Text;
+            int clientIdentityNo = int.Parse(idNumberTextbox.Text);
+            string clientAddress = StreetAddress1Box.Text + ", "+streetAddress2Box.Text + ", " + CityTextBox.Text + ", " + provinceTextBox.Text + ", " + PostalCodeTextBox.Text ;
+            string clientEmail = emailTextBox.Text;
+            string clientPhoneNo = phoneNumberbox.Text;
+            string clientID = "12";
 
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label14_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox12_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
             bool valid = true;
-
+            
             errorProvider1.Clear();
             if (string.IsNullOrWhiteSpace(nameTextbox.Text))
             {
@@ -56,10 +44,6 @@ namespace WindowsFormsApp1
             {
                 errorProvider1.SetError(nameTextbox, "");
             }
-            
-
-            
-           
             if (string.IsNullOrWhiteSpace(surnameTextbox.Text))
             {
                 errorProvider1.SetError(surnameTextbox, "Surname is required");
@@ -69,10 +53,6 @@ namespace WindowsFormsApp1
             {
                 errorProvider1.SetError(surnameTextbox, "");
             }
-
-            
-
-            
             if (string.IsNullOrWhiteSpace(dayComboBox.Text))
             {
                 errorProvider1.SetError(dayComboBox, "Day is required");
@@ -193,30 +173,18 @@ namespace WindowsFormsApp1
                 errorProvider1.SetError(PostalCodeTextBox, "");
             }
 
-            if(!valid)
+            if (!valid)
             {
                 return;
             }
             else
-            {
+            {  
+               
+                ClientTableAdapter clientTable = new ClientTableAdapter();
+                clientTable.InsertClient(clientID, clientName, clientSurname, clientIdentityNo, clientAddress, clientEmail, clientPhoneNo);
                 CreatePasswordForm form3 = new CreatePasswordForm();
                 form3.Show();
             }
-
-
-
-
-
-
-
-
-               
         }
-
-        private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            
-        }
-        
     }
 }

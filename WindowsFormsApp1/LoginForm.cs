@@ -16,50 +16,6 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
         }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void richTextBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
-        {
-           
-
-        }
-
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            ResetPasswordForm form = new ResetPasswordForm();
-            form.Show();
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            SignUpForm form2 = new SignUpForm();
-            form2.Show();
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
             bool valid = true;
@@ -95,27 +51,20 @@ namespace WindowsFormsApp1
             }
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void forgotPassword_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-
+            ResetPasswordForm form = new ResetPasswordForm();
+            form.Show();
         }
 
-        private void welcomeBackLabel_Click(object sender, EventArgs e)
+        private void signUpLink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
 
+            SignUpForm form2 = new SignUpForm();
+            form2.Show();
         }
 
-        private void enterDetailsLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void userNameLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click_1(object sender, EventArgs e)
+        private void loginButton_Click(object sender, EventArgs e)
         {
 
         }
