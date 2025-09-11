@@ -20,11 +20,13 @@ namespace WindowsFormsApp1
             paymentDetails1.BringToFront();
             updatePersonalInfo1.BringToFront();
             updateCarDetails1.BringToFront();
+            policyPage1.BringToFront();
+            homePage1.BringToFront();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            homePage1.BringToFront();
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -70,6 +72,11 @@ namespace WindowsFormsApp1
         private void updateCarButton_Click(object sender, EventArgs e)
         {
             updateCarDetails1.BringToFront();
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+           policyPage1.BringToFront();
         }
     }
 }

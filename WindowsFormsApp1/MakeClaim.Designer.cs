@@ -65,17 +65,18 @@
             // 
             this.NameLabel.AutoSize = true;
             this.NameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NameLabel.Location = new System.Drawing.Point(10, 107);
+            this.NameLabel.Location = new System.Drawing.Point(30, 28);
             this.NameLabel.Name = "NameLabel";
-            this.NameLabel.Size = new System.Drawing.Size(48, 18);
+            this.NameLabel.Size = new System.Drawing.Size(57, 22);
             this.NameLabel.TabIndex = 0;
             this.NameLabel.Text = "Name";
             // 
             // NameTextBox
             // 
-            this.NameTextBox.Location = new System.Drawing.Point(13, 126);
+            this.NameTextBox.Location = new System.Drawing.Point(34, 52);
+            this.NameTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.NameTextBox.Name = "NameTextBox";
-            this.NameTextBox.Size = new System.Drawing.Size(291, 22);
+            this.NameTextBox.Size = new System.Drawing.Size(327, 26);
             this.NameTextBox.TabIndex = 1;
             this.NameTextBox.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
@@ -83,60 +84,63 @@
             // 
             this.SurnameLabel.AutoSize = true;
             this.SurnameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SurnameLabel.Location = new System.Drawing.Point(322, 107);
+            this.SurnameLabel.Location = new System.Drawing.Point(381, 28);
             this.SurnameLabel.Name = "SurnameLabel";
-            this.SurnameLabel.Size = new System.Drawing.Size(68, 18);
+            this.SurnameLabel.Size = new System.Drawing.Size(82, 22);
             this.SurnameLabel.TabIndex = 2;
             this.SurnameLabel.Text = "Surname";
             // 
             // SurnameTextBox
             // 
-            this.SurnameTextBox.Location = new System.Drawing.Point(325, 126);
+            this.SurnameTextBox.Location = new System.Drawing.Point(385, 52);
+            this.SurnameTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.SurnameTextBox.Name = "SurnameTextBox";
-            this.SurnameTextBox.Size = new System.Drawing.Size(305, 22);
+            this.SurnameTextBox.Size = new System.Drawing.Size(343, 26);
             this.SurnameTextBox.TabIndex = 3;
             // 
             // PolicyNumberLabel
             // 
             this.PolicyNumberLabel.AutoSize = true;
             this.PolicyNumberLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PolicyNumberLabel.Location = new System.Drawing.Point(14, 175);
+            this.PolicyNumberLabel.Location = new System.Drawing.Point(35, 113);
             this.PolicyNumberLabel.Name = "PolicyNumberLabel";
-            this.PolicyNumberLabel.Size = new System.Drawing.Size(105, 18);
+            this.PolicyNumberLabel.Size = new System.Drawing.Size(126, 22);
             this.PolicyNumberLabel.TabIndex = 4;
             this.PolicyNumberLabel.Text = "Policy Number";
             // 
             // PolicyNumTextBox
             // 
-            this.PolicyNumTextBox.Location = new System.Drawing.Point(13, 194);
+            this.PolicyNumTextBox.Location = new System.Drawing.Point(34, 136);
+            this.PolicyNumTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.PolicyNumTextBox.Name = "PolicyNumTextBox";
-            this.PolicyNumTextBox.Size = new System.Drawing.Size(291, 22);
+            this.PolicyNumTextBox.Size = new System.Drawing.Size(327, 26);
             this.PolicyNumTextBox.TabIndex = 5;
             // 
             // DriverLicenseLabel
             // 
             this.DriverLicenseLabel.AutoSize = true;
             this.DriverLicenseLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DriverLicenseLabel.Location = new System.Drawing.Point(313, 175);
+            this.DriverLicenseLabel.Location = new System.Drawing.Point(371, 113);
             this.DriverLicenseLabel.Name = "DriverLicenseLabel";
-            this.DriverLicenseLabel.Size = new System.Drawing.Size(170, 18);
+            this.DriverLicenseLabel.Size = new System.Drawing.Size(206, 22);
             this.DriverLicenseLabel.TabIndex = 6;
             this.DriverLicenseLabel.Text = "Driver\'s License Number";
             // 
             // DriverLicenseTextBox
             // 
-            this.DriverLicenseTextBox.Location = new System.Drawing.Point(316, 196);
+            this.DriverLicenseTextBox.Location = new System.Drawing.Point(375, 139);
+            this.DriverLicenseTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.DriverLicenseTextBox.Name = "DriverLicenseTextBox";
-            this.DriverLicenseTextBox.Size = new System.Drawing.Size(305, 22);
+            this.DriverLicenseTextBox.Size = new System.Drawing.Size(343, 26);
             this.DriverLicenseTextBox.TabIndex = 7;
             // 
             // IncidentDetailsLabel
             // 
             this.IncidentDetailsLabel.AutoSize = true;
             this.IncidentDetailsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IncidentDetailsLabel.Location = new System.Drawing.Point(13, 339);
+            this.IncidentDetailsLabel.Location = new System.Drawing.Point(34, 318);
             this.IncidentDetailsLabel.Name = "IncidentDetailsLabel";
-            this.IncidentDetailsLabel.Size = new System.Drawing.Size(125, 20);
+            this.IncidentDetailsLabel.Size = new System.Drawing.Size(159, 25);
             this.IncidentDetailsLabel.TabIndex = 8;
             this.IncidentDetailsLabel.Text = "Incident Details";
             // 
@@ -150,35 +154,37 @@
             "Natural Disaster",
             "Vandalism",
             "Windshield"});
-            this.TypeOfClaimComboBox.Location = new System.Drawing.Point(18, 399);
+            this.TypeOfClaimComboBox.Location = new System.Drawing.Point(39, 393);
+            this.TypeOfClaimComboBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.TypeOfClaimComboBox.Name = "TypeOfClaimComboBox";
-            this.TypeOfClaimComboBox.Size = new System.Drawing.Size(286, 24);
+            this.TypeOfClaimComboBox.Size = new System.Drawing.Size(321, 28);
             this.TypeOfClaimComboBox.TabIndex = 9;
             // 
             // TypeOfClaimLabel
             // 
             this.TypeOfClaimLabel.AutoSize = true;
             this.TypeOfClaimLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TypeOfClaimLabel.Location = new System.Drawing.Point(15, 378);
+            this.TypeOfClaimLabel.Location = new System.Drawing.Point(36, 366);
             this.TypeOfClaimLabel.Name = "TypeOfClaimLabel";
-            this.TypeOfClaimLabel.Size = new System.Drawing.Size(102, 18);
+            this.TypeOfClaimLabel.Size = new System.Drawing.Size(125, 22);
             this.TypeOfClaimLabel.TabIndex = 10;
             this.TypeOfClaimLabel.Text = "Type Of Claim";
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(325, 397);
+            this.dateTimePicker1.Location = new System.Drawing.Point(385, 390);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(264, 22);
+            this.dateTimePicker1.Size = new System.Drawing.Size(296, 26);
             this.dateTimePicker1.TabIndex = 11;
             // 
             // DateAndTimeLabel
             // 
             this.DateAndTimeLabel.AutoSize = true;
             this.DateAndTimeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DateAndTimeLabel.Location = new System.Drawing.Point(322, 376);
+            this.DateAndTimeLabel.Location = new System.Drawing.Point(381, 364);
             this.DateAndTimeLabel.Name = "DateAndTimeLabel";
-            this.DateAndTimeLabel.Size = new System.Drawing.Size(175, 18);
+            this.DateAndTimeLabel.Size = new System.Drawing.Size(215, 22);
             this.DateAndTimeLabel.TabIndex = 12;
             this.DateAndTimeLabel.Text = "Date and Time of Incident";
             // 
@@ -186,26 +192,27 @@
             // 
             this.LocationOfTheIncidentLabel.AutoSize = true;
             this.LocationOfTheIncidentLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LocationOfTheIncidentLabel.Location = new System.Drawing.Point(13, 459);
+            this.LocationOfTheIncidentLabel.Location = new System.Drawing.Point(34, 468);
             this.LocationOfTheIncidentLabel.Name = "LocationOfTheIncidentLabel";
-            this.LocationOfTheIncidentLabel.Size = new System.Drawing.Size(183, 20);
+            this.LocationOfTheIncidentLabel.Size = new System.Drawing.Size(235, 25);
             this.LocationOfTheIncidentLabel.TabIndex = 13;
             this.LocationOfTheIncidentLabel.Text = "Location of the Incident";
             // 
             // StreetAddressTextBox
             // 
-            this.StreetAddressTextBox.Location = new System.Drawing.Point(13, 535);
+            this.StreetAddressTextBox.Location = new System.Drawing.Point(34, 563);
+            this.StreetAddressTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.StreetAddressTextBox.Name = "StreetAddressTextBox";
-            this.StreetAddressTextBox.Size = new System.Drawing.Size(576, 22);
+            this.StreetAddressTextBox.Size = new System.Drawing.Size(648, 26);
             this.StreetAddressTextBox.TabIndex = 14;
             // 
             // StreetAddressLabel
             // 
             this.StreetAddressLabel.AutoSize = true;
             this.StreetAddressLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.StreetAddressLabel.Location = new System.Drawing.Point(14, 505);
+            this.StreetAddressLabel.Location = new System.Drawing.Point(35, 525);
             this.StreetAddressLabel.Name = "StreetAddressLabel";
-            this.StreetAddressLabel.Size = new System.Drawing.Size(105, 18);
+            this.StreetAddressLabel.Size = new System.Drawing.Size(129, 22);
             this.StreetAddressLabel.TabIndex = 15;
             this.StreetAddressLabel.Text = "Street Address";
             // 
@@ -213,25 +220,26 @@
             // 
             this.CityLabel.AutoSize = true;
             this.CityLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CityLabel.Location = new System.Drawing.Point(10, 576);
+            this.CityLabel.Location = new System.Drawing.Point(30, 614);
             this.CityLabel.Name = "CityLabel";
-            this.CityLabel.Size = new System.Drawing.Size(33, 18);
+            this.CityLabel.Size = new System.Drawing.Size(41, 22);
             this.CityLabel.TabIndex = 16;
             this.CityLabel.Text = "City";
             // 
             // CityTextBox
             // 
-            this.CityTextBox.Location = new System.Drawing.Point(13, 597);
+            this.CityTextBox.Location = new System.Drawing.Point(34, 640);
+            this.CityTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.CityTextBox.Name = "CityTextBox";
-            this.CityTextBox.Size = new System.Drawing.Size(291, 22);
+            this.CityTextBox.Size = new System.Drawing.Size(327, 26);
             this.CityTextBox.TabIndex = 17;
             // 
             // ProvinceLabel
             // 
             this.ProvinceLabel.AutoSize = true;
-            this.ProvinceLabel.Location = new System.Drawing.Point(322, 578);
+            this.ProvinceLabel.Location = new System.Drawing.Point(381, 616);
             this.ProvinceLabel.Name = "ProvinceLabel";
-            this.ProvinceLabel.Size = new System.Drawing.Size(60, 16);
+            this.ProvinceLabel.Size = new System.Drawing.Size(69, 20);
             this.ProvinceLabel.TabIndex = 18;
             this.ProvinceLabel.Text = "Province";
             // 
@@ -248,43 +256,46 @@
             "North West",
             "Limpopo",
             "Northern Cape"});
-            this.ProvinceComboBox.Location = new System.Drawing.Point(325, 595);
+            this.ProvinceComboBox.Location = new System.Drawing.Point(385, 638);
+            this.ProvinceComboBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ProvinceComboBox.Name = "ProvinceComboBox";
-            this.ProvinceComboBox.Size = new System.Drawing.Size(277, 24);
+            this.ProvinceComboBox.Size = new System.Drawing.Size(311, 28);
             this.ProvinceComboBox.TabIndex = 19;
             // 
             // DescriptionLabel
             // 
             this.DescriptionLabel.AutoSize = true;
             this.DescriptionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DescriptionLabel.Location = new System.Drawing.Point(10, 650);
+            this.DescriptionLabel.Location = new System.Drawing.Point(30, 706);
             this.DescriptionLabel.Name = "DescriptionLabel";
-            this.DescriptionLabel.Size = new System.Drawing.Size(186, 18);
+            this.DescriptionLabel.Size = new System.Drawing.Size(228, 22);
             this.DescriptionLabel.TabIndex = 20;
             this.DescriptionLabel.Text = "Description Of The Incident";
             // 
             // DescriptionRichTextBox
             // 
-            this.DescriptionRichTextBox.Location = new System.Drawing.Point(4, 671);
+            this.DescriptionRichTextBox.Location = new System.Drawing.Point(23, 733);
+            this.DescriptionRichTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.DescriptionRichTextBox.Name = "DescriptionRichTextBox";
-            this.DescriptionRichTextBox.Size = new System.Drawing.Size(617, 63);
+            this.DescriptionRichTextBox.Size = new System.Drawing.Size(694, 78);
             this.DescriptionRichTextBox.TabIndex = 21;
             this.DescriptionRichTextBox.Text = "";
             // 
             // CaseNumberTextBox
             // 
-            this.CaseNumberTextBox.Location = new System.Drawing.Point(13, 783);
+            this.CaseNumberTextBox.Location = new System.Drawing.Point(34, 873);
+            this.CaseNumberTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.CaseNumberTextBox.Name = "CaseNumberTextBox";
-            this.CaseNumberTextBox.Size = new System.Drawing.Size(291, 22);
+            this.CaseNumberTextBox.Size = new System.Drawing.Size(327, 26);
             this.CaseNumberTextBox.TabIndex = 23;
             // 
             // CaseNumberLabel
             // 
             this.CaseNumberLabel.AutoSize = true;
             this.CaseNumberLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CaseNumberLabel.Location = new System.Drawing.Point(10, 762);
+            this.CaseNumberLabel.Location = new System.Drawing.Point(30, 846);
             this.CaseNumberLabel.Name = "CaseNumberLabel";
-            this.CaseNumberLabel.Size = new System.Drawing.Size(186, 18);
+            this.CaseNumberLabel.Size = new System.Drawing.Size(227, 22);
             this.CaseNumberLabel.TabIndex = 24;
             this.CaseNumberLabel.Text = "Case Number(if applicable)";
             // 
@@ -292,9 +303,9 @@
             // 
             this.PayoutMethodLabel.AutoSize = true;
             this.PayoutMethodLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PayoutMethodLabel.Location = new System.Drawing.Point(322, 760);
+            this.PayoutMethodLabel.Location = new System.Drawing.Point(381, 844);
             this.PayoutMethodLabel.Name = "PayoutMethodLabel";
-            this.PayoutMethodLabel.Size = new System.Drawing.Size(108, 18);
+            this.PayoutMethodLabel.Size = new System.Drawing.Size(130, 22);
             this.PayoutMethodLabel.TabIndex = 25;
             this.PayoutMethodLabel.Text = "Payout Method";
             // 
@@ -304,16 +315,18 @@
             this.PayoutMethodComboBox.Items.AddRange(new object[] {
             "Bank Transfer",
             "Cheque"});
-            this.PayoutMethodComboBox.Location = new System.Drawing.Point(325, 781);
+            this.PayoutMethodComboBox.Location = new System.Drawing.Point(385, 870);
+            this.PayoutMethodComboBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.PayoutMethodComboBox.Name = "PayoutMethodComboBox";
-            this.PayoutMethodComboBox.Size = new System.Drawing.Size(277, 24);
+            this.PayoutMethodComboBox.Size = new System.Drawing.Size(311, 28);
             this.PayoutMethodComboBox.TabIndex = 26;
             // 
             // ClaimButton
             // 
-            this.ClaimButton.Location = new System.Drawing.Point(236, 871);
+            this.ClaimButton.Location = new System.Drawing.Point(284, 947);
+            this.ClaimButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ClaimButton.Name = "ClaimButton";
-            this.ClaimButton.Size = new System.Drawing.Size(182, 37);
+            this.ClaimButton.Size = new System.Drawing.Size(205, 46);
             this.ClaimButton.TabIndex = 27;
             this.ClaimButton.Text = "Claim";
             this.ClaimButton.UseVisualStyleBackColor = true;
@@ -322,39 +335,41 @@
             // 
             this.VINlabel.AutoSize = true;
             this.VINlabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.VINlabel.Location = new System.Drawing.Point(10, 246);
+            this.VINlabel.Location = new System.Drawing.Point(30, 202);
             this.VINlabel.Name = "VINlabel";
-            this.VINlabel.Size = new System.Drawing.Size(197, 18);
+            this.VINlabel.Size = new System.Drawing.Size(242, 22);
             this.VINlabel.TabIndex = 28;
             this.VINlabel.Text = "Vehicle Identification Number";
             // 
             // VINtextBox
             // 
-            this.VINtextBox.Location = new System.Drawing.Point(13, 265);
+            this.VINtextBox.Location = new System.Drawing.Point(34, 225);
+            this.VINtextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.VINtextBox.Name = "VINtextBox";
-            this.VINtextBox.Size = new System.Drawing.Size(291, 22);
+            this.VINtextBox.Size = new System.Drawing.Size(327, 26);
             this.VINtextBox.TabIndex = 29;
             // 
             // LicensePlateTextBox
             // 
-            this.LicensePlateTextBox.Location = new System.Drawing.Point(316, 265);
+            this.LicensePlateTextBox.Location = new System.Drawing.Point(375, 225);
+            this.LicensePlateTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.LicensePlateTextBox.Name = "LicensePlateTextBox";
-            this.LicensePlateTextBox.Size = new System.Drawing.Size(305, 22);
+            this.LicensePlateTextBox.Size = new System.Drawing.Size(343, 26);
             this.LicensePlateTextBox.TabIndex = 30;
             // 
             // LicensePlateLabel
             // 
             this.LicensePlateLabel.AutoSize = true;
             this.LicensePlateLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LicensePlateLabel.Location = new System.Drawing.Point(313, 246);
+            this.LicensePlateLabel.Location = new System.Drawing.Point(371, 202);
             this.LicensePlateLabel.Name = "LicensePlateLabel";
-            this.LicensePlateLabel.Size = new System.Drawing.Size(96, 18);
+            this.LicensePlateLabel.Size = new System.Drawing.Size(118, 22);
             this.LicensePlateLabel.TabIndex = 31;
             this.LicensePlateLabel.Text = "License Plate";
             // 
             // MakeClaim
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.LicensePlateLabel);
             this.Controls.Add(this.LicensePlateTextBox);
@@ -387,8 +402,9 @@
             this.Controls.Add(this.SurnameLabel);
             this.Controls.Add(this.NameTextBox);
             this.Controls.Add(this.NameLabel);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "MakeClaim";
-            this.Size = new System.Drawing.Size(680, 937);
+            this.Size = new System.Drawing.Size(765, 1171);
             this.Load += new System.EventHandler(this.UserControl4_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

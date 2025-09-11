@@ -66,8 +66,37 @@ namespace WindowsFormsApp1
 
         private void loginButton_Click(object sender, EventArgs e)
         {
-            HomeForm homeForm = new HomeForm();
-            homeForm.Show();
+            bool valid = true;
+
+            errorProvider1.Clear();
+            if (string.IsNullOrWhiteSpace(userName.Text))
+            {
+                errorProvider1.SetError(userName, "UserName is required");
+                valid = false;
+            }
+            else
+            {
+                errorProvider1.SetError(userName, "");
+            }
+            if (string.IsNullOrWhiteSpace(password.Text))
+            {
+                errorProvider1.SetError(password, "Password is required");
+                valid = false;
+            }
+            else
+            {
+                errorProvider1.SetError(password, "");
+            }
+
+            if (!valid)
+            {
+                return;
+            }
+            else
+            {
+                HomeForm form5 = new HomeForm();
+                form5.Show();
+            }
         }
     }
 }

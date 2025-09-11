@@ -22,5 +22,45 @@ namespace WindowsFormsApp1
         {
 
         }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FuelTypeComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FuelTypeLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void EngineSizeLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void EngineSizeTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void PrimaryUseLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void PrimUseComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ParkLocationLabel_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
