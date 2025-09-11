@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
-    public partial class HomePage : UserControl
+    public partial class CreateAccountFormFinal : UserControl
     {
-        public HomePage()
+        public CreateAccountFormFinal()
         {
             InitializeComponent();
-        }
-
-        private void HomePage_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

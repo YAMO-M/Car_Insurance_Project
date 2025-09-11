@@ -87,9 +87,9 @@ namespace WindowsFormsApp1
             this.userNameLabel.Location = new System.Drawing.Point(45, 232);
             this.userNameLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.userNameLabel.Name = "userNameLabel";
-            this.userNameLabel.Size = new System.Drawing.Size(55, 13);
+            this.userNameLabel.Size = new System.Drawing.Size(32, 13);
             this.userNameLabel.TabIndex = 6;
-            this.userNameLabel.Text = "Username";
+            this.userNameLabel.Text = "Email";
             // 
             // password
             // 

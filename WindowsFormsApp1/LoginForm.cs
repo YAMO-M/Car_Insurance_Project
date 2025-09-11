@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.VisualStyles;
 
 namespace WindowsFormsApp1
 {
@@ -96,6 +97,7 @@ namespace WindowsFormsApp1
             {
                 HomeForm form5 = new HomeForm();
                 form5.Show();
+                this.Close();
             }
         }
     }

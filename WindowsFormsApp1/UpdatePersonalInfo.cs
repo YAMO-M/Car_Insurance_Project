@@ -22,5 +22,10 @@ namespace WindowsFormsApp1
         {
 
         }
+
+        private void SubmitButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
