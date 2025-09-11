@@ -33,6 +33,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.createAccountFormFinal1 = new WindowsFormsApp1.CreateAccountFormFinal();
             this.signUpPersonalDetails1 = new WindowsFormsApp1.SignUpPersonalDetails();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // NextButton
@@ -81,12 +82,22 @@
             this.signUpPersonalDetails1.Size = new System.Drawing.Size(832, 696);
             this.signUpPersonalDetails1.TabIndex = 6;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(288, 414);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(55, 16);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "the goat";
+            // 
             // SignUpForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(859, 789);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.createAccountFormFinal1);
             this.Controls.Add(this.signUpPersonalDetails1);
             this.Controls.Add(this.button2);
@@ -98,6 +109,7 @@
             this.Text = "Form2";
             this.Load += new System.EventHandler(this.SignUpForm_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -109,5 +121,6 @@
         private System.Windows.Forms.Button button2;
         private SignUpPersonalDetails signUpPersonalDetails1;
         private CreateAccountFormFinal createAccountFormFinal1;
+        private System.Windows.Forms.Label label1;
     }
 }
