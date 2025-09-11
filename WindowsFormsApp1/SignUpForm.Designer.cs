@@ -69,7 +69,7 @@
             // createAccountFormFinal1
             // 
             this.createAccountFormFinal1.Location = new System.Drawing.Point(-2, -1);
-            this.createAccountFormFinal1.Margin = new System.Windows.Forms.Padding(4);
+            this.createAccountFormFinal1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.createAccountFormFinal1.Name = "createAccountFormFinal1";
             this.createAccountFormFinal1.Size = new System.Drawing.Size(848, 696);
             this.createAccountFormFinal1.TabIndex = 7;
@@ -77,7 +77,7 @@
             // signUpPersonalDetails1
             // 
             this.signUpPersonalDetails1.Location = new System.Drawing.Point(-2, -1);
-            this.signUpPersonalDetails1.Margin = new System.Windows.Forms.Padding(4);
+            this.signUpPersonalDetails1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.signUpPersonalDetails1.Name = "signUpPersonalDetails1";
             this.signUpPersonalDetails1.Size = new System.Drawing.Size(832, 696);
             this.signUpPersonalDetails1.TabIndex = 6;
@@ -85,15 +85,15 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(288, 414);
+            this.label1.Location = new System.Drawing.Point(637, 398);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(55, 16);
+            this.label1.Size = new System.Drawing.Size(69, 20);
             this.label1.TabIndex = 8;
             this.label1.Text = "the goat";
             // 
             // SignUpForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(859, 789);
