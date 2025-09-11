@@ -66,7 +66,8 @@ namespace WindowsFormsApp1
 
         private void loginButton_Click(object sender, EventArgs e)
         {
-
+            HomeForm homeForm = new HomeForm();
+            homeForm.Show();
         }
     }
 }
