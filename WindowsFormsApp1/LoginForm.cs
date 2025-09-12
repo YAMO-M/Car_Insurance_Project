@@ -15,7 +15,9 @@ namespace WindowsFormsApp1
     {
         public LoginForm()
         {
+
             InitializeComponent();
+            this.AutoScroll = true;
         }
         private void button1_Click(object sender, EventArgs e)
         {
