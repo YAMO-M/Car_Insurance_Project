@@ -16,6 +16,7 @@ namespace WindowsFormsApp1
         public LoginForm()
         {
             InitializeComponent();
+            this.AutoScroll = true;
         }
         private void button1_Click(object sender, EventArgs e)
         {
@@ -97,7 +98,7 @@ namespace WindowsFormsApp1
             {
                 HomeForm form5 = new HomeForm();
                 form5.Show();
-                this.Close();
+                
             }
         }
     }
