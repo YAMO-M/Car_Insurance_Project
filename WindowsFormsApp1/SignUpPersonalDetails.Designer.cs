@@ -35,7 +35,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.IDNumbermaskedTextBox = new System.Windows.Forms.MaskedTextBox();
             this.IDNumberTextBox = new System.Windows.Forms.Label();
-            this.dataSet11 = new WindowsFormsApp1.DataSet1();
             this.label = new System.Windows.Forms.Label();
             this.PhoneNumberLabel = new System.Windows.Forms.Label();
             this.PhoneNumberTextBox = new System.Windows.Forms.MaskedTextBox();
@@ -50,7 +49,6 @@
             this.ProvinceComboBox = new System.Windows.Forms.ComboBox();
             this.PostalCodemaskedTextBox = new System.Windows.Forms.MaskedTextBox();
             this.label9 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet11)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -110,11 +108,6 @@
             this.IDNumberTextBox.TabIndex = 41;
             this.IDNumberTextBox.Text = "lD Number";
             // 
-            // dataSet11
-            // 
-            this.dataSet11.DataSetName = "DataSet1";
-            this.dataSet11.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // label
             // 
             this.label.AutoSize = true;
@@ -141,13 +134,10 @@
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(3, 185);
+            this.label4.Location = new System.Drawing.Point(0, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(82, 13);
-            this.label4.TabIndex = 45;
-            this.label4.Text = "Current Address";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
+            this.label4.Size = new System.Drawing.Size(100, 23);
+            this.label4.TabIndex = 56;
             // 
             // label5
             // 
@@ -257,7 +247,7 @@
             this.Controls.Add(this.label1);
             this.Name = "SignUpPersonalDetails";
             this.Size = new System.Drawing.Size(672, 696);
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet11)).EndInit();
+            this.Load += new System.EventHandler(this.SignUpPersonalDetails_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -265,26 +255,26 @@
 
         #endregion
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox NameTextBox;
-        private System.Windows.Forms.TextBox SurnameTextBox2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.MaskedTextBox IDNumbermaskedTextBox;
         private System.Windows.Forms.Label IDNumberTextBox;
-        private DataSet1 dataSet11;
+    
         private System.Windows.Forms.Label label;
         private System.Windows.Forms.Label PhoneNumberLabel;
-        private System.Windows.Forms.MaskedTextBox PhoneNumberTextBox;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox StreetAddress2TextBox;
-        private System.Windows.Forms.TextBox StreetAddressTextBox;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox CityTextBox;
-        private System.Windows.Forms.ComboBox ProvinceComboBox;
-        private System.Windows.Forms.MaskedTextBox PostalCodemaskedTextBox;
         private System.Windows.Forms.Label label9;
+        public System.Windows.Forms.TextBox NameTextBox;
+        public System.Windows.Forms.TextBox SurnameTextBox2;
+        public System.Windows.Forms.MaskedTextBox IDNumbermaskedTextBox;
+        public System.Windows.Forms.MaskedTextBox PhoneNumberTextBox;
+        public System.Windows.Forms.TextBox StreetAddress2TextBox;
+        public System.Windows.Forms.TextBox StreetAddressTextBox;
+        public System.Windows.Forms.TextBox CityTextBox;
+        public System.Windows.Forms.ComboBox ProvinceComboBox;
+        public System.Windows.Forms.MaskedTextBox PostalCodemaskedTextBox;
     }
 }

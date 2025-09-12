@@ -12,30 +12,15 @@ namespace WindowsFormsApp1
 {
     public partial class SignUpPersonalDetails : UserControl
     {
+        
         public SignUpPersonalDetails()
         {
-            InitializeComponent();
-          //  signUpCarDetails1.BringToFront();
-            
+            InitializeComponent();         
         }
 
-        private void NextButton_Click(object sender, EventArgs e)
-        {
-            
-           
-        }
+       
 
-        private void PhoneNumbermaskedTextBox2_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox4_TextChanged(object sender, EventArgs e)
+        private void SignUpPersonalDetails_Load(object sender, EventArgs e)
         {
 
         }

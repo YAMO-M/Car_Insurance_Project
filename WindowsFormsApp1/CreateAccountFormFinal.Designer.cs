@@ -32,10 +32,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.passwordTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.cornfirmnmaskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
+            this.emailTextbox = new System.Windows.Forms.TextBox();
+            this.Submit = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -74,44 +74,45 @@
             this.label4.TabIndex = 3;
             this.label4.Text = "Confirm Password :";
             // 
-            // maskedTextBox1
+            // passwordTextBox1
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(289, 141);
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(245, 20);
-            this.maskedTextBox1.TabIndex = 4;
+            this.passwordTextBox1.Location = new System.Drawing.Point(289, 141);
+            this.passwordTextBox1.Name = "passwordTextBox1";
+            this.passwordTextBox1.Size = new System.Drawing.Size(245, 20);
+            this.passwordTextBox1.TabIndex = 4;
             // 
-            // maskedTextBox2
+            // cornfirmnmaskedTextBox2
             // 
-            this.maskedTextBox2.Location = new System.Drawing.Point(289, 197);
-            this.maskedTextBox2.Name = "maskedTextBox2";
-            this.maskedTextBox2.Size = new System.Drawing.Size(245, 20);
-            this.maskedTextBox2.TabIndex = 5;
+            this.cornfirmnmaskedTextBox2.Location = new System.Drawing.Point(289, 197);
+            this.cornfirmnmaskedTextBox2.Name = "cornfirmnmaskedTextBox2";
+            this.cornfirmnmaskedTextBox2.Size = new System.Drawing.Size(245, 20);
+            this.cornfirmnmaskedTextBox2.TabIndex = 5;
             // 
-            // textBox1
+            // emailTextbox
             // 
-            this.textBox1.Location = new System.Drawing.Point(289, 88);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(245, 20);
-            this.textBox1.TabIndex = 6;
+            this.emailTextbox.Location = new System.Drawing.Point(289, 88);
+            this.emailTextbox.Name = "emailTextbox";
+            this.emailTextbox.Size = new System.Drawing.Size(245, 20);
+            this.emailTextbox.TabIndex = 6;
             // 
-            // label5
+            // Submit
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(364, 373);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(28, 13);
-            this.label5.TabIndex = 7;
-            this.label5.Text = "goat";
+            this.Submit.Location = new System.Drawing.Point(317, 427);
+            this.Submit.Name = "Submit";
+            this.Submit.Size = new System.Drawing.Size(75, 23);
+            this.Submit.TabIndex = 7;
+            this.Submit.Text = "Submit";
+            this.Submit.UseVisualStyleBackColor = true;
+            this.Submit.Click += new System.EventHandler(this.Submit_Click);
             // 
             // CreateAccountFormFinal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.maskedTextBox2);
-            this.Controls.Add(this.maskedTextBox1);
+            this.Controls.Add(this.Submit);
+            this.Controls.Add(this.emailTextbox);
+            this.Controls.Add(this.cornfirmnmaskedTextBox2);
+            this.Controls.Add(this.passwordTextBox1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -129,9 +130,9 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.MaskedTextBox passwordTextBox1;
+        private System.Windows.Forms.MaskedTextBox cornfirmnmaskedTextBox2;
+        private System.Windows.Forms.TextBox emailTextbox;
+        private System.Windows.Forms.Button Submit;
     }
 }
