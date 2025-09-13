@@ -13,9 +13,14 @@ namespace WindowsFormsApp1
 {
     public partial class CreateAccountFormFinal : UserControl
     {
+        private ErrorProvider errorProvider = new ErrorProvider();
         public CreateAccountFormFinal()
         {
             InitializeComponent();
+            
+            
+            
+            
         }
 
         private void Submit_Click(object sender, EventArgs e)
@@ -29,11 +34,13 @@ namespace WindowsFormsApp1
             string clientEmail = emailTextbox.Text;
             string clientPassword = passwordTextBox1.Text;
             string clientPhoneNo = signUpPersonalDetails.PhoneNumberTextBox.Text;
+            this.ParentForm?.Close();
             
 
             ClientTableAdapter adapter = new ClientTableAdapter();
             adapter.InsertClient(clientName,clientSurname,clientAddress,clientEmail,clientIdentityNo,clientPhoneNo,clientPassword);
 
         }
+        
     }
 }

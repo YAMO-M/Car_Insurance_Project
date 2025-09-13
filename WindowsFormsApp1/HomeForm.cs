@@ -22,6 +22,7 @@ namespace WindowsFormsApp1
             updateCarDetails1.BringToFront();
             policyPage1.BringToFront();
             homePage1.BringToFront();
+            this.AutoScroll = true;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -41,7 +42,7 @@ namespace WindowsFormsApp1
 
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
-            this.AutoScroll = true;
+            
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -77,6 +78,21 @@ namespace WindowsFormsApp1
         private void button1_Click_1(object sender, EventArgs e)
         {
            policyPage1.BringToFront();
+        }
+
+        private void LogoutButton_Click(object sender, EventArgs e)
+        {
+            string title = "Warning";
+            MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+            string message = "Are you sure you want to Logout?";
+            MessageBoxIcon icon = MessageBoxIcon.Question;
+
+            DialogResult result = MessageBox.Show(message, title, buttons, icon);
+
+            if (result == DialogResult.Yes)
+            {
+                this.Close();
+            }
         }
     }
 }

@@ -60,10 +60,10 @@ namespace WindowsFormsApp1
             // 
             // loginButton
             // 
-            this.loginButton.Location = new System.Drawing.Point(63, 510);
+            this.loginButton.Location = new System.Drawing.Point(84, 479);
             this.loginButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.loginButton.Name = "loginButton";
-            this.loginButton.Size = new System.Drawing.Size(419, 62);
+            this.loginButton.Size = new System.Drawing.Size(388, 86);
             this.loginButton.TabIndex = 3;
             this.loginButton.Text = "Login";
             this.loginButton.UseVisualStyleBackColor = true;
@@ -71,6 +71,9 @@ namespace WindowsFormsApp1
             // 
             // forgotPassword
             // 
+            this.forgotPassword.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.forgotPassword.AutoSize = true;
             this.forgotPassword.Location = new System.Drawing.Point(285, 450);
             this.forgotPassword.Name = "forgotPassword";
@@ -82,6 +85,9 @@ namespace WindowsFormsApp1
             // 
             // userNameLabel
             // 
+            this.userNameLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.userNameLabel.AutoSize = true;
             this.userNameLabel.Location = new System.Drawing.Point(60, 286);
             this.userNameLabel.Name = "userNameLabel";
@@ -91,18 +97,18 @@ namespace WindowsFormsApp1
             // 
             // password
             // 
-            this.password.Location = new System.Drawing.Point(63, 378);
+            this.password.Location = new System.Drawing.Point(62, 304);
             this.password.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.password.Name = "password";
-            this.password.Size = new System.Drawing.Size(355, 22);
+            this.password.Size = new System.Drawing.Size(421, 22);
             this.password.TabIndex = 7;
             // 
             // userName
             // 
-            this.userName.Location = new System.Drawing.Point(63, 305);
+            this.userName.Location = new System.Drawing.Point(62, 377);
             this.userName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.userName.Name = "userName";
-            this.userName.Size = new System.Drawing.Size(355, 22);
+            this.userName.Size = new System.Drawing.Size(421, 22);
             this.userName.TabIndex = 8;
             // 
             // label2
@@ -115,6 +121,9 @@ namespace WindowsFormsApp1
             // 
             // passwordLabel
             // 
+            this.passwordLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.passwordLabel.AutoSize = true;
             this.passwordLabel.Location = new System.Drawing.Point(60, 359);
             this.passwordLabel.Name = "passwordLabel";
@@ -124,6 +133,9 @@ namespace WindowsFormsApp1
             // 
             // dontHaveAccountLabel
             // 
+            this.dontHaveAccountLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dontHaveAccountLabel.AutoSize = true;
             this.dontHaveAccountLabel.Location = new System.Drawing.Point(60, 615);
             this.dontHaveAccountLabel.Name = "dontHaveAccountLabel";
@@ -133,6 +145,9 @@ namespace WindowsFormsApp1
             // 
             // signUpLink
             // 
+            this.signUpLink.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.signUpLink.AutoSize = true;
             this.signUpLink.Location = new System.Drawing.Point(365, 615);
             this.signUpLink.Name = "signUpLink";
@@ -144,6 +159,9 @@ namespace WindowsFormsApp1
             // 
             // welcomeBackLabel
             // 
+            this.welcomeBackLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.welcomeBackLabel.AutoSize = true;
             this.welcomeBackLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.welcomeBackLabel.Location = new System.Drawing.Point(125, 126);
@@ -151,9 +169,13 @@ namespace WindowsFormsApp1
             this.welcomeBackLabel.Size = new System.Drawing.Size(275, 42);
             this.welcomeBackLabel.TabIndex = 13;
             this.welcomeBackLabel.Text = "Welcome back";
+            this.welcomeBackLabel.Click += new System.EventHandler(this.welcomeBackLabel_Click);
             // 
             // enterDetailsLabel
             // 
+            this.enterDetailsLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.enterDetailsLabel.AutoSize = true;
             this.enterDetailsLabel.Location = new System.Drawing.Point(60, 214);
             this.enterDetailsLabel.Name = "enterDetailsLabel";
@@ -176,7 +198,7 @@ namespace WindowsFormsApp1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(600, 766);
+            this.ClientSize = new System.Drawing.Size(575, 747);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.enterDetailsLabel);
             this.Controls.Add(this.welcomeBackLabel);
@@ -193,6 +215,7 @@ namespace WindowsFormsApp1
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "LoginForm";
             this.Text = "Car Insurance";
+            this.Load += new System.EventHandler(this.LoginForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -41,17 +41,18 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(297, 21);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(328, 57);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(72, 16);
+            this.label1.Size = new System.Drawing.Size(203, 31);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Final Page";
+            this.label1.Text = "Create Password";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(188, 108);
+            this.label2.Location = new System.Drawing.Point(188, 151);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(57, 16);
@@ -61,7 +62,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(188, 177);
+            this.label3.Location = new System.Drawing.Point(188, 219);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(73, 16);
@@ -71,7 +72,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(188, 246);
+            this.label4.Location = new System.Drawing.Point(188, 286);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(121, 16);
@@ -80,35 +81,34 @@
             // 
             // passwordTextBox1
             // 
-            this.passwordTextBox1.Location = new System.Drawing.Point(289, 141);
+            this.passwordTextBox1.Location = new System.Drawing.Point(331, 213);
             this.passwordTextBox1.Name = "passwordTextBox1";
-            this.passwordTextBox1.Size = new System.Drawing.Size(245, 20);
+            this.passwordTextBox1.Size = new System.Drawing.Size(245, 22);
             this.passwordTextBox1.TabIndex = 4;
             // 
             // cornfirmnmaskedTextBox2
             // 
-            this.cornfirmnmaskedTextBox2.Location = new System.Drawing.Point(289, 197);
+            this.cornfirmnmaskedTextBox2.Location = new System.Drawing.Point(331, 286);
             this.cornfirmnmaskedTextBox2.Name = "cornfirmnmaskedTextBox2";
-            this.cornfirmnmaskedTextBox2.Size = new System.Drawing.Size(245, 20);
+            this.cornfirmnmaskedTextBox2.Size = new System.Drawing.Size(245, 22);
             this.cornfirmnmaskedTextBox2.TabIndex = 5;
             // 
             // emailTextbox
             // 
-            this.emailTextbox.Location = new System.Drawing.Point(289, 88);
+            this.emailTextbox.Location = new System.Drawing.Point(331, 145);
             this.emailTextbox.Name = "emailTextbox";
-            this.emailTextbox.Size = new System.Drawing.Size(245, 20);
+            this.emailTextbox.Size = new System.Drawing.Size(245, 22);
             this.emailTextbox.TabIndex = 6;
             // 
             // Submit
             // 
             this.Submit.Location = new System.Drawing.Point(317, 427);
             this.Submit.Name = "Submit";
-            this.Submit.Size = new System.Drawing.Size(75, 23);
+            this.Submit.Size = new System.Drawing.Size(139, 23);
             this.Submit.TabIndex = 7;
             this.Submit.Text = "Submit";
             this.Submit.UseVisualStyleBackColor = true;
             this.Submit.Click += new System.EventHandler(this.Submit_Click);
-          
             // 
             // CreateAccountFormFinal
             // 
@@ -122,7 +122,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "CreateAccountFormFinal";
             this.Size = new System.Drawing.Size(896, 857);
             this.ResumeLayout(false);

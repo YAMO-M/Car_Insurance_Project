@@ -17,6 +17,7 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
             this.AutoScroll = true;
+            
         }
         private void button1_Click(object sender, EventArgs e)
         {
@@ -100,6 +101,16 @@ namespace WindowsFormsApp1
                 form5.Show();
                 
             }
+        }
+
+        private void welcomeBackLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LoginForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
