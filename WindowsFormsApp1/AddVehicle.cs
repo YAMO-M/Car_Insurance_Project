@@ -87,13 +87,5 @@ namespace WindowsFormsApp1
         {
 
         }
-        private void radioButton_CheckedChanged(object sender, EventArgs e)
-        {
-            RadioButton rb = sender as RadioButton;
-            if (rb.Checked)
-            {
-                MessageBox.Show($"You selected: {rb.Text}");
-            }
-        }
     }
 }

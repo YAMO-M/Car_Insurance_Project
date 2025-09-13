@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -21,7 +22,8 @@ namespace WindowsFormsApp1
             InitializeComponent();
             this.AutoScroll = true;
             userName.Validating += userName_Validating;
-            password.Validating += password_Validating; 
+            password.Validating += password_Validating;
+            loginButton.Enabled = false;
         }
     
         private void button1_Click(object sender, EventArgs e)
@@ -75,8 +77,15 @@ namespace WindowsFormsApp1
         private void loginButton_Click(object sender, EventArgs e)
         {
 
-            HomeForm form5 = new HomeForm();
-            form5.Show();
+            try {
+                HomeForm form5 = new HomeForm();
+                form5.Show();
+            }
+            catch(SqlException ex)
+            {
+                MessageBox.Show("Hell nah, you don't exist!!");
+            }
+          
         }
 
         private void userName_TextChanged(object sender, EventArgs e)
@@ -118,12 +127,12 @@ namespace WindowsFormsApp1
         {
             
             string pass = password.Text;
-            
-            bool isValid = !string.IsNullOrWhiteSpace(pass) &&
-                           pass.Length >= 8 &&
-                           pass.Any(char.IsUpper) &&
-                           pass.Any(char.IsLower) &&
-                           pass.Any(char.IsDigit);
+
+            bool isValid = (!string.IsNullOrEmpty(pass))&
+            pass.Length >= 8 &
+            pass.Any(char.IsUpper) &
+            pass.Any(char.IsLower) &
+            pass.Any(char.IsDigit);
 
             if (!isValid)
             {
@@ -140,7 +149,7 @@ namespace WindowsFormsApp1
             else
             {
                 password.BackColor = System.Drawing.Color.LightGreen; // valid input
-               
+
             }
         }
     }
