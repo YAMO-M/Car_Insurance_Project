@@ -32,10 +32,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.passwordTextBox1 = new System.Windows.Forms.MaskedTextBox();
-            this.cornfirmnmaskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
+            this.passwordTextBox = new System.Windows.Forms.MaskedTextBox();
             this.emailTextbox = new System.Windows.Forms.TextBox();
             this.Submit = new System.Windows.Forms.Button();
+            this.confirmPaswordTextBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -45,7 +45,7 @@
             this.label1.Location = new System.Drawing.Point(328, 57);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(203, 31);
+            this.label1.Size = new System.Drawing.Size(162, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "Create Password";
             // 
@@ -79,19 +79,12 @@
             this.label4.TabIndex = 3;
             this.label4.Text = "Confirm Password :";
             // 
-            // passwordTextBox1
+            // passwordTextBox
             // 
-            this.passwordTextBox1.Location = new System.Drawing.Point(331, 213);
-            this.passwordTextBox1.Name = "passwordTextBox1";
-            this.passwordTextBox1.Size = new System.Drawing.Size(245, 22);
-            this.passwordTextBox1.TabIndex = 4;
-            // 
-            // cornfirmnmaskedTextBox2
-            // 
-            this.cornfirmnmaskedTextBox2.Location = new System.Drawing.Point(331, 286);
-            this.cornfirmnmaskedTextBox2.Name = "cornfirmnmaskedTextBox2";
-            this.cornfirmnmaskedTextBox2.Size = new System.Drawing.Size(245, 22);
-            this.cornfirmnmaskedTextBox2.TabIndex = 5;
+            this.passwordTextBox.Location = new System.Drawing.Point(331, 213);
+            this.passwordTextBox.Name = "passwordTextBox";
+            this.passwordTextBox.Size = new System.Drawing.Size(245, 22);
+            this.passwordTextBox.TabIndex = 4;
             // 
             // emailTextbox
             // 
@@ -110,14 +103,22 @@
             this.Submit.UseVisualStyleBackColor = true;
             this.Submit.Click += new System.EventHandler(this.Submit_Click);
             // 
+            // confirmPaswordTextBox
+            // 
+            this.confirmPaswordTextBox.Location = new System.Drawing.Point(333, 280);
+            this.confirmPaswordTextBox.Name = "confirmPaswordTextBox";
+            this.confirmPaswordTextBox.Size = new System.Drawing.Size(243, 22);
+            this.confirmPaswordTextBox.TabIndex = 8;
+            this.confirmPaswordTextBox.TextChanged += new System.EventHandler(this.confirmPaswordTextBox_TextChanged);
+            // 
             // CreateAccountFormFinal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.confirmPaswordTextBox);
             this.Controls.Add(this.Submit);
             this.Controls.Add(this.emailTextbox);
-            this.Controls.Add(this.cornfirmnmaskedTextBox2);
-            this.Controls.Add(this.passwordTextBox1);
+            this.Controls.Add(this.passwordTextBox);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -136,9 +137,9 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.MaskedTextBox passwordTextBox1;
-        private System.Windows.Forms.MaskedTextBox cornfirmnmaskedTextBox2;
+        private System.Windows.Forms.MaskedTextBox passwordTextBox;
         private System.Windows.Forms.TextBox emailTextbox;
         private System.Windows.Forms.Button Submit;
+        private System.Windows.Forms.TextBox confirmPaswordTextBox;
     }
 }
