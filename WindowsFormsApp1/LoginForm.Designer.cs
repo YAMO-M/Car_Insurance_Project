@@ -83,7 +83,7 @@ namespace WindowsFormsApp1
             this.userNameLabel.AutoSize = true;
             this.userNameLabel.Location = new System.Drawing.Point(68, 357);
             this.userNameLabel.Name = "userNameLabel";
-            this.userNameLabel.Size = new System.Drawing.Size(48, 20);
+            this.userNameLabel.Size = new System.Drawing.Size(32, 13);
             this.userNameLabel.TabIndex = 6;
             this.userNameLabel.Text = "Email";
             // 

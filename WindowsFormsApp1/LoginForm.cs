@@ -21,6 +21,7 @@ namespace WindowsFormsApp1
 
             InitializeComponent();
             this.AutoScroll = true;
+            this.AutoScroll = true;
             userName.Validating += userName_Validating;
             password.Validating += password_Validating;
             loginButton.Enabled = false;
