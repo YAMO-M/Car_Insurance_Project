@@ -38,15 +38,22 @@ namespace WindowsFormsApp1
             string clientEmail = emailTextbox.Text;
             string clientPassword = passwordTextBox.Text;
             string clientPhoneNo = signUpPersonalDetails.PhoneNumberTextBox.Text;
-            this.ParentForm?.Close();
+           
             
 
             ClientTableAdapter adapter = new ClientTableAdapter();
             adapter.InsertClient(clientName,clientSurname,clientAddress,clientEmail,clientIdentityNo,clientPhoneNo,clientPassword);
-            if (string.IsNullOrWhiteSpace(confirmPaswordTextBox.Text) && string.IsNullOrWhiteSpace(passwordTextBox.Text) && string.IsNullOrWhiteSpace(emailTextbox.Text))
+
+            if (IsValid2() && passwordTextBox.Text == confirmPaswordTextBox.Text)
             {
-                return;
+                this.ParentForm?.Close();
             }
+            else
+            {
+                MessageBox.Show("Complete SignUp");
+            }
+            
+
         }
         private void userName_TextChanged(object sender, EventArgs e)
         {
@@ -64,19 +71,22 @@ namespace WindowsFormsApp1
 
             if (isValid)
             {
+                e.Cancel = false;
+                errorProvider.SetError(emailTextbox, "");
                 emailTextbox.BackColor = System.Drawing.Color.LightGreen; // valid input
             }
             else
             {
-                MessageBox.Show(
-                       "Please enter a valid Gmail address (e.g., example@gmail.com).",
-                       "Invalid Email",
-                       MessageBoxButtons.OK,
-                       MessageBoxIcon.Warning
-                   );
+                // MessageBox.Show(
+                //  "Please enter a valid Gmail address (e.g., example@gmail.com).",
+                //  "Invalid Email",
+                //  MessageBoxButtons.OK,
+                //  MessageBoxIcon.Warning
+                // );
 
                 // Prevent leaving the textbox
-               // e.Cancel = true;
+                errorProvider.SetError(emailTextbox, "Please enter a valid Gmail address (e.g., example@gmail.com).");
+                e.Cancel = true;
             }
         }
         private void password_TextChanged(object sender, EventArgs e)
@@ -96,18 +106,25 @@ namespace WindowsFormsApp1
 
             if (!isValid)
             {
-                MessageBox.Show(
-                    "Password must be at least 8 characters long and include:\n" +
-                    "- At least one uppercase letter\n" +
-                    "- At least one lowercase letter\n" +
-                    "- At least one number",
-                    "Invalid Password",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Warning
-                );
+                errorProvider.SetError(passwordTextBox, "Password must be at least 8 characters long and include:\n" +
+                   "- At least one uppercase letter\n" +
+                  "- At least one lowercase letter\n" +
+                   "- At least one number");
+                e.Cancel = true;
+                // MessageBox.Show(
+                //    "Password must be at least 8 characters long and include:\n" +
+                //    "- At least one uppercase letter\n" +
+                //   "- At least one lowercase letter\n" +
+                //   "- At least one number",
+                //   "Invalid Password",
+                //   MessageBoxButtons.OK,
+                //    MessageBoxIcon.Warning
+                //);
             }
             else
             {
+                e.Cancel = false;
+                errorProvider.SetError(passwordTextBox, "");
                 passwordTextBox.BackColor = System.Drawing.Color.LightGreen; // valid input
 
             }
@@ -116,18 +133,31 @@ namespace WindowsFormsApp1
         {
             if (passwordTextBox.Text == confirmPaswordTextBox.Text &&  !string.IsNullOrWhiteSpace(confirmPaswordTextBox.Text))
             {
+                e.Cancel = false;
+                errorProvider.SetError(confirmPaswordTextBox, "");
                 confirmPaswordTextBox.BackColor = System.Drawing.Color.LightGreen;
                 
             }
             else
             {
-                MessageBox.Show("Password does not match", "Invalid Password", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                //MessageBox.Show("Password does not match", "Invalid Password", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                errorProvider.SetError(confirmPaswordTextBox, "Password does not match");
+                e.Cancel = true;
             }
         }
 
         private void confirmPaswordTextBox_TextChanged(object sender, EventArgs e)
         {
+            Submit.Enabled = true;
             
+        }
+
+        
+
+        public bool IsValid2()
+        {
+            return !string.IsNullOrWhiteSpace(emailTextbox.Text) && !string.IsNullOrWhiteSpace(passwordTextBox.Text) && 
+                !string.IsNullOrWhiteSpace(confirmPaswordTextBox.Text);
         }
     }
 }

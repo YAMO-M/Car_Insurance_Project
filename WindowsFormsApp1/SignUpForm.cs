@@ -32,17 +32,31 @@ namespace WindowsFormsApp1
 
         private void button2_Click(object sender, EventArgs e)
         {
-            signUpPersonalDetails1.BringToFront();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
+            if (createAccountFormFinal1.IsValid2())
+            {
+                signUpPersonalDetails1.BringToFront();
+            }
+            else
+            {
+                MessageBox.Show("Finalize Password");
+                return;
+            }
             
         }
 
+       
+
         private void NextButton_Click_1(object sender, EventArgs e)
         {
-            createAccountFormFinal1.BringToFront();
+            if (signUpPersonalDetails1.IsValid())
+            {
+                createAccountFormFinal1.BringToFront();
+            }
+            else
+            {
+                MessageBox.Show("Personal details are Incomplete");
+                return;
+            }
         }
 
         private void createAccountFormFinal1_Load(object sender, EventArgs e)

@@ -42,7 +42,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(328, 57);
+            this.label1.Location = new System.Drawing.Point(328, 59);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(162, 25);
@@ -95,7 +95,7 @@
             // 
             // Submit
             // 
-            this.Submit.Location = new System.Drawing.Point(317, 427);
+            this.Submit.Location = new System.Drawing.Point(333, 382);
             this.Submit.Name = "Submit";
             this.Submit.Size = new System.Drawing.Size(139, 23);
             this.Submit.TabIndex = 7;
@@ -125,7 +125,7 @@
             this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "CreateAccountFormFinal";
-            this.Size = new System.Drawing.Size(896, 857);
+            this.Size = new System.Drawing.Size(716, 685);
             this.ResumeLayout(false);
             this.PerformLayout();
 

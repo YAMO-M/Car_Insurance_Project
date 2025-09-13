@@ -36,21 +36,21 @@
             // 
             // NextButton
             // 
-            this.NextButton.Location = new System.Drawing.Point(550, 736);
+            this.NextButton.Location = new System.Drawing.Point(546, 602);
             this.NextButton.Name = "NextButton";
             this.NextButton.Size = new System.Drawing.Size(124, 34);
             this.NextButton.TabIndex = 2;
-            this.NextButton.Text = "Next";
+            this.NextButton.Text = "Step 2";
             this.NextButton.UseVisualStyleBackColor = true;
             this.NextButton.Click += new System.EventHandler(this.NextButton_Click_1);
             // 
             // Previous
             // 
-            this.Previous.Location = new System.Drawing.Point(85, 736);
+            this.Previous.Location = new System.Drawing.Point(82, 602);
             this.Previous.Name = "Previous";
             this.Previous.Size = new System.Drawing.Size(102, 34);
             this.Previous.TabIndex = 4;
-            this.Previous.Text = "Previous";
+            this.Previous.Text = "Step 1";
             this.Previous.UseVisualStyleBackColor = true;
             this.Previous.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -59,24 +59,25 @@
             this.createAccountFormFinal1.Location = new System.Drawing.Point(-2, -1);
             this.createAccountFormFinal1.Margin = new System.Windows.Forms.Padding(4);
             this.createAccountFormFinal1.Name = "createAccountFormFinal1";
-            this.createAccountFormFinal1.Size = new System.Drawing.Size(862, 730);
+            this.createAccountFormFinal1.Size = new System.Drawing.Size(862, 596);
             this.createAccountFormFinal1.TabIndex = 7;
             this.createAccountFormFinal1.Load += new System.EventHandler(this.createAccountFormFinal1_Load);
             // 
             // signUpPersonalDetails1
             // 
             this.signUpPersonalDetails1.Location = new System.Drawing.Point(-2, -1);
-            this.signUpPersonalDetails1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.signUpPersonalDetails1.Margin = new System.Windows.Forms.Padding(4);
             this.signUpPersonalDetails1.Name = "signUpPersonalDetails1";
-            this.signUpPersonalDetails1.Size = new System.Drawing.Size(832, 730);
+            this.signUpPersonalDetails1.Size = new System.Drawing.Size(832, 596);
             this.signUpPersonalDetails1.TabIndex = 6;
             // 
             // SignUpForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(859, 805);
+            this.ClientSize = new System.Drawing.Size(859, 657);
             this.Controls.Add(this.createAccountFormFinal1);
             this.Controls.Add(this.signUpPersonalDetails1);
             this.Controls.Add(this.Previous);
