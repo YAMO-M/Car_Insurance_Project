@@ -22,5 +22,70 @@ namespace WindowsFormsApp1
         {
 
         }
+
+        private void AddButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CVVtextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CVVlabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MonthLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void YearComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MonthComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ExpirationDateLable_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void PaymentDetailsLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AmountTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Policy3_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Policy2_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Policy1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

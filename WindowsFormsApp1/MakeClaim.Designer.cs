@@ -59,6 +59,8 @@
             this.VINtextBox = new System.Windows.Forms.TextBox();
             this.LicensePlateTextBox = new System.Windows.Forms.TextBox();
             this.LicensePlateLabel = new System.Windows.Forms.Label();
+            this.ClaimAmountLabel = new System.Windows.Forms.Label();
+            this.AmountTextBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // NameLabel
@@ -184,9 +186,9 @@
             this.DateAndTimeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DateAndTimeLabel.Location = new System.Drawing.Point(381, 364);
             this.DateAndTimeLabel.Name = "DateAndTimeLabel";
-            this.DateAndTimeLabel.Size = new System.Drawing.Size(215, 22);
+            this.DateAndTimeLabel.Size = new System.Drawing.Size(135, 22);
             this.DateAndTimeLabel.TabIndex = 12;
-            this.DateAndTimeLabel.Text = "Date and Time of Incident";
+            this.DateAndTimeLabel.Text = "Date of Incident";
             // 
             // LocationOfTheIncidentLabel
             // 
@@ -323,7 +325,7 @@
             // 
             // ClaimButton
             // 
-            this.ClaimButton.Location = new System.Drawing.Point(284, 947);
+            this.ClaimButton.Location = new System.Drawing.Point(245, 1032);
             this.ClaimButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ClaimButton.Name = "ClaimButton";
             this.ClaimButton.Size = new System.Drawing.Size(205, 46);
@@ -367,10 +369,30 @@
             this.LicensePlateLabel.TabIndex = 31;
             this.LicensePlateLabel.Text = "License Plate";
             // 
+            // ClaimAmountLabel
+            // 
+            this.ClaimAmountLabel.AutoSize = true;
+            this.ClaimAmountLabel.Location = new System.Drawing.Point(241, 947);
+            this.ClaimAmountLabel.Name = "ClaimAmountLabel";
+            this.ClaimAmountLabel.Size = new System.Drawing.Size(108, 20);
+            this.ClaimAmountLabel.TabIndex = 43;
+            this.ClaimAmountLabel.Text = "Claim Amount";
+            // 
+            // AmountTextBox
+            // 
+            this.AmountTextBox.Location = new System.Drawing.Point(233, 971);
+            this.AmountTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.AmountTextBox.Name = "AmountTextBox";
+            this.AmountTextBox.ReadOnly = true;
+            this.AmountTextBox.Size = new System.Drawing.Size(256, 26);
+            this.AmountTextBox.TabIndex = 42;
+            // 
             // MakeClaim
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.ClaimAmountLabel);
+            this.Controls.Add(this.AmountTextBox);
             this.Controls.Add(this.LicensePlateLabel);
             this.Controls.Add(this.LicensePlateTextBox);
             this.Controls.Add(this.VINtextBox);
@@ -444,5 +466,7 @@
         private System.Windows.Forms.TextBox VINtextBox;
         private System.Windows.Forms.TextBox LicensePlateTextBox;
         private System.Windows.Forms.Label LicensePlateLabel;
+        private System.Windows.Forms.Label ClaimAmountLabel;
+        private System.Windows.Forms.TextBox AmountTextBox;
     }
 }

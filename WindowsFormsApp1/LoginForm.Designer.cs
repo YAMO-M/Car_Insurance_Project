@@ -53,17 +53,15 @@ namespace WindowsFormsApp1
             // rememberMe
             // 
             rememberMe.Location = new System.Drawing.Point(0, 0);
-            rememberMe.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             rememberMe.Name = "rememberMe";
-            rememberMe.Size = new System.Drawing.Size(92, 20);
+            rememberMe.Size = new System.Drawing.Size(104, 25);
             rememberMe.TabIndex = 15;
             // 
             // loginButton
             // 
-            this.loginButton.Location = new System.Drawing.Point(84, 479);
-            this.loginButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.loginButton.Location = new System.Drawing.Point(70, 637);
             this.loginButton.Name = "loginButton";
-            this.loginButton.Size = new System.Drawing.Size(388, 86);
+            this.loginButton.Size = new System.Drawing.Size(471, 77);
             this.loginButton.TabIndex = 3;
             this.loginButton.Text = "Login";
             this.loginButton.UseVisualStyleBackColor = true;
@@ -75,9 +73,9 @@ namespace WindowsFormsApp1
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.forgotPassword.AutoSize = true;
-            this.forgotPassword.Location = new System.Drawing.Point(285, 450);
+            this.forgotPassword.Location = new System.Drawing.Point(321, 563);
             this.forgotPassword.Name = "forgotPassword";
-            this.forgotPassword.Size = new System.Drawing.Size(116, 16);
+            this.forgotPassword.Size = new System.Drawing.Size(138, 20);
             this.forgotPassword.TabIndex = 5;
             this.forgotPassword.TabStop = true;
             this.forgotPassword.Text = "Forgot Password?";
@@ -89,34 +87,34 @@ namespace WindowsFormsApp1
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.userNameLabel.AutoSize = true;
-            this.userNameLabel.Location = new System.Drawing.Point(60, 286);
+            this.userNameLabel.Location = new System.Drawing.Point(68, 357);
             this.userNameLabel.Name = "userNameLabel";
-            this.userNameLabel.Size = new System.Drawing.Size(41, 16);
+            this.userNameLabel.Size = new System.Drawing.Size(32, 13);
             this.userNameLabel.TabIndex = 6;
             this.userNameLabel.Text = "Email";
             // 
             // password
             // 
-            this.password.Location = new System.Drawing.Point(62, 304);
-            this.password.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.password.Location = new System.Drawing.Point(70, 472);
             this.password.Name = "password";
-            this.password.Size = new System.Drawing.Size(421, 22);
+            this.password.Size = new System.Drawing.Size(398, 26);
             this.password.TabIndex = 7;
+            this.password.TextChanged += new System.EventHandler(this.password_TextChanged);
             // 
             // userName
             // 
-            this.userName.Location = new System.Drawing.Point(62, 377);
-            this.userName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.userName.Location = new System.Drawing.Point(70, 382);
             this.userName.Name = "userName";
-            this.userName.Size = new System.Drawing.Size(421, 22);
+            this.userName.Size = new System.Drawing.Size(398, 26);
             this.userName.TabIndex = 8;
+            this.userName.TextChanged += new System.EventHandler(this.userName_TextChanged);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(60, 394);
+            this.label2.Location = new System.Drawing.Point(68, 492);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(0, 16);
+            this.label2.Size = new System.Drawing.Size(0, 20);
             this.label2.TabIndex = 9;
             // 
             // passwordLabel
@@ -125,9 +123,9 @@ namespace WindowsFormsApp1
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.passwordLabel.AutoSize = true;
-            this.passwordLabel.Location = new System.Drawing.Point(60, 359);
+            this.passwordLabel.Location = new System.Drawing.Point(68, 449);
             this.passwordLabel.Name = "passwordLabel";
-            this.passwordLabel.Size = new System.Drawing.Size(67, 16);
+            this.passwordLabel.Size = new System.Drawing.Size(78, 20);
             this.passwordLabel.TabIndex = 10;
             this.passwordLabel.Text = "Password";
             // 
@@ -137,9 +135,9 @@ namespace WindowsFormsApp1
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dontHaveAccountLabel.AutoSize = true;
-            this.dontHaveAccountLabel.Location = new System.Drawing.Point(60, 615);
+            this.dontHaveAccountLabel.Location = new System.Drawing.Point(68, 769);
             this.dontHaveAccountLabel.Name = "dontHaveAccountLabel";
-            this.dontHaveAccountLabel.Size = new System.Drawing.Size(146, 16);
+            this.dontHaveAccountLabel.Size = new System.Drawing.Size(177, 20);
             this.dontHaveAccountLabel.TabIndex = 11;
             this.dontHaveAccountLabel.Text = "Don\'t have an account?";
             // 
@@ -149,9 +147,9 @@ namespace WindowsFormsApp1
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.signUpLink.AutoSize = true;
-            this.signUpLink.Location = new System.Drawing.Point(365, 615);
+            this.signUpLink.Location = new System.Drawing.Point(411, 769);
             this.signUpLink.Name = "signUpLink";
-            this.signUpLink.Size = new System.Drawing.Size(52, 16);
+            this.signUpLink.Size = new System.Drawing.Size(63, 20);
             this.signUpLink.TabIndex = 12;
             this.signUpLink.TabStop = true;
             this.signUpLink.Text = "Sign up";
@@ -164,9 +162,9 @@ namespace WindowsFormsApp1
             | System.Windows.Forms.AnchorStyles.Right)));
             this.welcomeBackLabel.AutoSize = true;
             this.welcomeBackLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.welcomeBackLabel.Location = new System.Drawing.Point(125, 126);
+            this.welcomeBackLabel.Location = new System.Drawing.Point(141, 157);
             this.welcomeBackLabel.Name = "welcomeBackLabel";
-            this.welcomeBackLabel.Size = new System.Drawing.Size(275, 42);
+            this.welcomeBackLabel.Size = new System.Drawing.Size(329, 52);
             this.welcomeBackLabel.TabIndex = 13;
             this.welcomeBackLabel.Text = "Welcome back";
             this.welcomeBackLabel.Click += new System.EventHandler(this.welcomeBackLabel_Click);
@@ -177,9 +175,9 @@ namespace WindowsFormsApp1
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.enterDetailsLabel.AutoSize = true;
-            this.enterDetailsLabel.Location = new System.Drawing.Point(60, 214);
+            this.enterDetailsLabel.Location = new System.Drawing.Point(68, 268);
             this.enterDetailsLabel.Name = "enterDetailsLabel";
-            this.enterDetailsLabel.Size = new System.Drawing.Size(155, 16);
+            this.enterDetailsLabel.Size = new System.Drawing.Size(182, 20);
             this.enterDetailsLabel.TabIndex = 14;
             this.enterDetailsLabel.Text = "Please enter your details";
             // 
@@ -191,14 +189,14 @@ namespace WindowsFormsApp1
             // 
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(89, 18);
+            this.label1.Size = new System.Drawing.Size(100, 23);
             this.label1.TabIndex = 0;
             // 
             // LoginForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(575, 747);
+            this.ClientSize = new System.Drawing.Size(675, 957);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.enterDetailsLabel);
             this.Controls.Add(this.welcomeBackLabel);
@@ -212,7 +210,6 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.forgotPassword);
             this.Controls.Add(rememberMe);
             this.Controls.Add(this.loginButton);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "LoginForm";
             this.Text = "Car Insurance";
             this.Load += new System.EventHandler(this.LoginForm_Load);

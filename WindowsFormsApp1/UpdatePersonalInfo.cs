@@ -27,5 +27,80 @@ namespace WindowsFormsApp1
         {
 
         }
+
+        private void UpdatePersonalInfo_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void StreetAddressLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void StreetAddressTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void StreetAddress2TextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CityLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CityTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ProvinceLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ProvinceComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void PostalCodeLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void PostalCodeTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void EmailTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
