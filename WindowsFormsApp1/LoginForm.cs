@@ -81,9 +81,9 @@ namespace WindowsFormsApp1
                 HomeForm form5 = new HomeForm();
                 form5.Show();
             }
-            catch(SqlException ex)
+            catch(Exception ex)
             {
-                MessageBox.Show("Hell nah, you don't exist!!");
+                MessageBox.Show(ex + "Hell nah, you don't exist!!");
             }
           
         }
@@ -121,7 +121,7 @@ namespace WindowsFormsApp1
         }
         private void password_TextChanged(object sender, EventArgs e)
         {
-            loginButton.Enabled = true;//switches on the log in button
+            loginButton.Enabled = true;//switches on the log in buttonn
         }
         private void password_Validating(object sender, CancelEventArgs e)
         {
@@ -136,6 +136,7 @@ namespace WindowsFormsApp1
 
             if (!isValid)
             {
+                //essageBox.Show(
                 MessageBox.Show(
                     "Password must be at least 8 characters long and include:\n" +
                     "- At least one uppercase letter\n" +
