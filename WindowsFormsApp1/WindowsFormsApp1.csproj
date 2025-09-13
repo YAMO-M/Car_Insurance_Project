@@ -112,12 +112,6 @@
     <Compile Include="SignUpPersonalDetails.Designer.cs">
       <DependentUpon>SignUpPersonalDetails.cs</DependentUpon>
     </Compile>
-    <Compile Include="UpdateCarDetails.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UpdateCarDetails.Designer.cs">
-      <DependentUpon>UpdateCarDetails.cs</DependentUpon>
-    </Compile>
     <Compile Include="UpdatePersonalInfo.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -180,12 +174,10 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="SignUpPersonalDetails.resx">
       <DependentUpon>SignUpPersonalDetails.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UpdateCarDetails.resx">
-      <DependentUpon>UpdateCarDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UpdatePersonalInfo.resx">
       <DependentUpon>UpdatePersonalInfo.cs</DependentUpon>
@@ -236,6 +228,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cars1.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

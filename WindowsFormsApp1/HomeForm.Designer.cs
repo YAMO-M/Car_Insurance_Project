@@ -30,8 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HomeForm));
             this.panel2 = new System.Windows.Forms.Panel();
-            this.PolicyButton = new System.Windows.Forms.Button();
-            this.updateCarButton = new System.Windows.Forms.Button();
             this.UpdatePersonalDetButton = new System.Windows.Forms.Button();
             this.MakeClaimButton = new System.Windows.Forms.Button();
             this.MakePaymentButton = new System.Windows.Forms.Button();
@@ -39,26 +37,25 @@
             this.AddCarButton = new System.Windows.Forms.Button();
             this.UserLabel = new System.Windows.Forms.Label();
             this.HomeButton = new System.Windows.Forms.Button();
+            this.AddPolicyButton = new System.Windows.Forms.Button();
             this.makeClaim3 = new WindowsFormsApp1.MakeClaim();
             this.paymentDetails2 = new WindowsFormsApp1.PaymentDetails();
-            this.updateCarDetails2 = new WindowsFormsApp1.UpdateCarDetails();
             this.homePage1 = new WindowsFormsApp1.HomePage();
             this.policyPage1 = new WindowsFormsApp1.PolicyPage();
-            this.updateCarDetails1 = new WindowsFormsApp1.UpdateCarDetails();
             this.updatePersonalInfo1 = new WindowsFormsApp1.UpdatePersonalInfo();
             this.makeClaim2 = new WindowsFormsApp1.MakeClaim();
-            this.addVehicle2 = new WindowsFormsApp1.AddVehicle();
             this.paymentDetails1 = new WindowsFormsApp1.PaymentDetails();
             this.makeClaim1 = new WindowsFormsApp1.MakeClaim();
+            this.addVehicle2 = new WindowsFormsApp1.AddVehicle();
             this.addVehicle1 = new WindowsFormsApp1.AddVehicle();
+            this.addVehicle3 = new WindowsFormsApp1.AddVehicle();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.PolicyButton);
-            this.panel2.Controls.Add(this.updateCarButton);
+            this.panel2.Controls.Add(this.AddPolicyButton);
             this.panel2.Controls.Add(this.UpdatePersonalDetButton);
             this.panel2.Controls.Add(this.MakeClaimButton);
             this.panel2.Controls.Add(this.MakePaymentButton);
@@ -73,30 +70,9 @@
             this.panel2.TabIndex = 5;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
-            // PolicyButton
-            // 
-            this.PolicyButton.Location = new System.Drawing.Point(-2, 965);
-            this.PolicyButton.Name = "PolicyButton";
-            this.PolicyButton.Size = new System.Drawing.Size(256, 94);
-            this.PolicyButton.TabIndex = 13;
-            this.PolicyButton.Text = "Policy";
-            this.PolicyButton.UseVisualStyleBackColor = true;
-            this.PolicyButton.Click += new System.EventHandler(this.button1_Click_1);
-            // 
-            // updateCarButton
-            // 
-            this.updateCarButton.Location = new System.Drawing.Point(-2, 866);
-            this.updateCarButton.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.updateCarButton.Name = "updateCarButton";
-            this.updateCarButton.Size = new System.Drawing.Size(260, 103);
-            this.updateCarButton.TabIndex = 12;
-            this.updateCarButton.Text = "Update Car Details";
-            this.updateCarButton.UseVisualStyleBackColor = true;
-            this.updateCarButton.Click += new System.EventHandler(this.updateCarButton_Click);
-            // 
             // UpdatePersonalDetButton
             // 
-            this.UpdatePersonalDetButton.Location = new System.Drawing.Point(-2, 769);
+            this.UpdatePersonalDetButton.Location = new System.Drawing.Point(0, 769);
             this.UpdatePersonalDetButton.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.UpdatePersonalDetButton.Name = "UpdatePersonalDetButton";
             this.UpdatePersonalDetButton.Size = new System.Drawing.Size(258, 98);
@@ -107,7 +83,7 @@
             // 
             // MakeClaimButton
             // 
-            this.MakeClaimButton.Location = new System.Drawing.Point(0, 678);
+            this.MakeClaimButton.Location = new System.Drawing.Point(-3, 678);
             this.MakeClaimButton.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.MakeClaimButton.Name = "MakeClaimButton";
             this.MakeClaimButton.Size = new System.Drawing.Size(258, 94);
@@ -118,7 +94,7 @@
             // 
             // MakePaymentButton
             // 
-            this.MakePaymentButton.Location = new System.Drawing.Point(0, 585);
+            this.MakePaymentButton.Location = new System.Drawing.Point(-2, 588);
             this.MakePaymentButton.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.MakePaymentButton.Name = "MakePaymentButton";
             this.MakePaymentButton.Size = new System.Drawing.Size(260, 94);
@@ -141,14 +117,10 @@
             // 
             // AddCarButton
             // 
-            this.AddCarButton.Location = new System.Drawing.Point(0, 491);
-            this.AddCarButton.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.AddCarButton.Location = new System.Drawing.Point(0, 0);
             this.AddCarButton.Name = "AddCarButton";
-            this.AddCarButton.Size = new System.Drawing.Size(260, 95);
-            this.AddCarButton.TabIndex = 3;
-            this.AddCarButton.Text = "Policy";
-            this.AddCarButton.UseVisualStyleBackColor = true;
-            this.AddCarButton.Click += new System.EventHandler(this.button2_Click);
+            this.AddCarButton.Size = new System.Drawing.Size(75, 23);
+            this.AddCarButton.TabIndex = 12;
             // 
             // UserLabel
             // 
@@ -166,24 +138,38 @@
             // HomeButton
             // 
             this.HomeButton.AllowDrop = true;
-            this.HomeButton.Location = new System.Drawing.Point(-2, 386);
+            this.HomeButton.Location = new System.Drawing.Point(-2, 389);
             this.HomeButton.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.HomeButton.Name = "HomeButton";
-            this.HomeButton.Size = new System.Drawing.Size(260, 108);
+            this.HomeButton.Size = new System.Drawing.Size(260, 120);
             this.HomeButton.TabIndex = 2;
             this.HomeButton.Text = "Home";
             this.HomeButton.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.HomeButton.UseVisualStyleBackColor = true;
             this.HomeButton.Click += new System.EventHandler(this.button1_Click);
             // 
+            // AddPolicyButton
+            // 
+            this.AddPolicyButton.AllowDrop = true;
+            this.AddPolicyButton.Location = new System.Drawing.Point(-2, 501);
+            this.AddPolicyButton.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.AddPolicyButton.Name = "AddPolicyButton";
+            this.AddPolicyButton.Size = new System.Drawing.Size(260, 92);
+            this.AddPolicyButton.TabIndex = 13;
+            this.AddPolicyButton.Text = "Add Policy";
+            this.AddPolicyButton.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.AddPolicyButton.UseVisualStyleBackColor = true;
+            this.AddPolicyButton.Click += new System.EventHandler(this.AddPolicyButton_Click);
+            // 
             // makeClaim3
             // 
             this.makeClaim3.AutoScroll = true;
-            this.makeClaim3.Location = new System.Drawing.Point(266, 2);
+            this.makeClaim3.Location = new System.Drawing.Point(261, 2);
             this.makeClaim3.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.makeClaim3.Name = "makeClaim3";
             this.makeClaim3.Size = new System.Drawing.Size(1026, 1178);
             this.makeClaim3.TabIndex = 17;
+            this.makeClaim3.Load += new System.EventHandler(this.makeClaim3_Load);
             // 
             // paymentDetails2
             // 
@@ -194,19 +180,10 @@
             this.paymentDetails2.Size = new System.Drawing.Size(1026, 1183);
             this.paymentDetails2.TabIndex = 16;
             // 
-            // updateCarDetails2
-            // 
-            this.updateCarDetails2.AutoScroll = true;
-            this.updateCarDetails2.Location = new System.Drawing.Point(410, 288);
-            this.updateCarDetails2.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.updateCarDetails2.Name = "updateCarDetails2";
-            this.updateCarDetails2.Size = new System.Drawing.Size(1024, 1166);
-            this.updateCarDetails2.TabIndex = 15;
-            // 
             // homePage1
             // 
             this.homePage1.Location = new System.Drawing.Point(261, 2);
-            this.homePage1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.homePage1.Margin = new System.Windows.Forms.Padding(2);
             this.homePage1.Name = "homePage1";
             this.homePage1.Size = new System.Drawing.Size(1026, 1183);
             this.homePage1.TabIndex = 14;
@@ -214,19 +191,10 @@
             // policyPage1
             // 
             this.policyPage1.Location = new System.Drawing.Point(261, 2);
-            this.policyPage1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.policyPage1.Margin = new System.Windows.Forms.Padding(2);
             this.policyPage1.Name = "policyPage1";
             this.policyPage1.Size = new System.Drawing.Size(1026, 1157);
             this.policyPage1.TabIndex = 13;
-            // 
-            // updateCarDetails1
-            // 
-            this.updateCarDetails1.AutoScroll = true;
-            this.updateCarDetails1.Location = new System.Drawing.Point(261, 5);
-            this.updateCarDetails1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.updateCarDetails1.Name = "updateCarDetails1";
-            this.updateCarDetails1.Size = new System.Drawing.Size(1276, 1314);
-            this.updateCarDetails1.TabIndex = 12;
             // 
             // updatePersonalInfo1
             // 
@@ -246,16 +214,6 @@
             this.makeClaim2.Size = new System.Drawing.Size(1262, 1035);
             this.makeClaim2.TabIndex = 10;
             // 
-            // addVehicle2
-            // 
-            this.addVehicle2.AutoScroll = true;
-            this.addVehicle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addVehicle2.Location = new System.Drawing.Point(261, 5);
-            this.addVehicle2.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.addVehicle2.Name = "addVehicle2";
-            this.addVehicle2.Size = new System.Drawing.Size(1276, 1026);
-            this.addVehicle2.TabIndex = 9;
-            // 
             // paymentDetails1
             // 
             this.paymentDetails1.AutoScroll = true;
@@ -274,33 +232,47 @@
             this.makeClaim1.Size = new System.Drawing.Size(1262, 1195);
             this.makeClaim1.TabIndex = 7;
             // 
+            // addVehicle2
+            // 
+            this.addVehicle2.AutoScroll = true;
+            this.addVehicle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addVehicle2.Location = new System.Drawing.Point(0, 0);
+            this.addVehicle2.Name = "addVehicle2";
+            this.addVehicle2.Size = new System.Drawing.Size(914, 838);
+            this.addVehicle2.TabIndex = 0;
+            // 
             // addVehicle1
             // 
             this.addVehicle1.AutoScroll = true;
             this.addVehicle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addVehicle1.Location = new System.Drawing.Point(261, 5);
-            this.addVehicle1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.addVehicle1.Location = new System.Drawing.Point(0, 0);
             this.addVehicle1.Name = "addVehicle1";
-            this.addVehicle1.Size = new System.Drawing.Size(1262, 998);
-            this.addVehicle1.TabIndex = 6;
+            this.addVehicle1.Size = new System.Drawing.Size(914, 838);
+            this.addVehicle1.TabIndex = 0;
+            // 
+            // addVehicle3
+            // 
+            this.addVehicle3.AutoScroll = true;
+            this.addVehicle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addVehicle3.Location = new System.Drawing.Point(261, 2);
+            this.addVehicle3.Name = "addVehicle3";
+            this.addVehicle3.Size = new System.Drawing.Size(1250, 1048);
+            this.addVehicle3.TabIndex = 18;
             // 
             // HomeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1538, 1062);
+            this.Controls.Add(this.addVehicle3);
             this.Controls.Add(this.makeClaim3);
             this.Controls.Add(this.paymentDetails2);
-            this.Controls.Add(this.updateCarDetails2);
             this.Controls.Add(this.homePage1);
             this.Controls.Add(this.policyPage1);
-            this.Controls.Add(this.updateCarDetails1);
             this.Controls.Add(this.updatePersonalInfo1);
             this.Controls.Add(this.makeClaim2);
-            this.Controls.Add(this.addVehicle2);
             this.Controls.Add(this.paymentDetails1);
             this.Controls.Add(this.makeClaim1);
-            this.Controls.Add(this.addVehicle1);
             this.Controls.Add(this.panel2);
             this.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.Name = "HomeForm";
@@ -328,13 +300,13 @@
         private MakeClaim makeClaim2;
         private System.Windows.Forms.Button UpdatePersonalDetButton;
         private UpdatePersonalInfo updatePersonalInfo1;
-        private System.Windows.Forms.Button updateCarButton;
-        private UpdateCarDetails updateCarDetails1;
-        private System.Windows.Forms.Button PolicyButton;
+        //private UpdateCarDetails updateCarDetails1;
         private PolicyPage policyPage1;
         private HomePage homePage1;
-        private UpdateCarDetails updateCarDetails2;
+        //private UpdateCarDetails updateCarDetails2;
         private PaymentDetails paymentDetails2;
         private MakeClaim makeClaim3;
+        private System.Windows.Forms.Button AddPolicyButton;
+        private AddVehicle addVehicle3;
     }
 }

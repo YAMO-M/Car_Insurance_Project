@@ -21,5 +21,26 @@ namespace WindowsFormsApp1
         {
 
         }
+
+        private void richTextBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            pictureBox1.Image = Properties.Resources.cars; // "car" is the resource name
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
