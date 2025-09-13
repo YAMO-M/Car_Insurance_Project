@@ -5,9 +5,11 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Forms.VisualStyles;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace WindowsFormsApp1
 {
@@ -18,8 +20,10 @@ namespace WindowsFormsApp1
 
             InitializeComponent();
             this.AutoScroll = true;
-            this.AutoValidate = AutoValidate.EnablePreventFocusChange;
+            userName.Validating += userName_Validating;
+            password.Validating += password_Validating; 
         }
+    
         private void button1_Click(object sender, EventArgs e)
         {
             bool valid = true;
@@ -77,38 +81,67 @@ namespace WindowsFormsApp1
 
         private void userName_TextChanged(object sender, EventArgs e)
         {
-            try {
-                string username = userName.Text;
-
-                // Implicit validation rules
-                bool isValid = !string.IsNullOrWhiteSpace(username)      // Not empty
-                               && username.Contains("@")    // Alphanumeric only
-                               && username.Contains("gmail.com");                 // Min length
-                               
-
-                // Implicit feedback
-                if (isValid)
-                {
-                    //e.Cancel = true;
-                    userName.ForeColor = Color.Black;  // valid
-                    loginButton.Enabled = true;            // allow submit
-                }
-                else
-                {
-                    userName.ForeColor = Color.Red;    // invalid
-                    loginButton.Enabled = false;           // prevent submit
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Something went wrong:" + ex.Message);
-            }
-           
+            loginButton.Enabled = false;
         }
+        
+        private void userName_Validating(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+                string email = userName.Text.Trim();
 
+                bool isValid = !string.IsNullOrWhiteSpace(email)
+                               && email.EndsWith("@gmail.com", StringComparison.OrdinalIgnoreCase)
+                               && email.IndexOf("@gmail.com") > 0;
+
+               
+            if (isValid)
+            {
+                userName.BackColor = System.Drawing.Color.LightGreen; // valid input
+            }
+            else
+            {
+                MessageBox.Show(
+                       "Please enter a valid Gmail address (e.g., example@gmail.com).",
+                       "Invalid Email",
+                       MessageBoxButtons.OK,
+                       MessageBoxIcon.Warning
+                   );
+
+                // Prevent leaving the textbox
+                e.Cancel = true;
+            }
+        }
         private void password_TextChanged(object sender, EventArgs e)
         {
+            loginButton.Enabled = true;//switches on the log in button
+        }
+        private void password_Validating(object sender, CancelEventArgs e)
+        {
+            
+            string pass = password.Text;
+            
+            bool isValid = !string.IsNullOrWhiteSpace(pass) &&
+                           pass.Length >= 8 &&
+                           pass.Any(char.IsUpper) &&
+                           pass.Any(char.IsLower) &&
+                           pass.Any(char.IsDigit);
 
+            if (!isValid)
+            {
+                MessageBox.Show(
+                    "Password must be at least 8 characters long and include:\n" +
+                    "- At least one uppercase letter\n" +
+                    "- At least one lowercase letter\n" +
+                    "- At least one number",
+                    "Invalid Password",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning
+                );
+            }
+            else
+            {
+                password.BackColor = System.Drawing.Color.LightGreen; // valid input
+               
+            }
         }
     }
 }

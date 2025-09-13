@@ -243,6 +243,7 @@
             this.Policy1.TabStop = true;
             this.Policy1.Text = "Policy 1";
             this.Policy1.UseVisualStyleBackColor = true;
+            this.Policy1.CheckedChanged += new System.EventHandler(this.Policy1_CheckedChanged);
             // 
             // Policy2
             // 
@@ -254,6 +255,7 @@
             this.Policy2.TabStop = true;
             this.Policy2.Text = "Policy 2";
             this.Policy2.UseVisualStyleBackColor = true;
+            this.Policy2.CheckedChanged += new System.EventHandler(this.Policy2_CheckedChanged);
             // 
             // Policy3
             // 
@@ -265,6 +267,7 @@
             this.Policy3.TabStop = true;
             this.Policy3.Text = "Policy 3";
             this.Policy3.UseVisualStyleBackColor = true;
+            this.Policy3.CheckedChanged += new System.EventHandler(this.Policy3_CheckedChanged);
             // 
             // textBox1
             // 
@@ -333,7 +336,7 @@
             this.Controls.Add(this.VINlabel);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "AddVehicle";
-            this.Size = new System.Drawing.Size(1046, 838);
+            this.Size = new System.Drawing.Size(1221, 838);
             this.Load += new System.EventHandler(this.AddVehicle_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -72,5 +72,28 @@ namespace WindowsFormsApp1
         {
 
         }
+
+        private void Policy3_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Policy2_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Policy1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+        private void radioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            RadioButton rb = sender as RadioButton;
+            if (rb.Checked)
+            {
+                MessageBox.Show($"You selected: {rb.Text}");
+            }
+        }
     }
 }
