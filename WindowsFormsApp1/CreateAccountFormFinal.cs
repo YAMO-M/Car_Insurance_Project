@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using WindowsFormsApp1.DataSet2TableAdapters;
+using WindowsFormsApp1.DataSet1TableAdapters;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
@@ -15,16 +15,10 @@ namespace WindowsFormsApp1
 {
     public partial class CreateAccountFormFinal : UserControl
     {
-        private ErrorProvider errorProvider = new ErrorProvider();
+    
         public CreateAccountFormFinal()
         {
             InitializeComponent();
-            emailTextbox.Validating += userName_Validating;
-            passwordTextBox.Validating += password_Validating;
-            confirmPaswordTextBox.Validating += confirmPassword;
-            Submit.Enabled = false;
-
-
         }
 
         private void Submit_Click(object sender, EventArgs e)
@@ -34,99 +28,71 @@ namespace WindowsFormsApp1
             string clientName = signUpPersonalDetails.NameTextBox.Text;
             string clientSurname = signUpPersonalDetails.SurnameTextBox2.Text;
             string clientIdentityNo = signUpPersonalDetails.IDNumbermaskedTextBox.Text;
-            string clientAddress = signUpPersonalDetails.StreetAddressTextBox.Text + ", " + signUpPersonalDetails.StreetAddress2TextBox.Text + ", " + signUpPersonalDetails.CityTextBox.Text + ", " + signUpPersonalDetails.ProvinceComboBox.Text + ", " + signUpPersonalDetails.PostalCodemaskedTextBox.Text;
+            string clientAddress = signUpPersonalDetails.StreetAddressTextBox.Text + ", " + signUpPersonalDetails.CityTextBox.Text + ", " + signUpPersonalDetails.ProvinceComboBox.Text + ", " + signUpPersonalDetails.PostalCodemaskedTextBox.Text;
             string clientEmail = emailTextbox.Text;
             string clientPassword = passwordTextBox.Text;
             string clientPhoneNo = signUpPersonalDetails.PhoneNumberTextBox.Text;
-            this.ParentForm?.Close();
+           
             
 
+            if(checkInvalidInput())
+            {
+                ClientTableAdapter adapter = new ClientTableAdapter();
+                adapter.InsertClient(clientName, clientSurname, clientAddress, clientEmail, clientIdentityNo, clientPhoneNo, clientPassword);
+                MessageBox.Show("Account Created Succefully.", "Account", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.ParentForm?.Close();
+            }
+    
+        }
+
+        private bool checkInvalidInput()
+        {
+            ErrorProvider errorProvider1 = new ErrorProvider();
+            errorProvider1.Clear();
+            if (string.IsNullOrEmpty(emailTextbox.Text))
+            {
+                errorProvider1.SetError(emailTextbox, "Email is required");
+                return false;
+            }
+            else if (!(emailTextbox.Text.ToLower().EndsWith("@gmail.com")) || emailTextbox.Text.Split('@')[0].Length < 4)
+            {
+                errorProvider1.SetError(emailTextbox, "Enter valid email address (e.g example@gmail.com).");
+                return false;
+            }
+            else if(!(EmailErrorLabel.Text == ""))
+            {
+                return false;
+            }
+            if (string.IsNullOrEmpty(passwordTextBox.Text))
+            {
+                errorProvider1.SetError(passwordTextBox, "Password is required");
+                return false;
+            }
+            else if (!string.IsNullOrEmpty(passwordTextBox.Text)) return (numberLabel.ForeColor == ErrorLength.ForeColor) && (UpperCaseLabel.ForeColor == lowercaseLabel.ForeColor) && (ErrorLength.ForeColor == UpperCaseLabel.ForeColor) && (ErrorLength.ForeColor == Color.Green);
+
+            return true;
+
+        }
+
+       
+
+        private void passwordTextBox_TextChanged(object sender, EventArgs e)
+        {
+            ErrorLength.ForeColor = passwordTextBox.Text.Length < 8 ? Color.Red : Color.Green;
+
+            UpperCaseLabel.ForeColor = !passwordTextBox.Text.Any(char.IsUpper) ? Color.Red : Color.Green;
+
+            lowercaseLabel.ForeColor = !passwordTextBox.Text.Any(char.IsLower) ? Color.Red : Color.Green;
+
+            numberLabel.ForeColor = !passwordTextBox.Text.Any(char.IsDigit) ? Color.Red : Color.Green;
+        }
+
+        private void emailTextbox_TextChanged(object sender, EventArgs e)
+        {
             ClientTableAdapter adapter = new ClientTableAdapter();
-            adapter.InsertClient(clientName,clientSurname,clientAddress,clientEmail,clientIdentityNo,clientPhoneNo,clientPassword);
-            if (string.IsNullOrWhiteSpace(confirmPaswordTextBox.Text) && string.IsNullOrWhiteSpace(passwordTextBox.Text) && string.IsNullOrWhiteSpace(emailTextbox.Text))
-            {
-                return;
-            }
-        }
-        private void userName_TextChanged(object sender, EventArgs e)
-        {
-            Submit.Enabled = true;
-        }
-
-        private void userName_Validating(object sender, System.ComponentModel.CancelEventArgs e)
-        {
-            string email = emailTextbox.Text.Trim();
-
-            bool isValid = !string.IsNullOrWhiteSpace(email)
-                           && email.EndsWith("@gmail.com", StringComparison.OrdinalIgnoreCase)
-                           && email.IndexOf("@gmail.com") > 0;
-
-
-            if (isValid)
-            {
-                emailTextbox.BackColor = System.Drawing.Color.LightGreen; // valid input
-            }
-            else
-            {
-                MessageBox.Show(
-                       "Please enter a valid Gmail address (e.g., example@gmail.com).",
-                       "Invalid Email",
-                       MessageBoxButtons.OK,
-                       MessageBoxIcon.Warning
-                   );
-
-                // Prevent leaving the textbox
-               // e.Cancel = true;
-            }
-        }
-        private void password_TextChanged(object sender, EventArgs e)
-        {
-            Submit.Enabled = true;//switches on the log in button
-        }
-        private void password_Validating(object sender, CancelEventArgs e)
-        {
-
-            string pass = passwordTextBox.Text;
-
-            bool isValid = !string.IsNullOrWhiteSpace(pass) &&
-                           pass.Length >= 8 &&
-                           pass.Any(char.IsUpper) &&
-                           pass.Any(char.IsLower) &&
-                           pass.Any(char.IsDigit);
-
-            if (!isValid)
-            {
-                MessageBox.Show(
-                    "Password must be at least 8 characters long and include:\n" +
-                    "- At least one uppercase letter\n" +
-                    "- At least one lowercase letter\n" +
-                    "- At least one number",
-                    "Invalid Password",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Warning
-                );
-            }
-            else
-            {
-                passwordTextBox.BackColor = System.Drawing.Color.LightGreen; // valid input
-
-            }
-        }
-        private void confirmPassword(object sender, CancelEventArgs e)
-        {
-            if (passwordTextBox.Text == confirmPaswordTextBox.Text &&  !string.IsNullOrWhiteSpace(confirmPaswordTextBox.Text))
-            {
-                confirmPaswordTextBox.BackColor = System.Drawing.Color.LightGreen;
-                
-            }
-            else
-            {
-                MessageBox.Show("Password does not match", "Invalid Password", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-        }
-
-        private void confirmPaswordTextBox_TextChanged(object sender, EventArgs e)
-        {
+            int checkDuplicateEmail = (int)adapter.GetNoOfClientsWithEmail(emailTextbox.Text);
+            EmailErrorLabel.ForeColor = Color.Red;
+            EmailErrorLabel.Text = checkDuplicateEmail > 0 ? "Email already used" : "";
             
         }
     }

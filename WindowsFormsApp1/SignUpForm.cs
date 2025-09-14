@@ -42,7 +42,10 @@ namespace WindowsFormsApp1
 
         private void NextButton_Click_1(object sender, EventArgs e)
         {
-            createAccountFormFinal1.BringToFront();
+            if (signUpPersonalDetails1.checkSignUpInput()) {
+                createAccountFormFinal1.BringToFront();
+            }
+           
         }
 
         private void createAccountFormFinal1_Load(object sender, EventArgs e)

@@ -37,10 +37,7 @@
             this.IDNumberTextBox = new System.Windows.Forms.Label();
             this.label = new System.Windows.Forms.Label();
             this.PhoneNumberLabel = new System.Windows.Forms.Label();
-            this.PhoneNumberTextBox = new System.Windows.Forms.MaskedTextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.StreetAddress2TextBox = new System.Windows.Forms.TextBox();
             this.StreetAddressTextBox = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -49,12 +46,16 @@
             this.ProvinceComboBox = new System.Windows.Forms.ComboBox();
             this.PostalCodemaskedTextBox = new System.Windows.Forms.MaskedTextBox();
             this.label9 = new System.Windows.Forms.Label();
+            this.PhoneNumberTextBox = new System.Windows.Forms.MaskedTextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.IDErrorLabel = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(0, 20);
+            this.label1.Location = new System.Drawing.Point(4, 41);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(83, 13);
             this.label1.TabIndex = 2;
@@ -71,7 +72,7 @@
             // 
             this.SurnameTextBox2.Location = new System.Drawing.Point(316, 89);
             this.SurnameTextBox2.Name = "SurnameTextBox2";
-            this.SurnameTextBox2.Size = new System.Drawing.Size(296, 20);
+            this.SurnameTextBox2.Size = new System.Drawing.Size(288, 20);
             this.SurnameTextBox2.TabIndex = 35;
             // 
             // label2
@@ -98,6 +99,8 @@
             this.IDNumbermaskedTextBox.Name = "IDNumbermaskedTextBox";
             this.IDNumbermaskedTextBox.Size = new System.Drawing.Size(291, 20);
             this.IDNumbermaskedTextBox.TabIndex = 39;
+         
+            this.IDNumbermaskedTextBox.TextChanged += new System.EventHandler(this.IDNumbermaskedTextBox_TextChanged);
             // 
             // IDNumberTextBox
             // 
@@ -125,13 +128,6 @@
             this.PhoneNumberLabel.Size = new System.Drawing.Size(0, 13);
             this.PhoneNumberLabel.TabIndex = 43;
             // 
-            // PhoneNumberTextBox
-            // 
-            this.PhoneNumberTextBox.Location = new System.Drawing.Point(316, 149);
-            this.PhoneNumberTextBox.Name = "PhoneNumberTextBox";
-            this.PhoneNumberTextBox.Size = new System.Drawing.Size(288, 20);
-            this.PhoneNumberTextBox.TabIndex = 44;
-            // 
             // label4
             // 
             this.label4.Location = new System.Drawing.Point(0, 0);
@@ -139,33 +135,17 @@
             this.label4.Size = new System.Drawing.Size(100, 23);
             this.label4.TabIndex = 56;
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(3, 287);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(108, 13);
-            this.label5.TabIndex = 46;
-            this.label5.Text = "Street Address Line 2";
-            // 
-            // StreetAddress2TextBox
-            // 
-            this.StreetAddress2TextBox.Location = new System.Drawing.Point(6, 303);
-            this.StreetAddress2TextBox.Name = "StreetAddress2TextBox";
-            this.StreetAddress2TextBox.Size = new System.Drawing.Size(598, 20);
-            this.StreetAddress2TextBox.TabIndex = 47;
-            // 
             // StreetAddressTextBox
             // 
             this.StreetAddressTextBox.Location = new System.Drawing.Point(6, 243);
             this.StreetAddressTextBox.Name = "StreetAddressTextBox";
-            this.StreetAddressTextBox.Size = new System.Drawing.Size(598, 20);
+            this.StreetAddressTextBox.Size = new System.Drawing.Size(291, 20);
             this.StreetAddressTextBox.TabIndex = 48;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(313, 350);
+            this.label6.Location = new System.Drawing.Point(4, 283);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(49, 13);
             this.label6.TabIndex = 49;
@@ -183,7 +163,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(3, 350);
+            this.label8.Location = new System.Drawing.Point(313, 227);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(24, 13);
             this.label8.TabIndex = 51;
@@ -191,39 +171,85 @@
             // 
             // CityTextBox
             // 
-            this.CityTextBox.Location = new System.Drawing.Point(6, 366);
+            this.CityTextBox.Location = new System.Drawing.Point(313, 243);
             this.CityTextBox.Name = "CityTextBox";
             this.CityTextBox.Size = new System.Drawing.Size(291, 20);
             this.CityTextBox.TabIndex = 52;
             // 
             // ProvinceComboBox
             // 
+            this.ProvinceComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.ProvinceComboBox.FormattingEnabled = true;
-            this.ProvinceComboBox.Location = new System.Drawing.Point(316, 366);
+            this.ProvinceComboBox.Items.AddRange(new object[] {
+            "KwaZulu-Natal",
+            "Gauteng",
+            "Mpumalanga",
+            "Limpompo",
+            "Free State",
+            "Northen Cape",
+            "Eastern Cape",
+            "North West"});
+            this.ProvinceComboBox.Location = new System.Drawing.Point(6, 299);
             this.ProvinceComboBox.Name = "ProvinceComboBox";
             this.ProvinceComboBox.Size = new System.Drawing.Size(288, 21);
             this.ProvinceComboBox.TabIndex = 53;
             // 
             // PostalCodemaskedTextBox
             // 
-            this.PostalCodemaskedTextBox.Location = new System.Drawing.Point(6, 441);
+            this.PostalCodemaskedTextBox.Location = new System.Drawing.Point(313, 299);
             this.PostalCodemaskedTextBox.Name = "PostalCodemaskedTextBox";
-            this.PostalCodemaskedTextBox.Size = new System.Drawing.Size(105, 20);
+            this.PostalCodemaskedTextBox.Size = new System.Drawing.Size(291, 20);
             this.PostalCodemaskedTextBox.TabIndex = 54;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(3, 425);
+            this.label9.Location = new System.Drawing.Point(310, 283);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(84, 13);
             this.label9.TabIndex = 55;
             this.label9.Text = "Postal/Zip Code";
             // 
+            // PhoneNumberTextBox
+            // 
+            this.PhoneNumberTextBox.Location = new System.Drawing.Point(316, 149);
+            this.PhoneNumberTextBox.Name = "PhoneNumberTextBox";
+            this.PhoneNumberTextBox.Size = new System.Drawing.Size(288, 20);
+            this.PhoneNumberTextBox.TabIndex = 44;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(265, 10);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(45, 13);
+            this.label10.TabIndex = 57;
+            this.label10.Text = "Sign Up";
+            // 
+            // IDErrorLabel
+            // 
+            this.IDErrorLabel.AutoSize = true;
+            this.IDErrorLabel.Location = new System.Drawing.Point(4, 172);
+            this.IDErrorLabel.Name = "IDErrorLabel";
+            this.IDErrorLabel.Size = new System.Drawing.Size(0, 13);
+            this.IDErrorLabel.TabIndex = 58;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(4, 198);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(83, 13);
+            this.label5.TabIndex = 59;
+            this.label5.Text = "Address  Details";
+            // 
             // SignUpPersonalDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.IDErrorLabel);
+            this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.PostalCodemaskedTextBox);
             this.Controls.Add(this.ProvinceComboBox);
@@ -232,8 +258,6 @@
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.StreetAddressTextBox);
-            this.Controls.Add(this.StreetAddress2TextBox);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.PhoneNumberTextBox);
             this.Controls.Add(this.PhoneNumberLabel);
@@ -247,7 +271,7 @@
             this.Controls.Add(this.label1);
             this.Name = "SignUpPersonalDetails";
             this.Size = new System.Drawing.Size(672, 696);
-            this.Load += new System.EventHandler(this.SignUpPersonalDetails_Load);
+       
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -262,7 +286,6 @@
         private System.Windows.Forms.Label label;
         private System.Windows.Forms.Label PhoneNumberLabel;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
@@ -270,11 +293,13 @@
         public System.Windows.Forms.TextBox NameTextBox;
         public System.Windows.Forms.TextBox SurnameTextBox2;
         public System.Windows.Forms.MaskedTextBox IDNumbermaskedTextBox;
-        public System.Windows.Forms.MaskedTextBox PhoneNumberTextBox;
-        public System.Windows.Forms.TextBox StreetAddress2TextBox;
         public System.Windows.Forms.TextBox StreetAddressTextBox;
         public System.Windows.Forms.TextBox CityTextBox;
         public System.Windows.Forms.ComboBox ProvinceComboBox;
         public System.Windows.Forms.MaskedTextBox PostalCodemaskedTextBox;
+        public System.Windows.Forms.MaskedTextBox PhoneNumberTextBox;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label IDErrorLabel;
+        private System.Windows.Forms.Label label5;
     }
 }
