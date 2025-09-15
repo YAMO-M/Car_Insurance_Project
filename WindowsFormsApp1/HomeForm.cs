@@ -19,7 +19,7 @@ namespace WindowsFormsApp1
             makeClaim2.BringToFront();
             paymentDetails1.BringToFront();
             updatePersonalInfo1.BringToFront();
-            policyPage1.BringToFront();
+           // policyPage1.BringToFront();
             homePage1.BringToFront();
             this.AutoScroll = true;
         }
@@ -71,15 +71,7 @@ namespace WindowsFormsApp1
 
        
 
-        private void button1_Click_1(object sender, EventArgs e)
-        {
-           policyPage1.BringToFront();
-        }
-
-        private void makeClaim3_Load(object sender, EventArgs e)
-        {
-
-        }
+      
 
         private void AddPolicyButton_Click(object sender, EventArgs e)
         {

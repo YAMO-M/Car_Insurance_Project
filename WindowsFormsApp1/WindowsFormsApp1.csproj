@@ -69,12 +69,6 @@
     <Compile Include="LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="PolicyPage.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="PolicyPage.Designer.cs">
-      <DependentUpon>PolicyPage.cs</DependentUpon>
-    </Compile>
     <Compile Include="SignUpForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -119,11 +113,11 @@
     <Compile Include="UserControl1.Designer.cs">
       <DependentUpon>UserControl1.cs</DependentUpon>
     </Compile>
-    <Compile Include="AddVehicle.cs">
+    <Compile Include="Policy Page.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="AddVehicle.Designer.cs">
-      <DependentUpon>AddVehicle.cs</DependentUpon>
+    <Compile Include="Policy Page.Designer.cs">
+      <DependentUpon>Policy Page.cs</DependentUpon>
     </Compile>
     <Compile Include="PaymentDetails.cs">
       <SubType>UserControl</SubType>
@@ -145,9 +139,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PolicyPage.resx">
-      <DependentUpon>PolicyPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SignUpForm.resx">
       <DependentUpon>SignUpForm.cs</DependentUpon>
@@ -180,8 +171,8 @@
     <EmbeddedResource Include="UserControl1.resx">
       <DependentUpon>UserControl1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AddVehicle.resx">
-      <DependentUpon>AddVehicle.cs</DependentUpon>
+    <EmbeddedResource Include="Policy Page.resx">
+      <DependentUpon>Policy Page.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PaymentDetails.resx">
       <DependentUpon>PaymentDetails.cs</DependentUpon>

@@ -75,17 +75,30 @@ namespace WindowsFormsApp1
 
         private void Policy3_CheckedChanged(object sender, EventArgs e)
         {
+            if (Policy3.Checked)
+            {
+                AmountTextBox.Text = "R3000.00";
 
+            }
         }
 
         private void Policy2_CheckedChanged(object sender, EventArgs e)
         {
+            if (Policy2.Checked)
+            {
+                AmountTextBox.Text = "R2000.00";
 
+            }
         }
 
         private void Policy1_CheckedChanged(object sender, EventArgs e)
         {
+           
+                AmountTextBox.Text = "R1000.00";
 
+           
         }
+
+        
     }
 }

@@ -41,7 +41,7 @@
             this.makeClaim3 = new WindowsFormsApp1.MakeClaim();
             this.paymentDetails2 = new WindowsFormsApp1.PaymentDetails();
             this.homePage1 = new WindowsFormsApp1.HomePage();
-            this.policyPage1 = new WindowsFormsApp1.PolicyPage();
+           // this.policyPage1 = new WindowsFormsApp1.PolicyPage();
             this.updatePersonalInfo1 = new WindowsFormsApp1.UpdatePersonalInfo();
             this.makeClaim2 = new WindowsFormsApp1.MakeClaim();
             this.paymentDetails1 = new WindowsFormsApp1.PaymentDetails();
@@ -165,7 +165,7 @@
             this.makeClaim3.Name = "makeClaim3";
             this.makeClaim3.Size = new System.Drawing.Size(1026, 1178);
             this.makeClaim3.TabIndex = 17;
-            this.makeClaim3.Load += new System.EventHandler(this.makeClaim3_Load);
+            //this.makeClaim3.Load += new System.EventHandler(this.makeClaim3_Load);
             // 
             // paymentDetails2
             // 
@@ -186,11 +186,11 @@
             // 
             // policyPage1
             // 
-            this.policyPage1.Location = new System.Drawing.Point(261, 2);
-            this.policyPage1.Margin = new System.Windows.Forms.Padding(2);
-            this.policyPage1.Name = "policyPage1";
-            this.policyPage1.Size = new System.Drawing.Size(1026, 1157);
-            this.policyPage1.TabIndex = 13;
+            //this.policyPage1.Location = new System.Drawing.Point(261, 2);
+            //this.policyPage1.Margin = new System.Windows.Forms.Padding(2);
+            //this.policyPage1.Name = "policyPage1";
+            //this.policyPage1.Size = new System.Drawing.Size(1026, 1157);
+            //this.policyPage1.TabIndex = 13;
             // 
             // updatePersonalInfo1
             // 
@@ -256,7 +256,7 @@
             this.Controls.Add(this.makeClaim3);
             this.Controls.Add(this.paymentDetails2);
             this.Controls.Add(this.homePage1);
-            this.Controls.Add(this.policyPage1);
+           // this.Controls.Add(this.policyPage1);
             this.Controls.Add(this.updatePersonalInfo1);
             this.Controls.Add(this.makeClaim2);
             this.Controls.Add(this.paymentDetails1);
@@ -288,7 +288,7 @@
         private System.Windows.Forms.Button UpdatePersonalDetButton;
         private UpdatePersonalInfo updatePersonalInfo1;
         //private UpdateCarDetails updateCarDetails1;
-        private PolicyPage policyPage1;
+        //private PolicyPage policyPage1;
         private HomePage homePage1;
         //private UpdateCarDetails updateCarDetails2;
         private PaymentDetails paymentDetails2;
