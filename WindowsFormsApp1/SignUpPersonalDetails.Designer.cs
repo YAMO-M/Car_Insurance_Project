@@ -54,12 +54,12 @@
             // 
             // Personal
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(4, 41);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(83, 13);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Personal Details";
+            //this.label1.AutoSize = true;
+            //this.label1.Location = new System.Drawing.Point(4, 41);
+            //this.label1.Name = "label1";
+            //this.label1.Size = new System.Drawing.Size(83, 13);
+            //this.label1.TabIndex = 2;
+            //this.label1.Text = "Personal Details";
             // 
             // NameTextBox
             // 
@@ -68,7 +68,7 @@
             this.NameTextBox.Name = "NameTextBox";
             this.NameTextBox.Size = new System.Drawing.Size(391, 22);
             this.NameTextBox.TabIndex = 36;
-            this.NameTextBox.TextChanged += new System.EventHandler(this.NameTextBox_TextChanged);
+            //this.NameTextBox.TextChanged += new System.EventHandler(this.NameTextBox_TextChanged);
             // 
             // SurnameTextBox2
             // 
@@ -77,7 +77,7 @@
             this.SurnameTextBox2.Name = "SurnameTextBox2";
             this.SurnameTextBox2.Size = new System.Drawing.Size(288, 20);
             this.SurnameTextBox2.TabIndex = 35;
-            this.SurnameTextBox2.TextChanged += new System.EventHandler(this.SurnameTextBox2_TextChanged);
+           // this.SurnameTextBox2.TextChanged += new System.EventHandler(this.SurnameTextBox2_TextChanged);
             // 
             // label2
             // 
@@ -188,7 +188,7 @@
             this.CityTextBox.Name = "CityTextBox";
             this.CityTextBox.Size = new System.Drawing.Size(387, 22);
             this.CityTextBox.TabIndex = 52;
-            this.CityTextBox.TextChanged += new System.EventHandler(this.CityTextBox_TextChanged);
+            //this.CityTextBox.TextChanged += new System.EventHandler(this.CityTextBox_TextChanged);
             // 
             // ProvinceComboBox
             // 
