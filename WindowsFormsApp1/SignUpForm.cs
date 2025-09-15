@@ -48,15 +48,10 @@ namespace WindowsFormsApp1
 
         private void NextButton_Click_1(object sender, EventArgs e)
         {
-            if (signUpPersonalDetails1.IsValid())
-            {
+            if (signUpPersonalDetails1.checkSignUpInput()) {
                 createAccountFormFinal1.BringToFront();
             }
-            else
-            {
-                MessageBox.Show("Personal details are Incomplete");
-                return;
-            }
+           
         }
 
         private void createAccountFormFinal1_Load(object sender, EventArgs e)

@@ -7,138 +7,141 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsFormsApp1.DataSet1TableAdapters;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace WindowsFormsApp1
 {
     public partial class SignUpPersonalDetails : UserControl
     {
-        ErrorProvider errorProvider2 = new ErrorProvider();
+        ErrorProvider errorProvider1 = new ErrorProvider();
         public SignUpPersonalDetails()
         {
-            InitializeComponent();   
-            foreach(Control ct in this.Controls)
-            {
-                if (ct is TextBox t)
-                    t.Validating += Validate;
-                else if(ct is MaskedTextBox m)
-                    m.Validating += Validate;
-                else if(ct is ComboBox c)
-                    c.Validating += Validate;
-            }
+            InitializeComponent();
+            IDNumbermaskedTextBox.Mask = "0000000000000";
+            IDNumbermaskedTextBox.PromptChar = ' ';
+            PhoneNumberTextBox.Mask = "000-000-0000";
+            PhoneNumberTextBox.PromptChar = ' ';
+            PostalCodemaskedTextBox.Mask = "0000-0";
+            PostalCodemaskedTextBox.PromptChar= ' ';
+            
+        }
+
+        private void IDNumbermaskedTextBox_TextChanged(object sender, EventArgs e)
+        {
+            ClientTableAdapter adapter = new ClientTableAdapter();
+            int checkDuplicateID = (int)adapter.GetNoOfClientsWithIDNumber(IDNumbermaskedTextBox.Text);
+            IDErrorLabel.ForeColor = Color.Red;
+            IDErrorLabel.Text = checkDuplicateID > 0 ? " ID Already in use" : "";
         }
 
        
+        public bool checkSignUpInput()
 
-        private void SignUpPersonalDetails_Load(object sender, EventArgs e)
         {
-
+           
+            errorProvider1.Clear();
+            if (string.IsNullOrEmpty(NameTextBox.Text.Trim()))
+            {
+                errorProvider1.SetError(NameTextBox, "Name is required");
+                return false;
+            }
+            else if (NameTextBox.Text.Trim().Length < 3)
+            {
+                errorProvider1.SetError(NameTextBox, "Name must be atleast 3 letters");
+                return false;
+            }
+            else if (NameTextBox.Text.Trim().Any(Char.IsDigit) || NameTextBox.Text.Trim().Any(Char.IsPunctuation))
+            {
+                errorProvider1.SetError(NameTextBox, "Name contains no digits OR symbols");
+                return false;
+            }
+            if (string.IsNullOrEmpty(SurnameTextBox2.Text.Trim()))
+            {
+                errorProvider1.SetError(SurnameTextBox2, "Surname is required");
+                return false;
+            }
+            else if (SurnameTextBox2.Text.Trim().Length < 2)
+            {
+                errorProvider1.SetError(SurnameTextBox2, "Surname must be atleast 3 letters");
+                return false;
+            }
+            else if (SurnameTextBox2.Text.Trim().Any(Char.IsDigit) || NameTextBox.Text.Trim().Any(Char.IsPunctuation))
+            {
+                errorProvider1.SetError(NameTextBox, "Surname contains no digits or symbols");
+                return false;
+            }
+            if (string.IsNullOrEmpty(IDNumbermaskedTextBox.Text.Trim()))
+            {
+                errorProvider1.SetError(SurnameTextBox2, "ID Number is required");
+                return false;
+            }
+            else if(IDNumbermaskedTextBox.Text.Trim().Length < 12)
+            {
+                errorProvider1.SetError(IDNumbermaskedTextBox, "ID Number must be 13 numbers");
+                return false;
+            }
+            else if(!(IDErrorLabel.Text == ""))
+            {
+                return false;
+            }
+            if (string.IsNullOrEmpty(PhoneNumberTextBox.Text.Trim()))
+            {
+                errorProvider1.SetError(PhoneNumberTextBox, "Phone Number is required");
+                return false;
+            }
+            else if (PhoneNumberTextBox.Text.Trim().Length < 9)
+            {
+                errorProvider1.SetError(PhoneNumberTextBox, "Phone Number must be 10 numbers");
+                return false;
+            }
+            else if(!PhoneNumberTextBox.Text.StartsWith("0") || 
+                    !(PhoneNumberTextBox.Text.Trim()[1] == '6' ||
+                      PhoneNumberTextBox.Text.Trim()[1] == '7' ||
+                      PhoneNumberTextBox.Text.Trim()[1] == '8'))
+            {
+                errorProvider1.SetError(PhoneNumberTextBox, "Phone Number must start with 06,07,08");
+                return false;
+            }
+            if (string.IsNullOrEmpty(StreetAddressTextBox.Text.Trim()))
+            {
+                errorProvider1.SetError(StreetAddressTextBox, "Street Address is required");
+                return false;
+            }
+            else if (StreetAddressTextBox.Text.Trim().Length < 2)
+            {
+                errorProvider1.SetError(StreetAddressTextBox, "Street Address must be atleast 3 letters");
+                return false;
+            }
+            if (string.IsNullOrEmpty(CityTextBox.Text.Trim()))
+            {
+                errorProvider1.SetError(CityTextBox, "City is required");
+                return false;
+            }
+            else if(CityTextBox.Text.Trim().Length < 2)
+            {
+                errorProvider1.SetError(CityTextBox, "City Name must be atleast 3 letters");
+                return false;
+            }
+            if (string.IsNullOrEmpty(ProvinceComboBox.Text.Trim()))
+            {
+                errorProvider1.SetError(ProvinceComboBox, "Province is required");
+                return false;
+            }
+            if (string.IsNullOrEmpty(PostalCodemaskedTextBox.Text.Trim()))
+            {
+                errorProvider1.SetError(PostalCodemaskedTextBox, "Postal/Zip Code is required");
+                return false;
+            }
+            else if (PostalCodemaskedTextBox.Text.Trim().Length < 3)
+            {
+                errorProvider1.SetError(PostalCodemaskedTextBox, "Postal/Zip Code must be 4 or 5 numbers");
+                return false;
+            }
+         
+            return true;
         }
 
-        private void NameTextBox_TextChanged(object sender, EventArgs e)
-        {
-            TextBox textBox = (TextBox)sender;
-            string input = textBox.Text;
-            if (input.All(c => char.IsLetter(c)))
-            {
-                errorProvider2.SetError(textBox, "");
-            }
-            else
-            {
-                errorProvider2.SetError(textBox, "Invalid Name");
-            }
-        }
-
-        public bool IsValid()
-        {
-            return !string.IsNullOrWhiteSpace(NameTextBox.Text) && NameTextBox.Text.All(c => char.IsLetter(c)) && 
-                !string.IsNullOrWhiteSpace(SurnameTextBox2.Text) && SurnameTextBox2.Text.All(c => char.IsLetter(c)) && 
-                !string.IsNullOrWhiteSpace(IDNumbermaskedTextBox.Text) &&
-                !string.IsNullOrWhiteSpace(PhoneNumberTextBox.Text) &&
-                !string.IsNullOrWhiteSpace(StreetAddressTextBox.Text) && !string.IsNullOrWhiteSpace(StreetAddress2TextBox.Text) && 
-                !string.IsNullOrWhiteSpace(CityTextBox.Text) && CityTextBox.Text.All(c => char.IsLetter(c)) && !string.IsNullOrWhiteSpace(ProvinceComboBox.Text) && 
-                !string.IsNullOrWhiteSpace(PostalCodemaskedTextBox.Text);
-        }
-        public void Validate(object sender, CancelEventArgs e)
-        {
-            if(sender is TextBox t)
-            {
-                if (string.IsNullOrWhiteSpace(t.Text))
-                {
-                    errorProvider2.SetError(t, "Please fill in requirement");
-                    //e.Cancel = true;
-                }
-                else
-                {
-                    errorProvider2.SetError(t, "");
-                    //e.Cancel = false;
-                    if(t.Name == "NameTextBox" || t.Name == "SurnameTextBox2" || t.Name == "CityTextBox")
-                    {
-                        if(t.Text.All(c => char.IsLetter(c)))
-                        {
-                            errorProvider2.SetError(t, ""); 
-                        }
-                        else
-                        {
-                             errorProvider2.SetError(t, "Invalid Name");
-                        }
-                    }
-
-                }
-            }
-            else if(sender is MaskedTextBox m)
-            {
-                if (!m.MaskCompleted || string.IsNullOrWhiteSpace(m.Text))
-                {
-                    errorProvider2.SetError(m, "Please fill in requirement");
-                    //e.Cancel = true;
-                }
-                else
-                {
-                    errorProvider2.SetError(m, "");
-                    //e.Cancel = false;
-                }
-            }
-            else if(sender is ComboBox c)
-            {
-                if(c.SelectedIndex < 0)
-                {
-                    errorProvider2.SetError(c, "Please select a value");
-                    //e.Cancel = true;
-                }
-                else
-                {
-                    errorProvider2.SetError(c, "");
-                   // e.Cancel = false;
-                }
-            }
-        }
-
-        private void SurnameTextBox2_TextChanged(object sender, EventArgs e)
-        {
-            TextBox textBox = (TextBox)sender;
-            string input = textBox.Text;
-            if (input.All(c => char.IsLetter(c)))
-            {
-                errorProvider2.SetError(textBox, "");
-            }
-            else
-            {
-                errorProvider2.SetError(textBox, "Invalid Name");
-            }
-        }
-
-        private void CityTextBox_TextChanged(object sender, EventArgs e)
-        {
-            TextBox textBox = (TextBox)sender;
-            string input = textBox.Text;
-            if (input.All(c => char.IsLetter(c)))
-            {
-                errorProvider2.SetError(textBox, "");
-            }
-            else
-            {
-                errorProvider2.SetError(textBox, "Invalid Name");
-            }
-        }
+       
     }
 }
