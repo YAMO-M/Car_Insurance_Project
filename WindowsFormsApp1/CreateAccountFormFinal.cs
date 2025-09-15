@@ -95,5 +95,10 @@ namespace WindowsFormsApp1
             EmailErrorLabel.Text = checkDuplicateEmail > 0 ? "Email already used" : "";
             
         }
+
+        internal bool IsValid2()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
