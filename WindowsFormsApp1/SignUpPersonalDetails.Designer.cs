@@ -54,30 +54,26 @@
             // 
             // Personal
             // 
-            //this.label1.AutoSize = true;
-            //this.label1.Location = new System.Drawing.Point(4, 41);
-            //this.label1.Name = "label1";
-            //this.label1.Size = new System.Drawing.Size(83, 13);
-            //this.label1.TabIndex = 2;
-            //this.label1.Text = "Personal Details";
+            this.Personal.Location = new System.Drawing.Point(0, 0);
+            this.Personal.Name = "Personal";
+            this.Personal.Size = new System.Drawing.Size(100, 23);
+            this.Personal.TabIndex = 60;
             // 
             // NameTextBox
             // 
             this.NameTextBox.Location = new System.Drawing.Point(4, 94);
-            this.NameTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.NameTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.NameTextBox.Name = "NameTextBox";
             this.NameTextBox.Size = new System.Drawing.Size(391, 22);
             this.NameTextBox.TabIndex = 36;
-            //this.NameTextBox.TextChanged += new System.EventHandler(this.NameTextBox_TextChanged);
             // 
             // SurnameTextBox2
             // 
             this.SurnameTextBox2.Location = new System.Drawing.Point(419, 94);
-            this.SurnameTextBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.SurnameTextBox2.Margin = new System.Windows.Forms.Padding(4);
             this.SurnameTextBox2.Name = "SurnameTextBox2";
-            this.SurnameTextBox2.Size = new System.Drawing.Size(288, 20);
+            this.SurnameTextBox2.Size = new System.Drawing.Size(288, 22);
             this.SurnameTextBox2.TabIndex = 35;
-           // this.SurnameTextBox2.TextChanged += new System.EventHandler(this.SurnameTextBox2_TextChanged);
             // 
             // label2
             // 
@@ -102,18 +98,17 @@
             // IDNumbermaskedTextBox
             // 
             this.IDNumbermaskedTextBox.Location = new System.Drawing.Point(4, 164);
-            this.IDNumbermaskedTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.IDNumbermaskedTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.IDNumbermaskedTextBox.Mask = "0000000000000";
             this.IDNumbermaskedTextBox.Name = "IDNumbermaskedTextBox";
             this.IDNumbermaskedTextBox.Size = new System.Drawing.Size(387, 22);
             this.IDNumbermaskedTextBox.TabIndex = 39;
-         
             this.IDNumbermaskedTextBox.TextChanged += new System.EventHandler(this.IDNumbermaskedTextBox_TextChanged);
             // 
             // IDNumberTextBox
             // 
             this.IDNumberTextBox.AutoSize = true;
-            this.IDNumberTextBox.Location = new System.Drawing.Point(1, 143);
+            this.IDNumberTextBox.Location = new System.Drawing.Point(5, 144);
             this.IDNumberTextBox.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.IDNumberTextBox.Name = "IDNumberTextBox";
             this.IDNumberTextBox.Size = new System.Drawing.Size(71, 16);
@@ -149,9 +144,9 @@
             // StreetAddressTextBox
             // 
             this.StreetAddressTextBox.Location = new System.Drawing.Point(7, 244);
-            this.StreetAddressTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.StreetAddressTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.StreetAddressTextBox.Name = "StreetAddressTextBox";
-            this.StreetAddressTextBox.Size = new System.Drawing.Size(291, 20);
+            this.StreetAddressTextBox.Size = new System.Drawing.Size(382, 22);
             this.StreetAddressTextBox.TabIndex = 48;
             // 
             // label6
@@ -176,7 +171,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(313, 227);
+            this.label8.Location = new System.Drawing.Point(416, 222);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(29, 16);
             this.label8.TabIndex = 51;
@@ -184,11 +179,10 @@
             // 
             // CityTextBox
             // 
-            this.CityTextBox.Location = new System.Drawing.Point(313, 243);
+            this.CityTextBox.Location = new System.Drawing.Point(419, 238);
             this.CityTextBox.Name = "CityTextBox";
-            this.CityTextBox.Size = new System.Drawing.Size(387, 22);
+            this.CityTextBox.Size = new System.Drawing.Size(288, 22);
             this.CityTextBox.TabIndex = 52;
-            //this.CityTextBox.TextChanged += new System.EventHandler(this.CityTextBox_TextChanged);
             // 
             // ProvinceComboBox
             // 
@@ -210,15 +204,15 @@
             // 
             // PostalCodemaskedTextBox
             // 
-            this.PostalCodemaskedTextBox.Location = new System.Drawing.Point(313, 299);
+            this.PostalCodemaskedTextBox.Location = new System.Drawing.Point(420, 299);
             this.PostalCodemaskedTextBox.Name = "PostalCodemaskedTextBox";
-            this.PostalCodemaskedTextBox.Size = new System.Drawing.Size(291, 20);
+            this.PostalCodemaskedTextBox.Size = new System.Drawing.Size(291, 22);
             this.PostalCodemaskedTextBox.TabIndex = 54;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(310, 283);
+            this.label9.Location = new System.Drawing.Point(417, 280);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(104, 16);
             this.label9.TabIndex = 55;
@@ -226,9 +220,9 @@
             // 
             // PhoneNumberTextBox
             // 
-            this.PhoneNumberTextBox.Location = new System.Drawing.Point(316, 149);
+            this.PhoneNumberTextBox.Location = new System.Drawing.Point(420, 162);
             this.PhoneNumberTextBox.Name = "PhoneNumberTextBox";
-            this.PhoneNumberTextBox.Size = new System.Drawing.Size(288, 20);
+            this.PhoneNumberTextBox.Size = new System.Drawing.Size(288, 22);
             this.PhoneNumberTextBox.TabIndex = 44;
             // 
             // label10
@@ -236,7 +230,7 @@
             this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(265, 10);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(45, 13);
+            this.label10.Size = new System.Drawing.Size(55, 16);
             this.label10.TabIndex = 57;
             this.label10.Text = "Sign Up";
             // 
@@ -245,7 +239,7 @@
             this.IDErrorLabel.AutoSize = true;
             this.IDErrorLabel.Location = new System.Drawing.Point(4, 172);
             this.IDErrorLabel.Name = "IDErrorLabel";
-            this.IDErrorLabel.Size = new System.Drawing.Size(0, 13);
+            this.IDErrorLabel.Size = new System.Drawing.Size(0, 16);
             this.IDErrorLabel.TabIndex = 58;
             // 
             // label5
@@ -253,7 +247,7 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(4, 198);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(83, 13);
+            this.label5.Size = new System.Drawing.Size(106, 16);
             this.label5.TabIndex = 59;
             this.label5.Text = "Address  Details";
             // 
@@ -283,10 +277,9 @@
             this.Controls.Add(this.SurnameTextBox2);
             this.Controls.Add(this.NameTextBox);
             this.Controls.Add(this.Personal);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "SignUpPersonalDetails";
-            this.Size = new System.Drawing.Size(672, 696);
-       
+            this.Size = new System.Drawing.Size(751, 696);
             this.ResumeLayout(false);
             this.PerformLayout();
 

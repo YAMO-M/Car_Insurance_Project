@@ -36,7 +36,7 @@
             // 
             // NextButton
             // 
-            this.NextButton.Location = new System.Drawing.Point(546, 602);
+            this.NextButton.Location = new System.Drawing.Point(543, 533);
             this.NextButton.Name = "NextButton";
             this.NextButton.Size = new System.Drawing.Size(124, 34);
             this.NextButton.TabIndex = 2;
@@ -46,7 +46,7 @@
             // 
             // Previous
             // 
-            this.Previous.Location = new System.Drawing.Point(82, 602);
+            this.Previous.Location = new System.Drawing.Point(82, 533);
             this.Previous.Name = "Previous";
             this.Previous.Size = new System.Drawing.Size(102, 34);
             this.Previous.TabIndex = 4;
@@ -57,9 +57,9 @@
             // createAccountFormFinal1
             // 
             this.createAccountFormFinal1.Location = new System.Drawing.Point(-2, -1);
-            this.createAccountFormFinal1.Margin = new System.Windows.Forms.Padding(4);
+            this.createAccountFormFinal1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.createAccountFormFinal1.Name = "createAccountFormFinal1";
-            this.createAccountFormFinal1.Size = new System.Drawing.Size(862, 596);
+            this.createAccountFormFinal1.Size = new System.Drawing.Size(862, 512);
             this.createAccountFormFinal1.TabIndex = 7;
             this.createAccountFormFinal1.Load += new System.EventHandler(this.createAccountFormFinal1_Load);
             // 
@@ -68,7 +68,7 @@
             this.signUpPersonalDetails1.Location = new System.Drawing.Point(-2, -1);
             this.signUpPersonalDetails1.Margin = new System.Windows.Forms.Padding(4);
             this.signUpPersonalDetails1.Name = "signUpPersonalDetails1";
-            this.signUpPersonalDetails1.Size = new System.Drawing.Size(832, 596);
+            this.signUpPersonalDetails1.Size = new System.Drawing.Size(832, 527);
             this.signUpPersonalDetails1.TabIndex = 6;
             // 
             // SignUpForm
