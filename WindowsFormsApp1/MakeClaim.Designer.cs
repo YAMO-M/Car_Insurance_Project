@@ -194,7 +194,7 @@
             // 
             this.LocationOfTheIncidentLabel.AutoSize = true;
             this.LocationOfTheIncidentLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LocationOfTheIncidentLabel.Location = new System.Drawing.Point(34, 468);
+            this.LocationOfTheIncidentLabel.Location = new System.Drawing.Point(34, 442);
             this.LocationOfTheIncidentLabel.Name = "LocationOfTheIncidentLabel";
             this.LocationOfTheIncidentLabel.Size = new System.Drawing.Size(235, 25);
             this.LocationOfTheIncidentLabel.TabIndex = 13;
@@ -202,7 +202,7 @@
             // 
             // StreetAddressTextBox
             // 
-            this.StreetAddressTextBox.Location = new System.Drawing.Point(34, 563);
+            this.StreetAddressTextBox.Location = new System.Drawing.Point(33, 505);
             this.StreetAddressTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.StreetAddressTextBox.Name = "StreetAddressTextBox";
             this.StreetAddressTextBox.Size = new System.Drawing.Size(648, 26);
@@ -212,7 +212,7 @@
             // 
             this.StreetAddressLabel.AutoSize = true;
             this.StreetAddressLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.StreetAddressLabel.Location = new System.Drawing.Point(35, 525);
+            this.StreetAddressLabel.Location = new System.Drawing.Point(35, 479);
             this.StreetAddressLabel.Name = "StreetAddressLabel";
             this.StreetAddressLabel.Size = new System.Drawing.Size(129, 22);
             this.StreetAddressLabel.TabIndex = 15;
@@ -222,7 +222,7 @@
             // 
             this.CityLabel.AutoSize = true;
             this.CityLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CityLabel.Location = new System.Drawing.Point(30, 614);
+            this.CityLabel.Location = new System.Drawing.Point(30, 545);
             this.CityLabel.Name = "CityLabel";
             this.CityLabel.Size = new System.Drawing.Size(41, 22);
             this.CityLabel.TabIndex = 16;
@@ -230,7 +230,7 @@
             // 
             // CityTextBox
             // 
-            this.CityTextBox.Location = new System.Drawing.Point(34, 640);
+            this.CityTextBox.Location = new System.Drawing.Point(33, 571);
             this.CityTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.CityTextBox.Name = "CityTextBox";
             this.CityTextBox.Size = new System.Drawing.Size(327, 26);
@@ -239,7 +239,7 @@
             // ProvinceLabel
             // 
             this.ProvinceLabel.AutoSize = true;
-            this.ProvinceLabel.Location = new System.Drawing.Point(381, 616);
+            this.ProvinceLabel.Location = new System.Drawing.Point(381, 547);
             this.ProvinceLabel.Name = "ProvinceLabel";
             this.ProvinceLabel.Size = new System.Drawing.Size(69, 20);
             this.ProvinceLabel.TabIndex = 18;
@@ -258,7 +258,7 @@
             "North West",
             "Limpopo",
             "Northern Cape"});
-            this.ProvinceComboBox.Location = new System.Drawing.Point(385, 638);
+            this.ProvinceComboBox.Location = new System.Drawing.Point(385, 571);
             this.ProvinceComboBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ProvinceComboBox.Name = "ProvinceComboBox";
             this.ProvinceComboBox.Size = new System.Drawing.Size(311, 28);
@@ -268,7 +268,7 @@
             // 
             this.DescriptionLabel.AutoSize = true;
             this.DescriptionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DescriptionLabel.Location = new System.Drawing.Point(30, 706);
+            this.DescriptionLabel.Location = new System.Drawing.Point(29, 617);
             this.DescriptionLabel.Name = "DescriptionLabel";
             this.DescriptionLabel.Size = new System.Drawing.Size(228, 22);
             this.DescriptionLabel.TabIndex = 20;
@@ -276,7 +276,7 @@
             // 
             // DescriptionRichTextBox
             // 
-            this.DescriptionRichTextBox.Location = new System.Drawing.Point(23, 733);
+            this.DescriptionRichTextBox.Location = new System.Drawing.Point(24, 652);
             this.DescriptionRichTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.DescriptionRichTextBox.Name = "DescriptionRichTextBox";
             this.DescriptionRichTextBox.Size = new System.Drawing.Size(694, 78);
@@ -285,7 +285,7 @@
             // 
             // CaseNumberTextBox
             // 
-            this.CaseNumberTextBox.Location = new System.Drawing.Point(34, 873);
+            this.CaseNumberTextBox.Location = new System.Drawing.Point(24, 792);
             this.CaseNumberTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.CaseNumberTextBox.Name = "CaseNumberTextBox";
             this.CaseNumberTextBox.Size = new System.Drawing.Size(327, 26);
@@ -295,7 +295,7 @@
             // 
             this.CaseNumberLabel.AutoSize = true;
             this.CaseNumberLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CaseNumberLabel.Location = new System.Drawing.Point(30, 846);
+            this.CaseNumberLabel.Location = new System.Drawing.Point(20, 753);
             this.CaseNumberLabel.Name = "CaseNumberLabel";
             this.CaseNumberLabel.Size = new System.Drawing.Size(227, 22);
             this.CaseNumberLabel.TabIndex = 24;
@@ -305,7 +305,7 @@
             // 
             this.PayoutMethodLabel.AutoSize = true;
             this.PayoutMethodLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PayoutMethodLabel.Location = new System.Drawing.Point(381, 844);
+            this.PayoutMethodLabel.Location = new System.Drawing.Point(386, 753);
             this.PayoutMethodLabel.Name = "PayoutMethodLabel";
             this.PayoutMethodLabel.Size = new System.Drawing.Size(130, 22);
             this.PayoutMethodLabel.TabIndex = 25;
@@ -317,7 +317,7 @@
             this.PayoutMethodComboBox.Items.AddRange(new object[] {
             "Bank Transfer",
             "Cheque"});
-            this.PayoutMethodComboBox.Location = new System.Drawing.Point(385, 870);
+            this.PayoutMethodComboBox.Location = new System.Drawing.Point(385, 792);
             this.PayoutMethodComboBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.PayoutMethodComboBox.Name = "PayoutMethodComboBox";
             this.PayoutMethodComboBox.Size = new System.Drawing.Size(311, 28);
@@ -325,7 +325,7 @@
             // 
             // ClaimButton
             // 
-            this.ClaimButton.Location = new System.Drawing.Point(245, 1032);
+            this.ClaimButton.Location = new System.Drawing.Point(258, 919);
             this.ClaimButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ClaimButton.Name = "ClaimButton";
             this.ClaimButton.Size = new System.Drawing.Size(205, 46);
@@ -372,7 +372,7 @@
             // ClaimAmountLabel
             // 
             this.ClaimAmountLabel.AutoSize = true;
-            this.ClaimAmountLabel.Location = new System.Drawing.Point(241, 947);
+            this.ClaimAmountLabel.Location = new System.Drawing.Point(289, 850);
             this.ClaimAmountLabel.Name = "ClaimAmountLabel";
             this.ClaimAmountLabel.Size = new System.Drawing.Size(108, 20);
             this.ClaimAmountLabel.TabIndex = 43;
@@ -380,7 +380,7 @@
             // 
             // AmountTextBox
             // 
-            this.AmountTextBox.Location = new System.Drawing.Point(233, 971);
+            this.AmountTextBox.Location = new System.Drawing.Point(233, 874);
             this.AmountTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.AmountTextBox.Name = "AmountTextBox";
             this.AmountTextBox.ReadOnly = true;
