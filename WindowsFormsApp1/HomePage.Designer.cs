@@ -64,6 +64,7 @@
             this.PolicyBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
             this.PolicyBox1.Location = new System.Drawing.Point(35, 229);
             this.PolicyBox1.Name = "PolicyBox1";
+            this.PolicyBox1.ReadOnly = true;
             this.PolicyBox1.Size = new System.Drawing.Size(365, 149);
             this.PolicyBox1.TabIndex = 3;
             this.PolicyBox1.Text = "1. Collision Insurance\nPays for repairs or replacement of your car if it’s damage" +
@@ -74,6 +75,7 @@
             this.richTextBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
             this.richTextBox2.Location = new System.Drawing.Point(35, 405);
             this.richTextBox2.Name = "richTextBox2";
+            this.richTextBox2.ReadOnly = true;
             this.richTextBox2.Size = new System.Drawing.Size(393, 119);
             this.richTextBox2.TabIndex = 4;
             this.richTextBox2.Text = "2. Comprehensive Insurance\nCovers damage to your car from non-collision events su" +
@@ -85,6 +87,7 @@
             this.richTextBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
             this.richTextBox3.Location = new System.Drawing.Point(35, 559);
             this.richTextBox3.Name = "richTextBox3";
+            this.richTextBox3.ReadOnly = true;
             this.richTextBox3.Size = new System.Drawing.Size(434, 147);
             this.richTextBox3.TabIndex = 5;
             this.richTextBox3.Text = "3. Personal Injury Protection (PIP)\nCovers medical expenses for you and your pass" +
