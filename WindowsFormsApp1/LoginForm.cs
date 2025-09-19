@@ -25,27 +25,13 @@ namespace WindowsFormsApp1
             this.AutoScroll = true;
             this.AutoScroll = true;
         }
-        private void forgotPassword_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            ResetPasswordForm form = new ResetPasswordForm();
-            form.Show();
-        }
-
-        private void signUpLink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            SignUpForm form2 = new SignUpForm();
-            form2.Show();
-        }
-
         private void loginButton_Click(object sender, EventArgs e)
         {
-
-            if (checkUserExist()) { 
+            if (checkUserExist())
+            {
                 HomeForm form5 = new HomeForm();
                 form5.Show();
-            }
-          
-          
+            } 
         }
 
         private bool checkUserExist()
@@ -64,12 +50,12 @@ namespace WindowsFormsApp1
             }
             else
             {
-                ClientTableAdapter adapter = new ClientTableAdapter();
-                int checkDuplicateEmail = (int)adapter.GetNoOfClientsWithEmail(userName.Text);
-                errorProvider1.SetError(userName, checkDuplicateEmail > 0 ? "" : "Email does not exist");
+                AgentTableAdapter adapter = new AgentTableAdapter();
+                int No_Of_Emails = (int)adapter.Check_If_Agent_Email_Exist(userName.Text);
+                errorProvider1.SetError(userName, No_Of_Emails > 0 ? "" : "Email does not exist");
                 if (errorProvider1.GetError(userName) == "")
                 {
-                    int checkIfUserExist = (int)adapter.CheckIFUserExist(userName.Text, password.Text);
+                    int checkIfUserExist = (int)adapter.Check_If_Agent_Exist(userName.Text, password.Text);
                     if (checkIfUserExist > 0)
                     {
                         return true;
@@ -81,8 +67,7 @@ namespace WindowsFormsApp1
                     }
                 }
                 return false;
-            }
-               
-        } 
+            }    
+        }
     }
 }
