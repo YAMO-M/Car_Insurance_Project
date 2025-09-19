@@ -426,7 +426,7 @@
             this.Controls.Add(this.NameLabel);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "MakeClaim";
-            this.Size = new System.Drawing.Size(765, 1171);
+            this.Size = new System.Drawing.Size(1300, 838);
             this.Load += new System.EventHandler(this.UserControl4_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

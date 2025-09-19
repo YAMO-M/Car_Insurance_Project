@@ -125,12 +125,6 @@
     <Compile Include="Policy Page.Designer.cs">
       <DependentUpon>Policy Page.cs</DependentUpon>
     </Compile>
-    <Compile Include="PaymentDetails.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="PaymentDetails.Designer.cs">
-      <DependentUpon>PaymentDetails.cs</DependentUpon>
-    </Compile>
     <Compile Include="MakeClaim.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -182,9 +176,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Policy Page.resx">
       <DependentUpon>Policy Page.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PaymentDetails.resx">
-      <DependentUpon>PaymentDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MakeClaim.resx">
       <DependentUpon>MakeClaim.cs</DependentUpon>

@@ -15,18 +15,17 @@ namespace WindowsFormsApp1
         public HomeForm()
         {
             InitializeComponent();
+            this.WindowState = FormWindowState.Maximized;
             addVehicle1.BringToFront();
             makeClaim2.BringToFront();
-            paymentDetails1.BringToFront();
             updatePersonalInfo1.BringToFront();
-           // policyPage1.BringToFront();
-            homePage1.BringToFront();
-            this.AutoScroll = true;
+            homePage2.BringToFront();
+
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            homePage1.BringToFront();
+            homePage2.BringToFront();
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -54,10 +53,6 @@ namespace WindowsFormsApp1
             makeClaim2.BringToFront();
         }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-            paymentDetails1.BringToFront();
-        }
 
         private void HomeForm_Load(object sender, EventArgs e)
         {
@@ -97,5 +92,12 @@ namespace WindowsFormsApp1
         {
             searchPage1.BringToFront();
         }
+
+        private void searchPage1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        
     }
 }

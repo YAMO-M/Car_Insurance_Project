@@ -406,7 +406,7 @@
             this.Controls.Add(this.VINlabel);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "AddVehicle";
-            this.Size = new System.Drawing.Size(1221, 838);
+            this.Size = new System.Drawing.Size(1300, 838);
             this.Load += new System.EventHandler(this.AddVehicle_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

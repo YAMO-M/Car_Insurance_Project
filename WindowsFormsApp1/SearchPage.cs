@@ -23,29 +23,37 @@ namespace WindowsFormsApp1
 
         }
 
-        private void DeleteButton_Click(object sender, EventArgs e)
-        {
-            DialogResult result = MessageBox.Show("Are you sure you want to delete this customer?", "Confirmation", MessageBoxButtons.YesNo);
-            if(result == DialogResult.Yes)
-            {
-                //kwesta
-                //Change the status
-            }
-        }
 
         private void richTextBox1_TextChanged(object sender, EventArgs e)
         {
             //display clients
+            /*
+            Name:
+            Surname:
+            ID number:
+            Policy type:
+            Status:
+             */
         }
 
         private void searchButton_Click(object sender, EventArgs e)
         {
-
+            //Minenhle
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Are you sure you want to delete this customer?", "Confirmation", MessageBoxButtons.YesNo);
+            if (result == DialogResult.Yes)
+            {
+                //kwesta
+                //Change the status
+            }
         }
     }
 }

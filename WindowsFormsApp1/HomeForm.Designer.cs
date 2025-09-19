@@ -38,17 +38,16 @@
             this.UserLabel = new System.Windows.Forms.Label();
             this.HomeButton = new System.Windows.Forms.Button();
             this.UpdatePersonalDetButton = new System.Windows.Forms.Button();
+            this.searchPage1 = new WindowsFormsApp1.SearchPage();
             this.addVehicle3 = new WindowsFormsApp1.AddVehicle();
             this.makeClaim3 = new WindowsFormsApp1.MakeClaim();
-            this.paymentDetails2 = new WindowsFormsApp1.PaymentDetails();
             this.homePage1 = new WindowsFormsApp1.HomePage();
             this.updatePersonalInfo1 = new WindowsFormsApp1.AddClient();
             this.makeClaim2 = new WindowsFormsApp1.MakeClaim();
-            this.paymentDetails1 = new WindowsFormsApp1.PaymentDetails();
             this.makeClaim1 = new WindowsFormsApp1.MakeClaim();
             this.addVehicle2 = new WindowsFormsApp1.AddVehicle();
             this.addVehicle1 = new WindowsFormsApp1.AddVehicle();
-            this.searchPage1 = new WindowsFormsApp1.SearchPage();
+            this.homePage2 = new WindowsFormsApp1.HomePage();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -160,6 +159,15 @@
             this.UpdatePersonalDetButton.UseVisualStyleBackColor = true;
             this.UpdatePersonalDetButton.Click += new System.EventHandler(this.UpdatePersonalDetButton_Click);
             // 
+            // searchPage1
+            // 
+            this.searchPage1.AutoScroll = true;
+            this.searchPage1.Location = new System.Drawing.Point(261, 2);
+            this.searchPage1.Name = "searchPage1";
+            this.searchPage1.Size = new System.Drawing.Size(1221, 838);
+            this.searchPage1.TabIndex = 19;
+            this.searchPage1.Load += new System.EventHandler(this.searchPage1_Load);
+            // 
             // addVehicle3
             // 
             this.addVehicle3.AutoScroll = true;
@@ -178,14 +186,7 @@
             this.makeClaim3.Size = new System.Drawing.Size(1026, 1178);
             this.makeClaim3.TabIndex = 17;
             // 
-            // paymentDetails2
-            // 
-            this.paymentDetails2.AutoScroll = true;
-            this.paymentDetails2.Location = new System.Drawing.Point(261, 2);
-            this.paymentDetails2.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.paymentDetails2.Name = "paymentDetails2";
-            this.paymentDetails2.Size = new System.Drawing.Size(1026, 1183);
-            this.paymentDetails2.TabIndex = 16;
+
             // 
             // homePage1
             // 
@@ -214,14 +215,7 @@
             this.makeClaim2.TabIndex = 10;
             // 
             // paymentDetails1
-            // 
-            this.paymentDetails1.AutoScroll = true;
-            this.paymentDetails1.Location = new System.Drawing.Point(261, 2);
-            this.paymentDetails1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.paymentDetails1.Name = "paymentDetails1";
-            this.paymentDetails1.Size = new System.Drawing.Size(1276, 1026);
-            this.paymentDetails1.TabIndex = 8;
-            // 
+            
             // makeClaim1
             // 
             this.makeClaim1.AutoScroll = true;
@@ -249,28 +243,27 @@
             this.addVehicle1.Size = new System.Drawing.Size(914, 838);
             this.addVehicle1.TabIndex = 0;
             // 
-            // searchPage1
+            // homePage2
             // 
-            this.searchPage1.AutoScroll = true;
-            this.searchPage1.Location = new System.Drawing.Point(261, 2);
-            this.searchPage1.Name = "searchPage1";
-            this.searchPage1.Size = new System.Drawing.Size(1221, 838);
-            this.searchPage1.TabIndex = 19;
+            this.homePage2.Location = new System.Drawing.Point(261, 2);
+            this.homePage2.Name = "homePage2";
+            this.homePage2.Size = new System.Drawing.Size(1300, 838);
+            this.homePage2.TabIndex = 20;
+//            this.homePage2.Load += new System.EventHandler(this.homePage2_Load);
             // 
             // HomeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1538, 1062);
+            this.Controls.Add(this.homePage2);
             this.Controls.Add(this.searchPage1);
             this.Controls.Add(this.addVehicle3);
             this.Controls.Add(this.UpdatePersonalDetButton);
             this.Controls.Add(this.makeClaim3);
-            this.Controls.Add(this.paymentDetails2);
             this.Controls.Add(this.homePage1);
             this.Controls.Add(this.updatePersonalInfo1);
             this.Controls.Add(this.makeClaim2);
-            this.Controls.Add(this.paymentDetails1);
             this.Controls.Add(this.makeClaim1);
             this.Controls.Add(this.panel2);
             this.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
@@ -293,7 +286,6 @@
         private System.Windows.Forms.Button MakeClaimButton;
         private AddVehicle addVehicle1;
         private MakeClaim makeClaim1;
-        private PaymentDetails paymentDetails1;
         private AddVehicle addVehicle2;
         private MakeClaim makeClaim2;
         private System.Windows.Forms.Button UpdatePersonalDetButton;
@@ -302,11 +294,11 @@
         //private PolicyPage policyPage1;
         private HomePage homePage1;
         //private UpdateCarDetails updateCarDetails2;
-        private PaymentDetails paymentDetails2;
         private MakeClaim makeClaim3;
         private System.Windows.Forms.Button AddPolicyButton;
         private AddVehicle addVehicle3;
         private System.Windows.Forms.Button button1;
         private SearchPage searchPage1;
+        private HomePage homePage2;
     }
 }
