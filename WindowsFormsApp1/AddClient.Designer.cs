@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApp1
 {
-    partial class UpdatePersonalInfo
+    partial class AddClient
     {
         /// <summary> 
         /// Required designer variable.
@@ -59,9 +59,9 @@
             this.PersonalDetailsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PersonalDetailsLabel.Location = new System.Drawing.Point(8, 45);
             this.PersonalDetailsLabel.Name = "PersonalDetailsLabel";
-            this.PersonalDetailsLabel.Size = new System.Drawing.Size(176, 25);
+            this.PersonalDetailsLabel.Size = new System.Drawing.Size(139, 25);
             this.PersonalDetailsLabel.TabIndex = 11;
-            this.PersonalDetailsLabel.Text = "Customer Details";
+            this.PersonalDetailsLabel.Text = "Client Details";
             // 
             // PhoneNumTextBox
             // 

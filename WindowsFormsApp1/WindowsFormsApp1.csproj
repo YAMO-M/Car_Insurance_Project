@@ -69,6 +69,12 @@
     <Compile Include="LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="SearchPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SearchPage.Designer.cs">
+      <DependentUpon>SearchPage.cs</DependentUpon>
+    </Compile>
     <Compile Include="SignUpForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,11 +107,11 @@
     <Compile Include="SignUpPersonalDetails.Designer.cs">
       <DependentUpon>SignUpPersonalDetails.cs</DependentUpon>
     </Compile>
-    <Compile Include="UpdatePersonalInfo.cs">
+    <Compile Include="AddClient.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UpdatePersonalInfo.Designer.cs">
-      <DependentUpon>UpdatePersonalInfo.cs</DependentUpon>
+    <Compile Include="AddClient.Designer.cs">
+      <DependentUpon>AddClient.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControl1.cs">
       <SubType>UserControl</SubType>
@@ -140,6 +146,9 @@
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="SearchPage.resx">
+      <DependentUpon>SearchPage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SignUpForm.resx">
       <DependentUpon>SignUpForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -165,8 +174,8 @@
     <EmbeddedResource Include="SignUpPersonalDetails.resx">
       <DependentUpon>SignUpPersonalDetails.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UpdatePersonalInfo.resx">
-      <DependentUpon>UpdatePersonalInfo.cs</DependentUpon>
+    <EmbeddedResource Include="AddClient.resx">
+      <DependentUpon>AddClient.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControl1.resx">
       <DependentUpon>UserControl1.cs</DependentUpon>

@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HomeForm));
             this.panel2 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.AddPolicyButton = new System.Windows.Forms.Button();
             this.MakeClaimButton = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -41,13 +42,13 @@
             this.makeClaim3 = new WindowsFormsApp1.MakeClaim();
             this.paymentDetails2 = new WindowsFormsApp1.PaymentDetails();
             this.homePage1 = new WindowsFormsApp1.HomePage();
-            this.updatePersonalInfo1 = new WindowsFormsApp1.UpdatePersonalInfo();
+            this.updatePersonalInfo1 = new WindowsFormsApp1.AddClient();
             this.makeClaim2 = new WindowsFormsApp1.MakeClaim();
             this.paymentDetails1 = new WindowsFormsApp1.PaymentDetails();
             this.makeClaim1 = new WindowsFormsApp1.MakeClaim();
             this.addVehicle2 = new WindowsFormsApp1.AddVehicle();
             this.addVehicle1 = new WindowsFormsApp1.AddVehicle();
-            this.button1 = new System.Windows.Forms.Button();
+            this.searchPage1 = new WindowsFormsApp1.SearchPage();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -67,6 +68,17 @@
             this.panel2.Size = new System.Drawing.Size(258, 1318);
             this.panel2.TabIndex = 5;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(-3, 777);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(258, 98);
+            this.button1.TabIndex = 19;
+            this.button1.Text = "Search";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // AddPolicyButton
             // 
@@ -144,7 +156,7 @@
             this.UpdatePersonalDetButton.Name = "UpdatePersonalDetButton";
             this.UpdatePersonalDetButton.Size = new System.Drawing.Size(258, 98);
             this.UpdatePersonalDetButton.TabIndex = 11;
-            this.UpdatePersonalDetButton.Text = "Add Customer";
+            this.UpdatePersonalDetButton.Text = "Add Client";
             this.UpdatePersonalDetButton.UseVisualStyleBackColor = true;
             this.UpdatePersonalDetButton.Click += new System.EventHandler(this.UpdatePersonalDetButton_Click);
             // 
@@ -237,21 +249,20 @@
             this.addVehicle1.Size = new System.Drawing.Size(914, 838);
             this.addVehicle1.TabIndex = 0;
             // 
-            // button1
+            // searchPage1
             // 
-            this.button1.Location = new System.Drawing.Point(-3, 777);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(258, 98);
-            this.button1.TabIndex = 19;
-            this.button1.Text = "Search";
-            this.button1.UseVisualStyleBackColor = true;
+            this.searchPage1.AutoScroll = true;
+            this.searchPage1.Location = new System.Drawing.Point(261, 2);
+            this.searchPage1.Name = "searchPage1";
+            this.searchPage1.Size = new System.Drawing.Size(1221, 838);
+            this.searchPage1.TabIndex = 19;
             // 
             // HomeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1538, 1062);
+            this.Controls.Add(this.searchPage1);
             this.Controls.Add(this.addVehicle3);
             this.Controls.Add(this.UpdatePersonalDetButton);
             this.Controls.Add(this.makeClaim3);
@@ -286,7 +297,7 @@
         private AddVehicle addVehicle2;
         private MakeClaim makeClaim2;
         private System.Windows.Forms.Button UpdatePersonalDetButton;
-        private UpdatePersonalInfo updatePersonalInfo1;
+        private AddClient updatePersonalInfo1;
         //private UpdateCarDetails updateCarDetails1;
         //private PolicyPage policyPage1;
         private HomePage homePage1;
@@ -296,5 +307,6 @@
         private System.Windows.Forms.Button AddPolicyButton;
         private AddVehicle addVehicle3;
         private System.Windows.Forms.Button button1;
+        private SearchPage searchPage1;
     }
 }

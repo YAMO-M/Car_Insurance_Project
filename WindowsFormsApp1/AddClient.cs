@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
-    public partial class UpdatePersonalInfo : UserControl
+    public partial class AddClient : UserControl
     {
-        public UpdatePersonalInfo()
+        public AddClient()
         {
             InitializeComponent();
             this.AutoScroll = true;

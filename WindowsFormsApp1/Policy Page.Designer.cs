@@ -179,7 +179,7 @@
             this.AmountTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.AmountTextBox.Name = "AmountTextBox";
             this.AmountTextBox.ReadOnly = true;
-            this.AmountTextBox.Size = new System.Drawing.Size(256, 28);
+            this.AmountTextBox.Size = new System.Drawing.Size(337, 28);
             this.AmountTextBox.TabIndex = 40;
             this.AmountTextBox.TextChanged += new System.EventHandler(this.AmountTextBox_TextChanged);
             // 
