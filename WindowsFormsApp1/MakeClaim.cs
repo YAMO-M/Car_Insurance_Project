@@ -23,6 +23,8 @@ namespace WindowsFormsApp1
         int policyID;
         private void searchButton_Click(object sender, EventArgs e)
         {
+            ClaimButton.Enabled = true;
+            button1.Enabled = true;
             errorProvider1.Clear();
             PolicyTableAdapter policyTableAdapter = new PolicyTableAdapter();
 
@@ -30,7 +32,7 @@ namespace WindowsFormsApp1
                 errorProvider1.SetError(ClientIDTextbox,"Enter Client ID");
                 return;
             }
-            if ((int)policyTableAdapter.Check_If_Client_Has_Policy(int.Parse(ClientIDTextbox.Text)) > 0)
+            if ((int)policyTableAdapter.Check_If_Policy_Exist(int.Parse(ClientIDTextbox.Text)) > 0)
             {
                 policyError.Text = "";
                 DataRow policy = policyTableAdapter.GetPolicyDetails(int.Parse(ClientIDTextbox.Text)).Rows[0];
@@ -70,8 +72,18 @@ namespace WindowsFormsApp1
                 {
                     ClaimTableAdapter claimTableAdapter = new ClaimTableAdapter();
                     claimTableAdapter.InsertClaim(policyID, dateTimePicker1.Text,"approved", DescriptionRichTextBox.Text, policyType.Text);
+                    MessageBox.Show("Approved");
+                    clearTexts();
                 }
             }
+        }
+        public void clearTexts()
+        {
+            ClientIDTextbox.Text = "";
+            policyType.Text = "";
+            PolicyStatus.Text = "";
+            dateTimePicker1.Text = "";
+            DescriptionRichTextBox.Text = "";
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -82,6 +94,8 @@ namespace WindowsFormsApp1
                 {
                     ClaimTableAdapter claimTableAdapter = new ClaimTableAdapter();
                     claimTableAdapter.InsertClaim(policyID, dateTimePicker1.Text, "disapproved", DescriptionRichTextBox.Text, policyType.Text);
+                    MessageBox.Show("Disapproved");
+                    clearTexts();
                 }
             }
         }

@@ -117,7 +117,6 @@ namespace WindowsFormsApp1
             this.passwordLabel.Size = new System.Drawing.Size(53, 13);
             this.passwordLabel.TabIndex = 10;
             this.passwordLabel.Text = "Password";
-     
             // 
             // welcomeBackLabel
             // 
@@ -202,7 +201,6 @@ namespace WindowsFormsApp1
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.Label userNameLabel;
         private System.Windows.Forms.TextBox password;
-        private System.Windows.Forms.TextBox userName;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label passwordLabel;
         private System.Windows.Forms.Label welcomeBackLabel;
@@ -210,6 +208,7 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label PasswordError;
+        private System.Windows.Forms.TextBox userName;
     }
 }
 

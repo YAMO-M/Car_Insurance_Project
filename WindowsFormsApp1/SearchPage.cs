@@ -19,6 +19,8 @@ namespace WindowsFormsApp1
             InitializeComponent();
             this.AutoScroll = true;
         }
+        ErrorProvider errorProvider = new ErrorProvider();
+        
         private void searchButton_Click(object sender, EventArgs e)
         {
             clientError.ForeColor = Color.Red;
@@ -31,10 +33,10 @@ namespace WindowsFormsApp1
              }
 
             int clientID = int.Parse(ClientIDTextBox.Text);
-
             clearAllTextBoxs();
 
-           ClientTableAdapter clientTableAdapter = new ClientTableAdapter();
+
+            ClientTableAdapter clientTableAdapter = new ClientTableAdapter();
            PolicyTableAdapter policyTableAdapter = new PolicyTableAdapter(); 
            CarTableAdapter carTableAdapter = new CarTableAdapter();
 
@@ -49,24 +51,23 @@ namespace WindowsFormsApp1
                 PhoneNumberTextBox.Text = client["PhoneNumber"].ToString();
                 IDTextBox.Text = client["IDNumber"].ToString();
 
-                if ((int)policyTableAdapter.Check_If_Client_Has_Policy(clientID) > 0)
+                if ((int)policyTableAdapter.Check_If_Policy_Exist(clientID) > 0)
                 {
                    DataRow policy = policyTableAdapter.GetPolicyDetails(clientID).Rows[0];
 
-                    PolicyNumberTextBox.Text = policy["PolicyNumber"].ToString();
                     PolicyTypeTextBox.Text = policy["PolicyType"].ToString();
                     StartDateTextBox.Text = policy["StartDate"].ToString();
                     EndDateTextBox.Text = policy["EndDate"].ToString();
                     PremiumAmoutTextBox.Text = policy["PremiumAmount"].ToString();
                     StatusTextBox.Text = policy["Status"].ToString();
 
-                    int carID = (int)policy["CarID"];
-                    DataRow car = carTableAdapter.GetCarDetails(carID).Rows[0]; // not necessary to check because if you have policy implies you have a car
+                   
+                    DataRow car = carTableAdapter.GetCarDetails(clientID).Rows[0]; // not necessary to check because if you have policy implies you have a car
                     RegistrationNumberTextBox.Text = car["RegistrationNumber"].ToString();
-                    VinTextBox.Text = car["RegistrationNumber"].ToString();
-                    MakeTextBox.Text = car["RegistrationNumber"].ToString();
-                    ModelTextBox.Text = car["RegistrationNumber"].ToString();
-                    YearTextBox.Text = car["RegistrationNumber"].ToString();
+                    VinTextBox.Text = car["Vin"].ToString();
+                    MakeTextBox.Text = car["Make"].ToString();
+                    ModelTextBox.Text = car["Model"].ToString();
+                    YearTextBox.Text = car["Year"].ToString();
                    
 
                 }
@@ -95,7 +96,6 @@ namespace WindowsFormsApp1
             IDTextBox.Text = "";
 
             // policy details
-            PolicyNumberTextBox.Text = "";
             PolicyTypeTextBox.Text = "";
             StartDateTextBox.Text = "";
             EndDateTextBox.Text = "";
@@ -113,15 +113,42 @@ namespace WindowsFormsApp1
             policyError.Text = "";
             carError.Text = "";
             clientError.Text = "";
+
+            // radio
+            radioButton1.Checked = false;
+            radioButton2.Checked = false;
         }
 
         private void button2_Click(object sender, EventArgs e)
+
         {
-            DialogResult result = MessageBox.Show("Are you sure you want to delete this customer?", "Confirmation", MessageBoxButtons.YesNo);
-            if (result == DialogResult.Yes)
+            if (string.IsNullOrEmpty(ClientIDTextBox.Text))
             {
+                clientError.Text = "enter client id";
+                return;
+            }
+
+            errorProvider.Clear();
+            PolicyTableAdapter policyTableAdapter = new PolicyTableAdapter();
+            if (radioButton1.Checked)
+            {  
+                policyTableAdapter.UpdateStatus("active", int.Parse(ClientIDTextBox.Text));
+                
+
+            }
+            else if(radioButton2.Checked){
+                policyTableAdapter.UpdateStatus( "not active", int.Parse(ClientIDTextBox.Text));
                 
             }
+            else
+            {
+                
+                errorProvider.SetError(confirmButton, "press radio button");
+            }
+            
+            ClientIDTextBox.Text = "";
+            clearAllTextBoxs();
+
         }
 
         private void ClientIDTextBox_KeyPress(object sender, KeyPressEventArgs e)
@@ -138,9 +165,6 @@ namespace WindowsFormsApp1
             }
         }
 
-        private void ClientIDTextBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+       
     }
 }
