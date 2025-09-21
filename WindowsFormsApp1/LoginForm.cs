@@ -27,11 +27,11 @@ namespace WindowsFormsApp1
         }
         private void loginButton_Click(object sender, EventArgs e)
         {
-            if (checkUserExist())
-            {
+            //if (checkUserExist())
+            //{
                 HomeForm form5 = new HomeForm();
                 form5.Show();
-            } 
+        //    } 
         }
 
         private bool checkUserExist()

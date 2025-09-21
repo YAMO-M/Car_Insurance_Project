@@ -69,12 +69,6 @@
     <Compile Include="SearchPage.Designer.cs">
       <DependentUpon>SearchPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="ResetPasswordForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ResetPasswordForm.Designer.cs">
-      <DependentUpon>ResetPasswordForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="HomeForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -115,9 +109,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SearchPage.resx">
       <DependentUpon>SearchPage.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ResetPasswordForm.resx">
-      <DependentUpon>ResetPasswordForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HomeForm.resx">
       <DependentUpon>HomeForm.cs</DependentUpon>

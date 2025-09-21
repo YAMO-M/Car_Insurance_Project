@@ -4,9 +4,13 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Management.Instrumentation;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsFormsApp1.DataSet1TableAdapters;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace WindowsFormsApp1
 {
@@ -15,88 +19,167 @@ namespace WindowsFormsApp1
         public AddClient()
         {
             InitializeComponent();
+            CustomerID.Mask = "0000000000000";
+            CustomerID.PromptChar = ' ';
+            PhoneNumTextBox.Mask = "000-000-0000";
+            PhoneNumTextBox.PromptChar = ' ';
+            PostalCodeTextBox.Mask = "0000-0";
+            PostalCodeTextBox.PromptChar = ' ';
+
             this.AutoScroll = true;
         }
 
-
-        private void SubmitButton_Click(object sender, EventArgs e)
+        private void AddClientButton_Click(object sender, EventArgs e)
         {
+            if (DataValidation())
+            {
+                ClientTableAdapter adapter = new ClientTableAdapter();
+                string name = CustomerName.Text;
+                string lastname = CustomerLastName.Text;
+                long id = long.Parse(CustomerID.Text);
+                string address = StreetAddressTextBox.Text + ", "+CityTextBox+", "+ ProvinceComboBox.Text+", "+PostalCodeTextBox;
+                // adapter.InsertClient(name,lastname,id,address);
+                MessageBox.Show("Done");
+            } 
 
         }
+        ErrorProvider errorProvider1 = new ErrorProvider();
 
-        private void UpdatePersonalInfo_Load(object sender, EventArgs e)
-        {
+            public bool DataValidation() { 
+                errorProvider1.Clear();
+                if (string.IsNullOrEmpty(CustomerName.Text.Trim()))
+                {
+                    errorProvider1.SetError(CustomerName, "Name is required");
+                    return false;
+                }
+                else if (CustomerName.Text.Trim().Length < 3)
+                {
+                    errorProvider1.SetError(CustomerName, "Name must be atleast 3 letters");
+                    return false;
+                }
+                else if (CustomerName.Text.Trim().Any(Char.IsDigit) || CustomerName.Text.Trim().Any(Char.IsPunctuation))
+                {
+                    errorProvider1.SetError(CustomerName, "Name contains no digits OR symbols");
+                    return false;
+                }
+                if (string.IsNullOrEmpty(CustomerLastName.Text.Trim()))
+                {
+                    errorProvider1.SetError(CustomerLastName, "Surname is required");
+                    return false;
+                }
+                else if (CustomerLastName.Text.Trim().Length < 2)
+                {
+                    errorProvider1.SetError(CustomerLastName, "Surname must be atleast 3 letters");
+                    return false;
+                }
+                else if (CustomerLastName.Text.Trim().Any(Char.IsDigit) || CustomerLastName.Text.Trim().Any(Char.IsPunctuation))
+                {
+                    errorProvider1.SetError(CustomerLastName, "Surname contains no digits or symbols");
+                    return false;
+                }
+                if (string.IsNullOrEmpty(CustomerID.Text.Trim()))
+                {
+                    errorProvider1.SetError(CustomerID, "ID Number is required");
+                    return false;
+                }
+                else if (CustomerID.Text.Trim().Length < 12)
+                {
+                    errorProvider1.SetError(CustomerID, "ID Number must be 13 numbers");
+                    return false;
+                }
+                else if (!(IDErrorLabel.Text == ""))
+                {
+                    return false;
+                }
+                if (string.IsNullOrEmpty(EmailTextBox.Text.Trim()))
+                {
+                    errorProvider1.SetError(EmailTextBox, "Email is required");
+                    return false;
+                }
+                else if (!(EmailTextBox.Text.ToLower().EndsWith("@gmail.com")) || EmailTextBox.Text.Split('@')[0].Length < 4)
+                {
+                    errorProvider1.SetError(EmailTextBox, "Enter valid email address (e.g example@gmail.com).");
+                    return false;
+                }
+                else if (!(EmailErrorLabel.Text == ""))
+                {
+                    return false;
+                }
+                if (string.IsNullOrEmpty(PhoneNumTextBox.Text.Trim()))
+                {
+                    errorProvider1.SetError(PhoneNumTextBox, "Phone Number is required");
+                    return false;
+                }
+                else if (PhoneNumTextBox.Text.Trim().Length < 9)
+                {
+                    errorProvider1.SetError(PhoneNumTextBox, "Phone Number must be 10 numbers");
+                    return false;
+                }
+                else if (!PhoneNumTextBox.Text.StartsWith("0") ||
+                        !(PhoneNumTextBox.Text.Trim()[1] == '6' ||
+                          PhoneNumTextBox.Text.Trim()[1] == '7' ||
+                          PhoneNumTextBox.Text.Trim()[1] == '8'))
+                {
+                    errorProvider1.SetError(PhoneNumTextBox, "Phone Number must start with 06,07,08");
+                    return false;
+                }
+                if (string.IsNullOrEmpty(StreetAddressTextBox.Text.Trim()))
+                {
+                    errorProvider1.SetError(StreetAddressTextBox, "Street Address is required");
+                    return false;
+                }
+                else if (StreetAddressTextBox.Text.Trim().Length < 2)
+                {
+                    errorProvider1.SetError(StreetAddressTextBox, "Street Address must be atleast 3 letters");
+                    return false;
+                }
+                if (string.IsNullOrEmpty(CityTextBox.Text.Trim()))
+                {
+                    errorProvider1.SetError(CityTextBox, "City is required");
+                    return false;
+                }
+                else if (CityTextBox.Text.Trim().Length < 2)
+                {
+                    errorProvider1.SetError(CityTextBox, "City Name must be atleast 3 letters");
+                    return false;
+                }
+                if (string.IsNullOrEmpty(ProvinceComboBox.Text.Trim()))
+                {
+                    errorProvider1.SetError(ProvinceComboBox, "Province is required");
+                    return false;
+                }
+                if (string.IsNullOrEmpty(PostalCodeTextBox.Text.Trim()))
+                {
+                    errorProvider1.SetError(PostalCodeTextBox, "Postal/Zip Code is required");
+                    return false;
+                }
+                else if (PostalCodeTextBox.Text.Trim().Length < 3)
+                {
+                    errorProvider1.SetError(PostalCodeTextBox, "Postal/Zip Code must be 4 or 5 numbers");
+                    return false;
+                }
 
-        }
-
-        private void StreetAddressLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void StreetAddressTextBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void StreetAddress2TextBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void CityLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void CityTextBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void ProvinceLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void ProvinceComboBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void PostalCodeLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void PostalCodeTextBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
+                return true;
+            }
 
         private void EmailTextBox_TextChanged(object sender, EventArgs e)
         {
-
+            //ClientTableAdapter adapter = new ClientTableAdapter();
+            //int checkDuplicateEmail = (int)adapter.GetNoOfClientsWithEmail(EmailTextBox.Text);
+            //EmailErrorLabel.ForeColor = Color.Red;
+            //EmailErrorLabel.Text = checkDuplicateEmail > 0 ? " Email Already in use" : "";
         }
 
-        private void label4_Click(object sender, EventArgs e)
+
+        private void CustomerID_TextChanged(object sender, EventArgs e)
         {
-
+            //ClientTableAdapter adapter = new ClientTableAdapter();
+            //int checkDuplicateID = (int)adapter.GetNoOfClientsWithIDNumber(CustomerID.Text);
+            //IDErrorLabel.ForeColor = Color.Red;
+            //IDErrorLabel.Text = checkDuplicateID > 0 ? " ID Already in use" : "";
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
     }
+
 }
+
