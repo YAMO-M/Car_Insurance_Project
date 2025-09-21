@@ -85,6 +85,7 @@
             this.ClientIDTextBox.Name = "ClientIDTextBox";
             this.ClientIDTextBox.Size = new System.Drawing.Size(255, 20);
             this.ClientIDTextBox.TabIndex = 1;
+            this.ClientIDTextBox.TextChanged += new System.EventHandler(this.ClientIDTextBox_TextChanged);
             this.ClientIDTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ClientIDTextBox_KeyPress);
             // 
             // label1

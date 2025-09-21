@@ -38,7 +38,7 @@ namespace WindowsFormsApp1
            PolicyTableAdapter policyTableAdapter = new PolicyTableAdapter(); 
            CarTableAdapter carTableAdapter = new CarTableAdapter();
 
-           if ((int)clientTableAdapter.Check_If_ClientID_Exist(clientID) > 0)
+           if ((int)clientTableAdapter.Check_If_Client_Exist(clientID) > 0)
             {
                 DataRow client = clientTableAdapter.GetClientDetails(clientID).Rows[0];
 
@@ -120,8 +120,7 @@ namespace WindowsFormsApp1
             DialogResult result = MessageBox.Show("Are you sure you want to delete this customer?", "Confirmation", MessageBoxButtons.YesNo);
             if (result == DialogResult.Yes)
             {
-                //kwesta
-                //Change the status
+                
             }
         }
 
@@ -139,5 +138,9 @@ namespace WindowsFormsApp1
             }
         }
 
+        private void ClientIDTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

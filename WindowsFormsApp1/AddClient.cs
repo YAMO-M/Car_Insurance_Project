@@ -38,7 +38,9 @@ namespace WindowsFormsApp1
                 string lastname = CustomerLastName.Text;
                 long id = long.Parse(CustomerID.Text);
                 string address = StreetAddressTextBox.Text + ", "+CityTextBox+", "+ ProvinceComboBox.Text+", "+PostalCodeTextBox;
-                // adapter.InsertClient(name,lastname,id,address);
+                string email = EmailTextBox.Text;
+                string phoneno = PhoneNumTextBox.Text;
+                adapter.InsertClient(name,lastname,address,email,id,phoneno);
                 MessageBox.Show("Done");
             } 
 
@@ -164,19 +166,19 @@ namespace WindowsFormsApp1
 
         private void EmailTextBox_TextChanged(object sender, EventArgs e)
         {
-            //ClientTableAdapter adapter = new ClientTableAdapter();
-            //int checkDuplicateEmail = (int)adapter.GetNoOfClientsWithEmail(EmailTextBox.Text);
-            //EmailErrorLabel.ForeColor = Color.Red;
-            //EmailErrorLabel.Text = checkDuplicateEmail > 0 ? " Email Already in use" : "";
+            ClientTableAdapter adapter = new ClientTableAdapter();
+            int checkDuplicateEmail = (int)adapter.GetNoOfClientsWithEmail(EmailTextBox.Text);
+            EmailErrorLabel.ForeColor = Color.Red;
+            EmailErrorLabel.Text = checkDuplicateEmail > 0 ? " Email Already in use" : "";
         }
 
 
         private void CustomerID_TextChanged(object sender, EventArgs e)
         {
-            //ClientTableAdapter adapter = new ClientTableAdapter();
-            //int checkDuplicateID = (int)adapter.GetNoOfClientsWithIDNumber(CustomerID.Text);
-            //IDErrorLabel.ForeColor = Color.Red;
-            //IDErrorLabel.Text = checkDuplicateID > 0 ? " ID Already in use" : "";
+            ClientTableAdapter adapter = new ClientTableAdapter();
+            int checkDuplicateID = (int)adapter.Check_If_Client_Exist(int.Parse(CustomerID.Text));
+            IDErrorLabel.ForeColor = Color.Red;
+            IDErrorLabel.Text = checkDuplicateID > 0 ? " ID Already in use" : "";
         }
 
     }

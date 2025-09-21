@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsFormsApp1.DataSet1TableAdapters;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace WindowsFormsApp1
 {
@@ -17,30 +19,86 @@ namespace WindowsFormsApp1
             InitializeComponent();
             this.AutoScroll = true;
         }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        ErrorProvider errorProvider1 = new ErrorProvider();
+        int policyID;
+        private void searchButton_Click(object sender, EventArgs e)
         {
+            errorProvider1.Clear();
+            PolicyTableAdapter policyTableAdapter = new PolicyTableAdapter();
 
+            if (string.IsNullOrEmpty(ClientIDTextbox.Text)){
+                errorProvider1.SetError(ClientIDTextbox,"Enter Client ID");
+                return;
+            }
+            if ((int)policyTableAdapter.Check_If_Client_Has_Policy(int.Parse(ClientIDTextbox.Text)) > 0)
+            {
+                policyError.Text = "";
+                DataRow policy = policyTableAdapter.GetPolicyDetails(int.Parse(ClientIDTextbox.Text)).Rows[0];
+
+                policyType.Text = policy["PolicyType"].ToString();
+                PolicyStatus.Text = policy["Status"].ToString();
+                policyID = (int)policy["PolicyID"];
+                if (!PolicyStatus.Text.Equals("active"))
+                {
+                    ClaimButton.Enabled = false;
+                    button1.Enabled = false;
+                }
+            }
+            else { 
+                 policyError.ForeColor = Color.Red;
+                 policyError.Text = "policy not found";
+                ClaimButton.Enabled = false;
+                button1.Enabled = false;
+            }
+        }
+        public bool DataValidation()
+        {
+            errorProvider1.Clear();
+            if (string.IsNullOrEmpty(DescriptionRichTextBox.Text))
+            {
+                errorProvider1.SetError(DescriptionRichTextBox, "Description is required");
+                return false;
+            }
+            return true;
         }
 
-        private void UserControl4_Load(object sender, EventArgs e)
+        private void ClaimButton_Click(object sender, EventArgs e)
         {
-
+            if (PolicyStatus.Text.Equals("active"))
+            {
+                if (DataValidation())
+                {
+                    ClaimTableAdapter claimTableAdapter = new ClaimTableAdapter();
+                    claimTableAdapter.InsertClaim(policyID, dateTimePicker1.Text,"approved", DescriptionRichTextBox.Text, policyType.Text);
+                }
+            }
         }
 
-        private void maskedTextBox1_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-
+            if (PolicyStatus.Text.Equals("active"))
+            {
+                if (DataValidation())
+                {
+                    ClaimTableAdapter claimTableAdapter = new ClaimTableAdapter();
+                    claimTableAdapter.InsertClaim(policyID, dateTimePicker1.Text, "disapproved", DescriptionRichTextBox.Text, policyType.Text);
+                }
+            }
         }
 
-        private void label3_Click(object sender, EventArgs e)
+
+        private void ClientIDTextbox_KeyPress(object sender, KeyPressEventArgs e)
         {
+            // validate clientID
 
-        }
-
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-
+            if (char.IsControl(e.KeyChar))
+            {
+                return; // allow delete and other controls
+            }
+            if (!char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true; // PREVENT anything that this not digit to be pressed
+            }
         }
     }
 }

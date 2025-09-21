@@ -144,6 +144,7 @@
             // 
             // ProvinceComboBox
             // 
+            this.ProvinceComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.ProvinceComboBox.FormattingEnabled = true;
             this.ProvinceComboBox.Items.AddRange(new object[] {
             "KwaZulu-Natal",
