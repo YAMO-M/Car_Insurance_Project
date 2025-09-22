@@ -129,9 +129,9 @@
             this.UserLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.UserLabel.Location = new System.Drawing.Point(100, 326);
             this.UserLabel.Name = "UserLabel";
-            this.UserLabel.Size = new System.Drawing.Size(57, 25);
+            this.UserLabel.Size = new System.Drawing.Size(68, 25);
             this.UserLabel.TabIndex = 4;
-            this.UserLabel.Text = "User";
+            this.UserLabel.Text = "Agent";
             this.UserLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.UserLabel.Click += new System.EventHandler(this.label1_Click);
             // 
