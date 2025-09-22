@@ -15,7 +15,6 @@ namespace WindowsFormsApp1
         public AddVehicle()
         {
             InitializeComponent();
-            
         }
 
         private void AddVehicle_Load(object sender, EventArgs e)
