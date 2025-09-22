@@ -31,6 +31,8 @@ namespace WindowsFormsApp1
             {
                 HomeForm form5 = new HomeForm();
                 form5.Show();
+                userName.Text = "";
+                password.Text = "";
            } 
         }
 
