@@ -49,8 +49,6 @@
             this.PhoneNumberTextBox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.PolicyNumberTextBox = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
             this.StartDateTextBox = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.PolicyTypeTextBox = new System.Windows.Forms.TextBox();
@@ -84,7 +82,7 @@
             this.ClientIDTextBox.Name = "ClientIDTextBox";
             this.ClientIDTextBox.Size = new System.Drawing.Size(380, 26);
             this.ClientIDTextBox.TabIndex = 1;
-            this.ClientIDTextBox.TextChanged += new System.EventHandler(this.ClientIDTextBox_TextChanged);
+           
             this.ClientIDTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ClientIDTextBox_KeyPress);
             // 
             // label1
@@ -286,25 +284,6 @@
             this.label10.Size = new System.Drawing.Size(102, 20);
             this.label10.TabIndex = 25;
             this.label10.Text = "policy details:";
-            // 
-            // PolicyNumberTextBox
-            // 
-            this.PolicyNumberTextBox.Location = new System.Drawing.Point(192, 515);
-            this.PolicyNumberTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.PolicyNumberTextBox.Name = "PolicyNumberTextBox";
-            this.PolicyNumberTextBox.ReadOnly = true;
-            this.PolicyNumberTextBox.Size = new System.Drawing.Size(148, 26);
-            this.PolicyNumberTextBox.TabIndex = 27;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(70, 520);
-            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(109, 20);
-            this.label11.TabIndex = 26;
-            this.label11.Text = "PolicyNumber:";
             // 
             // StartDateTextBox
             // 
@@ -571,8 +550,6 @@
             this.Controls.Add(this.label13);
             this.Controls.Add(this.StartDateTextBox);
             this.Controls.Add(this.label12);
-            this.Controls.Add(this.PolicyNumberTextBox);
-            this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.PhoneNumberTextBox);
@@ -623,8 +600,6 @@
         private System.Windows.Forms.TextBox PhoneNumberTextBox;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox PolicyNumberTextBox;
-        private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox StartDateTextBox;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox PolicyTypeTextBox;

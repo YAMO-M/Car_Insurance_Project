@@ -19,7 +19,7 @@ namespace WindowsFormsApp1
         public AddClient()
         {
             InitializeComponent();
-            CustomerID.Mask = "0000000000000";
+            CustomerID.Mask = "000000000";
             CustomerID.PromptChar = ' ';
             PhoneNumTextBox.Mask = "000-000-0000";
             PhoneNumTextBox.PromptChar = ' ';
@@ -41,7 +41,7 @@ namespace WindowsFormsApp1
                 string email = EmailTextBox.Text;
                 string phoneno = PhoneNumTextBox.Text;
                 adapter.InsertClient(name,lastname,address,email,id,phoneno);
-                MessageBox.Show("Done");
+                MessageBox.Show("Client Added");
             } 
 
         }
@@ -84,7 +84,7 @@ namespace WindowsFormsApp1
                     errorProvider1.SetError(CustomerID, "ID Number is required");
                     return false;
                 }
-                else if (CustomerID.Text.Trim().Length < 12)
+                else if (CustomerID.Text.Trim().Length < 2)// trap
                 {
                     errorProvider1.SetError(CustomerID, "ID Number must be 13 numbers");
                     return false;
@@ -175,10 +175,18 @@ namespace WindowsFormsApp1
 
         private void CustomerID_TextChanged(object sender, EventArgs e)
         {
-            ClientTableAdapter adapter = new ClientTableAdapter();
-            int checkDuplicateID = (int)adapter.Check_If_Client_Exist(int.Parse(CustomerID.Text));
             IDErrorLabel.ForeColor = Color.Red;
-            IDErrorLabel.Text = checkDuplicateID > 0 ? " ID Already in use" : "";
+            if (!(CustomerID.Text.StartsWith("0") || CustomerID.Text.StartsWith("1")))
+            {
+                IDErrorLabel.Text = "invalid ID";
+            }
+            else
+            {
+
+                ClientTableAdapter adapter = new ClientTableAdapter();
+                int checkDuplicateID = (int)adapter.Check_If_Client_Exist(int.Parse(CustomerID.Text));
+                IDErrorLabel.Text = checkDuplicateID > 0 ? " ID Already in use" : "";
+            }
         }
 
     }
