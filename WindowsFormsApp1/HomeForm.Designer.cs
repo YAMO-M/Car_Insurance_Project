@@ -63,18 +63,18 @@
             this.panel2.Controls.Add(this.UserLabel);
             this.panel2.Controls.Add(this.HomeButton);
             this.panel2.Location = new System.Drawing.Point(0, 2);
-            this.panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(227, 1054);
+            this.panel2.Size = new System.Drawing.Size(255, 1318);
             this.panel2.TabIndex = 5;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(-3, 622);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button1.Location = new System.Drawing.Point(-3, 778);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(229, 78);
+            this.button1.Size = new System.Drawing.Size(258, 98);
             this.button1.TabIndex = 19;
             this.button1.Text = "Search";
             this.button1.UseVisualStyleBackColor = true;
@@ -83,10 +83,10 @@
             // AddPolicyButton
             // 
             this.AddPolicyButton.AllowDrop = true;
-            this.AddPolicyButton.Location = new System.Drawing.Point(-2, 401);
-            this.AddPolicyButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.AddPolicyButton.Location = new System.Drawing.Point(-2, 501);
+            this.AddPolicyButton.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.AddPolicyButton.Name = "AddPolicyButton";
-            this.AddPolicyButton.Size = new System.Drawing.Size(231, 74);
+            this.AddPolicyButton.Size = new System.Drawing.Size(260, 93);
             this.AddPolicyButton.TabIndex = 13;
             this.AddPolicyButton.Text = "Add Policy";
             this.AddPolicyButton.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
@@ -95,10 +95,10 @@
             // 
             // MakeClaimButton
             // 
-            this.MakeClaimButton.Location = new System.Drawing.Point(-3, 474);
-            this.MakeClaimButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.MakeClaimButton.Location = new System.Drawing.Point(-3, 583);
+            this.MakeClaimButton.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.MakeClaimButton.Name = "MakeClaimButton";
-            this.MakeClaimButton.Size = new System.Drawing.Size(229, 75);
+            this.MakeClaimButton.Size = new System.Drawing.Size(258, 103);
             this.MakeClaimButton.TabIndex = 6;
             this.MakeClaimButton.Text = "Make Claim";
             this.MakeClaimButton.UseVisualStyleBackColor = true;
@@ -108,10 +108,11 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.SystemColors.Control;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(-3, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(229, 227);
+            this.pictureBox1.Size = new System.Drawing.Size(258, 297);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
@@ -121,9 +122,9 @@
             this.UserLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.UserLabel.AutoSize = true;
             this.UserLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UserLabel.Location = new System.Drawing.Point(88, 261);
+            this.UserLabel.Location = new System.Drawing.Point(99, 326);
             this.UserLabel.Name = "UserLabel";
-            this.UserLabel.Size = new System.Drawing.Size(52, 20);
+            this.UserLabel.Size = new System.Drawing.Size(68, 25);
             this.UserLabel.TabIndex = 4;
             this.UserLabel.Text = "Agent";
             this.UserLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -132,10 +133,10 @@
             // HomeButton
             // 
             this.HomeButton.AllowDrop = true;
-            this.HomeButton.Location = new System.Drawing.Point(-2, 311);
-            this.HomeButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.HomeButton.Location = new System.Drawing.Point(-2, 389);
+            this.HomeButton.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.HomeButton.Name = "HomeButton";
-            this.HomeButton.Size = new System.Drawing.Size(231, 96);
+            this.HomeButton.Size = new System.Drawing.Size(260, 114);
             this.HomeButton.TabIndex = 2;
             this.HomeButton.Text = "Home";
             this.HomeButton.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
@@ -144,10 +145,10 @@
             // 
             // UpdatePersonalDetButton
             // 
-            this.UpdatePersonalDetButton.Location = new System.Drawing.Point(-2, 546);
-            this.UpdatePersonalDetButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.UpdatePersonalDetButton.Location = new System.Drawing.Point(-2, 682);
+            this.UpdatePersonalDetButton.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.UpdatePersonalDetButton.Name = "UpdatePersonalDetButton";
-            this.UpdatePersonalDetButton.Size = new System.Drawing.Size(229, 78);
+            this.UpdatePersonalDetButton.Size = new System.Drawing.Size(258, 101);
             this.UpdatePersonalDetButton.TabIndex = 11;
             this.UpdatePersonalDetButton.Text = "Add Client";
             this.UpdatePersonalDetButton.UseVisualStyleBackColor = true;
@@ -155,19 +156,19 @@
             // 
             // homePage2
             // 
-            this.homePage2.Location = new System.Drawing.Point(224, 55);
+            this.homePage2.Location = new System.Drawing.Point(252, 69);
             this.homePage2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.homePage2.Name = "homePage2";
-            this.homePage2.Size = new System.Drawing.Size(1155, 857);
+            this.homePage2.Size = new System.Drawing.Size(1299, 1071);
             this.homePage2.TabIndex = 20;
             // 
             // searchPage1
             // 
             this.searchPage1.AutoScroll = true;
-            this.searchPage1.Location = new System.Drawing.Point(232, 55);
+            this.searchPage1.Location = new System.Drawing.Point(261, 69);
             this.searchPage1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.searchPage1.Name = "searchPage1";
-            this.searchPage1.Size = new System.Drawing.Size(1085, 833);
+            this.searchPage1.Size = new System.Drawing.Size(1221, 1041);
             this.searchPage1.TabIndex = 19;
             this.searchPage1.Load += new System.EventHandler(this.searchPage1_Load);
             // 
@@ -175,54 +176,54 @@
             // 
             this.addVehicle3.AutoScroll = true;
             this.addVehicle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addVehicle3.Location = new System.Drawing.Point(232, 55);
+            this.addVehicle3.Location = new System.Drawing.Point(261, 69);
             this.addVehicle3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.addVehicle3.Name = "addVehicle3";
-            this.addVehicle3.Size = new System.Drawing.Size(1111, 785);
+            this.addVehicle3.Size = new System.Drawing.Size(1250, 981);
             this.addVehicle3.TabIndex = 18;
             // 
             // makeClaim3
             // 
             this.makeClaim3.AutoScroll = true;
-            this.makeClaim3.Location = new System.Drawing.Point(232, 55);
-            this.makeClaim3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.makeClaim3.Location = new System.Drawing.Point(261, 69);
+            this.makeClaim3.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.makeClaim3.Name = "makeClaim3";
-            this.makeClaim3.Size = new System.Drawing.Size(912, 889);
+            this.makeClaim3.Size = new System.Drawing.Size(1026, 1111);
             this.makeClaim3.TabIndex = 17;
             // 
             // homePage1
             // 
-            this.homePage1.Location = new System.Drawing.Point(232, 55);
+            this.homePage1.Location = new System.Drawing.Point(261, 69);
             this.homePage1.Margin = new System.Windows.Forms.Padding(2);
             this.homePage1.Name = "homePage1";
-            this.homePage1.Size = new System.Drawing.Size(912, 893);
+            this.homePage1.Size = new System.Drawing.Size(1026, 1116);
             this.homePage1.TabIndex = 14;
             // 
             // updatePersonalInfo1
             // 
             this.updatePersonalInfo1.AutoScroll = true;
-            this.updatePersonalInfo1.Location = new System.Drawing.Point(232, 55);
-            this.updatePersonalInfo1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.updatePersonalInfo1.Location = new System.Drawing.Point(261, 69);
+            this.updatePersonalInfo1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.updatePersonalInfo1.Name = "updatePersonalInfo1";
-            this.updatePersonalInfo1.Size = new System.Drawing.Size(1134, 1000);
+            this.updatePersonalInfo1.Size = new System.Drawing.Size(1276, 1250);
             this.updatePersonalInfo1.TabIndex = 11;
             // 
             // makeClaim2
             // 
             this.makeClaim2.AutoScroll = true;
-            this.makeClaim2.Location = new System.Drawing.Point(232, 55);
-            this.makeClaim2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.makeClaim2.Location = new System.Drawing.Point(261, 69);
+            this.makeClaim2.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.makeClaim2.Name = "makeClaim2";
-            this.makeClaim2.Size = new System.Drawing.Size(1122, 777);
+            this.makeClaim2.Size = new System.Drawing.Size(1262, 971);
             this.makeClaim2.TabIndex = 10;
             // 
             // makeClaim1
             // 
             this.makeClaim1.AutoScroll = true;
-            this.makeClaim1.Location = new System.Drawing.Point(381, 196);
-            this.makeClaim1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.makeClaim1.Location = new System.Drawing.Point(429, 245);
+            this.makeClaim1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.makeClaim1.Name = "makeClaim1";
-            this.makeClaim1.Size = new System.Drawing.Size(1122, 956);
+            this.makeClaim1.Size = new System.Drawing.Size(1262, 1195);
             this.makeClaim1.TabIndex = 7;
             // 
             // addVehicle2
@@ -246,17 +247,19 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.LogoutButton);
-            this.panel1.Location = new System.Drawing.Point(224, 2);
+            this.panel1.Location = new System.Drawing.Point(252, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1142, 56);
+            this.panel1.Size = new System.Drawing.Size(1285, 70);
             this.panel1.TabIndex = 21;
             // 
             // LogoutButton
             // 
             this.LogoutButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LogoutButton.Location = new System.Drawing.Point(969, 0);
+            this.LogoutButton.Location = new System.Drawing.Point(1090, 0);
+            this.LogoutButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.LogoutButton.Name = "LogoutButton";
-            this.LogoutButton.Size = new System.Drawing.Size(173, 53);
+            this.LogoutButton.Size = new System.Drawing.Size(195, 66);
             this.LogoutButton.TabIndex = 0;
             this.LogoutButton.Text = "Logout";
             this.LogoutButton.UseVisualStyleBackColor = true;
@@ -264,9 +267,9 @@
             // 
             // HomeForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1367, 844);
+            this.ClientSize = new System.Drawing.Size(1674, 1113);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.homePage2);
             this.Controls.Add(this.searchPage1);
@@ -278,7 +281,7 @@
             this.Controls.Add(this.makeClaim2);
             this.Controls.Add(this.makeClaim1);
             this.Controls.Add(this.panel2);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.Name = "HomeForm";
             this.Text = "Form5";
             this.Load += new System.EventHandler(this.HomeForm_Load);
