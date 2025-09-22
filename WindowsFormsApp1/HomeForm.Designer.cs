@@ -37,6 +37,8 @@
             this.UserLabel = new System.Windows.Forms.Label();
             this.HomeButton = new System.Windows.Forms.Button();
             this.UpdatePersonalDetButton = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.LogoutButton = new System.Windows.Forms.Button();
             this.homePage2 = new WindowsFormsApp1.HomePage();
             this.searchPage1 = new WindowsFormsApp1.SearchPage();
             this.addVehicle3 = new WindowsFormsApp1.AddVehicle();
@@ -47,8 +49,6 @@
             this.makeClaim1 = new WindowsFormsApp1.MakeClaim();
             this.addVehicle2 = new WindowsFormsApp1.AddVehicle();
             this.addVehicle1 = new WindowsFormsApp1.AddVehicle();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.LogoutButton = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -153,21 +153,39 @@
             this.UpdatePersonalDetButton.UseVisualStyleBackColor = true;
             this.UpdatePersonalDetButton.Click += new System.EventHandler(this.UpdatePersonalDetButton_Click);
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.LogoutButton);
+            this.panel1.Location = new System.Drawing.Point(224, 2);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1142, 56);
+            this.panel1.TabIndex = 21;
+            // 
+            // LogoutButton
+            // 
+            this.LogoutButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LogoutButton.Location = new System.Drawing.Point(969, 0);
+            this.LogoutButton.Name = "LogoutButton";
+            this.LogoutButton.Size = new System.Drawing.Size(173, 53);
+            this.LogoutButton.TabIndex = 0;
+            this.LogoutButton.Text = "Logout";
+            this.LogoutButton.UseVisualStyleBackColor = true;
+            this.LogoutButton.Click += new System.EventHandler(this.button2_Click_1);
+            // 
             // homePage2
             // 
-            this.homePage2.Location = new System.Drawing.Point(224, 55);
+            this.homePage2.Location = new System.Drawing.Point(224, 60);
             this.homePage2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.homePage2.Name = "homePage2";
-            this.homePage2.Size = new System.Drawing.Size(1155, 857);
+            this.homePage2.Size = new System.Drawing.Size(1155, 852);
             this.homePage2.TabIndex = 20;
             // 
             // searchPage1
             // 
-            this.searchPage1.AutoScroll = true;
-            this.searchPage1.Location = new System.Drawing.Point(232, 55);
+            this.searchPage1.Location = new System.Drawing.Point(232, 60);
             this.searchPage1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.searchPage1.Name = "searchPage1";
-            this.searchPage1.Size = new System.Drawing.Size(1085, 833);
+            this.searchPage1.Size = new System.Drawing.Size(1085, 828);
             this.searchPage1.TabIndex = 19;
             this.searchPage1.Load += new System.EventHandler(this.searchPage1_Load);
             // 
@@ -175,15 +193,14 @@
             // 
             this.addVehicle3.AutoScroll = true;
             this.addVehicle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addVehicle3.Location = new System.Drawing.Point(232, 55);
+            this.addVehicle3.Location = new System.Drawing.Point(232, 60);
             this.addVehicle3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.addVehicle3.Name = "addVehicle3";
-            this.addVehicle3.Size = new System.Drawing.Size(1111, 785);
+            this.addVehicle3.Size = new System.Drawing.Size(1111, 780);
             this.addVehicle3.TabIndex = 18;
             // 
             // makeClaim3
             // 
-            this.makeClaim3.AutoScroll = true;
             this.makeClaim3.Location = new System.Drawing.Point(232, 55);
             this.makeClaim3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.makeClaim3.Name = "makeClaim3";
@@ -242,25 +259,6 @@
             this.addVehicle1.Name = "addVehicle1";
             this.addVehicle1.Size = new System.Drawing.Size(914, 838);
             this.addVehicle1.TabIndex = 0;
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.LogoutButton);
-            this.panel1.Location = new System.Drawing.Point(224, 2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1142, 56);
-            this.panel1.TabIndex = 21;
-            // 
-            // LogoutButton
-            // 
-            this.LogoutButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LogoutButton.Location = new System.Drawing.Point(969, 0);
-            this.LogoutButton.Name = "LogoutButton";
-            this.LogoutButton.Size = new System.Drawing.Size(173, 53);
-            this.LogoutButton.TabIndex = 0;
-            this.LogoutButton.Text = "Logout";
-            this.LogoutButton.UseVisualStyleBackColor = true;
-            this.LogoutButton.Click += new System.EventHandler(this.button2_Click_1);
             // 
             // HomeForm
             // 

@@ -153,5 +153,10 @@ namespace WindowsFormsApp1
                 MessageBox.Show("Policy created");
             }
         }
+
+        private void AddVehicle_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
