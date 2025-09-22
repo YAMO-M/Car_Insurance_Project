@@ -15,7 +15,7 @@ namespace WindowsFormsApp1
         public AddVehicle()
         {
             InitializeComponent();
-            this.AutoScroll = true;
+            
         }
 
         private void AddVehicle_Load(object sender, EventArgs e)

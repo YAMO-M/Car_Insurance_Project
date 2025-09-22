@@ -161,9 +161,9 @@
             // 
             // homePage2
             // 
-            this.homePage2.Location = new System.Drawing.Point(261, 2);
+            this.homePage2.Location = new System.Drawing.Point(251, 2);
             this.homePage2.Name = "homePage2";
-            this.homePage2.Size = new System.Drawing.Size(1300, 997);
+            this.homePage2.Size = new System.Drawing.Size(1300, 1137);
             this.homePage2.TabIndex = 20;
             // 
             // searchPage1
@@ -171,7 +171,7 @@
             this.searchPage1.AutoScroll = true;
             this.searchPage1.Location = new System.Drawing.Point(261, 2);
             this.searchPage1.Name = "searchPage1";
-            this.searchPage1.Size = new System.Drawing.Size(1221, 838);
+            this.searchPage1.Size = new System.Drawing.Size(1221, 1107);
             this.searchPage1.TabIndex = 19;
             this.searchPage1.Load += new System.EventHandler(this.searchPage1_Load);
             // 

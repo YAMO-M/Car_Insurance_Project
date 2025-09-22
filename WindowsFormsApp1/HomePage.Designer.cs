@@ -138,7 +138,7 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label1);
             this.Name = "HomePage";
-            this.Size = new System.Drawing.Size(1300, 917);
+            this.Size = new System.Drawing.Size(1300, 1336);
             this.Load += new System.EventHandler(this.HomePage_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
