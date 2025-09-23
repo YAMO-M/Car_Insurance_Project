@@ -302,12 +302,14 @@
             // 
             // PolicyCreation
             // 
+            this.PolicyCreation.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.PolicyCreation.ForeColor = System.Drawing.SystemColors.Window;
             this.PolicyCreation.Location = new System.Drawing.Point(361, 644);
             this.PolicyCreation.Name = "PolicyCreation";
             this.PolicyCreation.Size = new System.Drawing.Size(256, 33);
             this.PolicyCreation.TabIndex = 11;
             this.PolicyCreation.Text = "Create Policy";
-            this.PolicyCreation.UseVisualStyleBackColor = true;
+            this.PolicyCreation.UseVisualStyleBackColor = false;
             this.PolicyCreation.Click += new System.EventHandler(this.PolicyCreation_Click_1);
             // 
             // textBox1

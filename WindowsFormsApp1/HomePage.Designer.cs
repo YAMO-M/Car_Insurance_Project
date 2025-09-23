@@ -43,40 +43,47 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(29, 169);
+            this.label1.Location = new System.Drawing.Point(26, 135);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(259, 32);
+            this.label1.Size = new System.Drawing.Size(224, 29);
             this.label1.TabIndex = 0;
             this.label1.Text = "Policies We Offer:";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(652, 347);
+            this.button2.Location = new System.Drawing.Point(580, 278);
+            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(8, 8);
+            this.button2.Size = new System.Drawing.Size(7, 6);
             this.button2.TabIndex = 2;
             this.button2.Text = "button2";
             this.button2.UseVisualStyleBackColor = true;
             // 
             // PolicyBox1
             // 
+            this.PolicyBox1.BackColor = System.Drawing.Color.SteelBlue;
             this.PolicyBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.PolicyBox1.Location = new System.Drawing.Point(35, 229);
+            this.PolicyBox1.ForeColor = System.Drawing.SystemColors.Window;
+            this.PolicyBox1.Location = new System.Drawing.Point(31, 183);
+            this.PolicyBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.PolicyBox1.Name = "PolicyBox1";
             this.PolicyBox1.ReadOnly = true;
-            this.PolicyBox1.Size = new System.Drawing.Size(365, 149);
+            this.PolicyBox1.Size = new System.Drawing.Size(325, 120);
             this.PolicyBox1.TabIndex = 3;
             this.PolicyBox1.Text = "1. Collision Insurance\nPays for repairs or replacement of your car if it’s damage" +
     "d in an accident, regardless of who was at fault.";
             // 
             // richTextBox2
             // 
+            this.richTextBox2.BackColor = System.Drawing.Color.SteelBlue;
             this.richTextBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.richTextBox2.Location = new System.Drawing.Point(35, 405);
+            this.richTextBox2.ForeColor = System.Drawing.SystemColors.Window;
+            this.richTextBox2.Location = new System.Drawing.Point(31, 324);
+            this.richTextBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.richTextBox2.Name = "richTextBox2";
             this.richTextBox2.ReadOnly = true;
-            this.richTextBox2.Size = new System.Drawing.Size(393, 119);
+            this.richTextBox2.Size = new System.Drawing.Size(350, 96);
             this.richTextBox2.TabIndex = 4;
             this.richTextBox2.Text = "2. Comprehensive Insurance\nCovers damage to your car from non-collision events su" +
     "ch as theft, fire, floods, vandalism, or natural disasters.";
@@ -84,11 +91,14 @@
             // 
             // richTextBox3
             // 
+            this.richTextBox3.BackColor = System.Drawing.Color.SteelBlue;
             this.richTextBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.richTextBox3.Location = new System.Drawing.Point(35, 559);
+            this.richTextBox3.ForeColor = System.Drawing.SystemColors.Window;
+            this.richTextBox3.Location = new System.Drawing.Point(31, 447);
+            this.richTextBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.richTextBox3.Name = "richTextBox3";
             this.richTextBox3.ReadOnly = true;
-            this.richTextBox3.Size = new System.Drawing.Size(434, 147);
+            this.richTextBox3.Size = new System.Drawing.Size(386, 118);
             this.richTextBox3.TabIndex = 5;
             this.richTextBox3.Text = "3. Personal Injury Protection (PIP)\nCovers medical expenses for you and your pass" +
     "engers after an accident, sometimes including lost wages and rehabilitation cost" +
@@ -98,9 +108,9 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(553, 38);
+            this.label2.Location = new System.Drawing.Point(492, 30);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(257, 32);
+            this.label2.Size = new System.Drawing.Size(221, 29);
             this.label2.TabIndex = 8;
             this.label2.Text = "CAR INSURANCE";
             // 
@@ -108,18 +118,19 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(81, 63);
+            this.label3.Location = new System.Drawing.Point(72, 50);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(132, 32);
+            this.label3.Size = new System.Drawing.Size(115, 29);
             this.label3.TabIndex = 9;
             this.label3.Text = "*LOGO* ";
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::WindowsFormsApp1.Properties.Resources.cars;
-            this.pictureBox1.Location = new System.Drawing.Point(507, 169);
+            this.pictureBox1.Location = new System.Drawing.Point(451, 135);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(730, 478);
+            this.pictureBox1.Size = new System.Drawing.Size(649, 382);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
@@ -127,7 +138,7 @@
             // 
             // HomePage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -137,8 +148,9 @@
             this.Controls.Add(this.PolicyBox1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "HomePage";
-            this.Size = new System.Drawing.Size(1300, 1336);
+            this.Size = new System.Drawing.Size(1156, 1069);
             this.Load += new System.EventHandler(this.HomePage_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
