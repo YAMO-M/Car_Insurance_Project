@@ -19,6 +19,7 @@ namespace WindowsFormsApp1
             InitializeComponent();
             this.AutoScroll = true;
         }
+        ClaimTableAdapter claimTableAdapter = new ClaimTableAdapter();
         ErrorProvider errorProvider1 = new ErrorProvider();
         int policyID;
         private void searchButton_Click(object sender, EventArgs e)
@@ -70,7 +71,6 @@ namespace WindowsFormsApp1
             {
                 if (DataValidation())
                 {
-                    ClaimTableAdapter claimTableAdapter = new ClaimTableAdapter();
                     claimTableAdapter.InsertClaim(policyID, dateTimePicker1.Text,"approved", DescriptionRichTextBox.Text, policyType.Text);
                     MessageBox.Show("Approved");
                     clearTexts();
@@ -92,7 +92,6 @@ namespace WindowsFormsApp1
             {
                 if (DataValidation())
                 {
-                    ClaimTableAdapter claimTableAdapter = new ClaimTableAdapter();
                     claimTableAdapter.InsertClaim(policyID, dateTimePicker1.Text, "disapproved", DescriptionRichTextBox.Text, policyType.Text);
                     MessageBox.Show("Disapproved");
                     clearTexts();

@@ -15,7 +15,7 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 namespace WindowsFormsApp1
 {
     public partial class AddClient : UserControl
-    {
+    {  
         public AddClient()
         {
             InitializeComponent();
@@ -28,12 +28,12 @@ namespace WindowsFormsApp1
 
             this.AutoScroll = true;
         }
-
+        ClientTableAdapter adapter = new ClientTableAdapter();
+        ErrorProvider errorProvider1 = new ErrorProvider();
         private void AddClientButton_Click(object sender, EventArgs e)
         {
             if (DataValidation())
             {
-                ClientTableAdapter adapter = new ClientTableAdapter();
                 string name = CustomerName.Text;
                 string lastname = CustomerLastName.Text;
                 long id = long.Parse(CustomerID.Text);
@@ -45,8 +45,6 @@ namespace WindowsFormsApp1
             } 
 
         }
-        ErrorProvider errorProvider1 = new ErrorProvider();
-
             public bool DataValidation() { 
                 errorProvider1.Clear();
                 if (string.IsNullOrEmpty(CustomerName.Text.Trim()))
@@ -166,7 +164,6 @@ namespace WindowsFormsApp1
 
         private void EmailTextBox_TextChanged(object sender, EventArgs e)
         {
-            ClientTableAdapter adapter = new ClientTableAdapter();
             int checkDuplicateEmail = (int)adapter.GetNoOfClientsWithEmail(EmailTextBox.Text);
             EmailErrorLabel.ForeColor = Color.Red;
             EmailErrorLabel.Text = checkDuplicateEmail > 0 ? " Email Already in use" : "";
@@ -182,8 +179,6 @@ namespace WindowsFormsApp1
             }
             else
             {
-
-                ClientTableAdapter adapter = new ClientTableAdapter();
                 int checkDuplicateID = (int)adapter.Check_If_Client_Exist(int.Parse(CustomerID.Text));
                 IDErrorLabel.Text = checkDuplicateID > 0 ? " ID Already in use" : "";
             }

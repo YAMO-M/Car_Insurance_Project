@@ -19,6 +19,10 @@ namespace WindowsFormsApp1
             InitializeComponent();
             this.AutoScroll = true;
         }
+
+        ClientTableAdapter clientTableAdapter = new ClientTableAdapter();
+        PolicyTableAdapter policyTableAdapter = new PolicyTableAdapter();
+        CarTableAdapter carTableAdapter = new CarTableAdapter();
         ErrorProvider errorProvider = new ErrorProvider();
         
         private void searchButton_Click(object sender, EventArgs e)
@@ -34,11 +38,7 @@ namespace WindowsFormsApp1
 
             int clientID = int.Parse(ClientIDTextBox.Text);
             clearAllTextBoxs();
-
-
-            ClientTableAdapter clientTableAdapter = new ClientTableAdapter();
-           PolicyTableAdapter policyTableAdapter = new PolicyTableAdapter(); 
-           CarTableAdapter carTableAdapter = new CarTableAdapter();
+        
 
            if ((int)clientTableAdapter.Check_If_Client_Exist(clientID) > 0)
             {
@@ -129,7 +129,7 @@ namespace WindowsFormsApp1
             }
 
             errorProvider.Clear();
-            PolicyTableAdapter policyTableAdapter = new PolicyTableAdapter();
+           
             if (radioButton1.Checked)
             {  
                 policyTableAdapter.UpdateStatus("active", int.Parse(ClientIDTextBox.Text));

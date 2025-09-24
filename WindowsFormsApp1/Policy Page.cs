@@ -17,7 +17,11 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
         }
-        ErrorProvider errorProvider1 = new ErrorProvider(); 
+        private ErrorProvider errorProvider1 = new ErrorProvider();
+        private PolicyTableAdapter policyTableAdapter = new PolicyTableAdapter();
+        private ClientTableAdapter clientTableAdapter = new ClientTableAdapter();
+        private CarTableAdapter carTableAdapter = new CarTableAdapter();
+        private PaymentTableAdapter paymentTableAdapter = new PaymentTableAdapter();
         private void Policy3_CheckedChanged(object sender, EventArgs e)
         {
             if (Policy3.Checked)
@@ -48,8 +52,7 @@ namespace WindowsFormsApp1
         {
             PolicyCreation.Enabled = true;
             ClientError.Text = "";
-            PolicyTableAdapter policyTableAdapter = new PolicyTableAdapter();
-            ClientTableAdapter clientTableAdapter = new ClientTableAdapter();
+           
             if (string.IsNullOrEmpty(textBox1.Text)) return;
             if ((int)clientTableAdapter.Check_If_Client_Exist(int.Parse(textBox1.Text)) > 0){
                 if((int)policyTableAdapter.Check_If_Policy_Exist(int.Parse(textBox1.Text)) > 0)
@@ -126,20 +129,13 @@ namespace WindowsFormsApp1
             
             if (dataValidation())
             {
-                CarTableAdapter carTableAdapter = new CarTableAdapter();
-               
-             
-                
+                      
                 if ((int)carTableAdapter.Check_If_Car_Exist(int.Parse(textBox1.Text)) > 0){
                     errorProvider1.SetError(PolicyCreation, "Car already exist");
                     return;
                 }
                 carTableAdapter.Insert(int.Parse(textBox1.Text), RegistrationPlateTextBox.Text, VINtextBox.Text, MakeTextBox.Text, ModelTextBox.Text, int.Parse(comboBox1.Text));
                 DataRow car = carTableAdapter.GetCarDetails(int.Parse(textBox1.Text)).Rows[0];
-
-              
-
-                PolicyTableAdapter policyTableAdapter = new PolicyTableAdapter();
                 string Policy = "";
                 if (Policy1.Checked) Policy = "Policy 1";
                 else if (Policy2.Checked) Policy = "Policy 2";
@@ -147,7 +143,6 @@ namespace WindowsFormsApp1
 
                 policyTableAdapter.InsertPolicy(int.Parse(textBox1.Text), (int)car["CarID"], Policy, dateTimePicker1.Value.ToString("yyyy-MM-dd"), dateTimePicker2.Value.ToString("yyyy-MM-dd"), Decimal.Parse(AmountTextBox.Text), "active");
                 DataRow policy = policyTableAdapter.GetPolicyDetails(int.Parse(textBox1.Text)).Rows[0];
-                PaymentTableAdapter paymentTableAdapter = new PaymentTableAdapter();
                 paymentTableAdapter.Insert((int)policy["PolicyID"], DateTime.Parse(dateTimePicker1.Text), Decimal.Parse(AmountTextBox.Text), PaymentMethodComboBox.Text);
 
                 MessageBox.Show("Policy created");
