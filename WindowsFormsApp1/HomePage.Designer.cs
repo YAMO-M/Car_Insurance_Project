@@ -69,7 +69,7 @@
             this.PolicyBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.PolicyBox1.Name = "PolicyBox1";
             this.PolicyBox1.ReadOnly = true;
-            this.PolicyBox1.Size = new System.Drawing.Size(438, 230);
+            this.PolicyBox1.Size = new System.Drawing.Size(474, 230);
             this.PolicyBox1.TabIndex = 3;
             this.PolicyBox1.Text = "1. Collision Insurance\nPays for repairs or replacement of your car if it’s damage" +
     "d in an accident, regardless of who was at fault.";
@@ -83,7 +83,7 @@
             this.richTextBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.richTextBox2.Name = "richTextBox2";
             this.richTextBox2.ReadOnly = true;
-            this.richTextBox2.Size = new System.Drawing.Size(494, 197);
+            this.richTextBox2.Size = new System.Drawing.Size(559, 197);
             this.richTextBox2.TabIndex = 4;
             this.richTextBox2.Text = "2. Comprehensive Insurance\nCovers damage to your car from non-collision events su" +
     "ch as theft, fire, floods, vandalism, or natural disasters.";
@@ -97,7 +97,7 @@
             this.richTextBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.richTextBox3.Name = "richTextBox3";
             this.richTextBox3.ReadOnly = true;
-            this.richTextBox3.Size = new System.Drawing.Size(569, 221);
+            this.richTextBox3.Size = new System.Drawing.Size(596, 221);
             this.richTextBox3.TabIndex = 5;
             this.richTextBox3.Text = "3. Personal Injury Protection (PIP)\nCovers medical expenses for you and your pass" +
     "engers after an accident, sometimes including lost wages and rehabilitation cost" +

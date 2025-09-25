@@ -27,7 +27,6 @@ namespace WindowsFormsApp1
             PostalCodeTextBox.Mask = "0000-0";
             PostalCodeTextBox.PromptChar = ' ';
 
-            this.AutoScroll = true;
         }
         ClientTableAdapter adapter = new ClientTableAdapter();
         ErrorProvider errorProvider1 = new ErrorProvider();
@@ -185,6 +184,7 @@ namespace WindowsFormsApp1
             }
         }
 
+       
     }
 
 }
