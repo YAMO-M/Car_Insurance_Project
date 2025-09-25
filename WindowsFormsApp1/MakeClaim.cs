@@ -113,5 +113,7 @@ namespace WindowsFormsApp1
                 e.Handled = true; // PREVENT anything that this not digit to be pressed
             }
         }
+
+     
     }
 }
