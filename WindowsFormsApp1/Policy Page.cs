@@ -86,8 +86,11 @@ namespace WindowsFormsApp1
         public bool dataValidation()
         {
             errorProvider1.Clear();
-            if (string.IsNullOrEmpty(textBox1.Text)) return false;
-            
+            if (string.IsNullOrEmpty(textBox1.Text)) {
+                errorProvider1.SetError(textBox1,"enter client id");
+                return false;
+
+            }
             if (string.IsNullOrEmpty(VINtextBox.Text.Trim()) || VINtextBox.Text.Length < 11)
             {
                 errorProvider1.SetError(VINtextBox, "VIN is required & must be atleast 11");
