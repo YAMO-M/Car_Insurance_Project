@@ -19,7 +19,6 @@ namespace WindowsFormsApp1
             InitializeComponent();
             this.AutoScroll = true;
         }
-
         ClientTableAdapter clientTableAdapter = new ClientTableAdapter();
         PolicyTableAdapter policyTableAdapter = new PolicyTableAdapter();
         CarTableAdapter carTableAdapter = new CarTableAdapter();
@@ -164,7 +163,5 @@ namespace WindowsFormsApp1
                 e.Handled = true; // PREVENT anything that this not digit to be pressed
             }
         }
-
-       
     }
 }

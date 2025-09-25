@@ -11,7 +11,9 @@ using System.Windows.Forms;
 namespace WindowsFormsApp1
 {
     public partial class HomeForm : Form
+    
     {
+        public string AgentFname;
         public HomeForm()
         {
             InitializeComponent();
@@ -23,58 +25,13 @@ namespace WindowsFormsApp1
 
         }
 
-        
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-         
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-            
-        }
-
-        
-            
-        
-
-        
-            
-        
-
-
         private void HomeForm_Load(object sender, EventArgs e)
         {
-
+            this.Text = "Home: Loggined in as " + AgentFname;
         }
-
-       
-
-       
-
-      
-
-        
-
-
-
-        
-
-        private void searchPage1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        
-
         private void homeToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            this.Text = "Home: Loggined in as " + AgentFname;
             homePage2.BringToFront();
         }
 
@@ -86,6 +43,7 @@ namespace WindowsFormsApp1
 
         private void searchToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            this.Text = "Search Page: Loggined in as " + AgentFname;
             searchPage1.BringToFront();
         }
 
@@ -101,16 +59,19 @@ namespace WindowsFormsApp1
 
         private void addPolicyToolStripMenuItem1_Click(object sender, EventArgs e)
         {
+            this.Text = "Policy Page: Loggined in as " + AgentFname;
             addVehicle3.BringToFront();
         }
 
         private void makeClaimToolStripMenuItem1_Click(object sender, EventArgs e)
         {
+            this.Text = "Claim: Loggined in as " + AgentFname;
             makeClaim2.BringToFront();
         }
 
         private void addClientToolStripMenuItem1_Click(object sender, EventArgs e)
         {
+            this.Text = "Add Client: Loggined in as " + AgentFname;
             updatePersonalInfo1.BringToFront();
         }
     }

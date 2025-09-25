@@ -15,7 +15,8 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 namespace WindowsFormsApp1
 {
     public partial class AddClient : UserControl
-    {  
+    {
+    
         public AddClient()
         {
             InitializeComponent();
