@@ -86,6 +86,8 @@ namespace WindowsFormsApp1
         public bool dataValidation()
         {
             errorProvider1.Clear();
+            if (string.IsNullOrEmpty(textBox1.Text)) return false;
+            
             if (string.IsNullOrEmpty(VINtextBox.Text.Trim()) || VINtextBox.Text.Length < 11)
             {
                 errorProvider1.SetError(VINtextBox, "VIN is required & must be atleast 11");
@@ -128,9 +130,7 @@ namespace WindowsFormsApp1
         private void PolicyCreation_Click_1(object sender, EventArgs e)
         {
             
-            if (dataValidation())
-            {
-                      
+            if (dataValidation())          
                 if ((int)carTableAdapter.Check_If_Car_Exist(int.Parse(textBox1.Text)) > 0){
                     errorProvider1.SetError(PolicyCreation, "Car already exist");
                     return;
