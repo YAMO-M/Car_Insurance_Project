@@ -20,16 +20,20 @@ namespace WindowsFormsApp1
         
         public LoginForm()
         {
-
             InitializeComponent();
             this.AutoScroll = true;
             this.AutoScroll = true;
         }
         private void loginButton_Click(object sender, EventArgs e)
         {
+       
+            
             if (checkUserExist())
             {
+                string AgentFname = new AgentTableAdapter().GetAgentName(userName.Text).Rows[0]
+                    ["FirstName"].ToString();
                 HomeForm form5 = new HomeForm();
+                form5.AgentFname = AgentFname;
                 form5.Show();
                 userName.Text = "";
                 password.Text = "";
@@ -70,6 +74,16 @@ namespace WindowsFormsApp1
                 }
                 return false;
             }    
+        }
+
+        private void label3_MouseHover(object sender, EventArgs e)
+        {
+            password.PasswordChar = '\0';
+        }
+
+        private void label3_MouseLeave(object sender, EventArgs e)
+        {
+            password.PasswordChar = '*';
         }
     }
 }

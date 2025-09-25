@@ -17,6 +17,7 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
         }
+
         private ErrorProvider errorProvider1 = new ErrorProvider();
         private PolicyTableAdapter policyTableAdapter = new PolicyTableAdapter();
         private ClientTableAdapter clientTableAdapter = new ClientTableAdapter();
@@ -147,11 +148,6 @@ namespace WindowsFormsApp1
 
                 MessageBox.Show("Policy created");
             }
-        }
-
-        private void AddVehicle_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
