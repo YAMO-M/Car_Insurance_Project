@@ -28,7 +28,7 @@ namespace WindowsFormsApp1
             if (Policy3.Checked)
             {
                 AmountTextBox.Text = "3000";
-               
+
             }
         }
 
@@ -43,20 +43,21 @@ namespace WindowsFormsApp1
 
         private void Policy1_CheckedChanged(object sender, EventArgs e)
         {
-           
-                AmountTextBox.Text = "1000";
 
-           
+            AmountTextBox.Text = "1000";
+
+
         }
         private void textBox1_TextChanged(object sender, EventArgs e)
 
         {
             PolicyCreation.Enabled = true;
             ClientError.Text = "";
-           
+
             if (string.IsNullOrEmpty(textBox1.Text)) return;
-            if ((int)clientTableAdapter.Check_If_Client_Exist(int.Parse(textBox1.Text)) > 0){
-                if((int)policyTableAdapter.Check_If_Policy_Exist(int.Parse(textBox1.Text)) > 0)
+            if ((int)clientTableAdapter.Check_If_Client_Exist(int.Parse(textBox1.Text)) > 0)
+            {
+                if ((int)policyTableAdapter.Check_If_Policy_Exist(int.Parse(textBox1.Text)) > 0)
                 {
                     ClientError.Text = "policy already exist";
                     PolicyCreation.Enabled = false;
@@ -67,7 +68,7 @@ namespace WindowsFormsApp1
                 ClientError.Text = "client does not exist";
                 PolicyCreation.Enabled = false;
             }
-           
+
         }
 
         private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
@@ -82,12 +83,13 @@ namespace WindowsFormsApp1
             }
         }
 
-      
+
         public bool dataValidation()
         {
             errorProvider1.Clear();
-            if (string.IsNullOrEmpty(textBox1.Text)) {
-                errorProvider1.SetError(textBox1,"enter client id");
+            if (string.IsNullOrEmpty(textBox1.Text))
+            {
+                errorProvider1.SetError(textBox1, "enter client id");
                 return false;
 
             }
@@ -126,31 +128,33 @@ namespace WindowsFormsApp1
                 errorProvider1.SetError(PaymentMethodComboBox, "Choose a payment method");
                 return false;
             }
-                return true;
+            return true;
         }
 
 
         private void PolicyCreation_Click_1(object sender, EventArgs e)
         {
-            
-            if (dataValidation())          
-                if ((int)carTableAdapter.Check_If_Car_Exist(int.Parse(textBox1.Text)) > 0){
+
+            if (dataValidation())
+                if ((int)carTableAdapter.Check_If_Car_Exist(int.Parse(textBox1.Text)) > 0)
+                {
                     errorProvider1.SetError(PolicyCreation, "Car already exist");
                     return;
                 }
-                carTableAdapter.Insert(int.Parse(textBox1.Text), RegistrationPlateTextBox.Text, VINtextBox.Text, MakeTextBox.Text, ModelTextBox.Text, int.Parse(comboBox1.Text));
-                DataRow car = carTableAdapter.GetCarDetails(int.Parse(textBox1.Text)).Rows[0];
-                string Policy = "";
-                if (Policy1.Checked) Policy = "Policy 1";
-                else if (Policy2.Checked) Policy = "Policy 2";
-                else Policy = "Policy 3";
+            carTableAdapter.Insert(int.Parse(textBox1.Text), RegistrationPlateTextBox.Text, VINtextBox.Text, MakeTextBox.Text, ModelTextBox.Text, int.Parse(comboBox1.Text));
+            DataRow car = carTableAdapter.GetCarDetails(int.Parse(textBox1.Text)).Rows[0];
+            string Policy = "";
+            if (Policy1.Checked) Policy = "Policy 1";
+            else if (Policy2.Checked) Policy = "Policy 2";
+            else Policy = "Policy 3";
 
-                policyTableAdapter.InsertPolicy(int.Parse(textBox1.Text), (int)car["CarID"], Policy, dateTimePicker1.Value.ToString("yyyy-MM-dd"), dateTimePicker2.Value.ToString("yyyy-MM-dd"), Decimal.Parse(AmountTextBox.Text), "active");
-                DataRow policy = policyTableAdapter.GetPolicyDetails(int.Parse(textBox1.Text)).Rows[0];
-                paymentTableAdapter.Insert((int)policy["PolicyID"], DateTime.Parse(dateTimePicker1.Text), Decimal.Parse(AmountTextBox.Text), PaymentMethodComboBox.Text);
+            policyTableAdapter.InsertPolicy(int.Parse(textBox1.Text), (int)car["CarID"], Policy, dateTimePicker1.Value.ToString("yyyy-MM-dd"), dateTimePicker2.Value.ToString("yyyy-MM-dd"), Decimal.Parse(AmountTextBox.Text), "active");
+            DataRow policy = policyTableAdapter.GetPolicyDetails(int.Parse(textBox1.Text)).Rows[0];
+            paymentTableAdapter.Insert((int)policy["PolicyID"], DateTime.Parse(dateTimePicker1.Text), Decimal.Parse(AmountTextBox.Text), PaymentMethodComboBox.Text);
 
-                MessageBox.Show("Policy created");
-            
+            MessageBox.Show("Policy created");
+
         }
     }
+}
 
