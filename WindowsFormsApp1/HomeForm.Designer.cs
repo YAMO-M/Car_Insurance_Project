@@ -138,7 +138,7 @@
             this.homePage2.Location = new System.Drawing.Point(0, 32);
             this.homePage2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.homePage2.Name = "homePage2";
-            this.homePage2.Size = new System.Drawing.Size(1801, 1108);
+            this.homePage2.Size = new System.Drawing.Size(1758, 1108);
             this.homePage2.TabIndex = 20;
             // 
             // searchPage1
