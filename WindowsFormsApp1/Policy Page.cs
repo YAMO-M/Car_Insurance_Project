@@ -150,7 +150,7 @@ namespace WindowsFormsApp1
                 paymentTableAdapter.Insert((int)policy["PolicyID"], DateTime.Parse(dateTimePicker1.Text), Decimal.Parse(AmountTextBox.Text), PaymentMethodComboBox.Text);
 
                 MessageBox.Show("Policy created");
-            }
+            
         }
     }
 

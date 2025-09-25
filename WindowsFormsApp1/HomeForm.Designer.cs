@@ -52,7 +52,8 @@
             // 
             // menuStrip1
             // 
-            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
+            this.menuStrip1.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.menuStrip1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.homeToolStripMenuItem,
@@ -69,6 +70,7 @@
             // 
             // homeToolStripMenuItem
             // 
+            this.homeToolStripMenuItem.ForeColor = System.Drawing.SystemColors.Window;
             this.homeToolStripMenuItem.Name = "homeToolStripMenuItem";
             this.homeToolStripMenuItem.Size = new System.Drawing.Size(77, 30);
             this.homeToolStripMenuItem.Text = "Home";
@@ -79,10 +81,11 @@
             this.addPolicyToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.addPolicyToolStripMenuItem1,
             this.makeClaimToolStripMenuItem1});
+            this.addPolicyToolStripMenuItem.ForeColor = System.Drawing.SystemColors.Window;
             this.addPolicyToolStripMenuItem.Name = "addPolicyToolStripMenuItem";
             this.addPolicyToolStripMenuItem.Size = new System.Drawing.Size(73, 29);
             this.addPolicyToolStripMenuItem.Text = "Policy";
-            this.addPolicyToolStripMenuItem.Click += new System.EventHandler(this.addPolicyToolStripMenuItem_Click);
+            this.addPolicyToolStripMenuItem.Click += new System.EventHandler(this.addPolicyToolStripMenuItem1_Click);
             // 
             // addPolicyToolStripMenuItem1
             // 
@@ -102,10 +105,18 @@
             // 
             this.addClientToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.addClientToolStripMenuItem1});
+            this.addClientToolStripMenuItem.ForeColor = System.Drawing.SystemColors.Window;
             this.addClientToolStripMenuItem.Name = "addClientToolStripMenuItem";
             this.addClientToolStripMenuItem.Size = new System.Drawing.Size(72, 29);
             this.addClientToolStripMenuItem.Text = "Client";
-            this.addClientToolStripMenuItem.Click += new System.EventHandler(this.addClientToolStripMenuItem_Click);
+            this.addClientToolStripMenuItem.Click += new System.EventHandler(this.addClientToolStripMenuItem1_Click);
+            // 
+            // addClientToolStripMenuItem1
+            // 
+            this.addClientToolStripMenuItem1.Name = "addClientToolStripMenuItem1";
+            this.addClientToolStripMenuItem1.Size = new System.Drawing.Size(162, 26);
+            this.addClientToolStripMenuItem1.Text = "Add Client";
+            this.addClientToolStripMenuItem1.Click += new System.EventHandler(this.addClientToolStripMenuItem1_Click);
             // 
             // addClientToolStripMenuItem1
             // 
@@ -116,6 +127,7 @@
             // 
             // searchToolStripMenuItem
             // 
+            this.searchToolStripMenuItem.ForeColor = System.Drawing.SystemColors.Window;
             this.searchToolStripMenuItem.Name = "searchToolStripMenuItem";
             this.searchToolStripMenuItem.Size = new System.Drawing.Size(80, 29);
             this.searchToolStripMenuItem.Text = "Search";
@@ -123,6 +135,7 @@
             // 
             // logoutToolStripMenuItem
             // 
+            this.logoutToolStripMenuItem.ForeColor = System.Drawing.SystemColors.Window;
             this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
             this.logoutToolStripMenuItem.Size = new System.Drawing.Size(85, 29);
             this.logoutToolStripMenuItem.Text = "Logout";

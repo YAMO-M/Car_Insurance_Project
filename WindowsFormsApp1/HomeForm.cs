@@ -35,20 +35,11 @@ namespace WindowsFormsApp1
             homePage2.BringToFront();
         }
 
-        private void addPolicyToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            //addVehicle3.BringToFront();
-        }
+        
 
-        private void makeClaimToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-           // makeClaim2.BringToFront();
-        }
+        
 
-        private void addClientToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            //updatePersonalInfo1.BringToFront();
-        }
+        
 
         private void searchToolStripMenuItem_Click(object sender, EventArgs e)
         {
