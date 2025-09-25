@@ -107,5 +107,55 @@ namespace WindowsFormsApp1
                 this.Close();
             }
         }
+
+        private void homeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            homePage2.BringToFront();
+        }
+
+        private void addPolicyToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //addVehicle3.BringToFront();
+        }
+
+        private void makeClaimToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+           // makeClaim2.BringToFront();
+        }
+
+        private void addClientToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //updatePersonalInfo1.BringToFront();
+        }
+
+        private void searchToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            searchPage1.BringToFront();
+        }
+
+        private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Are you sure you want to Logout?", "Logout", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+
+                this.Close();
+            }
+        }
+
+        private void addPolicyToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            addVehicle3.BringToFront();
+        }
+
+        private void makeClaimToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            makeClaim2.BringToFront();
+        }
+
+        private void addClientToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            updatePersonalInfo1.BringToFront();
+        }
     }
 }
