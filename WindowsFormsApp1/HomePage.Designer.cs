@@ -126,10 +126,10 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::WindowsFormsApp1.Properties.Resources.cars;
-            this.pictureBox1.Location = new System.Drawing.Point(718, 154);
+            this.pictureBox1.Location = new System.Drawing.Point(717, 239);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(987, 769);
+            this.pictureBox1.Size = new System.Drawing.Size(987, 604);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
