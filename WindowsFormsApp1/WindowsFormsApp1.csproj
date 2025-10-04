@@ -87,8 +87,6 @@
       <DependentUpon>AddClient.cs</DependentUpon>
     </Compile>
     <Compile Include="Update.cs">
-<<<<<<< HEAD
-=======
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Update.Designer.cs">
@@ -140,8 +138,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Update.resx">
       <DependentUpon>Update.cs</DependentUpon>
-<<<<<<< HEAD
-=======
+
     </EmbeddedResource>
     <EmbeddedResource Include="UserControl1.resx">
       <DependentUpon>UserControl1.cs</DependentUpon>
