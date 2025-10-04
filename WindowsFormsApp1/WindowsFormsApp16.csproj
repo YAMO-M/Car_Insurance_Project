@@ -92,6 +92,13 @@
     <Compile Include="Update.Designer.cs">
       <DependentUpon>Update.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControl1.cs">
+>>>>>>> caa3df4ba39175af93246903a315545d2e471e8f
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Update.Designer.cs">
+      <DependentUpon>Update.cs</DependentUpon>
+    </Compile>
     <Compile Include="Policy Page.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -131,6 +138,11 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Update.resx">
       <DependentUpon>Update.cs</DependentUpon>
+
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl1.resx">
+      <DependentUpon>UserControl1.cs</DependentUpon>
+>>>>>>> caa3df4ba39175af93246903a315545d2e471e8f
     </EmbeddedResource>
     <EmbeddedResource Include="Policy Page.resx">
       <DependentUpon>Policy Page.cs</DependentUpon>

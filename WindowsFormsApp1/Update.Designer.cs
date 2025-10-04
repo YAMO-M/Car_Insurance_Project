@@ -687,7 +687,7 @@
         private System.Windows.Forms.Button searchButton;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox ClientIDTextBox;
-        private System.Windows.Forms.Label label11;
+     //   private System.Windows.Forms.Label label11;
         private System.Windows.Forms.MaskedTextBox PhoneNumTextBox;
     }
 }
