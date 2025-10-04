@@ -69,5 +69,15 @@ namespace WindowsFormsApp1.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap CR_Magazine_InlineHero_Save_Big_Car_Insurance_1123 {
+            get {
+                object obj = ResourceManager.GetObject("CR-Magazine-InlineHero-Save-Big-Car-Insurance-1123", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

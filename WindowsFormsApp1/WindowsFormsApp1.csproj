@@ -165,5 +165,8 @@
   <ItemGroup>
     <None Include="Resources\cars1.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CR-Magazine-InlineHero-Save-Big-Car-Insurance-1123.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

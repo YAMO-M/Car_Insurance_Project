@@ -30,20 +30,22 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
-            this.PolicyBox1 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox3 = new System.Windows.Forms.RichTextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(26, 135);
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(29, 64);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(224, 29);
             this.label1.TabIndex = 0;
@@ -60,99 +62,116 @@
             this.button2.Text = "button2";
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // PolicyBox1
+            // label4
             // 
-            this.PolicyBox1.BackColor = System.Drawing.Color.SteelBlue;
-            this.PolicyBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.PolicyBox1.ForeColor = System.Drawing.SystemColors.Window;
-            this.PolicyBox1.Location = new System.Drawing.Point(31, 179);
-            this.PolicyBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.PolicyBox1.Name = "PolicyBox1";
-            this.PolicyBox1.ReadOnly = true;
-            this.PolicyBox1.Size = new System.Drawing.Size(300, 115);
-            this.PolicyBox1.TabIndex = 3;
-            this.PolicyBox1.Text = "1. Collision Insurance\nPays for repairs or replacement of your car if it’s damage" +
-    "d in an accident, regardless of who was at fault.";
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(30, 138);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(390, 75);
+            this.label4.TabIndex = 10;
+            this.label4.Text = "Pays for repairs or replacement of your \r\ncar if it’s damaged in an accident, \r\nr" +
+    "egardless of who was at fault.";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
-            // richTextBox2
+            // label6
             // 
-            this.richTextBox2.BackColor = System.Drawing.Color.SteelBlue;
-            this.richTextBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.richTextBox2.ForeColor = System.Drawing.SystemColors.Window;
-            this.richTextBox2.Location = new System.Drawing.Point(31, 310);
-            this.richTextBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.ReadOnly = true;
-            this.richTextBox2.Size = new System.Drawing.Size(300, 114);
-            this.richTextBox2.TabIndex = 4;
-            this.richTextBox2.Text = "2. Comprehensive Insurance\nCovers damage to your car from non-collision events su" +
-    "ch as theft, fire, floods, vandalism, or natural disasters.";
-            this.richTextBox2.TextChanged += new System.EventHandler(this.richTextBox2_TextChanged);
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(29, 266);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(310, 125);
+            this.label6.TabIndex = 12;
+            this.label6.Text = "Covers damage to your car \r\nfrom non-collision events such \r\nas theft, fire, vand" +
+    "alism, \r\nor natural disasters.\r\n\r\n";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
-            // richTextBox3
+            // label5
             // 
-            this.richTextBox3.BackColor = System.Drawing.Color.SteelBlue;
-            this.richTextBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.richTextBox3.ForeColor = System.Drawing.SystemColors.Window;
-            this.richTextBox3.Location = new System.Drawing.Point(31, 439);
-            this.richTextBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.richTextBox3.Name = "richTextBox3";
-            this.richTextBox3.ReadOnly = true;
-            this.richTextBox3.Size = new System.Drawing.Size(344, 117);
-            this.richTextBox3.TabIndex = 5;
-            this.richTextBox3.Text = "3. Personal Injury Protection (PIP)\nCovers medical expenses for you and your pass" +
-    "engers after an accident, sometimes including lost wages and rehabilitation cost" +
-    "s, regardless of fault.";
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(33, 433);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(338, 125);
+            this.label5.TabIndex = 13;
+            this.label5.Text = "Covers medical expenses for you \r\nand your passengers after an \r\naccident,sometim" +
+    "es including \r\nlost wages and rehabilitation \r\ncosts, regardless of fault.\r\n";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
-            // label2
+            // label7
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(492, 30);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(221, 29);
-            this.label2.TabIndex = 8;
-            this.label2.Text = "CAR INSURANCE";
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(28, 106);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(308, 32);
+            this.label7.TabIndex = 14;
+            this.label7.Text = "1. Collision Insurance";
             // 
-            // label3
+            // label8
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(72, 50);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(115, 29);
-            this.label3.TabIndex = 9;
-            this.label3.Text = "*LOGO* ";
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(31, 391);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(399, 32);
+            this.label8.TabIndex = 15;
+            this.label8.Text = "3. Personal Injury Protection";
+            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
-            // pictureBox1
+            // label9
             // 
-            this.pictureBox1.Image = global::WindowsFormsApp1.Properties.Resources.cars;
-            this.pictureBox1.Location = new System.Drawing.Point(421, 135);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(674, 400);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 7;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.Location = new System.Drawing.Point(29, 234);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(401, 32);
+            this.label9.TabIndex = 16;
+            this.label9.Text = "2. Comprehensive Insurance\r\n";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.Transparent;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.Location = new System.Drawing.Point(805, 30);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(349, 78);
+            this.label10.TabIndex = 17;
+            this.label10.Text = "       MOTOWISE \r\nAUTO  INSURANCE\r\n";
             // 
             // HomePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.richTextBox3);
-            this.Controls.Add(this.richTextBox2);
-            this.Controls.Add(this.PolicyBox1);
+            this.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.CR_Magazine_InlineHero_Save_Big_Car_Insurance_1123;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "HomePage";
-            this.Size = new System.Drawing.Size(1168, 740);
+            this.Size = new System.Drawing.Size(1358, 761);
             this.Load += new System.EventHandler(this.HomePage_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -162,11 +181,12 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.RichTextBox PolicyBox1;
-        private System.Windows.Forms.RichTextBox richTextBox2;
-        private System.Windows.Forms.RichTextBox richTextBox3;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
     }
 }

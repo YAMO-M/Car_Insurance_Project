@@ -20,8 +20,7 @@ namespace WindowsFormsApp1
         public AddClient()
         {
             InitializeComponent();
-            CustomerID.Mask = "000000000";
-            CustomerID.PromptChar = ' ';
+            //CustomerID.PromptChar = ' ';
             PhoneNumTextBox.Mask = "000-000-0000";
             PhoneNumTextBox.PromptChar = ' ';
             PostalCodeTextBox.Mask = "0000-0";

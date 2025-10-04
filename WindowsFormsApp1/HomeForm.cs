@@ -23,6 +23,13 @@ namespace WindowsFormsApp1
             updatePersonalInfo1.BringToFront();
             homePage2.BringToFront();
 
+            homePage2.Dock = DockStyle.Fill;
+            searchPage1.Dock = DockStyle.Fill;
+            addVehicle3.Dock = DockStyle.Fill;
+            makeClaim2.Dock = DockStyle.Fill;
+            updatePersonalInfo1.Dock = DockStyle.Fill;
+
+
         }
 
         private void HomeForm_Load(object sender, EventArgs e)
