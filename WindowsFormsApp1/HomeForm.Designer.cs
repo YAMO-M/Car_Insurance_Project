@@ -270,7 +270,7 @@
             this.addClient2.Name = "addClient2";
             this.addClient2.Size = new System.Drawing.Size(1568, 1125);
             this.addClient2.TabIndex = 21;
-            this.addClient2.Load += new System.EventHandler(this.addClient2_Load);
+        
             // 
             // HomeForm
             // 
