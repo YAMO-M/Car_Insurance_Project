@@ -114,8 +114,8 @@ namespace WindowsFormsApp1
             clientError.Text = "";
 
             // radio
-            radioButton1.Checked = false;
-            radioButton2.Checked = false;
+            ActivateradioButton.Checked = false;
+            De_ActivateradioButton2.Checked = false;
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -129,13 +129,13 @@ namespace WindowsFormsApp1
 
             errorProvider.Clear();
            
-            if (radioButton1.Checked)
+            if (ActivateradioButton.Checked)
             {  
                 policyTableAdapter.UpdateStatus("active", int.Parse(ClientIDTextBox.Text));
                 
 
             }
-            else if(radioButton2.Checked){
+            else if(De_ActivateradioButton2.Checked){
                 policyTableAdapter.UpdateStatus( "not active", int.Parse(ClientIDTextBox.Text));
                 
             }
@@ -162,6 +162,74 @@ namespace WindowsFormsApp1
             {
                 e.Handled = true; // PREVENT anything that this not digit to be pressed
             }
+        }
+
+        private void Policy1radioButton_CheckedChanged(object sender, EventArgs e)
+        {
+           
+           
+
+
+        }
+
+        private void Policy1radioButton_Enter(object sender, EventArgs e)
+        {
+            
+
+        }
+
+        private void Policy1radioButton_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Confirm Policy 1", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.No)
+                Policy1radioButton.Checked = false;
+            
+        }
+
+        private void Policy2radioButton_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Confirm Policy 2", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.No)
+                Policy2radioButton.Checked = false;
+
+        }
+
+        private void Policy3radioButton_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Confirm Policy 3", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.No)
+                Policy3radioButton.Checked = false;
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioButton1_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Activate Policy?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.No)
+            {
+                De_ActivateradioButton2.Checked = true;
+                ActivateradioButton.Checked = false;
+            }
+        }
+
+        private void radioButton2_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("De-activate Policy?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.No)
+            {
+                De_ActivateradioButton2.Checked = false;
+                ActivateradioButton.Checked = true;
+            }
+            
+        }
+
+        private void SearchPage_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

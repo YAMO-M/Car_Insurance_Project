@@ -191,8 +191,8 @@
             // 
             this.homePage1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("homePage1.BackgroundImage")));
             this.homePage1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.homePage1.Location = new System.Drawing.Point(61, 87);
-            this.homePage1.Margin = new System.Windows.Forms.Padding(2);
+            this.homePage1.Location = new System.Drawing.Point(0, 30);
+            this.homePage1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.homePage1.Name = "homePage1";
             this.homePage1.Size = new System.Drawing.Size(1394, 937);
             this.homePage1.TabIndex = 14;
@@ -238,13 +238,14 @@
             // 
             // makeClaim4
             // 
-            this.makeClaim4.AutoScroll = true;
-            this.makeClaim4.BackColor = System.Drawing.SystemColors.Control;
-            this.makeClaim4.Location = new System.Drawing.Point(-11, 38);
-            this.makeClaim4.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.makeClaim4.Name = "makeClaim4";
-            this.makeClaim4.Size = new System.Drawing.Size(1935, 1078);
-            this.makeClaim4.TabIndex = 20;
+            this.homePage2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("homePage2.BackgroundImage")));
+            this.homePage2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.homePage2.Location = new System.Drawing.Point(-13, 34);
+            this.homePage2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.homePage2.Name = "homePage2";
+            this.homePage2.Size = new System.Drawing.Size(2091, 1385);
+            this.homePage2.TabIndex = 20;
+            this.homePage2.Load += new System.EventHandler(this.homePage2_Load);
             // 
             // addVehicle2
             // 
