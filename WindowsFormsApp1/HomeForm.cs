@@ -14,6 +14,7 @@ namespace WindowsFormsApp1
     
     {
         public string AgentFname;
+        public string AgentEmail;
         public HomeForm()
         {
             InitializeComponent();
@@ -94,7 +95,7 @@ namespace WindowsFormsApp1
 
         }
 
-        private void homePage2_Load(object sender, EventArgs e)
+        private void addClient2_Load_1(object sender, EventArgs e)
         {
 
         }

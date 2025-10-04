@@ -20,7 +20,7 @@ namespace WindowsFormsApp1
         public AddClient()
         {
             InitializeComponent();
-            PostalCodeTextBox.Mask = "0000-0";
+            PostalCodeTextBox.Mask = "0000";
             PostalCodeTextBox.PromptChar = ' ';
 
         }
@@ -30,14 +30,22 @@ namespace WindowsFormsApp1
         {
             if (DataValidation())
             {
-                string name = CustomerName.Text;
-                string lastname = CustomerLastName.Text;
-                long id = long.Parse(CustomerID.Text);
-                string address = StreetAddressTextBox.Text + ", "+CityTextBox+", "+ ProvinceComboBox.Text+", "+PostalCodeTextBox;
-                string email = EmailTextBox.Text;
-                string phoneno = PhoneNumTextBox.Text;
-                adapter.Insert(name,lastname,address,email,id,phoneno);
-                MessageBox.Show("Client Added");
+                try
+                {
+                    string name = CustomerName.Text;
+                    string lastname = CustomerLastName.Text;
+                    string id = CustomerID.Text;
+                    string address = StreetAddressTextBox.Text + "," + CityTextBox.Text + "," + ProvinceComboBox.Text + "," + PostalCodeTextBox.Text;
+                    string email = EmailTextBox.Text;
+                    string phoneno = PhoneNumTextBox.Text;
+                    adapter.Insert(name, lastname, address, email, id, phoneno);
+                    string ClientId = adapter.getClientDetails(email).Rows[0]["ClientID"].ToString();
+                    MessageBox.Show("Client Added : ClientId = " + ClientId);
+                }
+                catch (System.Data.SqlClient.SqlException ex)
+                {
+                    MessageBox.Show("Client Alreay Exists");
+                }
             } 
 
         }
@@ -160,7 +168,7 @@ namespace WindowsFormsApp1
 
         private void EmailTextBox_TextChanged(object sender, EventArgs e)
         {
-            int checkDuplicateEmail = (int)adapter.GetNoOfClientsWithEmail(EmailTextBox.Text);
+            int checkDuplicateEmail = (int) adapter.GetNoOfClientsWithEmail(EmailTextBox.Text);
             EmailErrorLabel.ForeColor = Color.Red;
             EmailErrorLabel.Text = checkDuplicateEmail > 0 ? " Email Already in use" : "";
         }
@@ -175,7 +183,7 @@ namespace WindowsFormsApp1
             }
             else
             {
-                int checkDuplicateID = (int)adapter.Check_If_Client_Exist(int.Parse(CustomerID.Text));
+                int checkDuplicateID = (int)adapter.Check_If_Id_Exist(CustomerID.Text);
                 IDErrorLabel.Text = checkDuplicateID > 0 ? " ID Already in use" : "";
             }
         }

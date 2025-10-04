@@ -38,6 +38,7 @@
             this.addClientToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.searchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addClient2 = new WindowsFormsApp1.AddClient();
             this.homePage2 = new WindowsFormsApp1.HomePage();
             this.searchPage1 = new WindowsFormsApp1.SearchPage();
             this.addVehicle3 = new WindowsFormsApp1.AddVehicle();
@@ -142,6 +143,16 @@
             this.logoutToolStripMenuItem.Text = "Logout";
             this.logoutToolStripMenuItem.Click += new System.EventHandler(this.logoutToolStripMenuItem_Click);
             // 
+            // addClient2
+            // 
+            this.addClient2.BackColor = System.Drawing.SystemColors.Control;
+            this.addClient2.Location = new System.Drawing.Point(0, 24);
+            this.addClient2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.addClient2.Name = "addClient2";
+            this.addClient2.Size = new System.Drawing.Size(1568, 1127);
+            this.addClient2.TabIndex = 21;
+            this.addClient2.Load += new System.EventHandler(this.addClient2_Load_1);
+            // 
             // homePage2
             // 
             this.homePage2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("homePage2.BackgroundImage")));
@@ -223,8 +234,9 @@
             // 
             // addClient1
             // 
+            this.addClient1.BackColor = System.Drawing.SystemColors.Control;
             this.addClient1.Location = new System.Drawing.Point(0, 0);
-            this.addClient1.Margin = new System.Windows.Forms.Padding(2);
+            this.addClient1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.addClient1.Name = "addClient1";
             this.addClient1.Size = new System.Drawing.Size(867, 545);
             this.addClient1.TabIndex = 0;

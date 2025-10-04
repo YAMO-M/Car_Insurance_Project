@@ -23,6 +23,7 @@ namespace WindowsFormsApp1
         private ClientTableAdapter clientTableAdapter = new ClientTableAdapter();
         private CarTableAdapter carTableAdapter = new CarTableAdapter();
         private PaymentTableAdapter paymentTableAdapter = new PaymentTableAdapter();
+        private AgentTableAdapter agentTableAdapter = new AgentTableAdapter();  
         private void Policy3_CheckedChanged(object sender, EventArgs e)
         {
             if (Policy3.Checked)
@@ -147,8 +148,9 @@ namespace WindowsFormsApp1
             if (Policy1.Checked) Policy = "Policy 1";
             else if (Policy2.Checked) Policy = "Policy 2";
             else Policy = "Policy 3";
-
-            policyTableAdapter.InsertPolicy(int.Parse(textBox1.Text), (int)car["CarID"], Policy, dateTimePicker1.Value.ToString("yyyy-MM-dd"), dateTimePicker2.Value.ToString("yyyy-MM-dd"), Decimal.Parse(AmountTextBox.Text), "active");
+            string agentEmail = LoginForm.getAgentEmail.GetAgentEmail;
+            int agentId = (int) agentTableAdapter.GetAgentID(agentEmail).Rows[0]["AgentID"];
+            policyTableAdapter.Insert(int.Parse(textBox1.Text), (int)car["CarID"], Policy, dateTimePicker1.Value, dateTimePicker2.Value, Decimal.Parse(AmountTextBox.Text), "active",agentId);
             DataRow policy = policyTableAdapter.GetPolicyDetails(int.Parse(textBox1.Text)).Rows[0];
             paymentTableAdapter.Insert((int)policy["PolicyID"], DateTime.Parse(dateTimePicker1.Text), Decimal.Parse(AmountTextBox.Text), PaymentMethodComboBox.Text);
 
