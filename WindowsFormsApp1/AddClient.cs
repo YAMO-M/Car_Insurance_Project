@@ -215,7 +215,7 @@ namespace WindowsFormsApp1
         private void PostalCodeTextBox_Click(object sender, EventArgs e)
         {
             //PostalCodeTextBox.Select(PostalCodeTextBox.Text.Length-3, 0);
-            PostalCodeTextBox.Select(PostalCodeTextBox.MaskedTextProvider.ToString(false, false).Length, 1);
+            PostalCodeTextBox.Select(PostalCodeTextBox.MaskedTextProvider.ToString(false, false).Length + (PostalCodeTextBox.Text.Length == 6 ? 1:0), 1);
            
         }
     }
