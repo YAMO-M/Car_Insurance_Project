@@ -67,7 +67,7 @@
             // EmailTextBox
             // 
             this.EmailTextBox.Location = new System.Drawing.Point(320, 169);
-            this.EmailTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.EmailTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.EmailTextBox.Name = "EmailTextBox";
             this.EmailTextBox.Size = new System.Drawing.Size(260, 20);
             this.EmailTextBox.TabIndex = 17;
@@ -107,7 +107,7 @@
             // StreetAddressTextBox
             // 
             this.StreetAddressTextBox.Location = new System.Drawing.Point(51, 254);
-            this.StreetAddressTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.StreetAddressTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.StreetAddressTextBox.Name = "StreetAddressTextBox";
             this.StreetAddressTextBox.Size = new System.Drawing.Size(528, 20);
             this.StreetAddressTextBox.TabIndex = 24;
@@ -157,7 +157,7 @@
             "North West",
             "Mpumalanga"});
             this.ProvinceComboBox.Location = new System.Drawing.Point(319, 316);
-            this.ProvinceComboBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ProvinceComboBox.Margin = new System.Windows.Forms.Padding(2);
             this.ProvinceComboBox.Name = "ProvinceComboBox";
             this.ProvinceComboBox.Size = new System.Drawing.Size(260, 21);
             this.ProvinceComboBox.TabIndex = 31;
@@ -177,7 +177,7 @@
             this.AddClientButton.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.AddClientButton.ForeColor = System.Drawing.SystemColors.Window;
             this.AddClientButton.Location = new System.Drawing.Point(246, 414);
-            this.AddClientButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.AddClientButton.Margin = new System.Windows.Forms.Padding(2);
             this.AddClientButton.Name = "AddClientButton";
             this.AddClientButton.Size = new System.Drawing.Size(121, 27);
             this.AddClientButton.TabIndex = 34;
@@ -188,7 +188,7 @@
             // CustomerLastName
             // 
             this.CustomerLastName.Location = new System.Drawing.Point(319, 68);
-            this.CustomerLastName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.CustomerLastName.Margin = new System.Windows.Forms.Padding(2);
             this.CustomerLastName.Name = "CustomerLastName";
             this.CustomerLastName.Size = new System.Drawing.Size(260, 20);
             this.CustomerLastName.TabIndex = 36;
@@ -216,7 +216,7 @@
             // CustomerName
             // 
             this.CustomerName.Location = new System.Drawing.Point(51, 68);
-            this.CustomerName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.CustomerName.Margin = new System.Windows.Forms.Padding(2);
             this.CustomerName.Name = "CustomerName";
             this.CustomerName.Size = new System.Drawing.Size(255, 20);
             this.CustomerName.TabIndex = 35;
@@ -234,7 +234,7 @@
             // CityTextBox
             // 
             this.CityTextBox.Location = new System.Drawing.Point(51, 316);
-            this.CityTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.CityTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.CityTextBox.Name = "CityTextBox";
             this.CityTextBox.Size = new System.Drawing.Size(255, 20);
             this.CityTextBox.TabIndex = 30;
@@ -290,6 +290,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.Controls.Add(this.EmailErrorLabel);
             this.Controls.Add(this.PhoneNumTextBox);
             this.Controls.Add(this.PostalCodeTextBox);
@@ -313,7 +314,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.EmailTextBox);
             this.Controls.Add(this.PersonalDetailsLabel);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "AddClient";
             this.Size = new System.Drawing.Size(867, 545);
             this.ResumeLayout(false);

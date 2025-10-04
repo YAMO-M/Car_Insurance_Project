@@ -52,9 +52,11 @@
             // 
             this.IncidentDetailsLabel.AutoSize = true;
             this.IncidentDetailsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.2F);
-            this.IncidentDetailsLabel.Location = new System.Drawing.Point(68, 275);
+            this.IncidentDetailsLabel.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.IncidentDetailsLabel.Location = new System.Drawing.Point(45, 179);
+            this.IncidentDetailsLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.IncidentDetailsLabel.Name = "IncidentDetailsLabel";
-            this.IncidentDetailsLabel.Size = new System.Drawing.Size(186, 29);
+            this.IncidentDetailsLabel.Size = new System.Drawing.Size(125, 20);
             this.IncidentDetailsLabel.TabIndex = 8;
             this.IncidentDetailsLabel.Text = "Incident Details";
             // 
@@ -68,29 +70,31 @@
             "Fire",
             "Natural Disaster",
             "Vandalism"});
-            this.TypeOfClaimComboBox.Location = new System.Drawing.Point(72, 351);
-            this.TypeOfClaimComboBox.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.TypeOfClaimComboBox.Location = new System.Drawing.Point(48, 228);
+            this.TypeOfClaimComboBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.TypeOfClaimComboBox.Name = "TypeOfClaimComboBox";
-            this.TypeOfClaimComboBox.Size = new System.Drawing.Size(643, 28);
+            this.TypeOfClaimComboBox.Size = new System.Drawing.Size(430, 21);
             this.TypeOfClaimComboBox.TabIndex = 9;
             // 
             // TypeOfClaimLabel
             // 
             this.TypeOfClaimLabel.AutoSize = true;
             this.TypeOfClaimLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TypeOfClaimLabel.Location = new System.Drawing.Point(69, 325);
+            this.TypeOfClaimLabel.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.TypeOfClaimLabel.Location = new System.Drawing.Point(46, 211);
+            this.TypeOfClaimLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.TypeOfClaimLabel.Name = "TypeOfClaimLabel";
-            this.TypeOfClaimLabel.Size = new System.Drawing.Size(125, 22);
+            this.TypeOfClaimLabel.Size = new System.Drawing.Size(83, 15);
             this.TypeOfClaimLabel.TabIndex = 10;
             this.TypeOfClaimLabel.Text = "Type Of Claim";
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(839, 349);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.dateTimePicker1.Location = new System.Drawing.Point(559, 227);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.dateTimePicker1.MinDate = new System.DateTime(2025, 10, 1, 0, 0, 0, 0);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(786, 26);
+            this.dateTimePicker1.Size = new System.Drawing.Size(525, 20);
             this.dateTimePicker1.TabIndex = 11;
             this.dateTimePicker1.Value = new System.DateTime(2025, 10, 1, 0, 0, 0, 0);
             // 
@@ -98,9 +102,11 @@
             // 
             this.DateAndTimeLabel.AutoSize = true;
             this.DateAndTimeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DateAndTimeLabel.Location = new System.Drawing.Point(835, 325);
+            this.DateAndTimeLabel.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.DateAndTimeLabel.Location = new System.Drawing.Point(557, 211);
+            this.DateAndTimeLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.DateAndTimeLabel.Name = "DateAndTimeLabel";
-            this.DateAndTimeLabel.Size = new System.Drawing.Size(135, 22);
+            this.DateAndTimeLabel.Size = new System.Drawing.Size(92, 15);
             this.DateAndTimeLabel.TabIndex = 12;
             this.DateAndTimeLabel.Text = "Date of Incident";
             // 
@@ -108,18 +114,20 @@
             // 
             this.DescriptionLabel.AutoSize = true;
             this.DescriptionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DescriptionLabel.Location = new System.Drawing.Point(76, 420);
+            this.DescriptionLabel.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.DescriptionLabel.Location = new System.Drawing.Point(45, 278);
+            this.DescriptionLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.DescriptionLabel.Name = "DescriptionLabel";
-            this.DescriptionLabel.Size = new System.Drawing.Size(167, 22);
+            this.DescriptionLabel.Size = new System.Drawing.Size(115, 15);
             this.DescriptionLabel.TabIndex = 20;
             this.DescriptionLabel.Text = "Incident Description";
             // 
             // DescriptionRichTextBox
             // 
-            this.DescriptionRichTextBox.Location = new System.Drawing.Point(72, 455);
-            this.DescriptionRichTextBox.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.DescriptionRichTextBox.Location = new System.Drawing.Point(48, 296);
+            this.DescriptionRichTextBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.DescriptionRichTextBox.Name = "DescriptionRichTextBox";
-            this.DescriptionRichTextBox.Size = new System.Drawing.Size(1553, 78);
+            this.DescriptionRichTextBox.Size = new System.Drawing.Size(1037, 52);
             this.DescriptionRichTextBox.TabIndex = 21;
             this.DescriptionRichTextBox.Text = "";
             // 
@@ -127,10 +135,10 @@
             // 
             this.ClaimButton.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.ClaimButton.ForeColor = System.Drawing.SystemColors.Window;
-            this.ClaimButton.Location = new System.Drawing.Point(455, 562);
-            this.ClaimButton.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.ClaimButton.Location = new System.Drawing.Point(303, 365);
+            this.ClaimButton.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.ClaimButton.Name = "ClaimButton";
-            this.ClaimButton.Size = new System.Drawing.Size(250, 46);
+            this.ClaimButton.Size = new System.Drawing.Size(167, 30);
             this.ClaimButton.TabIndex = 27;
             this.ClaimButton.Text = "Approve";
             this.ClaimButton.UseVisualStyleBackColor = false;
@@ -140,19 +148,23 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(70, -34);
+            this.label1.Location = new System.Drawing.Point(47, -22);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(228, 22);
+            this.label1.Size = new System.Drawing.Size(154, 15);
             this.label1.TabIndex = 43;
             this.label1.Text = "Description Of The Incident";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(74, 65);
+            this.label2.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.label2.Location = new System.Drawing.Point(45, 42);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(126, 22);
+            this.label2.Size = new System.Drawing.Size(85, 15);
             this.label2.TabIndex = 45;
             this.label2.Text = "Enter Client ID";
             // 
@@ -160,9 +172,10 @@
             // 
             this.searchButton.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.searchButton.ForeColor = System.Drawing.SystemColors.Window;
-            this.searchButton.Location = new System.Drawing.Point(1451, 49);
+            this.searchButton.Location = new System.Drawing.Point(951, 38);
+            this.searchButton.Margin = new System.Windows.Forms.Padding(2);
             this.searchButton.Name = "searchButton";
-            this.searchButton.Size = new System.Drawing.Size(174, 38);
+            this.searchButton.Size = new System.Drawing.Size(116, 25);
             this.searchButton.TabIndex = 46;
             this.searchButton.Text = "Search";
             this.searchButton.UseVisualStyleBackColor = false;
@@ -172,10 +185,10 @@
             // 
             this.button1.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.button1.ForeColor = System.Drawing.SystemColors.Window;
-            this.button1.Location = new System.Drawing.Point(914, 562);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.button1.Location = new System.Drawing.Point(609, 365);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(250, 46);
+            this.button1.Size = new System.Drawing.Size(167, 30);
             this.button1.TabIndex = 47;
             this.button1.Text = "Disapprove";
             this.button1.UseVisualStyleBackColor = false;
@@ -184,10 +197,13 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(69, 123);
+            this.label3.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.label3.Location = new System.Drawing.Point(46, 80);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(104, 22);
+            this.label3.Size = new System.Drawing.Size(68, 15);
             this.label3.TabIndex = 49;
             this.label3.Text = "Policy Type";
             // 
@@ -195,51 +211,53 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(68, 189);
+            this.label4.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.label4.Location = new System.Drawing.Point(45, 123);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(114, 22);
+            this.label4.Size = new System.Drawing.Size(76, 15);
             this.label4.TabIndex = 53;
             this.label4.Text = "Policy Status";
             // 
             // PolicyStatus
             // 
             this.PolicyStatus.Enabled = false;
-            this.PolicyStatus.Location = new System.Drawing.Point(274, 185);
-            this.PolicyStatus.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.PolicyStatus.Location = new System.Drawing.Point(187, 118);
+            this.PolicyStatus.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.PolicyStatus.Name = "PolicyStatus";
-            this.PolicyStatus.Size = new System.Drawing.Size(1079, 26);
+            this.PolicyStatus.Size = new System.Drawing.Size(717, 20);
             this.PolicyStatus.TabIndex = 54;
             // 
             // policyType
             // 
             this.policyType.Enabled = false;
-            this.policyType.Location = new System.Drawing.Point(280, 122);
-            this.policyType.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.policyType.Location = new System.Drawing.Point(187, 79);
+            this.policyType.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.policyType.Name = "policyType";
-            this.policyType.Size = new System.Drawing.Size(1074, 26);
+            this.policyType.Size = new System.Drawing.Size(717, 20);
             this.policyType.TabIndex = 57;
             // 
             // policyError
             // 
             this.policyError.AutoSize = true;
             this.policyError.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.policyError.Location = new System.Drawing.Point(788, 66);
+            this.policyError.Location = new System.Drawing.Point(525, 43);
+            this.policyError.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.policyError.Name = "policyError";
-            this.policyError.Size = new System.Drawing.Size(0, 22);
+            this.policyError.Size = new System.Drawing.Size(0, 15);
             this.policyError.TabIndex = 60;
             // 
             // ClientIDTextbox
             // 
-            this.ClientIDTextbox.Location = new System.Drawing.Point(280, 65);
-            this.ClientIDTextbox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.ClientIDTextbox.Location = new System.Drawing.Point(187, 42);
             this.ClientIDTextbox.Name = "ClientIDTextbox";
-            this.ClientIDTextbox.Size = new System.Drawing.Size(1073, 26);
+            this.ClientIDTextbox.Size = new System.Drawing.Size(717, 20);
             this.ClientIDTextbox.TabIndex = 61;
             this.ClientIDTextbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ClientIDTextbox_KeyPress);
             // 
             // MakeClaim
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.Controls.Add(this.ClientIDTextbox);
@@ -260,9 +278,9 @@
             this.Controls.Add(this.TypeOfClaimLabel);
             this.Controls.Add(this.TypeOfClaimComboBox);
             this.Controls.Add(this.IncidentDetailsLabel);
-            this.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.Name = "MakeClaim";
-            this.Size = new System.Drawing.Size(1778, 1034);
+            this.Size = new System.Drawing.Size(1185, 672);
             this.ResumeLayout(false);
             this.PerformLayout();
 

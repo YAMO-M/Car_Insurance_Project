@@ -38,6 +38,7 @@
             this.addClientToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.searchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addClient2 = new WindowsFormsApp1.AddClient();
             this.homePage2 = new WindowsFormsApp1.HomePage();
             this.searchPage1 = new WindowsFormsApp1.SearchPage();
             this.addVehicle3 = new WindowsFormsApp1.AddVehicle();
@@ -51,7 +52,6 @@
             this.addVehicle2 = new WindowsFormsApp1.AddVehicle();
             this.addVehicle1 = new WindowsFormsApp1.AddVehicle();
             this.homePage3 = new WindowsFormsApp1.HomePage();
-            this.addClient2 = new WindowsFormsApp1.AddClient();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -119,7 +119,7 @@
             // addClientToolStripMenuItem1
             // 
             this.addClientToolStripMenuItem1.Name = "addClientToolStripMenuItem1";
-            this.addClientToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.addClientToolStripMenuItem1.Size = new System.Drawing.Size(131, 22);
             this.addClientToolStripMenuItem1.Text = "Add Client";
             this.addClientToolStripMenuItem1.Click += new System.EventHandler(this.addClientToolStripMenuItem1_Click);
             // 
@@ -139,11 +139,20 @@
             this.logoutToolStripMenuItem.Text = "Logout";
             this.logoutToolStripMenuItem.Click += new System.EventHandler(this.logoutToolStripMenuItem_Click);
             // 
+            // addClient2
+            // 
+            this.addClient2.BackColor = System.Drawing.SystemColors.Control;
+            this.addClient2.Location = new System.Drawing.Point(0, 24);
+            this.addClient2.Margin = new System.Windows.Forms.Padding(2);
+            this.addClient2.Name = "addClient2";
+            this.addClient2.Size = new System.Drawing.Size(1568, 1127);
+            this.addClient2.TabIndex = 21;
+            // 
             // homePage2
             // 
             this.homePage2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("homePage2.BackgroundImage")));
             this.homePage2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.homePage2.Location = new System.Drawing.Point(0, 26);
+            this.homePage2.Location = new System.Drawing.Point(0, 32);
             this.homePage2.Margin = new System.Windows.Forms.Padding(2);
             this.homePage2.Name = "homePage2";
             this.homePage2.Size = new System.Drawing.Size(1568, 1125);
@@ -152,7 +161,7 @@
             // searchPage1
             // 
             this.searchPage1.AutoScroll = true;
-            this.searchPage1.Location = new System.Drawing.Point(0, 26);
+            this.searchPage1.Location = new System.Drawing.Point(0, 24);
             this.searchPage1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.searchPage1.Name = "searchPage1";
             this.searchPage1.Size = new System.Drawing.Size(1116, 697);
@@ -172,10 +181,10 @@
             // 
             this.makeClaim3.AutoScroll = true;
             this.makeClaim3.BackColor = System.Drawing.SystemColors.Control;
-            this.makeClaim3.Location = new System.Drawing.Point(0, 27);
+            this.makeClaim3.Location = new System.Drawing.Point(0, 26);
             this.makeClaim3.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.makeClaim3.Name = "makeClaim3";
-            this.makeClaim3.Size = new System.Drawing.Size(1568, 1125);
+            this.makeClaim3.Size = new System.Drawing.Size(1116, 699);
             this.makeClaim3.TabIndex = 17;
             // 
             // homePage1
@@ -191,6 +200,7 @@
             // updatePersonalInfo1
             // 
             this.updatePersonalInfo1.AutoScroll = true;
+            this.updatePersonalInfo1.BackColor = System.Drawing.SystemColors.Control;
             this.updatePersonalInfo1.Location = new System.Drawing.Point(34, 89);
             this.updatePersonalInfo1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.updatePersonalInfo1.Name = "updatePersonalInfo1";
@@ -219,6 +229,7 @@
             // 
             // addClient1
             // 
+            this.addClient1.BackColor = System.Drawing.SystemColors.Control;
             this.addClient1.Location = new System.Drawing.Point(0, 0);
             this.addClient1.Margin = new System.Windows.Forms.Padding(2);
             this.addClient1.Name = "addClient1";
@@ -263,15 +274,6 @@
             this.homePage3.Size = new System.Drawing.Size(1778, 1034);
             this.homePage3.TabIndex = 22;
             this.homePage3.Load += new System.EventHandler(this.homePage3_Load);
-            // 
-            // addClient2
-            // 
-            this.addClient2.Location = new System.Drawing.Point(0, 26);
-            this.addClient2.Margin = new System.Windows.Forms.Padding(2);
-            this.addClient2.Name = "addClient2";
-            this.addClient2.Size = new System.Drawing.Size(1568, 1125);
-            this.addClient2.TabIndex = 21;
-            this.addClient2.Load += new System.EventHandler(this.addClient2_Load);
             // 
             // HomeForm
             // 

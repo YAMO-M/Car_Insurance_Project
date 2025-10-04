@@ -88,10 +88,5 @@ namespace WindowsFormsApp1
         {
 
         }
-
-        private void addClient2_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }
