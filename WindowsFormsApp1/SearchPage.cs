@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Forms.VisualStyles;
+using System.Xml.Linq;
 using WindowsFormsApp1.DataSet1TableAdapters;
 
 namespace WindowsFormsApp1
@@ -229,6 +230,21 @@ namespace WindowsFormsApp1
 
         private void SearchPage_Load(object sender, EventArgs e)
         {
+            //txtName.DataBindings.Add("Text", clientBsource, "Name");
+            //txtLastName.DataBindings.Add("Text", clientBsource, "LastName");
+            //txtAddress.DataBindings.Add("Text", clientBsource, "Address");
+            //txtEmail.DataBindings.Add("Text", clientBsource, "Email");
+            //txtIDNumber.DataBindings.Add("Text", clientBsource, "IDNumber");
+            //txtPhoneNumber.DataBindings.Add("Text", clientBsource, "PhoneNumber");
+
+            //txtRegNumber.DataBindings.Add("Text", carBsource, "RegistrationNumber");
+            //txtVin.DataBindings.Add("Text", carBsource, "VIN");
+            //txtMake.DataBindings.Add("Text", carBsource, "Make");
+            //txtModel.DataBindings.Add("Text", carBsource, "Model");
+            //txtYear.DataBindings.Add("Text", carBsource, "Year");
+
+            
+
 
         }
     }
