@@ -245,7 +245,7 @@
             this.homePage2.Name = "homePage2";
             this.homePage2.Size = new System.Drawing.Size(2091, 1385);
             this.homePage2.TabIndex = 20;
-            this.homePage2.Load += new System.EventHandler(this.homePage2_Load);
+            this.homePage2.Load += new System.EventHandler(this.homePage3_Load);
             // 
             // addVehicle2
             // 
