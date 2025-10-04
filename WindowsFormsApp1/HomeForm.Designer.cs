@@ -58,7 +58,6 @@
             // 
             this.menuStrip1.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.menuStrip1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.homeToolStripMenuItem,
@@ -119,7 +118,7 @@
             // addClientToolStripMenuItem1
             // 
             this.addClientToolStripMenuItem1.Name = "addClientToolStripMenuItem1";
-            this.addClientToolStripMenuItem1.Size = new System.Drawing.Size(165, 26);
+            this.addClientToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
             this.addClientToolStripMenuItem1.Text = "Add Client";
             this.addClientToolStripMenuItem1.Click += new System.EventHandler(this.addClientToolStripMenuItem1_Click);
             // 
@@ -141,13 +140,11 @@
             // 
             // addClient1
             // 
-            this.homePage2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("homePage2.BackgroundImage")));
-            this.homePage2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.homePage2.Location = new System.Drawing.Point(0, 30);
-            this.homePage2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.homePage2.Name = "homePage2";
-            this.homePage2.Size = new System.Drawing.Size(1488, 858);
-            this.homePage2.TabIndex = 20;
+            this.addClient1.Location = new System.Drawing.Point(0, 0);
+            this.addClient1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.addClient1.Name = "addClient1";
+            this.addClient1.Size = new System.Drawing.Size(1156, 671);
+            this.addClient1.TabIndex = 0;
             // 
             // makeClaim4
             // 
@@ -162,7 +159,7 @@
             // searchPage1
             // 
             this.searchPage1.AutoScroll = true;
-            this.searchPage1.Location = new System.Drawing.Point(0, 30);
+            this.searchPage1.Location = new System.Drawing.Point(0, 34);
             this.searchPage1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.searchPage1.Name = "searchPage1";
             this.searchPage1.Size = new System.Drawing.Size(1488, 858);
@@ -192,7 +189,7 @@
             // 
             this.homePage1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("homePage1.BackgroundImage")));
             this.homePage1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.homePage1.Location = new System.Drawing.Point(81, 107);
+            this.homePage1.Location = new System.Drawing.Point(0, 30);
             this.homePage1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.homePage1.Name = "homePage1";
             this.homePage1.Size = new System.Drawing.Size(1859, 1153);
@@ -201,7 +198,7 @@
             // updatePersonalInfo1
             // 
             this.updatePersonalInfo1.AutoScroll = true;
-            this.updatePersonalInfo1.Location = new System.Drawing.Point(46, 109);
+            this.updatePersonalInfo1.Location = new System.Drawing.Point(0, 32);
             this.updatePersonalInfo1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.updatePersonalInfo1.Name = "updatePersonalInfo1";
             this.updatePersonalInfo1.Size = new System.Drawing.Size(1488, 1023);
@@ -229,11 +226,14 @@
             // 
             // homePage2
             // 
-            this.homePage2.Location = new System.Drawing.Point(0, 40);
+            this.homePage2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("homePage2.BackgroundImage")));
+            this.homePage2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.homePage2.Location = new System.Drawing.Point(-13, 34);
             this.homePage2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.homePage2.Name = "homePage2";
             this.homePage2.Size = new System.Drawing.Size(2091, 1385);
             this.homePage2.TabIndex = 20;
+            this.homePage2.Load += new System.EventHandler(this.homePage2_Load);
             // 
             // addVehicle2
             // 
@@ -255,6 +255,8 @@
             // 
             // homePage3
             // 
+            this.homePage3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("homePage3.BackgroundImage")));
+            this.homePage3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.homePage3.Location = new System.Drawing.Point(0, 37);
             this.homePage3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.homePage3.Name = "homePage3";

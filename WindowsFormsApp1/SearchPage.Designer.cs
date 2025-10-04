@@ -32,8 +32,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.searchButton = new System.Windows.Forms.Button();
             this.UpdateStatusConfirmButton = new System.Windows.Forms.Button();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.ActivateradioButton = new System.Windows.Forms.RadioButton();
+            this.De_ActivateradioButton2 = new System.Windows.Forms.RadioButton();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -74,10 +74,9 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.PolicyUpdateConfirmButton = new System.Windows.Forms.Button();
-            this.radioButton4 = new System.Windows.Forms.RadioButton();
-            this.radioButton5 = new System.Windows.Forms.RadioButton();
+            this.Policy3radioButton = new System.Windows.Forms.RadioButton();
+            this.Policy1radioButton = new System.Windows.Forms.RadioButton();
+            this.Policy2radioButton = new System.Windows.Forms.RadioButton();
             this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -119,7 +118,7 @@
             this.UpdateStatusConfirmButton.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.UpdateStatusConfirmButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.UpdateStatusConfirmButton.ForeColor = System.Drawing.SystemColors.Window;
-            this.UpdateStatusConfirmButton.Location = new System.Drawing.Point(615, 650);
+            this.UpdateStatusConfirmButton.Location = new System.Drawing.Point(759, 677);
             this.UpdateStatusConfirmButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.UpdateStatusConfirmButton.Name = "UpdateStatusConfirmButton";
             this.UpdateStatusConfirmButton.Size = new System.Drawing.Size(131, 30);
@@ -128,31 +127,34 @@
             this.UpdateStatusConfirmButton.UseVisualStyleBackColor = false;
             this.UpdateStatusConfirmButton.Click += new System.EventHandler(this.button2_Click);
             // 
-            // radioButton1
+            // ActivateradioButton
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.radioButton1.Location = new System.Drawing.Point(224, 650);
-            this.radioButton1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(90, 24);
-            this.radioButton1.TabIndex = 9;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Activate";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.ActivateradioButton.AutoSize = true;
+            this.ActivateradioButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.ActivateradioButton.Location = new System.Drawing.Point(224, 650);
+            this.ActivateradioButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.ActivateradioButton.Name = "ActivateradioButton";
+            this.ActivateradioButton.Size = new System.Drawing.Size(90, 24);
+            this.ActivateradioButton.TabIndex = 9;
+            this.ActivateradioButton.TabStop = true;
+            this.ActivateradioButton.Text = "Activate";
+            this.ActivateradioButton.UseVisualStyleBackColor = true;
+            this.ActivateradioButton.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            this.ActivateradioButton.Click += new System.EventHandler(this.radioButton1_Click);
             // 
-            // radioButton2
+            // De_ActivateradioButton2
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.radioButton2.Location = new System.Drawing.Point(371, 653);
-            this.radioButton2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(116, 24);
-            this.radioButton2.TabIndex = 10;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "De-activate";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.De_ActivateradioButton2.AutoSize = true;
+            this.De_ActivateradioButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.De_ActivateradioButton2.Location = new System.Drawing.Point(371, 653);
+            this.De_ActivateradioButton2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.De_ActivateradioButton2.Name = "De_ActivateradioButton2";
+            this.De_ActivateradioButton2.Size = new System.Drawing.Size(116, 24);
+            this.De_ActivateradioButton2.TabIndex = 10;
+            this.De_ActivateradioButton2.TabStop = true;
+            this.De_ActivateradioButton2.Text = "De-activate";
+            this.De_ActivateradioButton2.UseVisualStyleBackColor = true;
+            this.De_ActivateradioButton2.Click += new System.EventHandler(this.radioButton2_Click);
             // 
             // label4
             // 
@@ -217,7 +219,7 @@
             // NameTextbox
             // 
             this.NameTextbox.Location = new System.Drawing.Point(188, 133);
-            this.NameTextbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.NameTextbox.Margin = new System.Windows.Forms.Padding(4);
             this.NameTextbox.Name = "NameTextbox";
             this.NameTextbox.ReadOnly = true;
             this.NameTextbox.Size = new System.Drawing.Size(496, 22);
@@ -226,7 +228,7 @@
             // IDTextBox
             // 
             this.IDTextBox.Location = new System.Drawing.Point(185, 265);
-            this.IDTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.IDTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.IDTextBox.Name = "IDTextBox";
             this.IDTextBox.ReadOnly = true;
             this.IDTextBox.Size = new System.Drawing.Size(499, 22);
@@ -235,7 +237,7 @@
             // EmailTextBox
             // 
             this.EmailTextBox.Location = new System.Drawing.Point(185, 226);
-            this.EmailTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.EmailTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.EmailTextBox.Name = "EmailTextBox";
             this.EmailTextBox.ReadOnly = true;
             this.EmailTextBox.Size = new System.Drawing.Size(499, 22);
@@ -244,7 +246,7 @@
             // AddressTextBox
             // 
             this.AddressTextBox.Location = new System.Drawing.Point(185, 194);
-            this.AddressTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.AddressTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.AddressTextBox.Name = "AddressTextBox";
             this.AddressTextBox.ReadOnly = true;
             this.AddressTextBox.Size = new System.Drawing.Size(499, 22);
@@ -253,7 +255,7 @@
             // LastNameTextbox
             // 
             this.LastNameTextbox.Location = new System.Drawing.Point(185, 162);
-            this.LastNameTextbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.LastNameTextbox.Margin = new System.Windows.Forms.Padding(4);
             this.LastNameTextbox.Name = "LastNameTextbox";
             this.LastNameTextbox.ReadOnly = true;
             this.LastNameTextbox.Size = new System.Drawing.Size(499, 22);
@@ -262,7 +264,7 @@
             // PhoneNumberTextBox
             // 
             this.PhoneNumberTextBox.Location = new System.Drawing.Point(185, 298);
-            this.PhoneNumberTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.PhoneNumberTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.PhoneNumberTextBox.Name = "PhoneNumberTextBox";
             this.PhoneNumberTextBox.ReadOnly = true;
             this.PhoneNumberTextBox.Size = new System.Drawing.Size(499, 22);
@@ -282,7 +284,7 @@
             // StartDateTextBox
             // 
             this.StartDateTextBox.Location = new System.Drawing.Point(201, 475);
-            this.StartDateTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.StartDateTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.StartDateTextBox.Name = "StartDateTextBox";
             this.StartDateTextBox.ReadOnly = true;
             this.StartDateTextBox.Size = new System.Drawing.Size(499, 22);
@@ -301,7 +303,7 @@
             // PolicyTypeTextBox
             // 
             this.PolicyTypeTextBox.Location = new System.Drawing.Point(201, 443);
-            this.PolicyTypeTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.PolicyTypeTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.PolicyTypeTextBox.Name = "PolicyTypeTextBox";
             this.PolicyTypeTextBox.ReadOnly = true;
             this.PolicyTypeTextBox.Size = new System.Drawing.Size(499, 22);
@@ -330,7 +332,7 @@
             // StatusTextBox
             // 
             this.StatusTextBox.Location = new System.Drawing.Point(204, 414);
-            this.StatusTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.StatusTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.StatusTextBox.Name = "StatusTextBox";
             this.StatusTextBox.ReadOnly = true;
             this.StatusTextBox.Size = new System.Drawing.Size(499, 22);
@@ -349,7 +351,7 @@
             // EndDateTextBox
             // 
             this.EndDateTextBox.Location = new System.Drawing.Point(204, 507);
-            this.EndDateTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.EndDateTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.EndDateTextBox.Name = "EndDateTextBox";
             this.EndDateTextBox.ReadOnly = true;
             this.EndDateTextBox.Size = new System.Drawing.Size(499, 22);
@@ -368,7 +370,7 @@
             // PremiumAmoutTextBox
             // 
             this.PremiumAmoutTextBox.Location = new System.Drawing.Point(204, 374);
-            this.PremiumAmoutTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.PremiumAmoutTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.PremiumAmoutTextBox.Name = "PremiumAmoutTextBox";
             this.PremiumAmoutTextBox.ReadOnly = true;
             this.PremiumAmoutTextBox.Size = new System.Drawing.Size(499, 22);
@@ -404,7 +406,7 @@
             // YearTextBox
             // 
             this.YearTextBox.Location = new System.Drawing.Point(926, 274);
-            this.YearTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.YearTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.YearTextBox.Name = "YearTextBox";
             this.YearTextBox.ReadOnly = true;
             this.YearTextBox.Size = new System.Drawing.Size(527, 22);
@@ -423,7 +425,7 @@
             // ModelTextBox
             // 
             this.ModelTextBox.Location = new System.Drawing.Point(926, 248);
-            this.ModelTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ModelTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.ModelTextBox.Name = "ModelTextBox";
             this.ModelTextBox.ReadOnly = true;
             this.ModelTextBox.Size = new System.Drawing.Size(527, 22);
@@ -442,7 +444,7 @@
             // MakeTextBox
             // 
             this.MakeTextBox.Location = new System.Drawing.Point(926, 212);
-            this.MakeTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.MakeTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.MakeTextBox.Name = "MakeTextBox";
             this.MakeTextBox.ReadOnly = true;
             this.MakeTextBox.Size = new System.Drawing.Size(527, 22);
@@ -461,7 +463,7 @@
             // VinTextBox
             // 
             this.VinTextBox.Location = new System.Drawing.Point(926, 180);
-            this.VinTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.VinTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.VinTextBox.Name = "VinTextBox";
             this.VinTextBox.ReadOnly = true;
             this.VinTextBox.Size = new System.Drawing.Size(527, 22);
@@ -480,7 +482,7 @@
             // RegistrationNumberTextBox
             // 
             this.RegistrationNumberTextBox.Location = new System.Drawing.Point(926, 146);
-            this.RegistrationNumberTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.RegistrationNumberTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.RegistrationNumberTextBox.Name = "RegistrationNumberTextBox";
             this.RegistrationNumberTextBox.ReadOnly = true;
             this.RegistrationNumberTextBox.Size = new System.Drawing.Size(527, 22);
@@ -538,53 +540,46 @@
             this.label2.TabIndex = 59;
             this.label2.Text = "Client Details:";
             // 
-            // radioButton3
+            // Policy3radioButton
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton3.Location = new System.Drawing.Point(484, 583);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(84, 24);
-            this.radioButton3.TabIndex = 60;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "Policy3";
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.Policy3radioButton.AutoSize = true;
+            this.Policy3radioButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Policy3radioButton.Location = new System.Drawing.Point(484, 583);
+            this.Policy3radioButton.Name = "Policy3radioButton";
+            this.Policy3radioButton.Size = new System.Drawing.Size(84, 24);
+            this.Policy3radioButton.TabIndex = 60;
+            this.Policy3radioButton.TabStop = true;
+            this.Policy3radioButton.Text = "Policy3";
+            this.Policy3radioButton.UseVisualStyleBackColor = true;
+            this.Policy3radioButton.Click += new System.EventHandler(this.Policy3radioButton_Click);
             // 
-            // PolicyUpdateConfirmButton
+            // Policy1radioButton
             // 
-            this.PolicyUpdateConfirmButton.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.PolicyUpdateConfirmButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PolicyUpdateConfirmButton.ForeColor = System.Drawing.SystemColors.Window;
-            this.PolicyUpdateConfirmButton.Location = new System.Drawing.Point(615, 580);
-            this.PolicyUpdateConfirmButton.Name = "PolicyUpdateConfirmButton";
-            this.PolicyUpdateConfirmButton.Size = new System.Drawing.Size(131, 31);
-            this.PolicyUpdateConfirmButton.TabIndex = 61;
-            this.PolicyUpdateConfirmButton.Text = "Confirm";
-            this.PolicyUpdateConfirmButton.UseVisualStyleBackColor = false;
+            this.Policy1radioButton.AutoSize = true;
+            this.Policy1radioButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Policy1radioButton.Location = new System.Drawing.Point(224, 583);
+            this.Policy1radioButton.Name = "Policy1radioButton";
+            this.Policy1radioButton.Size = new System.Drawing.Size(84, 24);
+            this.Policy1radioButton.TabIndex = 62;
+            this.Policy1radioButton.TabStop = true;
+            this.Policy1radioButton.Text = "Policy1";
+            this.Policy1radioButton.UseVisualStyleBackColor = true;
+            this.Policy1radioButton.CheckedChanged += new System.EventHandler(this.Policy1radioButton_CheckedChanged);
+            this.Policy1radioButton.Click += new System.EventHandler(this.Policy1radioButton_Click);
+            this.Policy1radioButton.Enter += new System.EventHandler(this.Policy1radioButton_Enter);
             // 
-            // radioButton4
+            // Policy2radioButton
             // 
-            this.radioButton4.AutoSize = true;
-            this.radioButton4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton4.Location = new System.Drawing.Point(224, 583);
-            this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(84, 24);
-            this.radioButton4.TabIndex = 62;
-            this.radioButton4.TabStop = true;
-            this.radioButton4.Text = "Policy1";
-            this.radioButton4.UseVisualStyleBackColor = true;
-            // 
-            // radioButton5
-            // 
-            this.radioButton5.AutoSize = true;
-            this.radioButton5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton5.Location = new System.Drawing.Point(353, 583);
-            this.radioButton5.Name = "radioButton5";
-            this.radioButton5.Size = new System.Drawing.Size(84, 24);
-            this.radioButton5.TabIndex = 63;
-            this.radioButton5.TabStop = true;
-            this.radioButton5.Text = "Policy2";
-            this.radioButton5.UseVisualStyleBackColor = true;
+            this.Policy2radioButton.AutoSize = true;
+            this.Policy2radioButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Policy2radioButton.Location = new System.Drawing.Point(353, 583);
+            this.Policy2radioButton.Name = "Policy2radioButton";
+            this.Policy2radioButton.Size = new System.Drawing.Size(84, 24);
+            this.Policy2radioButton.TabIndex = 63;
+            this.Policy2radioButton.TabStop = true;
+            this.Policy2radioButton.Text = "Policy2";
+            this.Policy2radioButton.UseVisualStyleBackColor = true;
+            this.Policy2radioButton.Click += new System.EventHandler(this.Policy2radioButton_Click);
             // 
             // label3
             // 
@@ -601,10 +596,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.radioButton5);
-            this.Controls.Add(this.radioButton4);
-            this.Controls.Add(this.PolicyUpdateConfirmButton);
-            this.Controls.Add(this.radioButton3);
+            this.Controls.Add(this.Policy2radioButton);
+            this.Controls.Add(this.Policy1radioButton);
+            this.Controls.Add(this.Policy3radioButton);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label18);
             this.Controls.Add(this.label11);
@@ -645,8 +639,8 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.radioButton2);
-            this.Controls.Add(this.radioButton1);
+            this.Controls.Add(this.De_ActivateradioButton2);
+            this.Controls.Add(this.ActivateradioButton);
             this.Controls.Add(this.UpdateStatusConfirmButton);
             this.Controls.Add(this.searchButton);
             this.Controls.Add(this.label1);
@@ -654,6 +648,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "SearchPage";
             this.Size = new System.Drawing.Size(1580, 827);
+            this.Load += new System.EventHandler(this.SearchPage_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -664,8 +659,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button searchButton;
         private System.Windows.Forms.Button UpdateStatusConfirmButton;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton ActivateradioButton;
+        private System.Windows.Forms.RadioButton De_ActivateradioButton2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
@@ -706,10 +701,9 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.Button PolicyUpdateConfirmButton;
-        private System.Windows.Forms.RadioButton radioButton4;
-        private System.Windows.Forms.RadioButton radioButton5;
+        private System.Windows.Forms.RadioButton Policy3radioButton;
+        private System.Windows.Forms.RadioButton Policy1radioButton;
+        private System.Windows.Forms.RadioButton Policy2radioButton;
         private System.Windows.Forms.Label label3;
     }
 }

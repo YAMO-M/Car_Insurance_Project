@@ -80,7 +80,7 @@ namespace WindowsFormsApp1
         private void addClientToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             this.Text = "Add Client: Loggined in as " + AgentFname;
-            addClient1.BringToFront();
+            updatePersonalInfo1.BringToFront();
         }
 
         private void addClient1_Load(object sender, EventArgs e)
@@ -89,6 +89,11 @@ namespace WindowsFormsApp1
         }
 
         private void homePage3_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void homePage2_Load(object sender, EventArgs e)
         {
 
         }

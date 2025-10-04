@@ -180,7 +180,44 @@ namespace WindowsFormsApp1
             }
         }
 
-       
+        private void AddClient_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CustomerID_Enter(object sender, EventArgs e)
+        {
+            CustomerID.Select(0, 0);
+        }
+
+        private void PostalCodeTextBox_Enter(object sender, EventArgs e)
+        {
+            PostalCodeTextBox.Select(0, 0);
+        }
+
+        private void CustomerID_Click(object sender, EventArgs e)
+        {
+            //CustomerID.Select(0, 0);
+            CustomerID.Select(CustomerID.MaskedTextProvider.ToString(false, false).Length, 1);
+        }
+
+        private void PhoneNumTextBox_Click(object sender, EventArgs e)
+        {
+            //PhoneNumTextBox.Select(0, 0);
+          PhoneNumTextBox.Select(PhoneNumTextBox.MaskedTextProvider.ToString(false, false).Length+(PhoneNumTextBox.Text.Length==12 ? 2 : 0), 0);
+        }
+
+        private void PostalCodeTextBox_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
+
+        private void PostalCodeTextBox_Click(object sender, EventArgs e)
+        {
+            //PostalCodeTextBox.Select(PostalCodeTextBox.Text.Length-3, 0);
+            PostalCodeTextBox.Select(PostalCodeTextBox.MaskedTextProvider.ToString(false, false).Length, 1);
+           
+        }
     }
 
 }
