@@ -27,9 +27,9 @@ namespace WindowsFormsApp1
         private void loginButton_Click(object sender, EventArgs e)
         {
        
-            
-            //if (checkUserExist())
-            //{
+            // aweh
+            if (checkUserExist())
+            {
                 string AgentFname = new AgentTableAdapter().GetAgentName(userName.Text).Rows[0]
                     ["FirstName"].ToString();
                 HomeForm form5 = new HomeForm();
@@ -37,7 +37,7 @@ namespace WindowsFormsApp1
                 form5.Show();
                 userName.Text = "";
                 password.Text = "";
-           //} 
+           } 
         }
 
         private bool checkUserExist()
