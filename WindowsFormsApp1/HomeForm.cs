@@ -74,7 +74,7 @@ namespace WindowsFormsApp1
         private void makeClaimToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             this.Text = "Claim: Loggined in as " + AgentFname;
-            makeClaim4.BringToFront();
+            makeClaim3.BringToFront();
         }
 
         private void addClientToolStripMenuItem1_Click(object sender, EventArgs e)
@@ -83,12 +83,13 @@ namespace WindowsFormsApp1
             updatePersonalInfo1.BringToFront();
         }
 
-        private void addClient1_Load(object sender, EventArgs e)
+
+        private void homePage3_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void homePage3_Load(object sender, EventArgs e)
+        private void addClient2_Load(object sender, EventArgs e)
         {
 
         }
