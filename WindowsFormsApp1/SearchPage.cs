@@ -142,7 +142,7 @@ namespace WindowsFormsApp1
             else
             {
                 
-                errorProvider.SetError(confirmButton, "press radio button");
+                errorProvider.SetError(UpdateStatusConfirmButton, "press radio button");
             }
             
             ClientIDTextBox.Text = "";
