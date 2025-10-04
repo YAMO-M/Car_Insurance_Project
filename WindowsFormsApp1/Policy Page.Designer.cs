@@ -58,6 +58,7 @@
             this.ClientError = new System.Windows.Forms.Label();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // VINlabel
@@ -233,7 +234,7 @@
             // Policy2
             // 
             this.Policy2.AutoSize = true;
-            this.Policy2.Location = new System.Drawing.Point(761, 453);
+            this.Policy2.Location = new System.Drawing.Point(762, 453);
             this.Policy2.Name = "Policy2";
             this.Policy2.Size = new System.Drawing.Size(67, 19);
             this.Policy2.TabIndex = 44;
@@ -362,7 +363,7 @@
             // 
             // dateTimePicker2
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(649, 368);
+            this.dateTimePicker2.Location = new System.Drawing.Point(646, 361);
             this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.dateTimePicker2.MinDate = new System.DateTime(2025, 10, 1, 0, 0, 0, 0);
             this.dateTimePicker2.Name = "dateTimePicker2";
@@ -374,16 +375,27 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(645, 341);
+            this.label4.Location = new System.Drawing.Point(643, 336);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(58, 15);
             this.label4.TabIndex = 63;
             this.label4.Text = "End Date";
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(523, 12);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(130, 24);
+            this.label6.TabIndex = 64;
+            this.label6.Text = "ADD POLICY";
+            // 
             // AddVehicle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.dateTimePicker2);
             this.Controls.Add(this.ClientError);
@@ -453,5 +465,6 @@
         private System.Windows.Forms.Label ClientError;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label6;
     }
 }

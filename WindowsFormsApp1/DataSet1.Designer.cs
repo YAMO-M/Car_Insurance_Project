@@ -5041,9 +5041,12 @@ SELECT PolicyID, ClientID, CarID, PolicyType, StartDate, EndDate, PremiumAmount,
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Client", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "ClientID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[3] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[3].Connection = this.Connection;
-            this._commandCollection[3].CommandText = "UPDATE [dbo].[Policy] SET  [Status] = @Status Where Policy.ClientID = @ClientID";
+            this._commandCollection[3].CommandText = "UPDATE [dbo].[Policy] SET  [Status] = @Status ,[PolicyType] = @PolicyType ,[Premi" +
+                "umAmount] = @PremiumAmount Where Policy.ClientID = @ClientID";
             this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Status", global::System.Data.SqlDbType.VarChar, 20, global::System.Data.ParameterDirection.Input, 0, 0, "Status", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PolicyType", global::System.Data.SqlDbType.VarChar, 30, global::System.Data.ParameterDirection.Input, 0, 0, "PolicyType", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PremiumAmount", global::System.Data.SqlDbType.Decimal, 9, global::System.Data.ParameterDirection.Input, 10, 2, "PremiumAmount", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ClientID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "ClientID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
@@ -5326,7 +5329,7 @@ SELECT PolicyID, ClientID, CarID, PolicyType, StartDate, EndDate, PremiumAmount,
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, false)]
-        public virtual int UpdateStatus(string Status, int ClientID) {
+        public virtual int UpdateStatus(string Status, string PolicyType, decimal PremiumAmount, int ClientID) {
             global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[3];
             if ((Status == null)) {
                 throw new global::System.ArgumentNullException("Status");
@@ -5334,7 +5337,14 @@ SELECT PolicyID, ClientID, CarID, PolicyType, StartDate, EndDate, PremiumAmount,
             else {
                 command.Parameters[0].Value = ((string)(Status));
             }
-            command.Parameters[1].Value = ((int)(ClientID));
+            if ((PolicyType == null)) {
+                throw new global::System.ArgumentNullException("PolicyType");
+            }
+            else {
+                command.Parameters[1].Value = ((string)(PolicyType));
+            }
+            command.Parameters[2].Value = ((decimal)(PremiumAmount));
+            command.Parameters[3].Value = ((int)(ClientID));
             global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
             if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -6008,7 +6018,7 @@ SELECT ClientID, FirstName, LastName, Address, Email, IDNumber, PhoneNumber FROM
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[5];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[6];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT ClientID, FirstName, LastName, Address, Email, IDNumber, PhoneNumber FROM " +
@@ -6036,6 +6046,14 @@ SELECT ClientID, FirstName, LastName, Address, Email, IDNumber, PhoneNumber FROM
             this._commandCollection[4].CommandText = "SELECT COUNT(*) FROM Client Where Client.Email = @Email";
             this._commandCollection[4].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Email", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Email", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[5] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[5].Connection = this.Connection;
+            this._commandCollection[5].CommandText = "Update Client Set Address = @Address,PhoneNumber = @PhoneNumber From Client Where" +
+                " ClientID = @ClientID";
+            this._commandCollection[5].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[5].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Address", global::System.Data.SqlDbType.VarChar, 100, global::System.Data.ParameterDirection.Input, 0, 0, "Address", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[5].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PhoneNumber", global::System.Data.SqlDbType.VarChar, 20, global::System.Data.ParameterDirection.Input, 0, 0, "PhoneNumber", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[5].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ClientID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "ClientID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6409,6 +6427,42 @@ SELECT ClientID, FirstName, LastName, Address, Email, IDNumber, PhoneNumber FROM
             else {
                 return new global::System.Nullable<int>(((int)(returnValue)));
             }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, false)]
+        public virtual int UpdateClientDetails(string Address, string PhoneNumber, int ClientID) {
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[5];
+            if ((Address == null)) {
+                throw new global::System.ArgumentNullException("Address");
+            }
+            else {
+                command.Parameters[0].Value = ((string)(Address));
+            }
+            if ((PhoneNumber == null)) {
+                throw new global::System.ArgumentNullException("PhoneNumber");
+            }
+            else {
+                command.Parameters[1].Value = ((string)(PhoneNumber));
+            }
+            command.Parameters[2].Value = ((int)(ClientID));
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            int returnValue;
+            try {
+                returnValue = command.ExecuteNonQuery();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            return returnValue;
         }
     }
     

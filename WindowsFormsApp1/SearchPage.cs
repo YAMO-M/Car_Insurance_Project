@@ -23,17 +23,18 @@ namespace WindowsFormsApp1
         PolicyTableAdapter policyTableAdapter = new PolicyTableAdapter();
         CarTableAdapter carTableAdapter = new CarTableAdapter();
         ErrorProvider errorProvider = new ErrorProvider();
-        
+
         private void searchButton_Click(object sender, EventArgs e)
         {
             clientError.ForeColor = Color.Red;
             policyError.ForeColor = Color.Red;
             carError.ForeColor = Color.Red;
 
-            if (string.IsNullOrEmpty(ClientIDTextBox.Text)) {
+            if (string.IsNullOrEmpty(ClientIDTextBox.Text))
+            {
                 clientError.Text = "enter client id";
                 return;
-             }
+            }
 
             int clientID = int.Parse(ClientIDTextBox.Text);
             clearAllTextBoxs();
@@ -113,45 +114,16 @@ namespace WindowsFormsApp1
             carError.Text = "";
             clientError.Text = "";
 
-            // radio
-            ActivateradioButton.Checked = false;
-            De_ActivateradioButton2.Checked = false;
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-
-        {
-            if (string.IsNullOrEmpty(ClientIDTextBox.Text))
-            {
-                clientError.Text = "enter client id";
-                return;
-            }
-
-            errorProvider.Clear();
            
-            if (ActivateradioButton.Checked)
-            {  
-                policyTableAdapter.UpdateStatus("active", int.Parse(ClientIDTextBox.Text));
-                
-
-            }
-            else if(De_ActivateradioButton2.Checked){
-                policyTableAdapter.UpdateStatus( "not active", int.Parse(ClientIDTextBox.Text));
-                
-            }
-            else
-            {
-                
-                errorProvider.SetError(UpdateStatusConfirmButton, "press radio button");
-            }
-            
-            ClientIDTextBox.Text = "";
-            clearAllTextBoxs();
-
         }
+
+       
+         
+
+        
 
         private void ClientIDTextBox_KeyPress(object sender, KeyPressEventArgs e)
-        {      
+        {
             // validate clientID
 
             if (char.IsControl(e.KeyChar))
@@ -164,68 +136,9 @@ namespace WindowsFormsApp1
             }
         }
 
-        private void Policy1radioButton_CheckedChanged(object sender, EventArgs e)
-        {
-           
-           
+     
 
-
-        }
-
-        private void Policy1radioButton_Enter(object sender, EventArgs e)
-        {
-            
-
-        }
-
-        private void Policy1radioButton_Click(object sender, EventArgs e)
-        {
-            DialogResult result = MessageBox.Show("Confirm Policy 1", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (result == DialogResult.No)
-                Policy1radioButton.Checked = false;
-            
-        }
-
-        private void Policy2radioButton_Click(object sender, EventArgs e)
-        {
-            DialogResult result = MessageBox.Show("Confirm Policy 2", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (result == DialogResult.No)
-                Policy2radioButton.Checked = false;
-
-        }
-
-        private void Policy3radioButton_Click(object sender, EventArgs e)
-        {
-            DialogResult result = MessageBox.Show("Confirm Policy 3", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (result == DialogResult.No)
-                Policy3radioButton.Checked = false;
-        }
-
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void radioButton1_Click(object sender, EventArgs e)
-        {
-            DialogResult result = MessageBox.Show("Activate Policy?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (result == DialogResult.No)
-            {
-                De_ActivateradioButton2.Checked = true;
-                ActivateradioButton.Checked = false;
-            }
-        }
-
-        private void radioButton2_Click(object sender, EventArgs e)
-        {
-            DialogResult result = MessageBox.Show("De-activate Policy?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (result == DialogResult.No)
-            {
-                De_ActivateradioButton2.Checked = false;
-                ActivateradioButton.Checked = true;
-            }
-            
-        }
+       
 
         private void SearchPage_Load(object sender, EventArgs e)
         {
@@ -233,3 +146,5 @@ namespace WindowsFormsApp1
         }
     }
 }
+
+       

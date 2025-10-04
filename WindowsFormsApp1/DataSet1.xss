@@ -9,12 +9,12 @@
     <Shape ID="DesignTable:Agent" ZOrder="10" X="781" Y="127" Height="267" Width="273" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="140" />
     <Shape ID="DesignTable:Claim" ZOrder="12" X="64" Y="424" Height="210" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="140" />
     <Shape ID="DesignTable:Payment" ZOrder="11" X="771" Y="479" Height="172" Width="196" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="121" />
-    <Shape ID="DesignTable:Policy" ZOrder="9" X="419" Y="518" Height="305" Width="228" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="197" />
-    <Shape ID="DesignTable:Car" ZOrder="5" X="113" Y="123" Height="248" Width="205" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="159" />
-    <Shape ID="DesignTable:Client" ZOrder="1" X="477" Y="138" Height="286" Width="216" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="159" />
+    <Shape ID="DesignTable:Policy" ZOrder="1" X="419" Y="518" Height="305" Width="211" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="197" />
+    <Shape ID="DesignTable:Car" ZOrder="6" X="113" Y="123" Height="248" Width="205" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="159" />
+    <Shape ID="DesignTable:Client" ZOrder="2" X="477" Y="138" Height="286" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="159" />
   </Shapes>
   <Connectors>
-    <Connector ID="DesignRelation:FK__Claim__PolicyID__114A936A" ZOrder="8" LineWidth="11">
+    <Connector ID="DesignRelation:FK__Claim__PolicyID__114A936A" ZOrder="9" LineWidth="11">
       <RoutePoints>
         <Point>
           <X>419</X>
@@ -26,7 +26,7 @@
         </Point>
       </RoutePoints>
     </Connector>
-    <Connector ID="DesignRelation:FK__Payment__PolicyI__14270015" ZOrder="7" LineWidth="11">
+    <Connector ID="DesignRelation:FK__Payment__PolicyI__14270015" ZOrder="8" LineWidth="11">
       <RoutePoints>
         <Point>
           <X>560</X>
@@ -42,7 +42,7 @@
         </Point>
       </RoutePoints>
     </Connector>
-    <Connector ID="DesignRelation:FK_Policy_Agent" ZOrder="6" LineWidth="11">
+    <Connector ID="DesignRelation:FK_Policy_Agent" ZOrder="7" LineWidth="11">
       <RoutePoints>
         <Point>
           <X>798</X>
@@ -53,12 +53,12 @@
           <Y>543</Y>
         </Point>
         <Point>
-          <X>647</X>
+          <X>630</X>
           <Y>543</Y>
         </Point>
       </RoutePoints>
     </Connector>
-    <Connector ID="DesignRelation:FK__Policy__CarID__08B54D69" ZOrder="4" LineWidth="11">
+    <Connector ID="DesignRelation:FK__Policy__CarID__08B54D69" ZOrder="5" LineWidth="11">
       <RoutePoints>
         <Point>
           <X>301</X>
@@ -74,7 +74,7 @@
         </Point>
       </RoutePoints>
     </Connector>
-    <Connector ID="DesignRelation:FK__Policy__ClientID__07C12930" ZOrder="3" LineWidth="11">
+    <Connector ID="DesignRelation:FK__Policy__ClientID__07C12930" ZOrder="4" LineWidth="11">
       <RoutePoints>
         <Point>
           <X>552</X>
@@ -86,7 +86,7 @@
         </Point>
       </RoutePoints>
     </Connector>
-    <Connector ID="DesignRelation:FK__Car__ClientID__03F0984C1" ZOrder="2" LineWidth="11">
+    <Connector ID="DesignRelation:FK__Car__ClientID__03F0984C1" ZOrder="3" LineWidth="11">
       <RoutePoints>
         <Point>
           <X>477</X>

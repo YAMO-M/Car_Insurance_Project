@@ -19,18 +19,20 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
             this.WindowState = FormWindowState.Maximized;
-            addVehicle3.BringToFront();
-            addClient1.BringToFront();
-            makeClaim4.BringToFront();
+            update1.BringToFront();
+            addVehicle4.BringToFront();
+            addClient3.BringToFront();
+            makeClaim1.BringToFront();
             updatePersonalInfo1.BringToFront();
-            homePage2.BringToFront();
+            searchPage2.BringToFront();
+            homePage4.BringToFront();
 
-            homePage2.Dock = DockStyle.Fill;
-            searchPage1.Dock = DockStyle.Fill;
-            addVehicle3.Dock = DockStyle.Fill;
-            makeClaim2.Dock = DockStyle.Fill;
-            updatePersonalInfo1.Dock = DockStyle.Fill;
-
+            homePage4.Dock = DockStyle.Fill;
+            searchPage2.Dock = DockStyle.Fill;
+            addVehicle4.Dock = DockStyle.Fill;
+            makeClaim1.Dock = DockStyle.Fill;
+            addClient3.Dock = DockStyle.Fill;
+            update1.Dock = DockStyle.Fill;
 
         }
 
@@ -40,8 +42,9 @@ namespace WindowsFormsApp1
         }
         private void homeToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            homePage4.BringToFront();
             this.Text = "Home: Loggined in as " + AgentFname;
-            homePage2.BringToFront();
+            //homePage.BringToFront();
         }
 
         
@@ -53,7 +56,7 @@ namespace WindowsFormsApp1
         private void searchToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Text = "Search Page: Loggined in as " + AgentFname;
-            searchPage1.BringToFront();
+            searchPage2.BringToFront();
         }
 
         private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
@@ -69,19 +72,19 @@ namespace WindowsFormsApp1
         private void addPolicyToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             this.Text = "Policy Page: Loggined in as " + AgentFname;
-            addVehicle3.BringToFront();
+            addVehicle4.BringToFront();
         }
 
         private void makeClaimToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             this.Text = "Claim: Loggined in as " + AgentFname;
-            makeClaim3.BringToFront();
+            makeClaim1.BringToFront();
         }
 
         private void addClientToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             this.Text = "Add Client: Loggined in as " + AgentFname;
-            updatePersonalInfo1.BringToFront();
+           addClient3.BringToFront();
         }
 
 
@@ -96,6 +99,22 @@ namespace WindowsFormsApp1
         }
 
         private void addClient2_Load_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void updateToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Text =  "Update: Loggined in as " + AgentFname;
+           update1.BringToFront();
+        }
+
+        private void update1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void addVehicle4_Load(object sender, EventArgs e)
         {
 
         }

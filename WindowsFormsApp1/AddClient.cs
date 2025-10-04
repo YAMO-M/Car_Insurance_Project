@@ -40,9 +40,9 @@ namespace WindowsFormsApp1
                     string phoneno = PhoneNumTextBox.Text;
                     adapter.Insert(name, lastname, address, email, id, phoneno);
                     string ClientId = adapter.getClientDetails(email).Rows[0]["ClientID"].ToString();
-                    MessageBox.Show("Client Added : ClientId = " + ClientId);
+                    MessageBox.Show("Client succefully added , ClientID = " + ClientId);
                 }
-                catch (System.Data.SqlClient.SqlException ex)
+                catch (System.Data.SqlClient.SqlException)
                 {
                     MessageBox.Show("Client Alreay Exists");
                 }
@@ -114,7 +114,7 @@ namespace WindowsFormsApp1
                     errorProvider1.SetError(PhoneNumTextBox, "Phone Number is required");
                     return false;
                 }
-                else if (PhoneNumTextBox.Text.Trim().Length < 9)
+                else if (PhoneNumTextBox.Text.Trim().Length <= 9)
                 {
                     errorProvider1.SetError(PhoneNumTextBox, "Phone Number must be 10 numbers");
                     return false;
