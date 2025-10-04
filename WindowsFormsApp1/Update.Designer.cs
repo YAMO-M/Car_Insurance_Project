@@ -34,16 +34,33 @@
             this.Policy3radioButton = new System.Windows.Forms.RadioButton();
             this.label2 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.carError = new System.Windows.Forms.Label();
+            this.RegistrationNumberTextBox = new System.Windows.Forms.TextBox();
+            this.label24 = new System.Windows.Forms.Label();
+            this.VinTextBox = new System.Windows.Forms.TextBox();
+            this.label23 = new System.Windows.Forms.Label();
+            this.MakeTextBox = new System.Windows.Forms.TextBox();
+            this.label22 = new System.Windows.Forms.Label();
+            this.ModelTextBox = new System.Windows.Forms.TextBox();
+            this.label21 = new System.Windows.Forms.Label();
+            this.YearTextBox = new System.Windows.Forms.TextBox();
+            this.label20 = new System.Windows.Forms.Label();
             this.clientError = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.policyError = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.PremiumAmoutTextBox = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.EndDateTextBox = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.StatusTextBox = new System.Windows.Forms.TextBox();
             this.PolicyTypeTextBox = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.StartDateTextBox = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
+            this.PhoneNumberTextBox = new System.Windows.Forms.TextBox();
             this.LastNameTextbox = new System.Windows.Forms.TextBox();
             this.AddressTextBox = new System.Windows.Forms.TextBox();
             this.EmailTextBox = new System.Windows.Forms.TextBox();
@@ -141,6 +158,121 @@
             this.label18.TabIndex = 109;
             this.label18.Text = "Policy Update";
             // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(749, 126);
+            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(126, 25);
+            this.label11.TabIndex = 158;
+            this.label11.Text = "Car Details:";
+            // 
+            // carError
+            // 
+            this.carError.AutoSize = true;
+            this.carError.Location = new System.Drawing.Point(837, 126);
+            this.carError.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.carError.Name = "carError";
+            this.carError.Size = new System.Drawing.Size(0, 16);
+            this.carError.TabIndex = 157;
+            // 
+            // RegistrationNumberTextBox
+            // 
+            this.RegistrationNumberTextBox.Location = new System.Drawing.Point(937, 154);
+            this.RegistrationNumberTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.RegistrationNumberTextBox.Name = "RegistrationNumberTextBox";
+            this.RegistrationNumberTextBox.ReadOnly = true;
+            this.RegistrationNumberTextBox.Size = new System.Drawing.Size(480, 22);
+            this.RegistrationNumberTextBox.TabIndex = 156;
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(751, 158);
+            this.label24.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(133, 16);
+            this.label24.TabIndex = 155;
+            this.label24.Text = "Registration Number:";
+            // 
+            // VinTextBox
+            // 
+            this.VinTextBox.Location = new System.Drawing.Point(937, 188);
+            this.VinTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.VinTextBox.Name = "VinTextBox";
+            this.VinTextBox.ReadOnly = true;
+            this.VinTextBox.Size = new System.Drawing.Size(480, 22);
+            this.VinTextBox.TabIndex = 154;
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(837, 190);
+            this.label23.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(29, 16);
+            this.label23.TabIndex = 153;
+            this.label23.Text = "Vin:";
+            // 
+            // MakeTextBox
+            // 
+            this.MakeTextBox.Location = new System.Drawing.Point(937, 220);
+            this.MakeTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.MakeTextBox.Name = "MakeTextBox";
+            this.MakeTextBox.ReadOnly = true;
+            this.MakeTextBox.Size = new System.Drawing.Size(480, 22);
+            this.MakeTextBox.TabIndex = 152;
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(837, 222);
+            this.label22.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(41, 16);
+            this.label22.TabIndex = 151;
+            this.label22.Text = "Make";
+            // 
+            // ModelTextBox
+            // 
+            this.ModelTextBox.Location = new System.Drawing.Point(937, 256);
+            this.ModelTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.ModelTextBox.Name = "ModelTextBox";
+            this.ModelTextBox.ReadOnly = true;
+            this.ModelTextBox.Size = new System.Drawing.Size(480, 22);
+            this.ModelTextBox.TabIndex = 150;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(837, 259);
+            this.label21.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(45, 16);
+            this.label21.TabIndex = 149;
+            this.label21.Text = "Model";
+            // 
+            // YearTextBox
+            // 
+            this.YearTextBox.Location = new System.Drawing.Point(937, 282);
+            this.YearTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.YearTextBox.Name = "YearTextBox";
+            this.YearTextBox.ReadOnly = true;
+            this.YearTextBox.Size = new System.Drawing.Size(480, 22);
+            this.YearTextBox.TabIndex = 148;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(837, 286);
+            this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(36, 16);
+            this.label20.TabIndex = 147;
+            this.label20.Text = "Year";
+            // 
             // clientError
             // 
             this.clientError.AutoSize = true;
@@ -181,6 +313,25 @@
             this.PremiumAmoutTextBox.ReadOnly = true;
             this.PremiumAmoutTextBox.Size = new System.Drawing.Size(375, 20);
             this.PremiumAmoutTextBox.TabIndex = 92;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(86, 520);
+            this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(66, 16);
+            this.label15.TabIndex = 141;
+            this.label15.Text = "End Date:";
+            // 
+            // EndDateTextBox
+            // 
+            this.EndDateTextBox.Location = new System.Drawing.Point(215, 515);
+            this.EndDateTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.EndDateTextBox.Name = "EndDateTextBox";
+            this.EndDateTextBox.ReadOnly = true;
+            this.EndDateTextBox.Size = new System.Drawing.Size(452, 22);
+            this.EndDateTextBox.TabIndex = 140;
             // 
             // label14
             // 
@@ -225,6 +376,14 @@
             this.label10.Size = new System.Drawing.Size(121, 20);
             this.label10.TabIndex = 83;
             this.label10.Text = "Policy Details:";
+            // 
+            // PhoneNumberTextBox
+            // 
+            this.PhoneNumberTextBox.Location = new System.Drawing.Point(196, 306);
+            this.PhoneNumberTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.PhoneNumberTextBox.Name = "PhoneNumberTextBox";
+            this.PhoneNumberTextBox.Size = new System.Drawing.Size(452, 22);
+            this.PhoneNumberTextBox.TabIndex = 132;
             // 
             // LastNameTextbox
             // 
@@ -425,16 +584,33 @@
             this.Controls.Add(this.Policy3radioButton);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label18);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.carError);
+            this.Controls.Add(this.RegistrationNumberTextBox);
+            this.Controls.Add(this.label24);
+            this.Controls.Add(this.VinTextBox);
+            this.Controls.Add(this.label23);
+            this.Controls.Add(this.MakeTextBox);
+            this.Controls.Add(this.label22);
+            this.Controls.Add(this.ModelTextBox);
+            this.Controls.Add(this.label21);
+            this.Controls.Add(this.YearTextBox);
+            this.Controls.Add(this.label20);
             this.Controls.Add(this.clientError);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.policyError);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.PremiumAmoutTextBox);
+            this.Controls.Add(this.label15);
+            this.Controls.Add(this.EndDateTextBox);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.StatusTextBox);
             this.Controls.Add(this.PolicyTypeTextBox);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.StartDateTextBox);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label10);
+            this.Controls.Add(this.PhoneNumberTextBox);
             this.Controls.Add(this.LastNameTextbox);
             this.Controls.Add(this.AddressTextBox);
             this.Controls.Add(this.EmailTextBox);
@@ -467,16 +643,33 @@
         private System.Windows.Forms.RadioButton Policy3radioButton;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label carError;
+        private System.Windows.Forms.TextBox RegistrationNumberTextBox;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.TextBox VinTextBox;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.TextBox MakeTextBox;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.TextBox ModelTextBox;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.TextBox YearTextBox;
+        private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label clientError;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label policyError;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.TextBox PremiumAmoutTextBox;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.TextBox EndDateTextBox;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TextBox StatusTextBox;
         private System.Windows.Forms.TextBox PolicyTypeTextBox;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.TextBox StartDateTextBox;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox PhoneNumberTextBox;
         private System.Windows.Forms.TextBox LastNameTextbox;
         private System.Windows.Forms.TextBox AddressTextBox;
         private System.Windows.Forms.TextBox EmailTextBox;

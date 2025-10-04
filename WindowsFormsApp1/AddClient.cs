@@ -176,16 +176,10 @@ namespace WindowsFormsApp1
 
         private void CustomerID_TextChanged(object sender, EventArgs e)
         {
-            IDErrorLabel.ForeColor = Color.Red;
-            if (!(CustomerID.Text.StartsWith("0") || CustomerID.Text.StartsWith("1")))
-            {
-                IDErrorLabel.Text = "invalid ID";
-            }
-            else
-            {
+                IDErrorLabel.ForeColor = Color.Red;
                 int checkDuplicateID = (int)adapter.Check_If_Id_Exist(CustomerID.Text);
                 IDErrorLabel.Text = checkDuplicateID > 0 ? " ID Already in use" : "";
-            }
+            
         }
 
         private void AddClient_Load(object sender, EventArgs e)

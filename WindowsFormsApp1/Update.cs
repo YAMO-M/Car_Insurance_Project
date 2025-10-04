@@ -230,7 +230,7 @@ namespace WindowsFormsApp1
         {
             DialogResult result = MessageBox.Show("De-activate Policy?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.No)
-            {
+        {
                 De_ActivateradioButton2.Checked = false;
                 ActivateradioButton.Checked = true;
             }

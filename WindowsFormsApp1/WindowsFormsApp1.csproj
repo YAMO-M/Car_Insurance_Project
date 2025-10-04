@@ -87,6 +87,15 @@
       <DependentUpon>AddClient.cs</DependentUpon>
     </Compile>
     <Compile Include="Update.cs">
+<<<<<<< HEAD
+=======
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Update.Designer.cs">
+      <DependentUpon>Update.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl1.cs">
+>>>>>>> caa3df4ba39175af93246903a315545d2e471e8f
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Update.Designer.cs">
@@ -131,6 +140,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Update.resx">
       <DependentUpon>Update.cs</DependentUpon>
+<<<<<<< HEAD
+=======
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl1.resx">
+      <DependentUpon>UserControl1.cs</DependentUpon>
+>>>>>>> caa3df4ba39175af93246903a315545d2e471e8f
     </EmbeddedResource>
     <EmbeddedResource Include="Policy Page.resx">
       <DependentUpon>Policy Page.cs</DependentUpon>
@@ -167,6 +182,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\CR-Magazine-InlineHero-Save-Big-Car-Insurance-1123.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image-removebg-preview.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
