@@ -24,6 +24,10 @@ namespace WindowsFormsApp1
             this.AutoScroll = true;
             this.AutoScroll = true;
         }
+        public class getAgentEmail
+        {
+            public static string GetAgentEmail { get; set; } 
+        }
         private void loginButton_Click(object sender, EventArgs e)
         {
        
@@ -34,6 +38,7 @@ namespace WindowsFormsApp1
                     ["FirstName"].ToString();
                 HomeForm form5 = new HomeForm();
                 form5.AgentFname = AgentFname;
+                getAgentEmail.GetAgentEmail = userName.Text;
                 form5.Show();
                 userName.Text = "";
                 password.Text = "";
@@ -84,6 +89,11 @@ namespace WindowsFormsApp1
         private void label3_MouseLeave(object sender, EventArgs e)
         {
             password.PasswordChar = '*';
+        }
+
+        private void LoginForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

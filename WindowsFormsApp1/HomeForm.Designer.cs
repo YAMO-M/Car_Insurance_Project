@@ -143,20 +143,22 @@
             // 
             this.addClient2.BackColor = System.Drawing.SystemColors.Control;
             this.addClient2.Location = new System.Drawing.Point(0, 24);
-            this.addClient2.Margin = new System.Windows.Forms.Padding(2);
+            this.addClient2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.addClient2.Name = "addClient2";
             this.addClient2.Size = new System.Drawing.Size(1568, 1127);
             this.addClient2.TabIndex = 21;
+            this.addClient2.Load += new System.EventHandler(this.addClient2_Load_1);
             // 
             // homePage2
             // 
             this.homePage2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("homePage2.BackgroundImage")));
             this.homePage2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.homePage2.Location = new System.Drawing.Point(0, 32);
-            this.homePage2.Margin = new System.Windows.Forms.Padding(2);
+            this.homePage2.Location = new System.Drawing.Point(-13, 34);
+            this.homePage2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.homePage2.Name = "homePage2";
-            this.homePage2.Size = new System.Drawing.Size(1568, 1125);
+            this.homePage2.Size = new System.Drawing.Size(2091, 1385);
             this.homePage2.TabIndex = 20;
+            this.homePage2.Load += new System.EventHandler(this.homePage3_Load);
             // 
             // searchPage1
             // 
@@ -231,21 +233,20 @@
             // 
             this.addClient1.BackColor = System.Drawing.SystemColors.Control;
             this.addClient1.Location = new System.Drawing.Point(0, 0);
-            this.addClient1.Margin = new System.Windows.Forms.Padding(2);
+            this.addClient1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.addClient1.Name = "addClient1";
             this.addClient1.Size = new System.Drawing.Size(867, 545);
             this.addClient1.TabIndex = 0;
             // 
             // makeClaim4
             // 
-            this.homePage2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("homePage2.BackgroundImage")));
-            this.homePage2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.homePage2.Location = new System.Drawing.Point(-13, 34);
-            this.homePage2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.homePage2.Name = "homePage2";
-            this.homePage2.Size = new System.Drawing.Size(2091, 1385);
-            this.homePage2.TabIndex = 20;
-            this.homePage2.Load += new System.EventHandler(this.homePage3_Load);
+            this.makeClaim4.AutoScroll = true;
+            this.makeClaim4.BackColor = System.Drawing.SystemColors.Control;
+            this.makeClaim4.Location = new System.Drawing.Point(0, 0);
+            this.makeClaim4.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.makeClaim4.Name = "makeClaim4";
+            this.makeClaim4.Size = new System.Drawing.Size(1185, 672);
+            this.makeClaim4.TabIndex = 0;
             // 
             // addVehicle2
             // 

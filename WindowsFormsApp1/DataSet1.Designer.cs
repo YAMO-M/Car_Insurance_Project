@@ -36,9 +36,11 @@ namespace WindowsFormsApp1 {
         
         private ClientDataTable tableClient;
         
-        private global::System.Data.DataRelation relationFK__Claim__PolicyID__114A936A1;
+        private global::System.Data.DataRelation relationFK__Claim__PolicyID__114A936A;
         
-        private global::System.Data.DataRelation relationFK__Payment__PolicyI__142700151;
+        private global::System.Data.DataRelation relationFK__Payment__PolicyI__14270015;
+        
+        private global::System.Data.DataRelation relationFK_Policy_Agent;
         
         private global::System.Data.DataRelation relationFK__Policy__CarID__08B54D69;
         
@@ -324,8 +326,9 @@ namespace WindowsFormsApp1 {
                     this.tableClient.InitVars();
                 }
             }
-            this.relationFK__Claim__PolicyID__114A936A1 = this.Relations["FK__Claim__PolicyID__114A936A1"];
-            this.relationFK__Payment__PolicyI__142700151 = this.Relations["FK__Payment__PolicyI__142700151"];
+            this.relationFK__Claim__PolicyID__114A936A = this.Relations["FK__Claim__PolicyID__114A936A"];
+            this.relationFK__Payment__PolicyI__14270015 = this.Relations["FK__Payment__PolicyI__14270015"];
+            this.relationFK_Policy_Agent = this.Relations["FK_Policy_Agent"];
             this.relationFK__Policy__CarID__08B54D69 = this.Relations["FK__Policy__CarID__08B54D69"];
             this.relationFK__Policy__ClientID__07C12930 = this.Relations["FK__Policy__ClientID__07C12930"];
             this.relationFK__Car__ClientID__03F0984C1 = this.Relations["FK__Car__ClientID__03F0984C1"];
@@ -351,14 +354,18 @@ namespace WindowsFormsApp1 {
             base.Tables.Add(this.tableCar);
             this.tableClient = new ClientDataTable();
             base.Tables.Add(this.tableClient);
-            this.relationFK__Claim__PolicyID__114A936A1 = new global::System.Data.DataRelation("FK__Claim__PolicyID__114A936A1", new global::System.Data.DataColumn[] {
+            this.relationFK__Claim__PolicyID__114A936A = new global::System.Data.DataRelation("FK__Claim__PolicyID__114A936A", new global::System.Data.DataColumn[] {
                         this.tablePolicy.PolicyIDColumn}, new global::System.Data.DataColumn[] {
                         this.tableClaim.PolicyIDColumn}, false);
-            this.Relations.Add(this.relationFK__Claim__PolicyID__114A936A1);
-            this.relationFK__Payment__PolicyI__142700151 = new global::System.Data.DataRelation("FK__Payment__PolicyI__142700151", new global::System.Data.DataColumn[] {
+            this.Relations.Add(this.relationFK__Claim__PolicyID__114A936A);
+            this.relationFK__Payment__PolicyI__14270015 = new global::System.Data.DataRelation("FK__Payment__PolicyI__14270015", new global::System.Data.DataColumn[] {
                         this.tablePolicy.PolicyIDColumn}, new global::System.Data.DataColumn[] {
                         this.tablePayment.PolicyIDColumn}, false);
-            this.Relations.Add(this.relationFK__Payment__PolicyI__142700151);
+            this.Relations.Add(this.relationFK__Payment__PolicyI__14270015);
+            this.relationFK_Policy_Agent = new global::System.Data.DataRelation("FK_Policy_Agent", new global::System.Data.DataColumn[] {
+                        this.tableAgent.AgentIDColumn}, new global::System.Data.DataColumn[] {
+                        this.tablePolicy.AgentIDColumn}, false);
+            this.Relations.Add(this.relationFK_Policy_Agent);
             this.relationFK__Policy__CarID__08B54D69 = new global::System.Data.DataRelation("FK__Policy__CarID__08B54D69", new global::System.Data.DataColumn[] {
                         this.tableCar.CarIDColumn}, new global::System.Data.DataColumn[] {
                         this.tablePolicy.CarIDColumn}, false);
@@ -961,7 +968,7 @@ namespace WindowsFormsApp1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public ClaimRow AddClaimRow(PolicyRow parentPolicyRowByFK__Claim__PolicyID__114A936A1, System.DateTime ClaimDate, string ClaimStatus, string Description, string ClaimType) {
+            public ClaimRow AddClaimRow(PolicyRow parentPolicyRowByFK__Claim__PolicyID__114A936A, System.DateTime ClaimDate, string ClaimStatus, string Description, string ClaimType) {
                 ClaimRow rowClaimRow = ((ClaimRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -970,8 +977,8 @@ namespace WindowsFormsApp1 {
                         ClaimStatus,
                         Description,
                         ClaimType};
-                if ((parentPolicyRowByFK__Claim__PolicyID__114A936A1 != null)) {
-                    columnValuesArray[1] = parentPolicyRowByFK__Claim__PolicyID__114A936A1[0];
+                if ((parentPolicyRowByFK__Claim__PolicyID__114A936A != null)) {
+                    columnValuesArray[1] = parentPolicyRowByFK__Claim__PolicyID__114A936A[0];
                 }
                 rowClaimRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowClaimRow);
@@ -1294,7 +1301,7 @@ namespace WindowsFormsApp1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public PaymentRow AddPaymentRow(PolicyRow parentPolicyRowByFK__Payment__PolicyI__142700151, System.DateTime PaymentDate, decimal Amount, string PaymentMethod) {
+            public PaymentRow AddPaymentRow(PolicyRow parentPolicyRowByFK__Payment__PolicyI__14270015, System.DateTime PaymentDate, decimal Amount, string PaymentMethod) {
                 PaymentRow rowPaymentRow = ((PaymentRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -1302,8 +1309,8 @@ namespace WindowsFormsApp1 {
                         PaymentDate,
                         Amount,
                         PaymentMethod};
-                if ((parentPolicyRowByFK__Payment__PolicyI__142700151 != null)) {
-                    columnValuesArray[1] = parentPolicyRowByFK__Payment__PolicyI__142700151[0];
+                if ((parentPolicyRowByFK__Payment__PolicyI__14270015 != null)) {
+                    columnValuesArray[1] = parentPolicyRowByFK__Payment__PolicyI__14270015[0];
                 }
                 rowPaymentRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowPaymentRow);
@@ -1516,6 +1523,8 @@ namespace WindowsFormsApp1 {
             
             private global::System.Data.DataColumn columnStatus;
             
+            private global::System.Data.DataColumn columnAgentID;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public PolicyDataTable() {
@@ -1615,6 +1624,14 @@ namespace WindowsFormsApp1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn AgentIDColumn {
+                get {
+                    return this.columnAgentID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -1650,7 +1667,7 @@ namespace WindowsFormsApp1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public PolicyRow AddPolicyRow(ClientRow parentClientRowByFK__Policy__ClientID__07C12930, CarRow parentCarRowByFK__Policy__CarID__08B54D69, string PolicyType, string StartDate, string EndDate, decimal PremiumAmount, string Status) {
+            public PolicyRow AddPolicyRow(ClientRow parentClientRowByFK__Policy__ClientID__07C12930, CarRow parentCarRowByFK__Policy__CarID__08B54D69, string PolicyType, System.DateTime StartDate, System.DateTime EndDate, decimal PremiumAmount, string Status, AgentRow parentAgentRowByFK_Policy_Agent) {
                 PolicyRow rowPolicyRow = ((PolicyRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -1660,12 +1677,16 @@ namespace WindowsFormsApp1 {
                         StartDate,
                         EndDate,
                         PremiumAmount,
-                        Status};
+                        Status,
+                        null};
                 if ((parentClientRowByFK__Policy__ClientID__07C12930 != null)) {
                     columnValuesArray[1] = parentClientRowByFK__Policy__ClientID__07C12930[0];
                 }
                 if ((parentCarRowByFK__Policy__CarID__08B54D69 != null)) {
                     columnValuesArray[2] = parentCarRowByFK__Policy__CarID__08B54D69[0];
+                }
+                if ((parentAgentRowByFK_Policy_Agent != null)) {
+                    columnValuesArray[8] = parentAgentRowByFK_Policy_Agent[0];
                 }
                 rowPolicyRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowPolicyRow);
@@ -1704,6 +1725,7 @@ namespace WindowsFormsApp1 {
                 this.columnEndDate = base.Columns["EndDate"];
                 this.columnPremiumAmount = base.Columns["PremiumAmount"];
                 this.columnStatus = base.Columns["Status"];
+                this.columnAgentID = base.Columns["AgentID"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1717,14 +1739,16 @@ namespace WindowsFormsApp1 {
                 base.Columns.Add(this.columnCarID);
                 this.columnPolicyType = new global::System.Data.DataColumn("PolicyType", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnPolicyType);
-                this.columnStartDate = new global::System.Data.DataColumn("StartDate", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columnStartDate = new global::System.Data.DataColumn("StartDate", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnStartDate);
-                this.columnEndDate = new global::System.Data.DataColumn("EndDate", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columnEndDate = new global::System.Data.DataColumn("EndDate", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnEndDate);
                 this.columnPremiumAmount = new global::System.Data.DataColumn("PremiumAmount", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnPremiumAmount);
                 this.columnStatus = new global::System.Data.DataColumn("Status", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnStatus);
+                this.columnAgentID = new global::System.Data.DataColumn("AgentID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAgentID);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnPolicyID}, true));
                 this.columnPolicyID.AutoIncrement = true;
@@ -1738,12 +1762,11 @@ namespace WindowsFormsApp1 {
                 this.columnPolicyType.AllowDBNull = false;
                 this.columnPolicyType.MaxLength = 30;
                 this.columnStartDate.AllowDBNull = false;
-                this.columnStartDate.MaxLength = 50;
                 this.columnEndDate.AllowDBNull = false;
-                this.columnEndDate.MaxLength = 50;
                 this.columnPremiumAmount.AllowDBNull = false;
                 this.columnStatus.AllowDBNull = false;
                 this.columnStatus.MaxLength = 20;
+                this.columnAgentID.AllowDBNull = false;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2376,7 +2399,7 @@ namespace WindowsFormsApp1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public ClientRow AddClientRow(string FirstName, string LastName, string Address, string Email, long IDNumber, string PhoneNumber) {
+            public ClientRow AddClientRow(string FirstName, string LastName, string Address, string Email, string IDNumber, string PhoneNumber) {
                 ClientRow rowClientRow = ((ClientRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -2437,7 +2460,7 @@ namespace WindowsFormsApp1 {
                 base.Columns.Add(this.columnAddress);
                 this.columnEmail = new global::System.Data.DataColumn("Email", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnEmail);
-                this.columnIDNumber = new global::System.Data.DataColumn("IDNumber", typeof(long), null, global::System.Data.MappingType.Element);
+                this.columnIDNumber = new global::System.Data.DataColumn("IDNumber", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnIDNumber);
                 this.columnPhoneNumber = new global::System.Data.DataColumn("PhoneNumber", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnPhoneNumber);
@@ -2458,6 +2481,7 @@ namespace WindowsFormsApp1 {
                 this.columnEmail.AllowDBNull = false;
                 this.columnEmail.MaxLength = 50;
                 this.columnIDNumber.AllowDBNull = false;
+                this.columnIDNumber.MaxLength = 50;
                 this.columnPhoneNumber.AllowDBNull = false;
                 this.columnPhoneNumber.MaxLength = 20;
             }
@@ -2665,6 +2689,17 @@ namespace WindowsFormsApp1 {
                     this[this.tableAgent.PasswordColumn] = value;
                 }
             }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public PolicyRow[] GetPolicyRows() {
+                if ((this.Table.ChildRelations["FK_Policy_Agent"] == null)) {
+                    return new PolicyRow[0];
+                }
+                else {
+                    return ((PolicyRow[])(base.GetChildRows(this.Table.ChildRelations["FK_Policy_Agent"])));
+                }
+            }
         }
         
         /// <summary>
@@ -2751,10 +2786,10 @@ namespace WindowsFormsApp1 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public PolicyRow PolicyRow {
                 get {
-                    return ((PolicyRow)(this.GetParentRow(this.Table.ParentRelations["FK__Claim__PolicyID__114A936A1"])));
+                    return ((PolicyRow)(this.GetParentRow(this.Table.ParentRelations["FK__Claim__PolicyID__114A936A"])));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK__Claim__PolicyID__114A936A1"]);
+                    this.SetParentRow(value, this.Table.ParentRelations["FK__Claim__PolicyID__114A936A"]);
                 }
             }
         }
@@ -2832,10 +2867,10 @@ namespace WindowsFormsApp1 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public PolicyRow PolicyRow {
                 get {
-                    return ((PolicyRow)(this.GetParentRow(this.Table.ParentRelations["FK__Payment__PolicyI__142700151"])));
+                    return ((PolicyRow)(this.GetParentRow(this.Table.ParentRelations["FK__Payment__PolicyI__14270015"])));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK__Payment__PolicyI__142700151"]);
+                    this.SetParentRow(value, this.Table.ParentRelations["FK__Payment__PolicyI__14270015"]);
                 }
             }
         }
@@ -2900,9 +2935,9 @@ namespace WindowsFormsApp1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string StartDate {
+            public System.DateTime StartDate {
                 get {
-                    return ((string)(this[this.tablePolicy.StartDateColumn]));
+                    return ((global::System.DateTime)(this[this.tablePolicy.StartDateColumn]));
                 }
                 set {
                     this[this.tablePolicy.StartDateColumn] = value;
@@ -2911,9 +2946,9 @@ namespace WindowsFormsApp1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string EndDate {
+            public System.DateTime EndDate {
                 get {
-                    return ((string)(this[this.tablePolicy.EndDateColumn]));
+                    return ((global::System.DateTime)(this[this.tablePolicy.EndDateColumn]));
                 }
                 set {
                     this[this.tablePolicy.EndDateColumn] = value;
@@ -2944,6 +2979,28 @@ namespace WindowsFormsApp1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int AgentID {
+                get {
+                    return ((int)(this[this.tablePolicy.AgentIDColumn]));
+                }
+                set {
+                    this[this.tablePolicy.AgentIDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public AgentRow AgentRow {
+                get {
+                    return ((AgentRow)(this.GetParentRow(this.Table.ParentRelations["FK_Policy_Agent"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_Policy_Agent"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public CarRow CarRow {
                 get {
                     return ((CarRow)(this.GetParentRow(this.Table.ParentRelations["FK__Policy__CarID__08B54D69"])));
@@ -2967,22 +3024,22 @@ namespace WindowsFormsApp1 {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public ClaimRow[] GetClaimRows() {
-                if ((this.Table.ChildRelations["FK__Claim__PolicyID__114A936A1"] == null)) {
+                if ((this.Table.ChildRelations["FK__Claim__PolicyID__114A936A"] == null)) {
                     return new ClaimRow[0];
                 }
                 else {
-                    return ((ClaimRow[])(base.GetChildRows(this.Table.ChildRelations["FK__Claim__PolicyID__114A936A1"])));
+                    return ((ClaimRow[])(base.GetChildRows(this.Table.ChildRelations["FK__Claim__PolicyID__114A936A"])));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public PaymentRow[] GetPaymentRows() {
-                if ((this.Table.ChildRelations["FK__Payment__PolicyI__142700151"] == null)) {
+                if ((this.Table.ChildRelations["FK__Payment__PolicyI__14270015"] == null)) {
                     return new PaymentRow[0];
                 }
                 else {
-                    return ((PaymentRow[])(base.GetChildRows(this.Table.ChildRelations["FK__Payment__PolicyI__142700151"])));
+                    return ((PaymentRow[])(base.GetChildRows(this.Table.ChildRelations["FK__Payment__PolicyI__14270015"])));
                 }
             }
         }
@@ -3172,9 +3229,9 @@ namespace WindowsFormsApp1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public long IDNumber {
+            public string IDNumber {
                 get {
-                    return ((long)(this[this.tableClient.IDNumberColumn]));
+                    return ((string)(this[this.tableClient.IDNumberColumn]));
                 }
                 set {
                     this[this.tableClient.IDNumberColumn] = value;
@@ -3600,7 +3657,7 @@ SELECT AgentID, FirstName, LastName, PhoneNumber, Email, Password FROM Agent WHE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[4];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[5];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT AgentID, FirstName, LastName, PhoneNumber, Email, Password FROM dbo.Agent";
@@ -3619,10 +3676,16 @@ SELECT AgentID, FirstName, LastName, PhoneNumber, Email, Password FROM Agent WHE
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Password", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Password", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[3] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[3].Connection = this.Connection;
-            this._commandCollection[3].CommandText = "SELECT        TOP (1) AgentID AS Expr1, FirstName AS Expr2, Agent.*\r\nFROM        " +
-                "    Agent\r\nWHERE        (Email = @email)";
+            this._commandCollection[3].CommandText = "SELECT AgentID, FirstName, LastName, PhoneNumber, Email, Password FROM dbo.Agent " +
+                "Where Email = @Email";
             this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@email", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Email", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Email", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Email", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[4] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[4].Connection = this.Connection;
+            this._commandCollection[4].CommandText = "SELECT        TOP (1) AgentID AS Expr1, FirstName AS Expr2, Agent.*\r\nFROM        " +
+                "    Agent\r\nWHERE        (Email = @email)";
+            this._commandCollection[4].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@email", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Email", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3653,8 +3716,25 @@ SELECT AgentID, FirstName, LastName, PhoneNumber, Email, Password FROM Agent WHE
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
-        public virtual DataSet1.AgentDataTable GetAgentName(string email) {
+        public virtual DataSet1.AgentDataTable GetAgentID(string Email) {
             this.Adapter.SelectCommand = this.CommandCollection[3];
+            if ((Email == null)) {
+                throw new global::System.ArgumentNullException("Email");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(Email));
+            }
+            DataSet1.AgentDataTable dataTable = new DataSet1.AgentDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual DataSet1.AgentDataTable GetAgentName(string email) {
+            this.Adapter.SelectCommand = this.CommandCollection[4];
             if ((email == null)) {
                 throw new global::System.ArgumentNullException("email");
             }
@@ -4879,51 +4959,56 @@ SELECT PaymentID, PolicyID, PaymentDate, Amount, PaymentMethod FROM Payment WHER
             tableMapping.ColumnMappings.Add("EndDate", "EndDate");
             tableMapping.ColumnMappings.Add("PremiumAmount", "PremiumAmount");
             tableMapping.ColumnMappings.Add("Status", "Status");
+            tableMapping.ColumnMappings.Add("AgentID", "AgentID");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[Policy] WHERE (([PolicyID] = @Original_PolicyID) AND ([ClientID] = @Original_ClientID) AND ([CarID] = @Original_CarID) AND ([PolicyType] = @Original_PolicyType) AND ([StartDate] = @Original_StartDate) AND ([EndDate] = @Original_EndDate) AND ([PremiumAmount] = @Original_PremiumAmount) AND ([Status] = @Original_Status))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[Policy] WHERE (([PolicyID] = @Original_PolicyID) AND ([ClientID] = @Original_ClientID) AND ([CarID] = @Original_CarID) AND ([PolicyType] = @Original_PolicyType) AND ([StartDate] = @Original_StartDate) AND ([EndDate] = @Original_EndDate) AND ([PremiumAmount] = @Original_PremiumAmount) AND ([Status] = @Original_Status) AND ([AgentID] = @Original_AgentID))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PolicyID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PolicyID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ClientID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ClientID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_CarID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CarID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PolicyType", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PolicyType", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_StartDate", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "StartDate", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_EndDate", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "EndDate", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_StartDate", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "StartDate", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_EndDate", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "EndDate", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PremiumAmount", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 10, 2, "PremiumAmount", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Status", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Status", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_AgentID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AgentID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[Policy] ([ClientID], [CarID], [PolicyType], [StartDate], [EndDate], [PremiumAmount], [Status]) VALUES (@ClientID, @CarID, @PolicyType, @StartDate, @EndDate, @PremiumAmount, @Status);
-SELECT PolicyID, ClientID, CarID, PolicyType, StartDate, EndDate, PremiumAmount, Status FROM Policy WHERE (PolicyID = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[Policy] ([ClientID], [CarID], [PolicyType], [StartDate], [EndDate], [PremiumAmount], [Status], [AgentID]) VALUES (@ClientID, @CarID, @PolicyType, @StartDate, @EndDate, @PremiumAmount, @Status, @AgentID);
+SELECT PolicyID, ClientID, CarID, PolicyType, StartDate, EndDate, PremiumAmount, Status, AgentID FROM Policy WHERE (PolicyID = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ClientID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ClientID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CarID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CarID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PolicyType", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PolicyType", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@StartDate", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "StartDate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@EndDate", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "EndDate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@StartDate", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "StartDate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@EndDate", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "EndDate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PremiumAmount", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 10, 2, "PremiumAmount", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Status", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Status", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AgentID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AgentID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Policy] SET [ClientID] = @ClientID, [CarID] = @CarID, [PolicyType] = @PolicyType, [StartDate] = @StartDate, [EndDate] = @EndDate, [PremiumAmount] = @PremiumAmount, [Status] = @Status WHERE (([PolicyID] = @Original_PolicyID) AND ([ClientID] = @Original_ClientID) AND ([CarID] = @Original_CarID) AND ([PolicyType] = @Original_PolicyType) AND ([StartDate] = @Original_StartDate) AND ([EndDate] = @Original_EndDate) AND ([PremiumAmount] = @Original_PremiumAmount) AND ([Status] = @Original_Status));
-SELECT PolicyID, ClientID, CarID, PolicyType, StartDate, EndDate, PremiumAmount, Status FROM Policy WHERE (PolicyID = @PolicyID)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Policy] SET [ClientID] = @ClientID, [CarID] = @CarID, [PolicyType] = @PolicyType, [StartDate] = @StartDate, [EndDate] = @EndDate, [PremiumAmount] = @PremiumAmount, [Status] = @Status, [AgentID] = @AgentID WHERE (([PolicyID] = @Original_PolicyID) AND ([ClientID] = @Original_ClientID) AND ([CarID] = @Original_CarID) AND ([PolicyType] = @Original_PolicyType) AND ([StartDate] = @Original_StartDate) AND ([EndDate] = @Original_EndDate) AND ([PremiumAmount] = @Original_PremiumAmount) AND ([Status] = @Original_Status) AND ([AgentID] = @Original_AgentID));
+SELECT PolicyID, ClientID, CarID, PolicyType, StartDate, EndDate, PremiumAmount, Status, AgentID FROM Policy WHERE (PolicyID = @PolicyID)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ClientID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ClientID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CarID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CarID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PolicyType", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PolicyType", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@StartDate", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "StartDate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@EndDate", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "EndDate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@StartDate", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "StartDate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@EndDate", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "EndDate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PremiumAmount", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 10, 2, "PremiumAmount", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Status", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Status", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AgentID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AgentID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PolicyID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PolicyID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ClientID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ClientID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_CarID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CarID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PolicyType", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PolicyType", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_StartDate", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "StartDate", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_EndDate", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "EndDate", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_StartDate", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "StartDate", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_EndDate", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "EndDate", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PremiumAmount", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 10, 2, "PremiumAmount", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Status", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Status", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_AgentID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AgentID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PolicyID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "PolicyID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
@@ -4937,11 +5022,11 @@ SELECT PolicyID, ClientID, CarID, PolicyType, StartDate, EndDate, PremiumAmount,
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[5];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[4];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT PolicyID, ClientID, CarID, PolicyType, StartDate, EndDate, PremiumAmount, " +
-                "Status FROM dbo.Policy";
+                "Status, AgentID FROM dbo.Policy";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
@@ -4951,27 +5036,15 @@ SELECT PolicyID, ClientID, CarID, PolicyType, StartDate, EndDate, PremiumAmount,
             this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[2].Connection = this.Connection;
             this._commandCollection[2].CommandText = "SELECT PolicyID, ClientID, CarID, PolicyType, StartDate, EndDate, PremiumAmount, " +
-                "Status FROM dbo.Policy Where Policy.ClientID = @Client";
+                "Status, AgentID FROM dbo.Policy Where Policy.ClientID = @Client";
             this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Client", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "ClientID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[3] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[3].Connection = this.Connection;
-            this._commandCollection[3].CommandText = @"INSERT INTO [dbo].[Policy] ([ClientID], [CarID], [PolicyType], [StartDate], [EndDate], [PremiumAmount], [Status]) VALUES (@ClientID, @CarID, @PolicyType, @StartDate, @EndDate, @PremiumAmount, @Status);
-SELECT PolicyID, ClientID, CarID, PolicyType, StartDate, EndDate, PremiumAmount, Status FROM Policy WHERE (PolicyID = SCOPE_IDENTITY())";
+            this._commandCollection[3].CommandText = "UPDATE [dbo].[Policy] SET  [Status] = @Status Where Policy.ClientID = @ClientID";
             this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ClientID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "ClientID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CarID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "CarID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PolicyType", global::System.Data.SqlDbType.VarChar, 30, global::System.Data.ParameterDirection.Input, 0, 0, "PolicyType", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@StartDate", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "StartDate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@EndDate", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "EndDate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PremiumAmount", global::System.Data.SqlDbType.Decimal, 9, global::System.Data.ParameterDirection.Input, 10, 2, "PremiumAmount", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Status", global::System.Data.SqlDbType.VarChar, 20, global::System.Data.ParameterDirection.Input, 0, 0, "Status", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[4] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[4].Connection = this.Connection;
-            this._commandCollection[4].CommandText = "UPDATE [dbo].[Policy] SET  [Status] = @Status Where Policy.ClientID = @ClientID";
-            this._commandCollection[4].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Status", global::System.Data.SqlDbType.VarChar, 20, global::System.Data.ParameterDirection.Input, 0, 0, "Status", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ClientID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "ClientID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ClientID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "ClientID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5043,7 +5116,7 @@ SELECT PolicyID, ClientID, CarID, PolicyType, StartDate, EndDate, PremiumAmount,
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_PolicyID, int Original_ClientID, int Original_CarID, string Original_PolicyType, string Original_StartDate, string Original_EndDate, decimal Original_PremiumAmount, string Original_Status) {
+        public virtual int Delete(int Original_PolicyID, int Original_ClientID, int Original_CarID, string Original_PolicyType, System.DateTime Original_StartDate, System.DateTime Original_EndDate, decimal Original_PremiumAmount, string Original_Status, int Original_AgentID) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_PolicyID));
             this.Adapter.DeleteCommand.Parameters[1].Value = ((int)(Original_ClientID));
             this.Adapter.DeleteCommand.Parameters[2].Value = ((int)(Original_CarID));
@@ -5053,18 +5126,8 @@ SELECT PolicyID, ClientID, CarID, PolicyType, StartDate, EndDate, PremiumAmount,
             else {
                 this.Adapter.DeleteCommand.Parameters[3].Value = ((string)(Original_PolicyType));
             }
-            if ((Original_StartDate == null)) {
-                throw new global::System.ArgumentNullException("Original_StartDate");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_StartDate));
-            }
-            if ((Original_EndDate == null)) {
-                throw new global::System.ArgumentNullException("Original_EndDate");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[5].Value = ((string)(Original_EndDate));
-            }
+            this.Adapter.DeleteCommand.Parameters[4].Value = ((System.DateTime)(Original_StartDate));
+            this.Adapter.DeleteCommand.Parameters[5].Value = ((System.DateTime)(Original_EndDate));
             this.Adapter.DeleteCommand.Parameters[6].Value = ((decimal)(Original_PremiumAmount));
             if ((Original_Status == null)) {
                 throw new global::System.ArgumentNullException("Original_Status");
@@ -5072,6 +5135,7 @@ SELECT PolicyID, ClientID, CarID, PolicyType, StartDate, EndDate, PremiumAmount,
             else {
                 this.Adapter.DeleteCommand.Parameters[7].Value = ((string)(Original_Status));
             }
+            this.Adapter.DeleteCommand.Parameters[8].Value = ((int)(Original_AgentID));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -5092,7 +5156,7 @@ SELECT PolicyID, ClientID, CarID, PolicyType, StartDate, EndDate, PremiumAmount,
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int ClientID, int CarID, string PolicyType, string StartDate, string EndDate, decimal PremiumAmount, string Status) {
+        public virtual int Insert(int ClientID, int CarID, string PolicyType, System.DateTime StartDate, System.DateTime EndDate, decimal PremiumAmount, string Status, int AgentID) {
             this.Adapter.InsertCommand.Parameters[0].Value = ((int)(ClientID));
             this.Adapter.InsertCommand.Parameters[1].Value = ((int)(CarID));
             if ((PolicyType == null)) {
@@ -5101,18 +5165,8 @@ SELECT PolicyID, ClientID, CarID, PolicyType, StartDate, EndDate, PremiumAmount,
             else {
                 this.Adapter.InsertCommand.Parameters[2].Value = ((string)(PolicyType));
             }
-            if ((StartDate == null)) {
-                throw new global::System.ArgumentNullException("StartDate");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(StartDate));
-            }
-            if ((EndDate == null)) {
-                throw new global::System.ArgumentNullException("EndDate");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(EndDate));
-            }
+            this.Adapter.InsertCommand.Parameters[3].Value = ((System.DateTime)(StartDate));
+            this.Adapter.InsertCommand.Parameters[4].Value = ((System.DateTime)(EndDate));
             this.Adapter.InsertCommand.Parameters[5].Value = ((decimal)(PremiumAmount));
             if ((Status == null)) {
                 throw new global::System.ArgumentNullException("Status");
@@ -5120,6 +5174,7 @@ SELECT PolicyID, ClientID, CarID, PolicyType, StartDate, EndDate, PremiumAmount,
             else {
                 this.Adapter.InsertCommand.Parameters[6].Value = ((string)(Status));
             }
+            this.Adapter.InsertCommand.Parameters[7].Value = ((int)(AgentID));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -5144,18 +5199,20 @@ SELECT PolicyID, ClientID, CarID, PolicyType, StartDate, EndDate, PremiumAmount,
                     int ClientID, 
                     int CarID, 
                     string PolicyType, 
-                    string StartDate, 
-                    string EndDate, 
+                    System.DateTime StartDate, 
+                    System.DateTime EndDate, 
                     decimal PremiumAmount, 
                     string Status, 
+                    int AgentID, 
                     int Original_PolicyID, 
                     int Original_ClientID, 
                     int Original_CarID, 
                     string Original_PolicyType, 
-                    string Original_StartDate, 
-                    string Original_EndDate, 
+                    System.DateTime Original_StartDate, 
+                    System.DateTime Original_EndDate, 
                     decimal Original_PremiumAmount, 
                     string Original_Status, 
+                    int Original_AgentID, 
                     int PolicyID) {
             this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(ClientID));
             this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(CarID));
@@ -5165,18 +5222,8 @@ SELECT PolicyID, ClientID, CarID, PolicyType, StartDate, EndDate, PremiumAmount,
             else {
                 this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(PolicyType));
             }
-            if ((StartDate == null)) {
-                throw new global::System.ArgumentNullException("StartDate");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(StartDate));
-            }
-            if ((EndDate == null)) {
-                throw new global::System.ArgumentNullException("EndDate");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(EndDate));
-            }
+            this.Adapter.UpdateCommand.Parameters[3].Value = ((System.DateTime)(StartDate));
+            this.Adapter.UpdateCommand.Parameters[4].Value = ((System.DateTime)(EndDate));
             this.Adapter.UpdateCommand.Parameters[5].Value = ((decimal)(PremiumAmount));
             if ((Status == null)) {
                 throw new global::System.ArgumentNullException("Status");
@@ -5184,35 +5231,27 @@ SELECT PolicyID, ClientID, CarID, PolicyType, StartDate, EndDate, PremiumAmount,
             else {
                 this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Status));
             }
-            this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(Original_PolicyID));
-            this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(Original_ClientID));
-            this.Adapter.UpdateCommand.Parameters[9].Value = ((int)(Original_CarID));
+            this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(AgentID));
+            this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(Original_PolicyID));
+            this.Adapter.UpdateCommand.Parameters[9].Value = ((int)(Original_ClientID));
+            this.Adapter.UpdateCommand.Parameters[10].Value = ((int)(Original_CarID));
             if ((Original_PolicyType == null)) {
                 throw new global::System.ArgumentNullException("Original_PolicyType");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(Original_PolicyType));
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(Original_PolicyType));
             }
-            if ((Original_StartDate == null)) {
-                throw new global::System.ArgumentNullException("Original_StartDate");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(Original_StartDate));
-            }
-            if ((Original_EndDate == null)) {
-                throw new global::System.ArgumentNullException("Original_EndDate");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((string)(Original_EndDate));
-            }
-            this.Adapter.UpdateCommand.Parameters[13].Value = ((decimal)(Original_PremiumAmount));
+            this.Adapter.UpdateCommand.Parameters[12].Value = ((System.DateTime)(Original_StartDate));
+            this.Adapter.UpdateCommand.Parameters[13].Value = ((System.DateTime)(Original_EndDate));
+            this.Adapter.UpdateCommand.Parameters[14].Value = ((decimal)(Original_PremiumAmount));
             if ((Original_Status == null)) {
                 throw new global::System.ArgumentNullException("Original_Status");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((string)(Original_Status));
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((string)(Original_Status));
             }
-            this.Adapter.UpdateCommand.Parameters[15].Value = ((int)(PolicyID));
+            this.Adapter.UpdateCommand.Parameters[16].Value = ((int)(Original_AgentID));
+            this.Adapter.UpdateCommand.Parameters[17].Value = ((int)(PolicyID));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -5233,8 +5272,25 @@ SELECT PolicyID, ClientID, CarID, PolicyType, StartDate, EndDate, PremiumAmount,
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int ClientID, int CarID, string PolicyType, string StartDate, string EndDate, decimal PremiumAmount, string Status, int Original_PolicyID, int Original_ClientID, int Original_CarID, string Original_PolicyType, string Original_StartDate, string Original_EndDate, decimal Original_PremiumAmount, string Original_Status) {
-            return this.Update(ClientID, CarID, PolicyType, StartDate, EndDate, PremiumAmount, Status, Original_PolicyID, Original_ClientID, Original_CarID, Original_PolicyType, Original_StartDate, Original_EndDate, Original_PremiumAmount, Original_Status, Original_PolicyID);
+        public virtual int Update(
+                    int ClientID, 
+                    int CarID, 
+                    string PolicyType, 
+                    System.DateTime StartDate, 
+                    System.DateTime EndDate, 
+                    decimal PremiumAmount, 
+                    string Status, 
+                    int AgentID, 
+                    int Original_PolicyID, 
+                    int Original_ClientID, 
+                    int Original_CarID, 
+                    string Original_PolicyType, 
+                    System.DateTime Original_StartDate, 
+                    System.DateTime Original_EndDate, 
+                    decimal Original_PremiumAmount, 
+                    string Original_Status, 
+                    int Original_AgentID) {
+            return this.Update(ClientID, CarID, PolicyType, StartDate, EndDate, PremiumAmount, Status, AgentID, Original_PolicyID, Original_ClientID, Original_CarID, Original_PolicyType, Original_StartDate, Original_EndDate, Original_PremiumAmount, Original_Status, Original_AgentID, Original_PolicyID);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5269,59 +5325,9 @@ SELECT PolicyID, ClientID, CarID, PolicyType, StartDate, EndDate, PremiumAmount,
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, false)]
-        public virtual int InsertPolicy(int ClientID, int CarID, string PolicyType, string StartDate, string EndDate, decimal PremiumAmount, string Status) {
-            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[3];
-            command.Parameters[0].Value = ((int)(ClientID));
-            command.Parameters[1].Value = ((int)(CarID));
-            if ((PolicyType == null)) {
-                throw new global::System.ArgumentNullException("PolicyType");
-            }
-            else {
-                command.Parameters[2].Value = ((string)(PolicyType));
-            }
-            if ((StartDate == null)) {
-                throw new global::System.ArgumentNullException("StartDate");
-            }
-            else {
-                command.Parameters[3].Value = ((string)(StartDate));
-            }
-            if ((EndDate == null)) {
-                throw new global::System.ArgumentNullException("EndDate");
-            }
-            else {
-                command.Parameters[4].Value = ((string)(EndDate));
-            }
-            command.Parameters[5].Value = ((decimal)(PremiumAmount));
-            if ((Status == null)) {
-                throw new global::System.ArgumentNullException("Status");
-            }
-            else {
-                command.Parameters[6].Value = ((string)(Status));
-            }
-            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
-            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                command.Connection.Open();
-            }
-            int returnValue;
-            try {
-                returnValue = command.ExecuteNonQuery();
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    command.Connection.Close();
-                }
-            }
-            return returnValue;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, false)]
         public virtual int UpdateStatus(string Status, int ClientID) {
-            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[4];
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[3];
             if ((Status == null)) {
                 throw new global::System.ArgumentNullException("Status");
             }
@@ -5958,7 +5964,7 @@ SELECT CarID, ClientID, RegistrationNumber, Vin, Make, Model, Year FROM Car WHER
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_LastName", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "LastName", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Address", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Address", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Email", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Email", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_IDNumber", global::System.Data.SqlDbType.BigInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IDNumber", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_IDNumber", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IDNumber", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PhoneNumber", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PhoneNumber", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
@@ -5969,7 +5975,7 @@ SELECT ClientID, FirstName, LastName, Address, Email, IDNumber, PhoneNumber FROM
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@LastName", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "LastName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Address", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Address", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Email", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Email", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IDNumber", global::System.Data.SqlDbType.BigInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IDNumber", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IDNumber", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IDNumber", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PhoneNumber", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PhoneNumber", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
@@ -5980,14 +5986,14 @@ SELECT ClientID, FirstName, LastName, Address, Email, IDNumber, PhoneNumber FROM
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@LastName", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "LastName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Address", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Address", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Email", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Email", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IDNumber", global::System.Data.SqlDbType.BigInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IDNumber", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IDNumber", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IDNumber", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PhoneNumber", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PhoneNumber", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ClientID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ClientID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_FirstName", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FirstName", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_LastName", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "LastName", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Address", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Address", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Email", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Email", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_IDNumber", global::System.Data.SqlDbType.BigInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IDNumber", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_IDNumber", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IDNumber", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PhoneNumber", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PhoneNumber", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ClientID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "ClientID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
@@ -6002,12 +6008,13 @@ SELECT ClientID, FirstName, LastName, Address, Email, IDNumber, PhoneNumber FROM
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[3];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[5];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT ClientID, FirstName, LastName, Address, Email, IDNumber, PhoneNumber FROM " +
-                "dbo.Client";
+                "dbo.Client Where ClientID = @ClientID";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ClientID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "ClientID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
             this._commandCollection[1].CommandText = "SELECT COUNT(*) FROM Client Where Client.ClientID =@ClientID";
@@ -6015,30 +6022,46 @@ SELECT ClientID, FirstName, LastName, Address, Email, IDNumber, PhoneNumber FROM
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ClientID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "ClientID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[2].Connection = this.Connection;
-            this._commandCollection[2].CommandText = "SELECT COUNT(*) FROM Client Where Client.Email = @Email";
+            this._commandCollection[2].CommandText = "SELECT COUNT(*) FROM Client Where Client.IDNumber =@IDNumber";
             this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Email", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Email", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(DataSet1.ClientDataTable dataTable) {
-            this.Adapter.SelectCommand = this.CommandCollection[0];
-            if ((this.ClearBeforeFill == true)) {
-                dataTable.Clear();
-            }
-            int returnValue = this.Adapter.Fill(dataTable);
-            return returnValue;
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IDNumber", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "IDNumber", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[3] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[3].Connection = this.Connection;
+            this._commandCollection[3].CommandText = "SELECT Address, ClientID, Email, FirstName, IDNumber, LastName, PhoneNumber FROM " +
+                "Client WHERE (Email = @Email)";
+            this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Email", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Email", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[4] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[4].Connection = this.Connection;
+            this._commandCollection[4].CommandText = "SELECT COUNT(*) FROM Client Where Client.Email = @Email";
+            this._commandCollection[4].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Email", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Email", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DataSet1.ClientDataTable GetData() {
+        public virtual DataSet1.ClientDataTable GetClientDetail(int ClientID) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(ClientID));
+            DataSet1.ClientDataTable dataTable = new DataSet1.ClientDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual DataSet1.ClientDataTable getClientDetails(string Email) {
+            this.Adapter.SelectCommand = this.CommandCollection[3];
+            if ((Email == null)) {
+                throw new global::System.ArgumentNullException("Email");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(Email));
+            }
             DataSet1.ClientDataTable dataTable = new DataSet1.ClientDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
@@ -6077,7 +6100,7 @@ SELECT ClientID, FirstName, LastName, Address, Email, IDNumber, PhoneNumber FROM
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_ClientID, string Original_FirstName, string Original_LastName, string Original_Address, string Original_Email, long Original_IDNumber, string Original_PhoneNumber) {
+        public virtual int Delete(int Original_ClientID, string Original_FirstName, string Original_LastName, string Original_Address, string Original_Email, string Original_IDNumber, string Original_PhoneNumber) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_ClientID));
             if ((Original_FirstName == null)) {
                 throw new global::System.ArgumentNullException("Original_FirstName");
@@ -6103,7 +6126,12 @@ SELECT ClientID, FirstName, LastName, Address, Email, IDNumber, PhoneNumber FROM
             else {
                 this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_Email));
             }
-            this.Adapter.DeleteCommand.Parameters[5].Value = ((long)(Original_IDNumber));
+            if ((Original_IDNumber == null)) {
+                throw new global::System.ArgumentNullException("Original_IDNumber");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((string)(Original_IDNumber));
+            }
             if ((Original_PhoneNumber == null)) {
                 throw new global::System.ArgumentNullException("Original_PhoneNumber");
             }
@@ -6130,7 +6158,7 @@ SELECT ClientID, FirstName, LastName, Address, Email, IDNumber, PhoneNumber FROM
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string FirstName, string LastName, string Address, string Email, long IDNumber, string PhoneNumber) {
+        public virtual int Insert(string FirstName, string LastName, string Address, string Email, string IDNumber, string PhoneNumber) {
             if ((FirstName == null)) {
                 throw new global::System.ArgumentNullException("FirstName");
             }
@@ -6155,7 +6183,12 @@ SELECT ClientID, FirstName, LastName, Address, Email, IDNumber, PhoneNumber FROM
             else {
                 this.Adapter.InsertCommand.Parameters[3].Value = ((string)(Email));
             }
-            this.Adapter.InsertCommand.Parameters[4].Value = ((long)(IDNumber));
+            if ((IDNumber == null)) {
+                throw new global::System.ArgumentNullException("IDNumber");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(IDNumber));
+            }
             if ((PhoneNumber == null)) {
                 throw new global::System.ArgumentNullException("PhoneNumber");
             }
@@ -6182,7 +6215,7 @@ SELECT ClientID, FirstName, LastName, Address, Email, IDNumber, PhoneNumber FROM
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string FirstName, string LastName, string Address, string Email, long IDNumber, string PhoneNumber, int Original_ClientID, string Original_FirstName, string Original_LastName, string Original_Address, string Original_Email, long Original_IDNumber, string Original_PhoneNumber, int ClientID) {
+        public virtual int Update(string FirstName, string LastName, string Address, string Email, string IDNumber, string PhoneNumber, int Original_ClientID, string Original_FirstName, string Original_LastName, string Original_Address, string Original_Email, string Original_IDNumber, string Original_PhoneNumber, int ClientID) {
             if ((FirstName == null)) {
                 throw new global::System.ArgumentNullException("FirstName");
             }
@@ -6207,7 +6240,12 @@ SELECT ClientID, FirstName, LastName, Address, Email, IDNumber, PhoneNumber FROM
             else {
                 this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(Email));
             }
-            this.Adapter.UpdateCommand.Parameters[4].Value = ((long)(IDNumber));
+            if ((IDNumber == null)) {
+                throw new global::System.ArgumentNullException("IDNumber");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(IDNumber));
+            }
             if ((PhoneNumber == null)) {
                 throw new global::System.ArgumentNullException("PhoneNumber");
             }
@@ -6239,7 +6277,12 @@ SELECT ClientID, FirstName, LastName, Address, Email, IDNumber, PhoneNumber FROM
             else {
                 this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(Original_Email));
             }
-            this.Adapter.UpdateCommand.Parameters[11].Value = ((long)(Original_IDNumber));
+            if ((Original_IDNumber == null)) {
+                throw new global::System.ArgumentNullException("Original_IDNumber");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(Original_IDNumber));
+            }
             if ((Original_PhoneNumber == null)) {
                 throw new global::System.ArgumentNullException("Original_PhoneNumber");
             }
@@ -6267,16 +6310,50 @@ SELECT ClientID, FirstName, LastName, Address, Email, IDNumber, PhoneNumber FROM
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string FirstName, string LastName, string Address, string Email, long IDNumber, string PhoneNumber, int Original_ClientID, string Original_FirstName, string Original_LastName, string Original_Address, string Original_Email, long Original_IDNumber, string Original_PhoneNumber) {
+        public virtual int Update(string FirstName, string LastName, string Address, string Email, string IDNumber, string PhoneNumber, int Original_ClientID, string Original_FirstName, string Original_LastName, string Original_Address, string Original_Email, string Original_IDNumber, string Original_PhoneNumber) {
             return this.Update(FirstName, LastName, Address, Email, IDNumber, PhoneNumber, Original_ClientID, Original_FirstName, Original_LastName, Original_Address, Original_Email, Original_IDNumber, Original_PhoneNumber, Original_ClientID);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual global::System.Nullable<int> Check_If_Client_Exist(int ClientID) {
+        public virtual object Check_If_Client_Exist(int ClientID) {
             global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[1];
             command.Parameters[0].Value = ((int)(ClientID));
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            object returnValue;
+            try {
+                returnValue = command.ExecuteScalar();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            if (((returnValue == null) 
+                        || (returnValue.GetType() == typeof(global::System.DBNull)))) {
+                return null;
+            }
+            else {
+                return ((object)(returnValue));
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual global::System.Nullable<int> Check_If_Id_Exist(string IDNumber) {
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[2];
+            if ((IDNumber == null)) {
+                throw new global::System.ArgumentNullException("IDNumber");
+            }
+            else {
+                command.Parameters[0].Value = ((string)(IDNumber));
+            }
             global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
             if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -6303,8 +6380,8 @@ SELECT ClientID, FirstName, LastName, Address, Email, IDNumber, PhoneNumber FROM
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual object GetNoOfClientsWithEmail(string Email) {
-            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[2];
+        public virtual global::System.Nullable<int> GetNoOfClientsWithEmail(string Email) {
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[4];
             if ((Email == null)) {
                 throw new global::System.ArgumentNullException("Email");
             }
@@ -6327,10 +6404,10 @@ SELECT ClientID, FirstName, LastName, Address, Email, IDNumber, PhoneNumber FROM
             }
             if (((returnValue == null) 
                         || (returnValue.GetType() == typeof(global::System.DBNull)))) {
-                return null;
+                return new global::System.Nullable<int>();
             }
             else {
-                return ((object)(returnValue));
+                return new global::System.Nullable<int>(((int)(returnValue)));
             }
         }
     }
@@ -6552,6 +6629,15 @@ SELECT ClientID, FirstName, LastName, Address, Email, IDNumber, PhoneNumber FROM
                     allChangedRows.AddRange(updatedRows);
                 }
             }
+            if ((this._agentTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Agent.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._agentTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
             if ((this._carTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.Car.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
@@ -6567,15 +6653,6 @@ SELECT ClientID, FirstName, LastName, Address, Email, IDNumber, PhoneNumber FROM
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
                     result = (result + this._policyTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
-            if ((this._agentTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Agent.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._agentTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -6615,6 +6692,14 @@ SELECT ClientID, FirstName, LastName, Address, Email, IDNumber, PhoneNumber FROM
                     allAddedRows.AddRange(addedRows);
                 }
             }
+            if ((this._agentTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Agent.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._agentTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
             if ((this._carTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.Car.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
@@ -6628,14 +6713,6 @@ SELECT ClientID, FirstName, LastName, Address, Email, IDNumber, PhoneNumber FROM
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
                     result = (result + this._policyTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
-            if ((this._agentTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Agent.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._agentTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -6681,14 +6758,6 @@ SELECT ClientID, FirstName, LastName, Address, Email, IDNumber, PhoneNumber FROM
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._agentTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Agent.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._agentTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
             if ((this._policyTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.Policy.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
@@ -6702,6 +6771,14 @@ SELECT ClientID, FirstName, LastName, Address, Email, IDNumber, PhoneNumber FROM
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
                     result = (result + this._carTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this._agentTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Agent.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._agentTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
