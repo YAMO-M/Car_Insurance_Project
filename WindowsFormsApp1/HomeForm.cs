@@ -18,8 +18,9 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
             this.WindowState = FormWindowState.Maximized;
-            addVehicle1.BringToFront();
-            makeClaim2.BringToFront();
+            addVehicle3.BringToFront();
+            addClient1.BringToFront();
+            makeClaim4.BringToFront();
             updatePersonalInfo1.BringToFront();
             homePage2.BringToFront();
 
@@ -39,7 +40,7 @@ namespace WindowsFormsApp1
         private void homeToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Text = "Home: Loggined in as " + AgentFname;
-            homePage2.BringToFront();
+            homePage3.BringToFront();
         }
 
         
@@ -73,13 +74,23 @@ namespace WindowsFormsApp1
         private void makeClaimToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             this.Text = "Claim: Loggined in as " + AgentFname;
-            makeClaim2.BringToFront();
+            makeClaim4.BringToFront();
         }
 
         private void addClientToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             this.Text = "Add Client: Loggined in as " + AgentFname;
-            updatePersonalInfo1.BringToFront();
+            addClient1.BringToFront();
+        }
+
+        private void addClient1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void homePage3_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
