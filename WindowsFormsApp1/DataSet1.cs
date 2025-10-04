@@ -8,6 +8,10 @@
         {
         }
 
+        partial class ClientDataTable
+        {
+        }
+
         partial class PaymentDataTable
         {
         }

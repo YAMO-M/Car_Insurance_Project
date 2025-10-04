@@ -39,49 +39,49 @@ namespace WindowsFormsApp1
             clearAllTextBoxs();
         
 
-           if ((int)clientTableAdapter.Check_If_Client_Exist(clientID) > 0)
-            {
-                DataRow client = clientTableAdapter.GetClientDetails(clientID).Rows[0];
+           //if ((int)clientTableAdapter.Check_If_Client_Exist(clientID) > 0)
+           // {
+           //     DataRow client = clientTableAdapter.GetClientDetails(clientID).Rows[0];
 
-                NameTextbox.Text = client["FirstName"].ToString();
-                LastNameTextbox.Text = client["LastName"].ToString();
-                AddressTextBox.Text = client["Address"].ToString();
-                EmailTextBox.Text = client["Email"].ToString();
-                PhoneNumberTextBox.Text = client["PhoneNumber"].ToString();
-                IDTextBox.Text = client["IDNumber"].ToString();
+           //     NameTextbox.Text = client["FirstName"].ToString();
+           //     LastNameTextbox.Text = client["LastName"].ToString();
+           //     AddressTextBox.Text = client["Address"].ToString();
+           //     EmailTextBox.Text = client["Email"].ToString();
+           //     PhoneNumberTextBox.Text = client["PhoneNumber"].ToString();
+           //     IDTextBox.Text = client["IDNumber"].ToString();
 
-                if ((int)policyTableAdapter.Check_If_Policy_Exist(clientID) > 0)
-                {
-                   DataRow policy = policyTableAdapter.GetPolicyDetails(clientID).Rows[0];
+           //     if ((int)policyTableAdapter.Check_If_Policy_Exist(clientID) > 0)
+           //     {
+           //        DataRow policy = policyTableAdapter.GetPolicyDetails(clientID).Rows[0];
 
-                    PolicyTypeTextBox.Text = policy["PolicyType"].ToString();
-                    StartDateTextBox.Text = policy["StartDate"].ToString();
-                    EndDateTextBox.Text = policy["EndDate"].ToString();
-                    PremiumAmoutTextBox.Text = policy["PremiumAmount"].ToString();
-                    StatusTextBox.Text = policy["Status"].ToString();
+           //         PolicyTypeTextBox.Text = policy["PolicyType"].ToString();
+           //         StartDateTextBox.Text = policy["StartDate"].ToString();
+           //         EndDateTextBox.Text = policy["EndDate"].ToString();
+           //         PremiumAmoutTextBox.Text = policy["PremiumAmount"].ToString();
+           //         StatusTextBox.Text = policy["Status"].ToString();
 
                    
-                    DataRow car = carTableAdapter.GetCarDetails(clientID).Rows[0]; // not necessary to check because if you have policy implies you have a car
-                    RegistrationNumberTextBox.Text = car["RegistrationNumber"].ToString();
-                    VinTextBox.Text = car["Vin"].ToString();
-                    MakeTextBox.Text = car["Make"].ToString();
-                    ModelTextBox.Text = car["Model"].ToString();
-                    YearTextBox.Text = car["Year"].ToString();
+           //         DataRow car = carTableAdapter.GetCarDetails(clientID).Rows[0]; // not necessary to check because if you have policy implies you have a car
+           //         RegistrationNumberTextBox.Text = car["RegistrationNumber"].ToString();
+           //         VinTextBox.Text = car["Vin"].ToString();
+           //         MakeTextBox.Text = car["Make"].ToString();
+           //         ModelTextBox.Text = car["Model"].ToString();
+           //         YearTextBox.Text = car["Year"].ToString();
                    
 
-                }
-                else
-                {
+           //     }
+           //     else
+           //     {
                    
-                    policyError.Text = "no policy found";
-                    carError.Text = "no car found";
-                }
+           //         policyError.Text = "no policy found";
+           //         carError.Text = "no car found";
+           //     }
                 
-            }
-            else
-            {
-               clientError.Text = "not client found";
-            }
+           // }
+           // else
+           // {
+           //    clientError.Text = "not client found";
+           // }
             
         }
         public void clearAllTextBoxs()

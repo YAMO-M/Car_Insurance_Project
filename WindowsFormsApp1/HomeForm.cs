@@ -40,7 +40,7 @@ namespace WindowsFormsApp1
         private void homeToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Text = "Home: Loggined in as " + AgentFname;
-            homePage3.BringToFront();
+            homePage2.BringToFront();
         }
 
         

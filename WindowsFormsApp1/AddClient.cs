@@ -20,9 +20,6 @@ namespace WindowsFormsApp1
         public AddClient()
         {
             InitializeComponent();
-            //CustomerID.PromptChar = ' ';
-            PhoneNumTextBox.Mask = "000-000-0000";
-            PhoneNumTextBox.PromptChar = ' ';
             PostalCodeTextBox.Mask = "0000-0";
             PostalCodeTextBox.PromptChar = ' ';
 
@@ -39,7 +36,7 @@ namespace WindowsFormsApp1
                 string address = StreetAddressTextBox.Text + ", "+CityTextBox+", "+ ProvinceComboBox.Text+", "+PostalCodeTextBox;
                 string email = EmailTextBox.Text;
                 string phoneno = PhoneNumTextBox.Text;
-                adapter.InsertClient(name,lastname,address,email,id,phoneno);
+                adapter.Insert(name,lastname,address,email,id,phoneno);
                 MessageBox.Show("Client Added");
             } 
 
@@ -81,7 +78,7 @@ namespace WindowsFormsApp1
                     errorProvider1.SetError(CustomerID, "ID Number is required");
                     return false;
                 }
-                else if (CustomerID.Text.Trim().Length < 2)// trap
+                else if (CustomerID.Text.Trim().Length < 13)
                 {
                     errorProvider1.SetError(CustomerID, "ID Number must be 13 numbers");
                     return false;
