@@ -274,5 +274,15 @@ namespace WindowsFormsApp1
                 e.Handled = true;
             }
         }
+
+        private void label18_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void ClientIDTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

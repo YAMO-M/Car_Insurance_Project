@@ -50,13 +50,14 @@
             this.PostalCodeTextBox = new System.Windows.Forms.MaskedTextBox();
             this.PhoneNumTextBox = new System.Windows.Forms.MaskedTextBox();
             this.EmailErrorLabel = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // PersonalDetailsLabel
             // 
             this.PersonalDetailsLabel.AutoSize = true;
             this.PersonalDetailsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PersonalDetailsLabel.Location = new System.Drawing.Point(406, 66);
+            this.PersonalDetailsLabel.Location = new System.Drawing.Point(401, 113);
             this.PersonalDetailsLabel.Name = "PersonalDetailsLabel";
             this.PersonalDetailsLabel.Size = new System.Drawing.Size(139, 25);
             this.PersonalDetailsLabel.TabIndex = 11;
@@ -64,7 +65,7 @@
             // 
             // EmailTextBox
             // 
-            this.EmailTextBox.Location = new System.Drawing.Point(811, 285);
+            this.EmailTextBox.Location = new System.Drawing.Point(806, 332);
             this.EmailTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.EmailTextBox.Name = "EmailTextBox";
             this.EmailTextBox.Size = new System.Drawing.Size(388, 26);
@@ -74,7 +75,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(406, 263);
+            this.label2.Location = new System.Drawing.Point(401, 310);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(83, 20);
             this.label2.TabIndex = 18;
@@ -83,7 +84,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(808, 263);
+            this.label4.Location = new System.Drawing.Point(803, 310);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(48, 20);
             this.label4.TabIndex = 19;
@@ -91,7 +92,7 @@
             // 
             // StreetAddressTextBox
             // 
-            this.StreetAddressTextBox.Location = new System.Drawing.Point(411, 382);
+            this.StreetAddressTextBox.Location = new System.Drawing.Point(406, 429);
             this.StreetAddressTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.StreetAddressTextBox.Name = "StreetAddressTextBox";
             this.StreetAddressTextBox.Size = new System.Drawing.Size(377, 26);
@@ -100,7 +101,7 @@
             // StreetAddressLabel
             // 
             this.StreetAddressLabel.AutoSize = true;
-            this.StreetAddressLabel.Location = new System.Drawing.Point(408, 337);
+            this.StreetAddressLabel.Location = new System.Drawing.Point(403, 384);
             this.StreetAddressLabel.Name = "StreetAddressLabel";
             this.StreetAddressLabel.Size = new System.Drawing.Size(120, 20);
             this.StreetAddressLabel.TabIndex = 26;
@@ -109,7 +110,7 @@
             // CityLabel
             // 
             this.CityLabel.AutoSize = true;
-            this.CityLabel.Location = new System.Drawing.Point(408, 436);
+            this.CityLabel.Location = new System.Drawing.Point(403, 483);
             this.CityLabel.Name = "CityLabel";
             this.CityLabel.Size = new System.Drawing.Size(35, 20);
             this.CityLabel.TabIndex = 28;
@@ -118,7 +119,7 @@
             // ProvinceLabel
             // 
             this.ProvinceLabel.AutoSize = true;
-            this.ProvinceLabel.Location = new System.Drawing.Point(808, 436);
+            this.ProvinceLabel.Location = new System.Drawing.Point(803, 483);
             this.ProvinceLabel.Name = "ProvinceLabel";
             this.ProvinceLabel.Size = new System.Drawing.Size(69, 20);
             this.ProvinceLabel.TabIndex = 29;
@@ -138,7 +139,7 @@
             "Northern Cape",
             "North West",
             "Mpumalanga"});
-            this.ProvinceComboBox.Location = new System.Drawing.Point(812, 458);
+            this.ProvinceComboBox.Location = new System.Drawing.Point(807, 505);
             this.ProvinceComboBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ProvinceComboBox.Name = "ProvinceComboBox";
             this.ProvinceComboBox.Size = new System.Drawing.Size(388, 28);
@@ -147,7 +148,7 @@
             // PostalCodeLabel
             // 
             this.PostalCodeLabel.AutoSize = true;
-            this.PostalCodeLabel.Location = new System.Drawing.Point(407, 505);
+            this.PostalCodeLabel.Location = new System.Drawing.Point(402, 552);
             this.PostalCodeLabel.Name = "PostalCodeLabel";
             this.PostalCodeLabel.Size = new System.Drawing.Size(121, 20);
             this.PostalCodeLabel.TabIndex = 33;
@@ -157,7 +158,7 @@
             // 
             this.AddClientButton.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.AddClientButton.ForeColor = System.Drawing.SystemColors.Window;
-            this.AddClientButton.Location = new System.Drawing.Point(675, 667);
+            this.AddClientButton.Location = new System.Drawing.Point(670, 714);
             this.AddClientButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.AddClientButton.Name = "AddClientButton";
             this.AddClientButton.Size = new System.Drawing.Size(181, 41);
@@ -168,7 +169,7 @@
             // 
             // CustomerLastName
             // 
-            this.CustomerLastName.Location = new System.Drawing.Point(809, 130);
+            this.CustomerLastName.Location = new System.Drawing.Point(804, 177);
             this.CustomerLastName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.CustomerLastName.Name = "CustomerLastName";
             this.CustomerLastName.Size = new System.Drawing.Size(388, 26);
@@ -177,7 +178,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(404, 106);
+            this.label3.Location = new System.Drawing.Point(399, 153);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(51, 20);
             this.label3.TabIndex = 37;
@@ -186,7 +187,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(807, 106);
+            this.label1.Location = new System.Drawing.Point(802, 153);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(86, 20);
             this.label1.TabIndex = 38;
@@ -194,7 +195,7 @@
             // 
             // CustomerName
             // 
-            this.CustomerName.Location = new System.Drawing.Point(407, 130);
+            this.CustomerName.Location = new System.Drawing.Point(402, 177);
             this.CustomerName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.CustomerName.Name = "CustomerName";
             this.CustomerName.Size = new System.Drawing.Size(381, 26);
@@ -203,7 +204,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(404, 173);
+            this.label6.Location = new System.Drawing.Point(399, 220);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(89, 20);
             this.label6.TabIndex = 40;
@@ -211,7 +212,7 @@
             // 
             // CityTextBox
             // 
-            this.CityTextBox.Location = new System.Drawing.Point(407, 458);
+            this.CityTextBox.Location = new System.Drawing.Point(402, 505);
             this.CityTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.CityTextBox.Name = "CityTextBox";
             this.CityTextBox.Size = new System.Drawing.Size(381, 26);
@@ -220,14 +221,14 @@
             // IDErrorLabel
             // 
             this.IDErrorLabel.AutoSize = true;
-            this.IDErrorLabel.Location = new System.Drawing.Point(818, 206);
+            this.IDErrorLabel.Location = new System.Drawing.Point(813, 253);
             this.IDErrorLabel.Name = "IDErrorLabel";
             this.IDErrorLabel.Size = new System.Drawing.Size(0, 20);
             this.IDErrorLabel.TabIndex = 41;
             // 
             // CustomerID
             // 
-            this.CustomerID.Location = new System.Drawing.Point(407, 206);
+            this.CustomerID.Location = new System.Drawing.Point(402, 253);
             this.CustomerID.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.CustomerID.Mask = "0000000000000";
             this.CustomerID.Name = "CustomerID";
@@ -241,7 +242,7 @@
             // 
             // PostalCodeTextBox
             // 
-            this.PostalCodeTextBox.Location = new System.Drawing.Point(412, 530);
+            this.PostalCodeTextBox.Location = new System.Drawing.Point(407, 577);
             this.PostalCodeTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.PostalCodeTextBox.Mask = "0000";
             this.PostalCodeTextBox.Name = "PostalCodeTextBox";
@@ -254,7 +255,7 @@
             // 
             // PhoneNumTextBox
             // 
-            this.PhoneNumTextBox.Location = new System.Drawing.Point(407, 286);
+            this.PhoneNumTextBox.Location = new System.Drawing.Point(402, 333);
             this.PhoneNumTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.PhoneNumTextBox.Mask = "999-000-0000";
             this.PhoneNumTextBox.Name = "PhoneNumTextBox";
@@ -271,11 +272,22 @@
             this.EmailErrorLabel.Size = new System.Drawing.Size(0, 20);
             this.EmailErrorLabel.TabIndex = 45;
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(620, 28);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(189, 32);
+            this.label5.TabIndex = 65;
+            this.label5.Text = "ADD CLIENT";
+            // 
             // AddClient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.EmailErrorLabel);
             this.Controls.Add(this.PhoneNumTextBox);
             this.Controls.Add(this.PostalCodeTextBox);
@@ -330,5 +342,6 @@
         private System.Windows.Forms.MaskedTextBox PostalCodeTextBox;
         private System.Windows.Forms.MaskedTextBox PhoneNumTextBox;
         private System.Windows.Forms.Label EmailErrorLabel;
+        private System.Windows.Forms.Label label5;
     }
 }

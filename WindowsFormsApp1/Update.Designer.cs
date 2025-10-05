@@ -34,8 +34,16 @@
             this.Policy3radioButton = new System.Windows.Forms.RadioButton();
             this.label2 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
-
-           
+            //this.RegistrationNumberTextBox = new System.Windows.Forms.TextBox();
+            //this.label24 = new System.Windows.Forms.Label();
+            //this.VinTextBox = new System.Windows.Forms.TextBox();
+            //this.label23 = new System.Windows.Forms.Label();
+            //this.MakeTextBox = new System.Windows.Forms.TextBox();
+            //this.label22 = new System.Windows.Forms.Label();
+            //this.ModelTextBox = new System.Windows.Forms.TextBox();
+            //this.label21 = new System.Windows.Forms.Label();
+            //this.YearTextBox = new System.Windows.Forms.TextBox();
+            //this.label20 = new System.Windows.Forms.Label();
             this.clientError = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.policyError = new System.Windows.Forms.Label();
@@ -65,7 +73,6 @@
             this.searchButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.ClientIDTextBox = new System.Windows.Forms.TextBox();
-        
             this.PhoneNumTextBox = new System.Windows.Forms.MaskedTextBox();
             this.label25 = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -140,15 +147,16 @@
             this.label18.Location = new System.Drawing.Point(717, 18);
             this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(175, 29);
+            this.label18.Size = new System.Drawing.Size(216, 29);
             this.label18.TabIndex = 109;
-            this.label18.Text = "Policy Update";
-            
-          
-           
-       
-          
-   
+            this.label18.Text = "POLICY UPDATE";
+            this.label18.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.label18_MouseDoubleClick);
+            // 
+            // clientError
+            // 
+            this.clientError.AutoSize = true;
+            this.clientError.Location = new System.Drawing.Point(933, 80);
+            this.clientError.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.clientError.Name = "clientError";
             this.clientError.Size = new System.Drawing.Size(0, 20);
             this.clientError.TabIndex = 96;
@@ -165,7 +173,7 @@
             // policyError
             // 
             this.policyError.AutoSize = true;
-            this.policyError.Location = new System.Drawing.Point(331, 464);
+            this.policyError.Location = new System.Drawing.Point(410, 441);
             this.policyError.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.policyError.Name = "policyError";
             this.policyError.Size = new System.Drawing.Size(0, 20);
@@ -427,8 +435,8 @@
             this.ClientIDTextBox.Name = "ClientIDTextBox";
             this.ClientIDTextBox.Size = new System.Drawing.Size(491, 26);
             this.ClientIDTextBox.TabIndex = 65;
+            this.ClientIDTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ClientIDTextBox_KeyPress);
             // 
-          
             // PhoneNumTextBox
             // 
             this.PhoneNumTextBox.Location = new System.Drawing.Point(357, 294);
@@ -457,15 +465,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.label25);
             this.Controls.Add(this.PhoneNumTextBox);
- 
             this.Controls.Add(this.label3);
             this.Controls.Add(this.Policy2radioButton);
             this.Controls.Add(this.Policy1radioButton);
             this.Controls.Add(this.Policy3radioButton);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label18);
-        
-         
             this.Controls.Add(this.clientError);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.policyError);
@@ -512,7 +517,7 @@
         private System.Windows.Forms.RadioButton Policy3radioButton;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label label11;
+       // private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label clientError;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label policyError;
