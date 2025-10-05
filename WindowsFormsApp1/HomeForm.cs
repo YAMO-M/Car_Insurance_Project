@@ -19,8 +19,7 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
             this.WindowState = FormWindowState.Maximized;
-         
-            update1.BringToFront();
+            update2.BringToFront();
             addVehicle4.BringToFront();
             addClient3.BringToFront();
             makeClaim1.BringToFront();
@@ -33,8 +32,7 @@ namespace WindowsFormsApp1
             addVehicle4.Dock = DockStyle.Fill;
             makeClaim1.Dock = DockStyle.Fill;
             addClient3.Dock = DockStyle.Fill;
-            update1.Dock = DockStyle.Fill;
-          
+            update2.Dock = DockStyle.Fill;
 
         }
 
@@ -108,7 +106,7 @@ namespace WindowsFormsApp1
         private void updateToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Text =  "Update: Loggined in as " + AgentFname;
-           update1.BringToFront();
+           update2.BringToFront();
         }
 
 

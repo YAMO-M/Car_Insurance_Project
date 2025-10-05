@@ -246,6 +246,33 @@ namespace WindowsFormsApp1
             }
         }
 
-       
+        private void PhoneNumTextBox_Click(object sender, EventArgs e)
+        {
+            PhoneNumTextBox.Select(PhoneNumTextBox.MaskedTextProvider.ToString(false, false).Length + (PhoneNumTextBox.Text.Length == 12 ? 2 : 0), 0);
+
+        }
+
+        private void Update_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ClientIDTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // validate clientID
+
+            if (char.IsControl(e.KeyChar))
+            {
+                return; // allow delete and other controls
+            }
+            if (!char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true; // PREVENT anything that this not digit to be pressed
+            }
+            if (ClientIDTextBox.Text.Length > 4)
+            {
+                e.Handled = true;
+            }
+        }
     }
 }
