@@ -274,5 +274,10 @@ namespace WindowsFormsApp1
                 e.Handled = true;
             }
         }
+
+        private void label18_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+
+        }
     }
 }
