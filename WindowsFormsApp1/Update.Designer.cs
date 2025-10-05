@@ -145,7 +145,7 @@
             // clientError
             // 
             this.clientError.AutoSize = true;
-            this.clientError.Location = new System.Drawing.Point(978, 82);
+            this.clientError.Location = new System.Drawing.Point(933, 80);
             this.clientError.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.clientError.Name = "clientError";
             this.clientError.Size = new System.Drawing.Size(0, 20);
@@ -163,7 +163,7 @@
             // policyError
             // 
             this.policyError.AutoSize = true;
-            this.policyError.Location = new System.Drawing.Point(331, 464);
+            this.policyError.Location = new System.Drawing.Point(410, 441);
             this.policyError.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.policyError.Name = "policyError";
             this.policyError.Size = new System.Drawing.Size(0, 20);
@@ -425,6 +425,7 @@
             this.ClientIDTextBox.Name = "ClientIDTextBox";
             this.ClientIDTextBox.Size = new System.Drawing.Size(491, 26);
             this.ClientIDTextBox.TabIndex = 65;
+            this.ClientIDTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ClientIDTextBox_KeyPress);
             // 
             // PhoneNumTextBox
             // 

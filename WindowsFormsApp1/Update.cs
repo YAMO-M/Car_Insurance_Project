@@ -279,5 +279,10 @@ namespace WindowsFormsApp1
         {
 
         }
+
+        private void ClientIDTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
