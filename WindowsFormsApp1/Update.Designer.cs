@@ -624,7 +624,7 @@
         private System.Windows.Forms.RadioButton Policy3radioButton;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label label11;
+ 
         private System.Windows.Forms.Label carError;
         private System.Windows.Forms.TextBox RegistrationNumberTextBox;
         private System.Windows.Forms.Label label24;

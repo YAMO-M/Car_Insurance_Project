@@ -19,6 +19,7 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
             this.WindowState = FormWindowState.Maximized;
+         
             update1.BringToFront();
             addVehicle4.BringToFront();
             addClient3.BringToFront();
@@ -33,6 +34,7 @@ namespace WindowsFormsApp1
             makeClaim1.Dock = DockStyle.Fill;
             addClient3.Dock = DockStyle.Fill;
             update1.Dock = DockStyle.Fill;
+          
 
         }
 
@@ -109,14 +111,12 @@ namespace WindowsFormsApp1
            update1.BringToFront();
         }
 
-        private void update1_Load(object sender, EventArgs e)
-        {
-
-        }
 
         private void addVehicle4_Load(object sender, EventArgs e)
         {
 
         }
+
+       
     }
 }
