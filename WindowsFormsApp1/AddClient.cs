@@ -35,7 +35,7 @@ namespace WindowsFormsApp1
                     string name = CustomerName.Text;
                     string lastname = CustomerLastName.Text;
                     string id = CustomerID.Text;
-                    string address = StreetAddressTextBox.Text + "," + CityTextBox.Text + "," + ProvinceComboBox.Text + "," + PostalCodeTextBox.Text;
+                    string address = StreetAddressTextBox.Text + ", " + CityTextBox.Text + ", " + ProvinceComboBox.Text + ", " + PostalCodeTextBox.Text;
                     string email = EmailTextBox.Text.ToLower();
                     string phoneno = PhoneNumTextBox.Text;
                     adapter.Insert(name, lastname, address, email, id, phoneno);
