@@ -109,14 +109,12 @@ namespace WindowsFormsApp1
            update2.BringToFront();
         }
 
-        private void update1_Load(object sender, EventArgs e)
-        {
-
-        }
 
         private void addVehicle4_Load(object sender, EventArgs e)
         {
 
         }
+
+       
     }
 }

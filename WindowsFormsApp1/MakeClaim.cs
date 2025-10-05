@@ -39,7 +39,7 @@ namespace WindowsFormsApp1
                 DataRow policy = policyTableAdapter.GetPolicyDetails(int.Parse(ClientIDTextbox.Text)).Rows[0];
 
                 policyType.Text = policy["PolicyType"].ToString();
-                PolicyStatus.Text = policy["Status"].ToString();
+                PolicyStatus.Text = policy["Status"].ToString().ToLower();
                 policyID = (int)policy["PolicyID"];
                 if (!PolicyStatus.Text.Equals("active"))
                 {
