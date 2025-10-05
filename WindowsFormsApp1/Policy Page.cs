@@ -99,12 +99,12 @@ namespace WindowsFormsApp1
                 errorProvider1.SetError(VINtextBox, "VIN is required & must be atleast 11");
                 return false;
             }
-            else if (MakeTextBox.Text.Trim().Length < 3)
+            if (MakeTextBox.Text.Trim().Length < 3)
             {
                 errorProvider1.SetError(MakeTextBox, "Make must be atleast 3 letters");
                 return false;
             }
-            else if (ModelTextBox.Text.Trim().Length < 3)
+            if (ModelTextBox.Text.Trim().Length < 3)
             {
                 errorProvider1.SetError(ModelTextBox, "Model must be atleast 3 letters");
                 return false;

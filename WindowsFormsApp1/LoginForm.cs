@@ -34,7 +34,7 @@ namespace WindowsFormsApp1
             // aweh
             if (checkUserExist())
             {
-                string AgentFname = new AgentTableAdapter().GetAgentName(userName.Text).Rows[0]
+                string AgentFname = new AgentTableAdapter().GetAgentName(userName.Text.ToLower()).Rows[0]
                     ["FirstName"].ToString();
                 HomeForm form5 = new HomeForm();
                 form5.AgentFname = AgentFname;
@@ -62,11 +62,11 @@ namespace WindowsFormsApp1
             else
             {
                 AgentTableAdapter adapter = new AgentTableAdapter();
-                int No_Of_Emails = (int)adapter.Check_If_Agent_Email_Exist(userName.Text);
+                int No_Of_Emails = (int)adapter.Check_If_Agent_Email_Exist(userName.Text.ToLower());
                 errorProvider1.SetError(userName, No_Of_Emails > 0 ? "" : "Email does not exist");
                 if (errorProvider1.GetError(userName) == "")
                 {
-                    int checkIfUserExist = (int)adapter.Check_If_Agent_Exist(userName.Text, password.Text);
+                    int checkIfUserExist = (int)adapter.Check_If_Agent_Exist(userName.Text.ToLower(), password.Text);
                     if (checkIfUserExist > 0)
                     {
                         return true;
