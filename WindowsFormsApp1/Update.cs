@@ -179,7 +179,7 @@ namespace WindowsFormsApp1
         {
             if (Policy1radioButton.Checked)
             {
-                PremiumAmoutTextBox.Text = "1000";
+                PremiumAmoutTextBox.Text = "500";
 
             }
         }
@@ -188,7 +188,7 @@ namespace WindowsFormsApp1
         {
             if (Policy2radioButton.Checked)
             {
-                PremiumAmoutTextBox.Text = "2000";
+                PremiumAmoutTextBox.Text = "750";
 
             }
         }
@@ -197,7 +197,7 @@ namespace WindowsFormsApp1
         {
             if (Policy3radioButton.Checked)
             {
-                PremiumAmoutTextBox.Text = "3000";
+                PremiumAmoutTextBox.Text = "1000";
 
             }
         }

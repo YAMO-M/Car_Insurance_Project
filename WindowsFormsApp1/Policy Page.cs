@@ -28,7 +28,7 @@ namespace WindowsFormsApp1
         {
             if (Policy3.Checked)
             {
-                AmountTextBox.Text = "3000";
+                AmountTextBox.Text = "500";
 
             }
         }
@@ -37,7 +37,7 @@ namespace WindowsFormsApp1
         {
             if (Policy2.Checked)
             {
-                AmountTextBox.Text = "2000";
+                AmountTextBox.Text = "750";
 
             }
         }

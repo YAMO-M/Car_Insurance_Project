@@ -34,7 +34,7 @@
             this.Policy3radioButton = new System.Windows.Forms.RadioButton();
             this.label2 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
+
             this.carError = new System.Windows.Forms.Label();
             this.RegistrationNumberTextBox = new System.Windows.Forms.TextBox();
             this.label24 = new System.Windows.Forms.Label();
@@ -78,7 +78,7 @@
             this.searchButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.ClientIDTextBox = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
+        
             this.PhoneNumTextBox = new System.Windows.Forms.MaskedTextBox();
             this.SuspendLayout();
             // 
@@ -157,17 +157,7 @@
             this.label18.Size = new System.Drawing.Size(119, 20);
             this.label18.TabIndex = 109;
             this.label18.Text = "Policy Update";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(749, 126);
-            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(126, 25);
-            this.label11.TabIndex = 158;
-            this.label11.Text = "Car Details:";
+            
             // 
             // carError
             // 
@@ -553,16 +543,7 @@
             this.ClientIDTextBox.Size = new System.Drawing.Size(535, 20);
             this.ClientIDTextBox.TabIndex = 65;
             // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(30, 433);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(98, 20);
-            this.label11.TabIndex = 115;
-            this.label11.Text = "Policy Type";
-            // 
+          
             // PhoneNumTextBox
             // 
             this.PhoneNumTextBox.Location = new System.Drawing.Point(140, 275);
@@ -577,14 +558,14 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.PhoneNumTextBox);
-            this.Controls.Add(this.label11);
+ 
             this.Controls.Add(this.label3);
             this.Controls.Add(this.Policy2radioButton);
             this.Controls.Add(this.Policy1radioButton);
             this.Controls.Add(this.Policy3radioButton);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label18);
-            this.Controls.Add(this.label11);
+        
             this.Controls.Add(this.carError);
             this.Controls.Add(this.RegistrationNumberTextBox);
             this.Controls.Add(this.label24);
@@ -687,7 +668,7 @@
         private System.Windows.Forms.Button searchButton;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox ClientIDTextBox;
-     //   private System.Windows.Forms.Label label11;
+
         private System.Windows.Forms.MaskedTextBox PhoneNumTextBox;
     }
 }
