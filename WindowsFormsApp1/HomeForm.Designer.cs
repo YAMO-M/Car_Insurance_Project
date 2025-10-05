@@ -39,7 +39,7 @@
             this.searchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.updateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.trackPaymentsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+           
             this.addVehicle4 = new WindowsFormsApp1.AddVehicle();
             this.searchPage2 = new WindowsFormsApp1.SearchPage();
             this.makeClaim1 = new WindowsFormsApp1.MakeClaim();
@@ -116,8 +116,7 @@
             // addClientToolStripMenuItem
             // 
             this.addClientToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.addClientToolStripMenuItem1,
-            this.trackPaymentsToolStripMenuItem});
+            this.addClientToolStripMenuItem1});
             this.addClientToolStripMenuItem.ForeColor = System.Drawing.SystemColors.Window;
             this.addClientToolStripMenuItem.Name = "addClientToolStripMenuItem";
             this.addClientToolStripMenuItem.Size = new System.Drawing.Size(51, 22);
