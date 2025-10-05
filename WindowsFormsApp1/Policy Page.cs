@@ -28,7 +28,7 @@ namespace WindowsFormsApp1
         {
             if (Policy3.Checked)
             {
-                AmountTextBox.Text = "3000";
+                AmountTextBox.Text = "R3000.00";
 
             }
         }
@@ -37,7 +37,7 @@ namespace WindowsFormsApp1
         {
             if (Policy2.Checked)
             {
-                AmountTextBox.Text = "2000";
+                AmountTextBox.Text = "R2000.00";
 
             }
         }
@@ -45,7 +45,7 @@ namespace WindowsFormsApp1
         private void Policy1_CheckedChanged(object sender, EventArgs e)
         {
 
-            AmountTextBox.Text = "1000";
+            AmountTextBox.Text = "R1000.00";
 
 
         }
@@ -155,6 +155,11 @@ namespace WindowsFormsApp1
             paymentTableAdapter.Insert((int)policy["PolicyID"], DateTime.Parse(dateTimePicker1.Text), Decimal.Parse(AmountTextBox.Text), PaymentMethodComboBox.Text);
 
             MessageBox.Show("Policy created Successfully");
+
+        }
+
+        private void AmountTextBox_TextChanged(object sender, EventArgs e)
+        {
 
         }
     }

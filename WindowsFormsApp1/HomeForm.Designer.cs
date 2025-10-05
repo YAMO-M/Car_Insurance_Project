@@ -43,8 +43,8 @@
             this.searchPage2 = new WindowsFormsApp1.SearchPage();
             this.makeClaim1 = new WindowsFormsApp1.MakeClaim();
             this.addClient3 = new WindowsFormsApp1.AddClient();
-            this.update1 = new WindowsFormsApp1.Update();
             this.homePage4 = new WindowsFormsApp1.HomePage();
+            this.update1 = new WindowsFormsApp1.Update();
             this.addClient2 = new WindowsFormsApp1.AddClient();
             this.searchPage1 = new WindowsFormsApp1.SearchPage();
             this.addVehicle3 = new WindowsFormsApp1.AddVehicle();
@@ -57,6 +57,7 @@
             this.homePage3 = new WindowsFormsApp1.HomePage();
             this.homePage1 = new WindowsFormsApp1.HomePage();
             this.homePage2 = new WindowsFormsApp1.HomePage();
+            this.update2 = new WindowsFormsApp1.Update();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -75,8 +76,7 @@
             this.updateToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(6, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(1156, 33);
+            this.menuStrip1.Size = new System.Drawing.Size(1854, 33);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -158,17 +158,17 @@
             // addVehicle4
             // 
             this.addVehicle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addVehicle4.Location = new System.Drawing.Point(0, 31);
+            this.addVehicle4.Location = new System.Drawing.Point(-19, 31);
             this.addVehicle4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.addVehicle4.Name = "addVehicle4";
-            this.addVehicle4.Size = new System.Drawing.Size(1156, 730);
+            this.addVehicle4.Size = new System.Drawing.Size(1851, 971);
             this.addVehicle4.TabIndex = 6;
             this.addVehicle4.Load += new System.EventHandler(this.addVehicle4_Load);
             // 
             // searchPage2
             // 
             this.searchPage2.AutoScroll = true;
-            this.searchPage2.Location = new System.Drawing.Point(0, 34);
+            this.searchPage2.Location = new System.Drawing.Point(0, 31);
             this.searchPage2.Margin = new System.Windows.Forms.Padding(2);
             this.searchPage2.Name = "searchPage2";
             this.searchPage2.Size = new System.Drawing.Size(1156, 728);
@@ -193,14 +193,6 @@
             this.addClient3.Size = new System.Drawing.Size(1156, 728);
             this.addClient3.TabIndex = 3;
             // 
-            // update1
-            // 
-            this.update1.Location = new System.Drawing.Point(0, 27);
-            this.update1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.update1.Name = "update1";
-            this.update1.Size = new System.Drawing.Size(1028, 582);
-            this.update1.TabIndex = 2;
-            // 
             // homePage4
             // 
             this.homePage4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("homePage4.BackgroundImage")));
@@ -210,6 +202,14 @@
             this.homePage4.Name = "homePage4";
             this.homePage4.Size = new System.Drawing.Size(1156, 730);
             this.homePage4.TabIndex = 1;
+            // 
+            // update1
+            // 
+            this.update1.Location = new System.Drawing.Point(0, 27);
+            this.update1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.update1.Name = "update1";
+            this.update1.Size = new System.Drawing.Size(1028, 582);
+            this.update1.TabIndex = 2;
             // 
             // addClient2
             // 
@@ -329,11 +329,20 @@
             this.homePage2.TabIndex = 20;
             this.homePage2.Load += new System.EventHandler(this.homePage3_Load);
             // 
+            // update2
+            // 
+            this.update2.Location = new System.Drawing.Point(-48, 31);
+            this.update2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.update2.Name = "update2";
+            this.update2.Size = new System.Drawing.Size(2352, 1734);
+            this.update2.TabIndex = 7;
+            // 
             // HomeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1156, 761);
+            this.ClientSize = new System.Drawing.Size(1854, 1034);
+            this.Controls.Add(this.update2);
             this.Controls.Add(this.addVehicle4);
             this.Controls.Add(this.searchPage2);
             this.Controls.Add(this.makeClaim1);
@@ -382,5 +391,6 @@
         private MakeClaim makeClaim1;
         private SearchPage searchPage2;
         private AddVehicle addVehicle4;
+        private Update update2;
     }
 }

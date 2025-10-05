@@ -137,6 +137,10 @@ namespace WindowsFormsApp1
             {
                 e.Handled = true; // PREVENT anything that this not digit to be pressed
             }
+            if (ClientIDTextBox.Text.Length > 4)
+            {
+                e.Handled= true;
+            }
         }
 
      

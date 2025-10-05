@@ -65,7 +65,7 @@
             // 
             this.VINlabel.AutoSize = true;
             this.VINlabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.VINlabel.Location = new System.Drawing.Point(53, 243);
+            this.VINlabel.Location = new System.Drawing.Point(187, 236);
             this.VINlabel.Name = "VINlabel";
             this.VINlabel.Size = new System.Drawing.Size(242, 22);
             this.VINlabel.TabIndex = 1;
@@ -73,17 +73,17 @@
             // 
             // VINtextBox
             // 
-            this.VINtextBox.Location = new System.Drawing.Point(57, 269);
+            this.VINtextBox.Location = new System.Drawing.Point(191, 262);
             this.VINtextBox.MaxLength = 17;
             this.VINtextBox.Name = "VINtextBox";
-            this.VINtextBox.Size = new System.Drawing.Size(485, 28);
+            this.VINtextBox.Size = new System.Drawing.Size(376, 28);
             this.VINtextBox.TabIndex = 2;
             // 
             // MakeLabel
             // 
             this.MakeLabel.AutoSize = true;
             this.MakeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MakeLabel.Location = new System.Drawing.Point(55, 308);
+            this.MakeLabel.Location = new System.Drawing.Point(189, 301);
             this.MakeLabel.Name = "MakeLabel";
             this.MakeLabel.Size = new System.Drawing.Size(53, 22);
             this.MakeLabel.TabIndex = 3;
@@ -91,16 +91,16 @@
             // 
             // MakeTextBox
             // 
-            this.MakeTextBox.Location = new System.Drawing.Point(58, 330);
+            this.MakeTextBox.Location = new System.Drawing.Point(192, 323);
             this.MakeTextBox.Name = "MakeTextBox";
-            this.MakeTextBox.Size = new System.Drawing.Size(486, 28);
+            this.MakeTextBox.Size = new System.Drawing.Size(375, 28);
             this.MakeTextBox.TabIndex = 4;
             // 
             // ModelLabel
             // 
             this.ModelLabel.AutoSize = true;
             this.ModelLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ModelLabel.Location = new System.Drawing.Point(53, 361);
+            this.ModelLabel.Location = new System.Drawing.Point(187, 354);
             this.ModelLabel.Name = "ModelLabel";
             this.ModelLabel.Size = new System.Drawing.Size(58, 22);
             this.ModelLabel.TabIndex = 5;
@@ -108,16 +108,16 @@
             // 
             // ModelTextBox
             // 
-            this.ModelTextBox.Location = new System.Drawing.Point(57, 383);
+            this.ModelTextBox.Location = new System.Drawing.Point(191, 376);
             this.ModelTextBox.Name = "ModelTextBox";
-            this.ModelTextBox.Size = new System.Drawing.Size(492, 28);
+            this.ModelTextBox.Size = new System.Drawing.Size(376, 28);
             this.ModelTextBox.TabIndex = 6;
             // 
             // RegistrationPlateLabel
             // 
             this.RegistrationPlateLabel.AutoSize = true;
             this.RegistrationPlateLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RegistrationPlateLabel.Location = new System.Drawing.Point(55, 485);
+            this.RegistrationPlateLabel.Location = new System.Drawing.Point(189, 478);
             this.RegistrationPlateLabel.Name = "RegistrationPlateLabel";
             this.RegistrationPlateLabel.Size = new System.Drawing.Size(220, 22);
             this.RegistrationPlateLabel.TabIndex = 12;
@@ -125,15 +125,15 @@
             // 
             // RegistrationPlateTextBox
             // 
-            this.RegistrationPlateTextBox.Location = new System.Drawing.Point(56, 509);
+            this.RegistrationPlateTextBox.Location = new System.Drawing.Point(190, 502);
             this.RegistrationPlateTextBox.Name = "RegistrationPlateTextBox";
-            this.RegistrationPlateTextBox.Size = new System.Drawing.Size(493, 28);
+            this.RegistrationPlateTextBox.Size = new System.Drawing.Size(377, 28);
             this.RegistrationPlateTextBox.TabIndex = 13;
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(416, 548);
+            this.label12.Location = new System.Drawing.Point(550, 541);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(0, 22);
             this.label12.TabIndex = 23;
@@ -142,7 +142,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(52, 195);
+            this.label1.Location = new System.Drawing.Point(186, 188);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(165, 32);
             this.label1.TabIndex = 25;
@@ -152,7 +152,7 @@
             // 
             this.YearLabel.AutoSize = true;
             this.YearLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.YearLabel.Location = new System.Drawing.Point(54, 418);
+            this.YearLabel.Location = new System.Drawing.Point(188, 411);
             this.YearLabel.Name = "YearLabel";
             this.YearLabel.Size = new System.Drawing.Size(172, 22);
             this.YearLabel.TabIndex = 7;
@@ -161,7 +161,7 @@
             // AmountLabel
             // 
             this.AmountLabel.AutoSize = true;
-            this.AmountLabel.Location = new System.Drawing.Point(640, 516);
+            this.AmountLabel.Location = new System.Drawing.Point(682, 539);
             this.AmountLabel.Name = "AmountLabel";
             this.AmountLabel.Size = new System.Drawing.Size(71, 22);
             this.AmountLabel.TabIndex = 41;
@@ -169,18 +169,19 @@
             // 
             // AmountTextBox
             // 
-            this.AmountTextBox.Location = new System.Drawing.Point(635, 542);
+            this.AmountTextBox.Location = new System.Drawing.Point(677, 565);
             this.AmountTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.AmountTextBox.Name = "AmountTextBox";
             this.AmountTextBox.ReadOnly = true;
-            this.AmountTextBox.Size = new System.Drawing.Size(561, 28);
+            this.AmountTextBox.Size = new System.Drawing.Size(427, 28);
             this.AmountTextBox.TabIndex = 40;
+            this.AmountTextBox.TextChanged += new System.EventHandler(this.AmountTextBox_TextChanged);
             // 
             // CardNumberLabel
             // 
             this.CardNumberLabel.AutoSize = true;
             this.CardNumberLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CardNumberLabel.Location = new System.Drawing.Point(643, 270);
+            this.CardNumberLabel.Location = new System.Drawing.Point(685, 293);
             this.CardNumberLabel.Name = "CardNumberLabel";
             this.CardNumberLabel.Size = new System.Drawing.Size(91, 22);
             this.CardNumberLabel.TabIndex = 31;
@@ -193,17 +194,17 @@
             this.PaymentMethodComboBox.Items.AddRange(new object[] {
             "Credit/Debit Card",
             "EFT"});
-            this.PaymentMethodComboBox.Location = new System.Drawing.Point(643, 234);
+            this.PaymentMethodComboBox.Location = new System.Drawing.Point(685, 257);
             this.PaymentMethodComboBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.PaymentMethodComboBox.Name = "PaymentMethodComboBox";
-            this.PaymentMethodComboBox.Size = new System.Drawing.Size(553, 30);
+            this.PaymentMethodComboBox.Size = new System.Drawing.Size(419, 30);
             this.PaymentMethodComboBox.TabIndex = 28;
             // 
             // PaymentMethodLabel
             // 
             this.PaymentMethodLabel.AutoSize = true;
             this.PaymentMethodLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PaymentMethodLabel.Location = new System.Drawing.Point(639, 208);
+            this.PaymentMethodLabel.Location = new System.Drawing.Point(681, 231);
             this.PaymentMethodLabel.Name = "PaymentMethodLabel";
             this.PaymentMethodLabel.Size = new System.Drawing.Size(144, 22);
             this.PaymentMethodLabel.TabIndex = 27;
@@ -213,7 +214,7 @@
             // 
             this.PaymentDetailsLabel.AutoSize = true;
             this.PaymentDetailsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
-            this.PaymentDetailsLabel.Location = new System.Drawing.Point(642, 147);
+            this.PaymentDetailsLabel.Location = new System.Drawing.Point(680, 188);
             this.PaymentDetailsLabel.Name = "PaymentDetailsLabel";
             this.PaymentDetailsLabel.Size = new System.Drawing.Size(236, 32);
             this.PaymentDetailsLabel.TabIndex = 26;
@@ -222,7 +223,7 @@
             // Policy1
             // 
             this.Policy1.AutoSize = true;
-            this.Policy1.Location = new System.Drawing.Point(648, 453);
+            this.Policy1.Location = new System.Drawing.Point(690, 476);
             this.Policy1.Name = "Policy1";
             this.Policy1.Size = new System.Drawing.Size(152, 26);
             this.Policy1.TabIndex = 43;
@@ -234,7 +235,7 @@
             // Policy2
             // 
             this.Policy2.AutoSize = true;
-            this.Policy2.Location = new System.Drawing.Point(833, 453);
+            this.Policy2.Location = new System.Drawing.Point(875, 476);
             this.Policy2.Name = "Policy2";
             this.Policy2.Size = new System.Drawing.Size(209, 26);
             this.Policy2.TabIndex = 44;
@@ -246,7 +247,7 @@
             // Policy3
             // 
             this.Policy3.AutoSize = true;
-            this.Policy3.Location = new System.Drawing.Point(1072, 453);
+            this.Policy3.Location = new System.Drawing.Point(1090, 478);
             this.Policy3.Name = "Policy3";
             this.Policy3.Size = new System.Drawing.Size(124, 26);
             this.Policy3.TabIndex = 45;
@@ -258,7 +259,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(644, 416);
+            this.label3.Location = new System.Drawing.Point(686, 439);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(104, 22);
             this.label3.TabIndex = 48;
@@ -295,19 +296,19 @@
             "2023",
             "2024",
             "2025"});
-            this.comboBox1.Location = new System.Drawing.Point(56, 444);
+            this.comboBox1.Location = new System.Drawing.Point(190, 437);
             this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(495, 30);
+            this.comboBox1.Size = new System.Drawing.Size(377, 30);
             this.comboBox1.TabIndex = 50;
             // 
             // PolicyCreation
             // 
             this.PolicyCreation.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.PolicyCreation.ForeColor = System.Drawing.SystemColors.Window;
-            this.PolicyCreation.Location = new System.Drawing.Point(527, 658);
+            this.PolicyCreation.Location = new System.Drawing.Point(505, 636);
             this.PolicyCreation.Name = "PolicyCreation";
-            this.PolicyCreation.Size = new System.Drawing.Size(256, 33);
+            this.PolicyCreation.Size = new System.Drawing.Size(183, 45);
             this.PolicyCreation.TabIndex = 11;
             this.PolicyCreation.Text = "Create Policy";
             this.PolicyCreation.UseVisualStyleBackColor = false;
@@ -315,9 +316,9 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(59, 119);
+            this.textBox1.Location = new System.Drawing.Point(192, 115);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(485, 28);
+            this.textBox1.Size = new System.Drawing.Size(375, 28);
             this.textBox1.TabIndex = 55;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
@@ -326,7 +327,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(56, 92);
+            this.label2.Location = new System.Drawing.Point(190, 85);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(126, 22);
             this.label2.TabIndex = 54;
@@ -336,7 +337,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(51, 44);
+            this.label5.Location = new System.Drawing.Point(185, 37);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(187, 32);
             this.label5.TabIndex = 56;
@@ -344,11 +345,11 @@
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(643, 298);
+            this.dateTimePicker1.Location = new System.Drawing.Point(685, 321);
             this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.dateTimePicker1.MinDate = new System.DateTime(2025, 10, 1, 0, 0, 0, 0);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(553, 28);
+            this.dateTimePicker1.Size = new System.Drawing.Size(419, 28);
             this.dateTimePicker1.TabIndex = 59;
             this.dateTimePicker1.Value = new System.DateTime(2025, 10, 1, 0, 0, 0, 0);
             // 
@@ -356,18 +357,18 @@
             // 
             this.ClientError.AutoSize = true;
             this.ClientError.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ClientError.Location = new System.Drawing.Point(400, 122);
+            this.ClientError.Location = new System.Drawing.Point(603, 118);
             this.ClientError.Name = "ClientError";
             this.ClientError.Size = new System.Drawing.Size(0, 22);
             this.ClientError.TabIndex = 61;
             // 
             // dateTimePicker2
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(646, 361);
+            this.dateTimePicker2.Location = new System.Drawing.Point(688, 384);
             this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.dateTimePicker2.MinDate = new System.DateTime(2025, 10, 1, 0, 0, 0, 0);
             this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(547, 28);
+            this.dateTimePicker2.Size = new System.Drawing.Size(413, 28);
             this.dateTimePicker2.TabIndex = 62;
             this.dateTimePicker2.Value = new System.DateTime(2025, 10, 1, 0, 0, 0, 0);
             // 
@@ -375,7 +376,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(643, 336);
+            this.label4.Location = new System.Drawing.Point(685, 359);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(85, 22);
             this.label4.TabIndex = 63;
@@ -385,7 +386,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(523, 12);
+            this.label6.Location = new System.Drawing.Point(683, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(193, 32);
             this.label6.TabIndex = 64;
@@ -428,7 +429,7 @@
             this.Controls.Add(this.VINlabel);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "AddVehicle";
-            this.Size = new System.Drawing.Size(1778, 1034);
+            this.Size = new System.Drawing.Size(1662, 990);
             this.ResumeLayout(false);
             this.PerformLayout();
 
