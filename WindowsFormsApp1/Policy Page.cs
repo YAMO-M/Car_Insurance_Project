@@ -124,7 +124,7 @@ namespace WindowsFormsApp1
                 errorProvider1.SetError(comboBox1, "Choose a year");
                 return false;
             }
-            if (string.IsNullOrEmpty(PaymentMethodComboBox.Text))
+            if (string.IsNullOrEmpty(PaymentMethodComboBox.Text.Trim()))
             {
                 errorProvider1.SetError(PaymentMethodComboBox, "Choose a payment method");
                 return false;
@@ -159,6 +159,11 @@ namespace WindowsFormsApp1
         }
 
         private void AmountTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void PaymentMethodComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
