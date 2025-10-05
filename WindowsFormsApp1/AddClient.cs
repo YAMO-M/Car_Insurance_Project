@@ -114,7 +114,7 @@ namespace WindowsFormsApp1
                     errorProvider1.SetError(PhoneNumTextBox, "Phone Number is required");
                     return false;
                 }
-                else if (PhoneNumTextBox.Text.Trim().Length <= 9)
+                else if (PhoneNumTextBox.Text.Trim().Length < 12)
                 {
                     errorProvider1.SetError(PhoneNumTextBox, "Phone Number must be 10 numbers");
                     return false;
@@ -157,9 +157,9 @@ namespace WindowsFormsApp1
                     errorProvider1.SetError(PostalCodeTextBox, "Postal/Zip Code is required");
                     return false;
                 }
-                else if (PostalCodeTextBox.Text.Trim().Length < 3)
+                else if (PostalCodeTextBox.Text.Trim().Length <= 3)
                 {
-                    errorProvider1.SetError(PostalCodeTextBox, "Postal/Zip Code must be 4 or 5 numbers");
+                    errorProvider1.SetError(PostalCodeTextBox, "Postal/Zip Code must be 4 numbers");
                     return false;
                 }
 
