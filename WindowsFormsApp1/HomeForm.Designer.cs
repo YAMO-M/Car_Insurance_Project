@@ -64,6 +64,7 @@
             // 
             this.menuStrip1.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.menuStrip1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.homeToolStripMenuItem,
@@ -74,8 +75,8 @@
             this.updateToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(1371, 28);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(6, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(1156, 33);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -83,7 +84,7 @@
             // 
             this.homeToolStripMenuItem.ForeColor = System.Drawing.SystemColors.Window;
             this.homeToolStripMenuItem.Name = "homeToolStripMenuItem";
-            this.homeToolStripMenuItem.Size = new System.Drawing.Size(65, 26);
+            this.homeToolStripMenuItem.Size = new System.Drawing.Size(79, 29);
             this.homeToolStripMenuItem.Text = "Home";
             this.homeToolStripMenuItem.Click += new System.EventHandler(this.homeToolStripMenuItem_Click);
             // 
@@ -94,21 +95,21 @@
             this.makeClaimToolStripMenuItem1});
             this.addPolicyToolStripMenuItem.ForeColor = System.Drawing.SystemColors.Window;
             this.addPolicyToolStripMenuItem.Name = "addPolicyToolStripMenuItem";
-            this.addPolicyToolStripMenuItem.Size = new System.Drawing.Size(64, 26);
+            this.addPolicyToolStripMenuItem.Size = new System.Drawing.Size(78, 29);
             this.addPolicyToolStripMenuItem.Text = "Policy";
             this.addPolicyToolStripMenuItem.Click += new System.EventHandler(this.addPolicyToolStripMenuItem1_Click);
             // 
             // addPolicyToolStripMenuItem1
             // 
             this.addPolicyToolStripMenuItem1.Name = "addPolicyToolStripMenuItem1";
-            this.addPolicyToolStripMenuItem1.Size = new System.Drawing.Size(173, 26);
+            this.addPolicyToolStripMenuItem1.Size = new System.Drawing.Size(213, 34);
             this.addPolicyToolStripMenuItem1.Text = "Add Policy";
             this.addPolicyToolStripMenuItem1.Click += new System.EventHandler(this.addPolicyToolStripMenuItem1_Click);
             // 
             // makeClaimToolStripMenuItem1
             // 
             this.makeClaimToolStripMenuItem1.Name = "makeClaimToolStripMenuItem1";
-            this.makeClaimToolStripMenuItem1.Size = new System.Drawing.Size(173, 26);
+            this.makeClaimToolStripMenuItem1.Size = new System.Drawing.Size(213, 34);
             this.makeClaimToolStripMenuItem1.Text = "Make Claim";
             this.makeClaimToolStripMenuItem1.Click += new System.EventHandler(this.makeClaimToolStripMenuItem1_Click);
             // 
@@ -118,14 +119,14 @@
             this.addClientToolStripMenuItem1});
             this.addClientToolStripMenuItem.ForeColor = System.Drawing.SystemColors.Window;
             this.addClientToolStripMenuItem.Name = "addClientToolStripMenuItem";
-            this.addClientToolStripMenuItem.Size = new System.Drawing.Size(63, 26);
+            this.addClientToolStripMenuItem.Size = new System.Drawing.Size(77, 29);
             this.addClientToolStripMenuItem.Text = "Client";
             this.addClientToolStripMenuItem.Click += new System.EventHandler(this.addClientToolStripMenuItem1_Click);
             // 
             // addClientToolStripMenuItem1
             // 
             this.addClientToolStripMenuItem1.Name = "addClientToolStripMenuItem1";
-            this.addClientToolStripMenuItem1.Size = new System.Drawing.Size(165, 26);
+            this.addClientToolStripMenuItem1.Size = new System.Drawing.Size(203, 34);
             this.addClientToolStripMenuItem1.Text = "Add Client";
             this.addClientToolStripMenuItem1.Click += new System.EventHandler(this.addClientToolStripMenuItem1_Click);
             // 
@@ -133,7 +134,7 @@
             // 
             this.searchToolStripMenuItem.ForeColor = System.Drawing.SystemColors.Window;
             this.searchToolStripMenuItem.Name = "searchToolStripMenuItem";
-            this.searchToolStripMenuItem.Size = new System.Drawing.Size(69, 26);
+            this.searchToolStripMenuItem.Size = new System.Drawing.Size(85, 29);
             this.searchToolStripMenuItem.Text = "Search";
             this.searchToolStripMenuItem.Click += new System.EventHandler(this.searchToolStripMenuItem_Click);
             // 
@@ -142,57 +143,60 @@
             this.logoutToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.logoutToolStripMenuItem.ForeColor = System.Drawing.SystemColors.Window;
             this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
-            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(73, 26);
+            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(88, 29);
             this.logoutToolStripMenuItem.Text = "Logout";
             this.logoutToolStripMenuItem.Click += new System.EventHandler(this.logoutToolStripMenuItem_Click);
             // 
             // updateToolStripMenuItem
             // 
+            this.updateToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.updateToolStripMenuItem.Name = "updateToolStripMenuItem";
-            this.updateToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
+            this.updateToolStripMenuItem.Size = new System.Drawing.Size(90, 29);
             this.updateToolStripMenuItem.Text = "Update";
             this.updateToolStripMenuItem.Click += new System.EventHandler(this.updateToolStripMenuItem_Click);
             // 
             // addVehicle4
             // 
             this.addVehicle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addVehicle4.Location = new System.Drawing.Point(0, 25);
+            this.addVehicle4.Location = new System.Drawing.Point(0, 31);
+            this.addVehicle4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.addVehicle4.Name = "addVehicle4";
-            this.addVehicle4.Size = new System.Drawing.Size(1028, 584);
+            this.addVehicle4.Size = new System.Drawing.Size(1156, 730);
             this.addVehicle4.TabIndex = 6;
             this.addVehicle4.Load += new System.EventHandler(this.addVehicle4_Load);
             // 
             // searchPage2
             // 
             this.searchPage2.AutoScroll = true;
-            this.searchPage2.Location = new System.Drawing.Point(0, 27);
+            this.searchPage2.Location = new System.Drawing.Point(0, 34);
             this.searchPage2.Margin = new System.Windows.Forms.Padding(2);
             this.searchPage2.Name = "searchPage2";
-            this.searchPage2.Size = new System.Drawing.Size(1028, 582);
+            this.searchPage2.Size = new System.Drawing.Size(1156, 728);
             this.searchPage2.TabIndex = 5;
             // 
             // makeClaim1
             // 
             this.makeClaim1.AutoScroll = true;
             this.makeClaim1.BackColor = System.Drawing.SystemColors.Control;
-            this.makeClaim1.Location = new System.Drawing.Point(0, 27);
-            this.makeClaim1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.makeClaim1.Location = new System.Drawing.Point(0, 34);
+            this.makeClaim1.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.makeClaim1.Name = "makeClaim1";
-            this.makeClaim1.Size = new System.Drawing.Size(1028, 582);
+            this.makeClaim1.Size = new System.Drawing.Size(1156, 728);
             this.makeClaim1.TabIndex = 4;
             // 
             // addClient3
             // 
             this.addClient3.BackColor = System.Drawing.SystemColors.Control;
-            this.addClient3.Location = new System.Drawing.Point(0, 27);
-            this.addClient3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.addClient3.Location = new System.Drawing.Point(0, 34);
+            this.addClient3.Margin = new System.Windows.Forms.Padding(2);
             this.addClient3.Name = "addClient3";
-            this.addClient3.Size = new System.Drawing.Size(1028, 582);
+            this.addClient3.Size = new System.Drawing.Size(1156, 728);
             this.addClient3.TabIndex = 3;
             // 
             // update1
             // 
             this.update1.Location = new System.Drawing.Point(0, 27);
+            this.update1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.update1.Name = "update1";
             this.update1.Size = new System.Drawing.Size(1028, 582);
             this.update1.TabIndex = 2;
@@ -201,32 +205,21 @@
             // 
             this.homePage4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("homePage4.BackgroundImage")));
             this.homePage4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.homePage4.Location = new System.Drawing.Point(0, 25);
+            this.homePage4.Location = new System.Drawing.Point(0, 31);
             this.homePage4.Margin = new System.Windows.Forms.Padding(1);
             this.homePage4.Name = "homePage4";
-            this.homePage4.Size = new System.Drawing.Size(1028, 584);
+            this.homePage4.Size = new System.Drawing.Size(1156, 730);
             this.homePage4.TabIndex = 1;
             // 
             // addClient2
             // 
             this.addClient2.BackColor = System.Drawing.SystemColors.Control;
             this.addClient2.Location = new System.Drawing.Point(0, 24);
-            this.addClient2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.addClient2.Margin = new System.Windows.Forms.Padding(2);
             this.addClient2.Name = "addClient2";
             this.addClient2.Size = new System.Drawing.Size(1568, 1127);
             this.addClient2.TabIndex = 21;
             this.addClient2.Load += new System.EventHandler(this.addClient2_Load_1);
-            // 
-            // homePage2
-            // 
-            this.homePage2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("homePage2.BackgroundImage")));
-            this.homePage2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.homePage2.Location = new System.Drawing.Point(-13, 34);
-            this.homePage2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.homePage2.Name = "homePage2";
-            this.homePage2.Size = new System.Drawing.Size(2091, 1385);
-            this.homePage2.TabIndex = 20;
-            this.homePage2.Load += new System.EventHandler(this.homePage3_Load);
             // 
             // searchPage1
             // 
@@ -260,6 +253,7 @@
             // updatePersonalInfo1
             // 
             this.updatePersonalInfo1.AutoScroll = true;
+            this.updatePersonalInfo1.BackColor = System.Drawing.SystemColors.Control;
             this.updatePersonalInfo1.Location = new System.Drawing.Point(0, 39);
             this.updatePersonalInfo1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.updatePersonalInfo1.Name = "updatePersonalInfo1";
@@ -270,7 +264,7 @@
             // 
             this.addClient1.BackColor = System.Drawing.SystemColors.Control;
             this.addClient1.Location = new System.Drawing.Point(0, 0);
-            this.addClient1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.addClient1.Margin = new System.Windows.Forms.Padding(2);
             this.addClient1.Name = "addClient1";
             this.addClient1.Size = new System.Drawing.Size(867, 545);
             this.addClient1.TabIndex = 0;
@@ -337,18 +331,17 @@
             // 
             // HomeForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1028, 609);
+            this.ClientSize = new System.Drawing.Size(1156, 761);
             this.Controls.Add(this.addVehicle4);
             this.Controls.Add(this.searchPage2);
             this.Controls.Add(this.makeClaim1);
             this.Controls.Add(this.addClient3);
-            this.Controls.Add(this.update1);
             this.Controls.Add(this.homePage4);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.Name = "HomeForm";
             this.Text = "Form5";
             this.Load += new System.EventHandler(this.HomeForm_Load);

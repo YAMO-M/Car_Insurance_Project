@@ -31,7 +31,7 @@ namespace WindowsFormsApp1
         private void loginButton_Click(object sender, EventArgs e)
         {
        
-            // aweh
+           
             if (checkUserExist())
             {
                 string AgentFname = new AgentTableAdapter().GetAgentName(userName.Text).Rows[0]
@@ -92,6 +92,11 @@ namespace WindowsFormsApp1
         }
 
         private void LoginForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
 
         }

@@ -31,6 +31,7 @@ namespace WindowsFormsApp1
             policyError.ForeColor = Color.Red;
             carError.ForeColor = Color.Red;
 
+
             if (string.IsNullOrEmpty(ClientIDTextBox.Text))
             {
                 clientError.Text = "enter client id";
@@ -83,6 +84,7 @@ namespace WindowsFormsApp1
             else
             {
                 clientError.Text = "not client found";
+                
             }
 
         }
@@ -143,22 +145,7 @@ namespace WindowsFormsApp1
 
         private void SearchPage_Load(object sender, EventArgs e)
         {
-            //txtName.DataBindings.Add("Text", clientBsource, "Name");
-            //txtLastName.DataBindings.Add("Text", clientBsource, "LastName");
-            //txtAddress.DataBindings.Add("Text", clientBsource, "Address");
-            //txtEmail.DataBindings.Add("Text", clientBsource, "Email");
-            //txtIDNumber.DataBindings.Add("Text", clientBsource, "IDNumber");
-            //txtPhoneNumber.DataBindings.Add("Text", clientBsource, "PhoneNumber");
-
-            //txtRegNumber.DataBindings.Add("Text", carBsource, "RegistrationNumber");
-            //txtVin.DataBindings.Add("Text", carBsource, "VIN");
-            //txtMake.DataBindings.Add("Text", carBsource, "Make");
-            //txtModel.DataBindings.Add("Text", carBsource, "Model");
-            //txtYear.DataBindings.Add("Text", carBsource, "Year");
-
             
-
-
         }
     }
 }
