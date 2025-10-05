@@ -28,7 +28,7 @@ namespace WindowsFormsApp1
         {
             if (Policy3.Checked)
             {
-                AmountTextBox.Text = "R3000.00";
+                AmountTextBox.Text = "3000";
 
             }
         }
@@ -37,7 +37,7 @@ namespace WindowsFormsApp1
         {
             if (Policy2.Checked)
             {
-                AmountTextBox.Text = "R2000.00";
+                AmountTextBox.Text = "2000";
 
             }
         }
@@ -45,7 +45,7 @@ namespace WindowsFormsApp1
         private void Policy1_CheckedChanged(object sender, EventArgs e)
         {
 
-            AmountTextBox.Text = "R1000.00";
+            AmountTextBox.Text = "1000";
 
 
         }

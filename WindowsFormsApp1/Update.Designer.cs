@@ -35,17 +35,17 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
 
-            this.carError = new System.Windows.Forms.Label();
-            this.RegistrationNumberTextBox = new System.Windows.Forms.TextBox();
-            this.label24 = new System.Windows.Forms.Label();
-            this.VinTextBox = new System.Windows.Forms.TextBox();
-            this.label23 = new System.Windows.Forms.Label();
-            this.MakeTextBox = new System.Windows.Forms.TextBox();
-            this.label22 = new System.Windows.Forms.Label();
-            this.ModelTextBox = new System.Windows.Forms.TextBox();
-            this.label21 = new System.Windows.Forms.Label();
-            this.YearTextBox = new System.Windows.Forms.TextBox();
-            this.label20 = new System.Windows.Forms.Label();
+            //this.carError = new System.Windows.Forms.Label();
+            //this.RegistrationNumberTextBox = new System.Windows.Forms.TextBox();
+            //this.label24 = new System.Windows.Forms.Label();
+            //this.VinTextBox = new System.Windows.Forms.TextBox();
+            //this.label23 = new System.Windows.Forms.Label();
+            //this.MakeTextBox = new System.Windows.Forms.TextBox();
+            //this.label22 = new System.Windows.Forms.Label();
+            //this.ModelTextBox = new System.Windows.Forms.TextBox();
+            //this.label21 = new System.Windows.Forms.Label();
+            //this.YearTextBox = new System.Windows.Forms.TextBox();
+            //this.label20 = new System.Windows.Forms.Label();
             this.clientError = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.policyError = new System.Windows.Forms.Label();
@@ -157,108 +157,7 @@
             // 
             // carError
             // 
-            this.carError.AutoSize = true;
-            this.carError.Location = new System.Drawing.Point(837, 126);
-            this.carError.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.carError.Name = "carError";
-            this.carError.Size = new System.Drawing.Size(0, 16);
-            this.carError.TabIndex = 157;
-            // 
-            // RegistrationNumberTextBox
-            // 
-            this.RegistrationNumberTextBox.Location = new System.Drawing.Point(937, 154);
-            this.RegistrationNumberTextBox.Margin = new System.Windows.Forms.Padding(4);
-            this.RegistrationNumberTextBox.Name = "RegistrationNumberTextBox";
-            this.RegistrationNumberTextBox.ReadOnly = true;
-            this.RegistrationNumberTextBox.Size = new System.Drawing.Size(480, 22);
-            this.RegistrationNumberTextBox.TabIndex = 156;
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(751, 158);
-            this.label24.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(133, 16);
-            this.label24.TabIndex = 155;
-            this.label24.Text = "Registration Number:";
-            // 
-            // VinTextBox
-            // 
-            this.VinTextBox.Location = new System.Drawing.Point(937, 188);
-            this.VinTextBox.Margin = new System.Windows.Forms.Padding(4);
-            this.VinTextBox.Name = "VinTextBox";
-            this.VinTextBox.ReadOnly = true;
-            this.VinTextBox.Size = new System.Drawing.Size(480, 22);
-            this.VinTextBox.TabIndex = 154;
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(837, 190);
-            this.label23.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(29, 16);
-            this.label23.TabIndex = 153;
-            this.label23.Text = "Vin:";
-            // 
-            // MakeTextBox
-            // 
-            this.MakeTextBox.Location = new System.Drawing.Point(937, 220);
-            this.MakeTextBox.Margin = new System.Windows.Forms.Padding(4);
-            this.MakeTextBox.Name = "MakeTextBox";
-            this.MakeTextBox.ReadOnly = true;
-            this.MakeTextBox.Size = new System.Drawing.Size(480, 22);
-            this.MakeTextBox.TabIndex = 152;
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(837, 222);
-            this.label22.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(41, 16);
-            this.label22.TabIndex = 151;
-            this.label22.Text = "Make";
-            // 
-            // ModelTextBox
-            // 
-            this.ModelTextBox.Location = new System.Drawing.Point(937, 256);
-            this.ModelTextBox.Margin = new System.Windows.Forms.Padding(4);
-            this.ModelTextBox.Name = "ModelTextBox";
-            this.ModelTextBox.ReadOnly = true;
-            this.ModelTextBox.Size = new System.Drawing.Size(480, 22);
-            this.ModelTextBox.TabIndex = 150;
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(837, 259);
-            this.label21.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(45, 16);
-            this.label21.TabIndex = 149;
-            this.label21.Text = "Model";
-            // 
-            // YearTextBox
-            // 
-            this.YearTextBox.Location = new System.Drawing.Point(937, 282);
-            this.YearTextBox.Margin = new System.Windows.Forms.Padding(4);
-            this.YearTextBox.Name = "YearTextBox";
-            this.YearTextBox.ReadOnly = true;
-            this.YearTextBox.Size = new System.Drawing.Size(480, 22);
-            this.YearTextBox.TabIndex = 148;
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(837, 286);
-            this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(36, 16);
-            this.label20.TabIndex = 147;
-            this.label20.Text = "Year";
-            // 
+          
             // clientError
             // 
             this.clientError.AutoSize = true;
@@ -580,17 +479,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label18);
         
-            this.Controls.Add(this.carError);
-            this.Controls.Add(this.RegistrationNumberTextBox);
-            this.Controls.Add(this.label24);
-            this.Controls.Add(this.VinTextBox);
-            this.Controls.Add(this.label23);
-            this.Controls.Add(this.MakeTextBox);
-            this.Controls.Add(this.label22);
-            this.Controls.Add(this.ModelTextBox);
-            this.Controls.Add(this.label21);
-            this.Controls.Add(this.YearTextBox);
-            this.Controls.Add(this.label20);
+            
             this.Controls.Add(this.clientError);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.policyError);
@@ -637,7 +526,7 @@
         private System.Windows.Forms.RadioButton Policy3radioButton;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label label11;
+       // private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label clientError;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label policyError;
