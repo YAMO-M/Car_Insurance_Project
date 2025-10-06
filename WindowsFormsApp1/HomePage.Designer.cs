@@ -69,13 +69,13 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(32, 82);
+            this.label4.Location = new System.Drawing.Point(32, 63);
             this.label4.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(324, 60);
+            this.label4.Size = new System.Drawing.Size(278, 80);
             this.label4.TabIndex = 10;
-            this.label4.Text = "Pays for repairs or replacement of your \r\ncar if it’s damaged in an accident, \r\nr" +
-    "egardless of who was at fault.";
+            this.label4.Text = "Covers the cost of repairing or \r\nreplacing your own vehicle if it\'s \r\ndamaged in" +
+    " an accident involving \r\nanother car or object.";
             this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label6
@@ -84,13 +84,14 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(32, 195);
+            this.label6.Location = new System.Drawing.Point(32, 184);
             this.label6.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(256, 100);
+            this.label6.Size = new System.Drawing.Size(294, 120);
             this.label6.TabIndex = 12;
-            this.label6.Text = "Covers damage to your car \r\nfrom non-collision events such \r\nas theft, fire, vand" +
-    "alism, \r\nor natural disasters.\r\n\r\n";
+            this.label6.Text = "Provides protection against \r\nunexpected events that are not\r\n related to a colli" +
+    "sion. This includes \r\nincidents like theft, vandialism and \r\nnatural disasters. " +
+    "\r\n\r\n";
             this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label5
@@ -99,13 +100,13 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(32, 321);
+            this.label5.Location = new System.Drawing.Point(32, 329);
             this.label5.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(276, 100);
+            this.label5.Size = new System.Drawing.Size(313, 80);
             this.label5.TabIndex = 13;
-            this.label5.Text = "Covers medical expenses for you \r\nand your passengers after an \r\naccident,sometim" +
-    "es including \r\nlost wages and rehabilitation \r\ncosts, regardless of fault.\r\n";
+            this.label5.Text = "Covers the damage you cause \r\nto other people\'s vehicles or property \r\nand any me" +
+    "dical expenses for injuries \r\nyou cause to others in an accident.";
             this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label7
@@ -127,7 +128,7 @@
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(31, 295);
+            this.label8.Location = new System.Drawing.Point(31, 303);
             this.label8.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(225, 26);
@@ -141,7 +142,7 @@
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(31, 163);
+            this.label9.Location = new System.Drawing.Point(31, 158);
             this.label9.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(275, 26);
@@ -176,7 +177,7 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.Margin = new System.Windows.Forms.Padding(1);
             this.Name = "HomePage";
             this.Size = new System.Drawing.Size(905, 495);
             this.Load += new System.EventHandler(this.HomePage_Load);

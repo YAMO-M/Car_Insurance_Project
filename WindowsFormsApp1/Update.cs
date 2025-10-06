@@ -137,8 +137,8 @@ namespace WindowsFormsApp1
                     clientTableAdapter.UpdateClientDetails(AddressTextBox.Text, PhoneNumTextBox.Text, int.Parse(ClientIDTextBox.Text));
 
                     string Policy = "";
-                    if (Policy1radioButton.Checked) Policy = "Collision";
-                    else if (Policy2radioButton.Checked) Policy = "Comprehensive";
+                    if (Policy1radioButton.Checked) Policy = "Comprehensive";
+                    else if (Policy2radioButton.Checked) Policy = "Collision";
                     else Policy = "Third party";
                     policyTableAdapter.UpdateStatus(policyStatus, Policy, Decimal.Parse(PremiumAmoutTextBox.Text), int.Parse(ClientIDTextBox.Text.Trim()));
                     MessageBox.Show("Client Updated");
