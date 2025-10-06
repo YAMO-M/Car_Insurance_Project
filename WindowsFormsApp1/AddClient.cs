@@ -40,11 +40,11 @@ namespace WindowsFormsApp1
                     string phoneno = PhoneNumTextBox.Text;
                     adapter.Insert(name, lastname, address, email, id, phoneno);
                     string ClientId = adapter.getClientDetails(email).Rows[0]["ClientID"].ToString();
-                    MessageBox.Show("Client succefully added , ClientID = " + ClientId);
+                    MessageBox.Show("Client successfully added , ClientID = " + ClientId);
                 }
                 catch (System.Data.SqlClient.SqlException)
                 {
-                    MessageBox.Show("Client Alreay Exists");
+                    MessageBox.Show("Client Already Exists");
                 }
             } 
 

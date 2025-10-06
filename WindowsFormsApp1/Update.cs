@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -105,41 +106,49 @@ namespace WindowsFormsApp1
 
         private void UpdateStatusConfirmButton_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(ClientIDTextBox.Text))
+            try
             {
-                clientError.Text = "enter client id";
-                return;
-            }
+                if (string.IsNullOrEmpty(ClientIDTextBox.Text))
+                {
+                    clientError.Text = "enter client id";
+                    return;
+                }
 
-            errorProvider1.Clear();
-            string policyStatus = "";
-            if (ActivateradioButton.Checked)
+                errorProvider1.Clear();
+                string policyStatus = "";
+                if (ActivateradioButton.Checked)
+                {
+
+                    policyStatus = "active";
+
+                }
+                else if (De_ActivateradioButton2.Checked)
+                {
+                    policyStatus = "not active";
+                }
+                else
+                {
+
+                    errorProvider1.SetError(UpdateStatusConfirmButton, "press radio button");
+                    return;
+                }
+                if (DataValidation())
+                {
+                    clientTableAdapter.UpdateClientDetails(AddressTextBox.Text, PhoneNumTextBox.Text, int.Parse(ClientIDTextBox.Text));
+
+                    string Policy = "";
+                    if (Policy1radioButton.Checked) Policy = "Collision";
+                    else if (Policy2radioButton.Checked) Policy = "Comprehensive";
+                    else Policy = "Third party";
+                    policyTableAdapter.UpdateStatus(policyStatus, Policy, Decimal.Parse(PremiumAmoutTextBox.Text), int.Parse(ClientIDTextBox.Text.Trim()));
+                    MessageBox.Show("Client Updated");
+                    ClientIDTextBox.Text = "";
+                    clearAllTextBoxs();
+                }
+            }
+            catch (SqlException ex)
             {
-
-                policyStatus = "active";
-
-            }
-            else if (De_ActivateradioButton2.Checked)
-            {
-                policyStatus = "not active";
-            }
-            else
-            {
-
-                errorProvider1.SetError(UpdateStatusConfirmButton, "press radio button");
-                return;
-            }
-            if (DataValidation()) { 
-            clientTableAdapter.UpdateClientDetails(AddressTextBox.Text, PhoneNumTextBox.Text, int.Parse(ClientIDTextBox.Text));
-            
-                string Policy = "";
-                if (Policy1radioButton.Checked) Policy = "Collision";
-                else if (Policy2radioButton.Checked) Policy = "Comprehensive";
-                else Policy = "Third party";
-                policyTableAdapter.UpdateStatus(policyStatus,Policy,Decimal.Parse(PremiumAmoutTextBox.Text), int.Parse(ClientIDTextBox.Text.Trim()));
-                MessageBox.Show("Client Updated");
-                ClientIDTextBox.Text = "";
-                clearAllTextBoxs();
+                MessageBox.Show("Error was encountered: " + ex);
             }
         }
         public bool DataValidation()
